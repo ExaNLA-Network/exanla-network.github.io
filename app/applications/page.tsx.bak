@@ -1,0 +1,199 @@
+import Image from 'next/image';
+
+// Define Application Categories
+export const applicationCategories = {
+  COMPUTATIONAL_CHEMISTRY: "Computational Chemistry",
+  MATERIALS_SCIENCE: "Materials Science",
+  PHYSICS_SIMULATION: "Physics Simulation",
+  HIGH_PERFORMANCE_COMPUTING: "High-Performance Computing",
+} as const;
+
+export type ApplicationCategoryValue = typeof applicationCategories[keyof typeof applicationCategories];
+
+interface Application {
+  id: string;
+  title: string;
+  description: string;
+  content: string;
+  logo: string;
+  website: string;
+  categories: ApplicationCategoryValue[];
+}
+
+// Applications data
+const applications: Application[] = [
+  {
+    id: 'quantum-espresso',
+    title: 'Quantum ESPRESSO',
+    description: 'An integrated suite for first-principles electronic structure calculations and materials modeling',
+    content: `Quantum ESPRESSO is an integrated suite of open-source computer codes for electronic-structure calculations and materials modeling at the nanoscale. It is based on density-functional theory, plane waves, and pseudopotentials.
+
+    Key numerical linear algebra components:
+    - Dense eigenvalue problems for electronic states calculation
+    - Large-scale parallel diagonalization using ELPA or other solvers
+    - Iterative eigensolvers for ground state calculations
+    - Efficient handling of plane-wave basis sets
+    - Performance optimization through advanced linear algebra libraries
+
+    The integration with modern linear algebra libraries like ELPA and MAGMA has significantly improved its performance on modern HPC architectures, enabling larger and more complex simulations.`,
+    logo: '/applications/logo/logo-quantumespresso_10.jpg',
+    website: 'https://www.quantum-espresso.org/',
+    categories: [applicationCategories.COMPUTATIONAL_CHEMISTRY, applicationCategories.MATERIALS_SCIENCE, applicationCategories.PHYSICS_SIMULATION, applicationCategories.HIGH_PERFORMANCE_COMPUTING],
+  },
+  {
+    id: 'yambo',
+    title: 'YAMBO',
+    description: 'A state-of-the-art code for Many-Body calculations in solid state and molecular physics',
+    content: `YAMBO is a scientific code implementing Many-Body Perturbation Theory (MBPT) methods for calculating electronic and optical properties of materials from first principles. It takes full advantage of modern HPC architectures through optimized linear algebra operations.
+
+    Key numerical linear algebra aspects:
+    - Complex linear algebra operations for Green\'s function methods
+    - Parallel eigenvalue solvers for quasiparticle calculations
+    - Efficient handling of large matrices in GW calculations
+    - Linear response calculations using advanced linear algebra
+    - Integration with high-performance libraries for optimal performance
+
+    The code heavily relies on distributed linear algebra operations and benefits greatly from modern numerical libraries that can efficiently handle both dense and sparse computations on large matrices.`,
+    logo: '/applications/yambo-logo.png',
+    website: 'https://www.yambo-code.eu/',
+    categories: [applicationCategories.MATERIALS_SCIENCE, applicationCategories.PHYSICS_SIMULATION, applicationCategories.HIGH_PERFORMANCE_COMPUTING],
+  },
+  {
+    id: 'cp2k',
+    title: 'CP2K',
+    description: 'A quantum chemistry and solid state physics software package for atomistic simulations',
+    content: `CP2K is an open-source electronic structure and molecular dynamics software package that performs atomistic simulations of solid state, liquid, molecular, and biological systems. It provides a rich set of features based on density functional theory (DFT) using both the Gaussian and plane wave approaches.
+
+    Key numerical linear algebra components:
+    - Distributed dense matrix operations for electronic structure
+    - Sparse matrix algebra for linear scaling DFT methods
+    - Efficient eigensolvers using ELPA and other libraries
+    - Matrix operations in mixed Gaussian/Plane-Wave approach
+    - Advanced linear scaling techniques for large systems
+
+    The performance of CP2K heavily relies on efficient linear algebra operations, particularly in its DBCSR (Distributed Block Compressed Sparse Row) library for sparse matrix operations and its integration with state-of-the-art dense linear algebra libraries like ELPA for diagonalization tasks.`,
+    logo: '/applications/cp2k-logo.png',
+    website: 'https://www.cp2k.org/',
+    categories: [applicationCategories.COMPUTATIONAL_CHEMISTRY, applicationCategories.MATERIALS_SCIENCE, applicationCategories.PHYSICS_SIMULATION, applicationCategories.HIGH_PERFORMANCE_COMPUTING],
+  }
+];
+
+// Helper function to get category styles (similar to other pages)
+function getCategoryStyle(category: ApplicationCategoryValue) {
+  switch (category) {
+    case applicationCategories.COMPUTATIONAL_CHEMISTRY:
+      return 'bg-sky-100 text-sky-800';
+    case applicationCategories.MATERIALS_SCIENCE:
+      return 'bg-amber-100 text-amber-800';
+    case applicationCategories.PHYSICS_SIMULATION:
+      return 'bg-rose-100 text-rose-800';
+    case applicationCategories.HIGH_PERFORMANCE_COMPUTING:
+      return 'bg-indigo-100 text-indigo-800';
+    default:
+      return 'bg-gray-100 text-gray-800';
+  }
+}
+
+export default function Applications() {
+  // Calculate category distribution
+  const categoryCounts = applications.reduce((acc, app) => {
+    app.categories.forEach(category => {
+      acc[category] = (acc[category] || 0) + 1;
+    });
+    return acc;
+  }, {} as Record<ApplicationCategoryValue, number>);
+
+  const allCategories = Object.values(applicationCategories);
+
+  return (
+    <div className="bg-white py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center">
+          <h1 className="text-3xl font-bold text-gray-900 sm:text-4xl">Featured Applications</h1>
+          <p className="mt-3 max-w-2xl mx-auto text-xl text-gray-500 sm:mt-4">
+            Discover how exascale numerical linear algebra powers cutting-edge scientific applications
+          </p>
+        </div>
+
+        <div className="mt-12 space-y-16">
+          {applications.map((app, index) => (
+            <div 
+              key={app.id} 
+              className={`flex flex-col ${
+                index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
+              } gap-8 items-center`}
+            >
+              <div className="w-full md:w-1/2">
+                <div className="aspect-w-16 aspect-h-9 bg-white rounded-lg overflow-hidden shadow-lg">
+                  <div className="w-full h-full flex flex-col items-center justify-center p-6">
+                    <div className="relative w-48 h-48 mb-4">
+                      <Image
+                        src={app.logo || '/applications/default-logo.png'}
+                        alt={`${app.title} logo`}
+                        fill
+                        sizes="(max-width: 192px) 100vw, 192px"
+                        className="object-contain"
+                      />
+                    </div>
+                    <a
+                      href={app.website}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-4 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700"
+                    >
+                      Visit Official Website
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div className="w-full md:w-1/2">
+                <h2 className="text-2xl font-bold text-gray-900">{app.title}</h2>
+                <p className="mt-2 text-lg text-blue-600">{app.description}</p>
+                <div className="mt-3 flex flex-wrap gap-2">
+                  {app.categories.map((category) => (
+                    <span
+                      key={category}
+                      className={`px-2 py-1 text-xs font-semibold rounded-full ${getCategoryStyle(category)}`}
+                    >
+                      {category}
+                    </span>
+                  ))}
+                </div>
+                <div className="mt-4 prose prose-blue text-gray-600 max-w-none">
+                  {app.content.split('\n\n').map((paragraph, i) => (
+                    <p key={i} className="mb-4 whitespace-pre-wrap">
+                      {paragraph}
+                    </p>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Application Category Distribution Section */}
+        <div className="mt-16 pt-10 border-t border-gray-200">
+          <div className="text-center">
+            <h2 className="text-2xl font-bold text-gray-900 sm:text-3xl">Application Category Distribution</h2>
+            <p className="mt-2 max-w-2xl mx-auto text-lg text-gray-500">
+              Overview of application categorizations.
+            </p>
+          </div>
+          <div className="mt-8 grid grid-cols-1 gap-y-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-6">
+            {allCategories.map((category) => (
+              <div key={category} className={`p-4 rounded-lg shadow-md ${getCategoryStyle(category).replace('text-', 'bg-').replace('-800', '-100').replace('-100', '-50')} border border-gray-200`}>
+                <h3 className={`text-lg font-medium ${getCategoryStyle(category).split(' ')[1]}`}>{category}</h3>
+                <p className={`mt-1 text-3xl font-semibold ${getCategoryStyle(category).split(' ')[1]}`}>
+                  {categoryCounts[category] || 0}
+                </p>
+                <p className={`text-sm ${getCategoryStyle(category).split(' ')[1]} opacity-75`}>
+                  {categoryCounts[category] === 1 ? 'Application' : 'Applications'}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+} 

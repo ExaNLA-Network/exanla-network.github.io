@@ -1,0 +1,82 @@
+'use client';
+
+import Link from 'next/link';
+import Image from 'next/image'; // Import Next/Image
+import { newsArticlesData, NewsArticleData, NewsCategoryValue } from './news-data'; // Import categories types as well
+
+// Function to format date for display (can be kept or also moved to a utils file later)
+const formatDate = (dateString: string) => {
+  const options: Intl.DateTimeFormatOptions = { year: 'numeric', month: 'long', day: 'numeric' };
+  return new Date(dateString).toLocaleDateString(undefined, options);
+};
+
+// Helper to get a consistent color for category tags (can be expanded)
+const getCategoryStyle = (category: NewsCategoryValue) => {
+  // Basic styling, can be made more sophisticated with a switch or map
+  return 'bg-indigo-100 text-indigo-700';
+};
+
+export default function NewsPage() {
+  // Sort articles by date, most recent first
+  const sortedArticles = [...newsArticlesData].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+
+  return (
+    <div className="bg-white py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center">
+          <h1 className="text-3xl font-bold text-gray-900 sm:text-4xl">Latest News</h1>
+          <p className="mt-3 max-w-2xl mx-auto text-xl text-gray-500 sm:mt-4">
+            Stay updated with the latest announcements, achievements, and events from the ExaNLA project.
+          </p>
+        </div>
+
+        {sortedArticles.length === 0 ? (
+          <div className="text-center mt-12">
+            <p className="text-xl text-gray-500">No news articles yet. Check back soon!</p>
+          </div>
+        ) : (
+          <div className="mt-12 max-w-lg mx-auto grid gap-8 lg:grid-cols-2 lg:max-w-none">
+            {sortedArticles.map((article: NewsArticleData) => (
+              <div key={article.id} className="flex flex-col rounded-lg shadow-lg overflow-hidden">
+                {article.imageUrl && (
+                  <div className="flex-shrink-0 h-48 w-full relative">
+                    <Image 
+                      src={article.imageUrl} 
+                      alt={article.title} 
+                      fill
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      className="object-cover"
+                    />
+                  </div>
+                )}
+                <div className="flex-1 bg-white p-6 flex flex-col justify-between">
+                  <div className="flex-1">
+                    <div className="flex flex-wrap gap-2 mb-2">
+                      {article.categories.map((category) => (
+                        <span 
+                          key={category}
+                          className={`px-2 py-1 text-xs font-medium rounded-full ${getCategoryStyle(category)}`}
+                        >
+                          {category}
+                        </span>
+                      ))}
+                    </div>
+                    <Link href={`/news/${article.slug}`} className="block mt-1">
+                      <p className="text-xl font-semibold text-gray-900 hover:text-blue-600 transition-colors duration-150">{article.title}</p>
+                      <p className="mt-3 text-base text-gray-500">{article.summary}</p>
+                    </Link>
+                  </div>
+                  <div className="mt-6 flex items-center">
+                    <div className="text-sm text-gray-500">
+                      <time dateTime={article.date}>{formatDate(article.date)}</time>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
+    </div>
+  );
+} 
