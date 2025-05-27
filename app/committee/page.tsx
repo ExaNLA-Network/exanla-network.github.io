@@ -54,9 +54,9 @@ const committeeMembers: CommitteeMember[] = [
   {
     id: 'xinzhe.wu',
     name: 'Dr. Xinzhe Wu',
-    title: 'Senior Researcher',
+    title: 'Senior Scientific Researcher',
     affiliation: 'Jülich Supercomputing Center, FZJ, Germany',
-    //bio: 'Dr. Xinzhe Wu is a leading expert in numerical linear algebra and high-performance computing. His research focuses on developing efficient algorithms for large-scale matrix computations.',
+    bio: 'Dr. Xinzhe Wu is specializing in numerical linear algebra and high-performance computing. His research focuses on subspace methods for solving eigenvalue problems, with expertise in parallel matrix operations, task-based programming, and the application of machine learning in materials science.',
     image: '/committee/avatar/xinzhe.wu.jpeg',
     categories: [expertiseCategories.NUMERICAL_LINEAR_ALGEBRA, expertiseCategories.HPC, expertiseCategories.ALGORITHM_DEVELOPMENT, expertiseCategories.SOFTWARE_DEVELOPMENT, expertiseCategories.PARALLEL_PROGRAMMING],
     workingGroups: [WorkingGroups.PERFORMANCE_PARALLELIZATION, WorkingGroups.APPLICATION_FUNCTIONALITY, WorkingGroups.NLA_INTERFACE],
