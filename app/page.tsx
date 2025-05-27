@@ -91,30 +91,26 @@ export default function Home() {
                   The purpose of this committee is to define, oversee, and coordinate the core activities required 
                   to design and develop a high-performance, scalable, and portable dense Numerical Linear Algebra (NLA)
                   library optimized for modern distributed and accelerated computing environments.
-                </p>
-
-                <p>
                   As computational demands in scientific computing, data analytics, and machine learning continue to grow, 
                   the need for efficient, robust, and flexible NLA solutions has become critical. Our mission is to set 
-                  the stage that will foster the delivering of a state-of-the-art software library that leverages the 
-                  capabilities of heterogeneous architectures—including GPUs, multi-core CPUs, and distributed memory 
-                  systems—while providing a clean, extensible interface for a broad spectrum of users and applications.
+                  the stage for delivering a state-of-the-art NLA library that leverages the capabilities of heterogeneous 
+                  architectures—including GPUs, multi-core CPUs, and distributed memory systems—while providing a clean, 
+                  extensible interface for a broad spectrum of users and applications.
                 </p>
 
                 <p>
                   The ExaNLA initiative will be guided by an open-source development model, fostering transparency, 
                   community engagement, and long-term sustainability. The committee will actively promote collaboration 
                   among experts in numerical analysis, software engineering, and high-performance computing from a broad 
-                  range of academic institutions and national laboratories.
-                </p>
-
-                <p>
+                  range of academic institutions and national laboratories. 
                   The committee will play an advisory role in setting the technical direction and scope of the library, 
                   identifying key functionalities (e.g., factorizations, solvers, eigensolvers), and establishing best 
-                  practices for parallelism, resilience, interoperability and performance portability. The committee can 
-                  support the creation of working groups whose activities could include the evaluation and integration of 
-                  established and emerging programming models, the formulation of benchmarks and testing protocols, and 
-                  the development of community-driven documentation and support strategies.
+                  practices for parallelism, resilience, interoperability and performance portability. The committee 
+                  supports the creation of working groups whose activities may include the study and design of existing 
+                  and novel algorithms, the evaluation and integration of established and emerging programming models, 
+                  the formulation of benchmarks and testing protocols, and the development of community-driven documentation 
+                  and support strategies. Through this collaborative and inclusive approach, this committee aims to lay 
+                  the groundwork for a next-generation NLA library that meets the evolving needs of research and industry alike. 
                 </p>
               </div>
             </div>
