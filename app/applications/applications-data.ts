@@ -15,6 +15,7 @@ export interface Application {
   content: string;
   logo: string;
   website: string;
+  repository?: string;
   categories: ApplicationCategoryValue[];
 }
 
@@ -36,6 +37,7 @@ export const applications: Application[] = [
     The integration with modern linear algebra libraries like ELPA and MAGMA has significantly improved its performance on modern HPC architectures, enabling larger and more complex simulations.`,
     logo: '/applications/logo/logo-quantumespresso_10.jpg',
     website: 'https://www.quantum-espresso.org/',
+    repository: 'https://github.com/QEF/q-e',
     categories: [applicationCategories.COMPUTATIONAL_CHEMISTRY, applicationCategories.MATERIALS_SCIENCE, applicationCategories.PHYSICS_SIMULATION, applicationCategories.HIGH_PERFORMANCE_COMPUTING],
   },
   {
@@ -52,26 +54,9 @@ export const applications: Application[] = [
     - Integration with high-performance libraries for optimal performance
 
     The code heavily relies on distributed linear algebra operations and benefits greatly from modern numerical libraries that can efficiently handle both dense and sparse computations on large matrices.`,
-    logo: '/applications/yambo-logo.png',
+    logo: '/applications/logo/yambo_logo.png',
     website: 'https://www.yambo-code.eu/',
+    repository: 'https://github.com/yambo-code/yambo',
     categories: [applicationCategories.MATERIALS_SCIENCE, applicationCategories.PHYSICS_SIMULATION, applicationCategories.HIGH_PERFORMANCE_COMPUTING],
-  },
-  {
-    id: 'cp2k',
-    title: 'CP2K',
-    description: 'A quantum chemistry and solid state physics software package for atomistic simulations',
-    content: `CP2K is an open-source electronic structure and molecular dynamics software package that performs atomistic simulations of solid state, liquid, molecular, and biological systems. It provides a rich set of features based on density functional theory (DFT) using both the Gaussian and plane wave approaches.
-
-    Key numerical linear algebra components:
-    - Distributed dense matrix operations for electronic structure
-    - Sparse matrix algebra for linear scaling DFT methods
-    - Efficient eigensolvers using ELPA and other libraries
-    - Matrix operations in mixed Gaussian/Plane-Wave approach
-    - Advanced linear scaling techniques for large systems
-
-    The performance of CP2K heavily relies on efficient linear algebra operations, particularly in its DBCSR (Distributed Block Compressed Sparse Row) library for sparse matrix operations and its integration with state-of-the-art dense linear algebra libraries like ELPA for diagonalization tasks.`,
-    logo: '/applications/cp2k-logo.png',
-    website: 'https://www.cp2k.org/',
-    categories: [applicationCategories.COMPUTATIONAL_CHEMISTRY, applicationCategories.MATERIALS_SCIENCE, applicationCategories.PHYSICS_SIMULATION, applicationCategories.HIGH_PERFORMANCE_COMPUTING],
   }
 ]; 

@@ -4,6 +4,11 @@ export const libraryCategories = {
   SPARSE_LINEAR_ALGEBRA: "Sparse Linear Algebra",
   EIGENVALUE_PROBLEMS: "Eigenvalue Problems",
   HIGH_PERFORMANCE_COMPUTING: "High-Performance Computing",
+  HERMITIAN_SYMMETRIC: "Hermitian/Symmetric",
+  QUASI_HERMITIAN_SYMMETRIC: "Quasi-Hermitian/Symmetric",
+  GPU_ACCELERATION: "GPU Acceleration",
+  DISTRIBUTED_MEMORY: "Distributed Memory",
+  SUBSPACE_ITERATION: "Subspace Iteration",
 } as const;
 
 export type LibraryCategoryValue = typeof libraryCategories[keyof typeof libraryCategories];
@@ -24,111 +29,62 @@ export interface Library {
 // Libraries data
 export const libraries: Library[] = [
   {
-    id: 'elpa',
-    name: 'ELPA',
-    description: 'A high-performance library for solving large-scale symmetric/Hermitian eigenvalue problems on distributed memory computers.',
-    features: [
-      'Highly optimized eigensolvers for large matrices',
-      'Distributed memory parallelization',
-      'GPU acceleration support',
-      'Specialized for electronic structure calculations',
-      'Excellent scalability on HPC systems'
-    ],
-    language: 'Fortran / C',
-    license: 'LGPL',
-    website: 'https://elpa.mpcdf.mpg.de/',
-    repository: 'https://gitlab.mpcdf.mpg.de/elpa/elpa',
-    logo: '/libraries/elpa-logo.png',
-    categories: [libraryCategories.EIGENVALUE_PROBLEMS, libraryCategories.HIGH_PERFORMANCE_COMPUTING],
-  },
-  {
     id: 'slate',
     name: 'SLATE',
     description: 'Next-generation software library for dense linear algebra operations designed to replace ScaLAPACK for modern HPC systems.',
     features: [
-      'Parallel BLAS operations',
+      'Full coverage of LAPACK and ScaLAPACK functionality',
+      'Parallel BLAS operations with GPU acceleration',
       'Dense linear system solvers',
       'Least squares solvers',
-      'Eigenvalue problem solvers',
-      'Modern C++ design with task-based parallelism'
+      'Singular value and eigenvalue solvers',
+      'Support for distributed-memory systems',
+      'Built on MPI and OpenMP standards',
+      'Integration with vendor libraries (MKL, cuBLAS, rocBLAS, etc.)',
+      'Modern C++ design with task-based parallelism',
+      'Optimized for both GPU-accelerated and multi-core systems'
     ],
     language: 'C++',
     license: 'BSD-3',
     website: 'https://icl.utk.edu/slate/',
     repository: 'https://github.com/icl-utk-edu/slate',
-    logo: '/libraries/slate-logo.png',
-    categories: [libraryCategories.DENSE_LINEAR_ALGEBRA, libraryCategories.EIGENVALUE_PROBLEMS, libraryCategories.HIGH_PERFORMANCE_COMPUTING],
-  },
-  {
-    id: 'magma',
-    name: 'MAGMA',
-    description: 'Dense linear algebra library similar to LAPACK but optimized for heterogeneous/hybrid architectures, particularly CPU+GPU systems.',
-    features: [
-      'Hybrid CPU+GPU algorithms',
-      'Dense linear algebra routines',
-      'Algorithms-by-tiles approach',
-      'Dynamic scheduling',
-      'LAPACK-style interface'
-    ],
-    language: 'C++ / CUDA',
-    license: 'BSD-3',
-    website: 'https://icl.utk.edu/magma/',
-    repository: 'https://bitbucket.org/icl/magma',
-    logo: '/libraries/magma-logo.png',
-    categories: [libraryCategories.DENSE_LINEAR_ALGEBRA, libraryCategories.HIGH_PERFORMANCE_COMPUTING],
-  },
-  {
-    id: 'eigenexa',
-    name: 'EigenExa',
-    description: 'A high-performance dense eigenvalue solver developed at RIKEN, specifically designed for large-scale parallel computing systems including the K computer and Fugaku.',
-    features: [
-      'Highly optimized for large-scale parallel systems',
-      'Specialized in symmetric eigenvalue problems',
-      'Advanced parallel algorithms for matrix operations',
-      'Excellent scalability on many-core architectures',
-      'Integration with major scientific applications'
-    ],
-    language: 'Fortran',
-    license: 'BSD-3',
-    website: 'https://www.r-ccs.riken.jp/labs/lpnctrt/en/projects/eigenexa/',
-    repository: 'https://github.com/RIKEN-RCCS/EigenExa',
-    logo: '/libraries/eigenexa-logo.png',
-    categories: [libraryCategories.EIGENVALUE_PROBLEMS, libraryCategories.HIGH_PERFORMANCE_COMPUTING],
+    logo: '/libraries/logo/slate-logo.png',
+    categories: [libraryCategories.DENSE_LINEAR_ALGEBRA, 
+                 libraryCategories.EIGENVALUE_PROBLEMS, 
+                 libraryCategories.HIGH_PERFORMANCE_COMPUTING,
+                 libraryCategories.HERMITIAN_SYMMETRIC,
+                 libraryCategories.QUASI_HERMITIAN_SYMMETRIC,
+                 libraryCategories.GPU_ACCELERATION,
+                 libraryCategories.DISTRIBUTED_MEMORY],
   },
   {
     id: 'chase',
     name: 'ChASE',
-    description: 'A modern C++ implementation of the Chebyshev Accelerated Subspace Eigenvalue Solver for computing selected eigenpairs of large Hermitian matrices.',
+    description: 'A modern C++ implementation of the Chebyshev Accelerated Subspace Eigenvalue Solver for computing selected eigenpairs of large Hermitian and quasi-Hermitian matrices.',
     features: [
       'Optimized for dense Hermitian eigenproblems',
+      'Optimized for dense quasi-Hermitian eigenproblems (Bethe–Salpeter equations)',
       'Highly efficient parallel implementation',
       'GPU acceleration support',
       'Subspace iteration',
-      'Excellent scalability for large matrices'
+      'Excellent scalability for large matrices',
+      'Distributed memory support',
+      'Multi-GPU support'
     ],
     language: 'C++',
     license: 'BSD-3',
     website: 'https://chase-library.github.io/ChASE/',
     repository: 'https://github.com/ChASE-library/ChASE',
-    logo: '/libraries/logo/ChASE_Logo_RGB.png',
-    categories: [libraryCategories.EIGENVALUE_PROBLEMS, libraryCategories.HIGH_PERFORMANCE_COMPUTING],
-  },
-  {
-    id: 'dla-future',
-    name: 'DLA-Future',
-    description: 'Modern C++ framework for distributed memory linear algebra algorithms, focusing on productivity and performance portability.',
-    features: [
-      'Task-based programming model',
-      'Shared-memory style distributed algorithms',
-      'High performance on modern HPC systems',
-      'Modern C++ design patterns',
-      'Excellent maintainability'
+    logo: '/libraries/logo/ChASE_Logo_RGB.jpg',
+    categories: [
+      libraryCategories.DENSE_LINEAR_ALGEBRA,
+      libraryCategories.EIGENVALUE_PROBLEMS,
+      libraryCategories.HIGH_PERFORMANCE_COMPUTING,
+      libraryCategories.HERMITIAN_SYMMETRIC,
+      libraryCategories.QUASI_HERMITIAN_SYMMETRIC,
+      libraryCategories.GPU_ACCELERATION,
+      libraryCategories.SUBSPACE_ITERATION,
+      libraryCategories.DISTRIBUTED_MEMORY
     ],
-    language: 'C++',
-    license: 'BSD-3',
-    website: 'https://github.com/eth-cscs/DLA-Future',
-    repository: 'https://github.com/eth-cscs/DLA-Future',
-    logo: '/libraries/dla-future-logo.png',
-    categories: [libraryCategories.DENSE_LINEAR_ALGEBRA, libraryCategories.HIGH_PERFORMANCE_COMPUTING],
-  },
+  }
 ]; 

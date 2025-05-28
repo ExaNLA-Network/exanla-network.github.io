@@ -1,19 +1,30 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Home() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-gray-900 text-white py-20">
+      <section className="bg-[#003D66] text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              ExaNLA
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8">
+            <div className="flex items-center justify-center space-x-4 mb-6">
+              <Image
+                src="/ExaNLA_logo_light.png"
+                alt="ExaNLA Logo"
+                width={240}
+                height={96}
+                className="h-20 w-auto"
+                priority
+              />
+              <h1 className="text-4xl md:text-6xl font-bold">
+                ExaNLA
+              </h1>
+            </div>
+            <p className="text-xl md:text-2xl text-white mb-8">
               Exascale Numerical Linear Algebra Collaboration
             </p>
-            <p className="max-w-3xl mx-auto text-lg text-gray-400">
+            <p className="max-w-3xl mx-auto text-lg text-white">
               Advancing numerical linear algebra for exascale computing through collaborative research,
               development, and optimization of algorithms, libraries, and applications.
             </p>
@@ -35,7 +46,7 @@ export default function Home() {
                 </p>
                 <Link
                   href="/applications"
-                  className="inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+                  className="inline-block bg-[#003D66] text-white px-4 py-2 rounded hover:bg-[#002D4D]"
                 >
                   Learn More
                 </Link>
@@ -52,7 +63,7 @@ export default function Home() {
                 </p>
                 <Link
                   href="/libraries"
-                  className="inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+                  className="inline-block bg-[#003D66] text-white px-4 py-2 rounded hover:bg-[#002D4D]"
                 >
                   Learn More
                 </Link>
@@ -69,7 +80,7 @@ export default function Home() {
                 </p>
                 <Link
                   href="/benchmarks"
-                  className="inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+                  className="inline-block bg-[#003D66] text-white px-4 py-2 rounded hover:bg-[#002D4D]"
                 >
                   Learn More
                 </Link>

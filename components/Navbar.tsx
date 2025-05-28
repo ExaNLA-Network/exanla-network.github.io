@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 
@@ -9,7 +10,12 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const isActive = (path: string) => {
-    return pathname === path;
+    // Handle root path specially
+    if (path === '/') {
+      return pathname === '/';
+    }
+    // For other paths, check if the pathname starts with the path
+    return pathname.startsWith(path);
   };
 
   const navLinks = [
@@ -24,12 +30,22 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="bg-gray-800 text-white">
+    <nav className="bg-white text-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
-            <Link href="/" className="flex items-center">
-              <span className="text-xl font-bold">ExaNLA</span>
+            <Link href="/" className="flex items-center space-x-3">
+              <div className="bg-white h-12 w-12 flex items-center justify-center rounded-full">
+                <Image
+                  src="/ExaNLA_logo.png"
+                  alt="ExaNLA Logo"
+                  width={45}
+                  height={45}
+                  className="h-12 w-12 object-contain"
+                  priority
+                />
+              </div>
+              <span className="text-xl font-bold text-gray-900">ExaNLA</span>
             </Link>
           </div>
           
@@ -40,10 +56,10 @@ export default function Navbar() {
               <Link 
                   key={link.href}
                   href={link.href} 
-                className={`px-3 py-2 rounded-md text-sm font-medium ${
+                className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-150 ${
                     isActive(link.href) 
-                    ? 'bg-gray-900 text-white' 
-                    : 'text-gray-300 hover:bg-gray-700 hover:text-white'
+                    ? 'bg-[#FFA500] text-white' 
+                    : 'text-gray-600 hover:bg-[#FFA500] hover:text-white'
                 }`}
               >
                   {link.label}
@@ -104,10 +120,10 @@ export default function Navbar() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setIsMenuOpen(false)}
-              className={`block px-3 py-2 rounded-md text-base font-medium ${
+              className={`block px-3 py-2 rounded-md text-base font-medium transition-colors duration-150 ${
                   isActive(link.href) 
-                  ? 'bg-gray-900 text-white' 
-                  : 'text-gray-300 hover:bg-gray-700 hover:text-white'
+                  ? 'bg-[#FFA500] text-white' 
+                  : 'text-gray-300 hover:bg-[#FFA500] hover:text-white'
               }`}
             >
                 {link.label}

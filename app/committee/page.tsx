@@ -353,12 +353,6 @@ const committeeMembers: CommitteeMember[] = [
 ];
 
 // Corrected: Renamed original 'categories' to 'expertiseCategories' here as well
-const getExpertiseCategoryStyle = () => {
-  // Use lighter gray and smaller font for content text
-  return 'text-gray-600 text-[11px]';
-};
-
-// Helper to get a consistent color for Working Group tags
 const getWorkingGroupStyle = () => {
   // Use lighter gray and smaller font for content text
   return 'text-gray-600 text-[11px]';
@@ -527,40 +521,38 @@ export default function Committee() {
         {filteredAndSortedMembers.length > 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredAndSortedMembers.map((member) => (
-              <div key={member.id} className="bg-white rounded-xl shadow-2xl overflow-hidden flex flex-col">
+              <div key={member.id} className="bg-[#003D66] rounded-xl shadow-2xl overflow-hidden flex flex-col">
                 <div className="p-6 flex-grow">
                   {member.image ? (
-                    <div className="mx-auto mb-6 h-40 w-40 relative rounded-full overflow-hidden shadow-lg ring-4 ring-blue-500 ring-opacity-50">
+                    <div className="mx-auto mb-6 h-40 w-40 relative rounded-full overflow-hidden shadow-lg ring-4 ring-white ring-opacity-50">
                       <Image src={member.image} alt={member.name} fill sizes="160px" className="object-cover" />
                     </div>
                   ) : (
-                    <div className="mx-auto mb-6 h-40 w-40 relative rounded-full overflow-hidden shadow-lg ring-4 ring-blue-500 ring-opacity-50 bg-gray-100 flex items-center justify-center">
+                    <div className="mx-auto mb-6 h-40 w-40 relative rounded-full overflow-hidden shadow-lg ring-4 ring-white ring-opacity-50 bg-gray-100 flex items-center justify-center">
                       <span className="text-4xl font-bold text-gray-400">
                         {member.name
-                          .replace(/^(Dr\.|Prof\.|Prof\. Dr\.)\s+/i, '')  // Remove titles at the start
+                          .replace(/^(Dr\.|Prof\.|Prof\. Dr\.)\s+/i, '')
                           .split(' ')
                           .map(word => word[0])
                           .join('')}
                       </span>
                     </div>
                   )}
-                  <h2 className="text-2xl font-bold text-gray-900 text-center">{member.name}</h2>
-                  <p className="text-center text-blue-600 font-medium">{member.title}</p>
-                  <p className="text-center text-sm text-gray-500 mb-4">{member.affiliation}</p>
+                  <h2 className="text-2xl font-bold text-white text-center">{member.name}</h2>
+                  <p className="text-center text-gray-200 font-medium">{member.title}</p>
+                  <p className="text-center text-sm text-gray-300 mb-4">{member.affiliation}</p>
                   
                   {member.bio && member.bio !== 'To be updated' && (
-                    <p className="text-sm text-gray-700 mb-4 leading-relaxed
-                    bg-slate-50 p-3 rounded-md
-                    ">{member.bio}</p>
+                    <p className="text-sm text-gray-200 mb-4 leading-relaxed bg-[#002D4D] p-3 rounded-md">{member.bio}</p>
                   )}
 
                   {/* Display Working Groups */}
                   {member.workingGroups.length > 0 && (
                     <div className="mb-4">
-                      <h4 className="text-xs font-bold text-gray-900 uppercase tracking-wider mb-1">Working Groups:</h4>
+                      <h4 className="text-xs font-bold text-white uppercase tracking-wider mb-1">Working Groups:</h4>
                       <div className="flex flex-wrap gap-2">
                         {member.workingGroups.map(wg => (
-                          <span key={wg} className={`px-2.5 py-1 text-xs font-semibold rounded-full ${getWorkingGroupStyle()}`}>
+                          <span key={wg} className="px-2.5 py-1 text-xs font-semibold rounded-full bg-gray-300 text-gray-800">
                             {wg}
                           </span>
                         ))}
@@ -570,17 +562,16 @@ export default function Committee() {
 
                   {/* Display Expertise Categories */}
                   <div>
-                    <h4 className="text-xs font-bold text-gray-900 uppercase tracking-wider mb-1">Expertise:</h4>
+                    <h4 className="text-xs font-bold text-white uppercase tracking-wider mb-1">Expertise:</h4>
                     <div className="flex flex-wrap gap-2">
                       {member.categories.map(category => (
-                        <span key={category} className={`px-2.5 py-1 text-xs font-semibold rounded-full ${getExpertiseCategoryStyle()}`}>
+                        <span key={category} className="px-2.5 py-1 text-xs font-semibold rounded-full bg-gray-300 text-gray-800">
                           {category}
                         </span>
                       ))}
                     </div>
                   </div>
                 </div>
-                {/* Optional: Add a footer to card if needed */}
               </div>
             ))}
           </div>
