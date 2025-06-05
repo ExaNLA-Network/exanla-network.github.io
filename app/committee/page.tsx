@@ -113,11 +113,11 @@ const committeeMembers: CommitteeMember[] = [
   },
   {
     id: 'alfredo.correa',
-    name: 'Dr. Alfredo Correa',
-    title: 'Staff Scientist, Group Leader',
+    name: 'Dr. Alfredo A. Correa',
+    title: 'Group Leader, Quantum Simulations Group, Physics Division',
     affiliation: 'Lawrence Livermore National Laboratory, USA',
-    //bio: 'To be updated',
-    //image: '/committee/avatar/alfredo.correa.jpg',
+    bio: 'Alfredo A. Correa is a Staff Scientist at Lawrence Livermore National Laboratory. His research focuses on the application, theoretical development, and software engineering of first-principles methods. These methods are used to describe matter under extreme conditions, including equations of state, as well as non-equilibrium and non-adiabatic coupled electron-ion quantum dynamics. Alfredo earned his Bachelor’s degree in Physics from the Balseiro Institute in Argentina and completed his Ph.D. in Physics at the University of California, Berkeley, in 2008. Following a postdoctoral position at Stanford University, he joined the Physics Division at Lawrence Livermore National Laboratory (LLNL) as a Lawrence Fellow in 2009. Since 2022, Alfredo has served as the Group Leader of the Quantum Simulations Group at LLNL. Alfredo is currently Thrust Leader, Software Manager at the “Center for Non-Perturbative Studies of Functional Materials under Non-Equilibrium Conditions” where he develops code for massively parallel MPI-interconnected GPU-based computers. He is a member of the C++ Standards Committee and a contributor to the MPI Forum.',
+    image: '/committee/avatar/alfredo.correa.jpg',
     categories: [expertiseCategories.NUMERICAL_LINEAR_ALGEBRA, expertiseCategories.HPC, expertiseCategories.ALGORITHM_DEVELOPMENT, expertiseCategories.APPLIED_MATHEMATICS, expertiseCategories.SCIENTIFIC_COMPUTING, expertiseCategories.SOFTWARE_DEVELOPMENT, expertiseCategories.PARALLEL_PROGRAMMING, expertiseCategories.INTERFACE_DEVELOPMENT],
     workingGroups: [WorkingGroups.PERFORMANCE_PARALLELIZATION, WorkingGroups.NLA_INTERFACE],
   },
@@ -389,6 +389,34 @@ const getFamilyNameForSort = (name: string, id: string): string => {
   return lastNameCandidate.toLowerCase();
 };
 
+// Add ReadMore component
+interface ReadMoreProps {
+  text: string;
+  maxLength?: number;
+}
+
+const ReadMore: React.FC<ReadMoreProps> = ({ text, maxLength = 300 }) => {
+  const [isExpanded, setIsExpanded] = useState(false);
+  
+  if (text.length <= maxLength) {
+    return <p className="text-sm text-gray-200 mb-4 leading-relaxed bg-[#002D4D] p-3 rounded-md">{text}</p>;
+  }
+
+  return (
+    <div className="text-sm text-gray-200 mb-4 leading-relaxed bg-[#002D4D] p-3 rounded-md">
+      <p className={isExpanded ? '' : 'line-clamp-5'}>
+        {text}
+      </p>
+      <button
+        onClick={() => setIsExpanded(!isExpanded)}
+        className="text-blue-400 hover:text-blue-300 font-medium mt-2 focus:outline-none"
+      >
+        {isExpanded ? 'Show Less' : 'Read More'}
+      </button>
+    </div>
+  );
+};
+
 export default function Committee() {
   const [selectedWorkingGroups, setSelectedWorkingGroups] = useState<WorkingGroupValue[]>([]);
   const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('asc');
@@ -543,7 +571,7 @@ export default function Committee() {
                   <p className="text-center text-sm text-gray-300 mb-4">{member.affiliation}</p>
                   
                   {member.bio && member.bio !== 'To be updated' && (
-                    <p className="text-sm text-gray-200 mb-4 leading-relaxed bg-[#002D4D] p-3 rounded-md">{member.bio}</p>
+                    <ReadMore text={member.bio} />
                   )}
 
                   {/* Display Working Groups */}
