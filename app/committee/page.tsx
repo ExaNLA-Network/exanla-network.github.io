@@ -87,7 +87,7 @@ const committeeMembers: CommitteeMember[] = [
     title: 'Professor, Director',
     affiliation: 'Umeå University, Sweden',
     //bio: 'To be updated',
-    //image: '/committee/avatar/paolo.bientinesi.jpg',
+    image: '/committee/avatar/paolo.bientinesi.jpg',
     categories: [expertiseCategories.NUMERICAL_LINEAR_ALGEBRA, expertiseCategories.HPC, expertiseCategories.ALGORITHM_DEVELOPMENT, expertiseCategories.PARALLEL_PROGRAMMING, expertiseCategories.AUTOMATION],
     workingGroups: [WorkingGroups.APPLICATION_FUNCTIONALITY, WorkingGroups.NLA_INTERFACE],
   },
