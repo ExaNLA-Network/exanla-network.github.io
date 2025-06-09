@@ -22,7 +22,7 @@ export interface Library {
   license: string;
   website: string;
   repository: string;
-  logo: string;
+  logo?: string;
   categories: LibraryCategoryValue[];
 }
 
@@ -84,6 +84,34 @@ export const libraries: Library[] = [
       libraryCategories.QUASI_HERMITIAN_SYMMETRIC,
       libraryCategories.GPU_ACCELERATION,
       libraryCategories.SUBSPACE_ITERATION,
+      libraryCategories.DISTRIBUTED_MEMORY
+    ],
+  },
+  {
+    id: 'starneig',
+    name: 'StarNEig',
+    description: 'A task-based library for solving dense nonsymmetric eigenvalue problems, featuring GPU acceleration and distributed memory support.',
+    features: [
+      'Dense nonsymmetric eigenvalue problems',
+      'Task-based parallelism with StarPU runtime system',
+      'Support for both shared and distributed memory systems',
+      'GPU acceleration with CUDA support',
+      'Complete implementation of Hessenberg reduction',
+      'Complete implementation of Schur reduction (QR/QZ algorithm)',
+      'Eigenvalue reordering and deflating subspaces',
+      'Computation of eigenvectors',
+      'Integration with LAPACK and ScaLAPACK',
+      'Support only real arithmetic'
+    ],
+    language: 'C',
+    license: 'BSD-3',
+    website: 'https://nlafet.github.io/StarNEig/',
+    repository: 'https://github.com/NLAFET/StarNEig',
+    categories: [
+      libraryCategories.DENSE_LINEAR_ALGEBRA,
+      libraryCategories.EIGENVALUE_PROBLEMS,
+      libraryCategories.HIGH_PERFORMANCE_COMPUTING,
+      libraryCategories.GPU_ACCELERATION,
       libraryCategories.DISTRIBUTED_MEMORY
     ],
   }

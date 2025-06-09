@@ -99,16 +99,22 @@ export default function LibrariesPage() {
             <div className="p-6 sm:p-8">
               <div className="flex flex-col md:flex-row gap-8">
                 {/* Logo and Website Section */}
-                <div className="flex flex-col items-center md:w-48">
-                  <div className="w-32 h-32 relative mb-4">
-                    <Image
-                      src={library.logo}
-                      alt={`${library.name} logo`}
-                      fill
-                      className="object-contain"
-                    />
+                <div className="flex flex-col items-center md:w-48 flex-shrink-0">
+                  <div className="w-32 h-20 relative mb-4 flex-shrink-0">
+                    {library.logo ? (
+                      <Image
+                        src={library.logo}
+                        alt={`${library.name} logo`}
+                        fill
+                        className="object-contain"
+                      />
+                    ) : (
+                      <div className="w-32 h-20 flex items-center justify-center bg-white rounded-lg">
+                        <span className="text-2xl font-bold text-[#003D66] px-4 text-center">{library.name}</span>
+                      </div>
+                    )}
                   </div>
-                  <div className="flex flex-col gap-2">
+                  <div className="flex flex-col gap-2 w-full">
                     <a 
                       href={library.website}
                       target="_blank"
