@@ -188,7 +188,7 @@ const committeeMembers: CommitteeMember[] = [
     affiliation: 'Institut de Ciencia de Materials de Barcelona (ICMAB-CSIC), Spain',
     //bio: 'A physicist with a wide experience in the development of ab-initio simulation methods and their applications in physics, materials science, and geophysics. One of the maintainers of the SIESTA code (http://siesta-project.org/siesta), and participant in international initiatives in scientific data management and computational frameworks.',
     //image: '/committee/avatar/alberto.garcia.jpg',
-    categories: [expertiseCategories.SCIENTIFIC_COMPUTING],
+    categories: [expertiseCategories.SCIENTIFIC_COMPUTING,expertiseCategories.SOFTWARE_DEVELOPMENT],
     workingGroups: [WorkingGroups.APPLICATION_FUNCTIONALITY],
   },
   {

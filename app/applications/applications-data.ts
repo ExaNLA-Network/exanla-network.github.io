@@ -1,4 +1,4 @@
-// Define Application Categories
+// Define Application CategoriesA
 export const applicationCategories = {
   COMPUTATIONAL_CHEMISTRY: "Computational Chemistry",
   MATERIALS_SCIENCE: "Materials Science",
@@ -38,6 +38,20 @@ export const applications: Application[] = [
     logo: '/applications/logo/logo-quantumespresso_10.jpg',
     website: 'https://www.quantum-espresso.org/',
     repository: 'https://github.com/QEF/q-e',
+    categories: [applicationCategories.COMPUTATIONAL_CHEMISTRY, applicationCategories.MATERIALS_SCIENCE, applicationCategories.PHYSICS_SIMULATION, applicationCategories.HIGH_PERFORMANCE_COMPUTING],
+  },
+    {
+    id: 'siesta',
+    title: 'SIESTA',
+    description: 'A DFT code using localized atomic orbitals and pseudopotentials',
+    content: `SIESTA is both a method and its computer program implementation, to perform efficient electronic structure calculations and ab initio molecular dynamics simulations of molecules and solids. SIESTA's efficiency stems from the use of a basis set of strictly-localized atomic orbitals. A very important feature of the code is that its accuracy and cost can be tuned in a wide range, from quick exploratory calculations to highly accurate simulations matching the quality of other approaches, such as plane-wave methods.
+
+The possibility of treating large systems with some first-principles electronic-structure methods has opened up new opportunities in many disciplines. The SIESTA program is open source and has become quite popular, being increasingly used by researchers in geosciences, biology, and engineering (apart from those in its natural habitat of materials physics and chemistry). Currently there are several thousand users all over the world, and the paper describing the method (J. Phys. Cond. Matt. 14, 2745 (2002)) has received more than 11,000 citations so far.
+
+SIESTA includes the TranSIESTA module, which provides the ability to model open-boundary systems where ballistic electron transport is taking place. Using TranSIESTA one can compute electronic transport properties, such as the zero-bias conductance and the I-V characteristic, of a nanoscale system in contact with two electrodes at different electrochemical potentials.`,
+    logo: '/applications/logo/SIESTA-logo-233x125.png',
+    website: 'https://siesta-project.org/',
+    repository: 'https://gitlab.com/siesta-project/siesta',
     categories: [applicationCategories.COMPUTATIONAL_CHEMISTRY, applicationCategories.MATERIALS_SCIENCE, applicationCategories.PHYSICS_SIMULATION, applicationCategories.HIGH_PERFORMANCE_COMPUTING],
   },
   {
