@@ -4,6 +4,7 @@ export const applicationCategories = {
   MATERIALS_SCIENCE: "Materials Science",
   PHYSICS_SIMULATION: "Physics Simulation",
   HIGH_PERFORMANCE_COMPUTING: "High-Performance Computing",
+  BIOPHYSICS: "Biophysics",
 } as const;
 
 export type ApplicationCategoryValue = typeof applicationCategories[keyof typeof applicationCategories];
