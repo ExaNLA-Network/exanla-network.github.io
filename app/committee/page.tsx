@@ -188,7 +188,7 @@ const committeeMembers: CommitteeMember[] = [
     affiliation: 'Institut de Ciencia de Materials de Barcelona (ICMAB-CSIC), Spain',
     //bio: 'A physicist with a wide experience in the development of ab-initio simulation methods and their applications in physics, materials science, and geophysics. One of the maintainers of the SIESTA code (http://siesta-project.org/siesta), and participant in international initiatives in scientific data management and computational frameworks.',
     //image: '/committee/avatar/alberto.garcia.jpg',
-    categories: [expertiseCategories.SCIENTIFIC_COMPUTING],
+    categories: [expertiseCategories.SCIENTIFIC_COMPUTING,expertiseCategories.SOFTWARE_DEVELOPMENT],
     workingGroups: [WorkingGroups.APPLICATION_FUNCTIONALITY],
   },
   {
@@ -255,7 +255,7 @@ const committeeMembers: CommitteeMember[] = [
     name: 'Dr. Hemanth Kolla',
     title: 'Principal Member of Technical Staff',
     affiliation: 'Sandia National Laboratories, USA',
-    bio: 'Hemanth Kolla has a primary research interest is in HPC for multi-physics turbulent flows. He has 15 years of research experise spanning HPC fault-tolerance, tensor decompositions, scalable algorithms, and programming models.',
+    bio: 'Hemanth Kolla has a primary research interest in HPC for multi-physics turbulent flows. He has 15 years of research expertise spanning HPC fault-tolerance, tensor decompositions, scalable algorithms, and programming models.',
     image: '/committee/avatar/hemanth.kolla.jpg',
     categories: [expertiseCategories.HPC, expertiseCategories.ALGORITHM_DEVELOPMENT, expertiseCategories.PARALLEL_PROGRAMMING, expertiseCategories.APPLIED_MATHEMATICS, expertiseCategories.SCIENTIFIC_COMPUTING],
     workingGroups: [WorkingGroups.PERFORMANCE_PARALLELIZATION],
