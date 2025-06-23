@@ -42,7 +42,7 @@ export const applications: Application[] = [
     • Excited state and time-dependent electronic structure
       calculations with RPA/Casida, Ehrenfest and time-dependent
       perturbation theory      
-    
+
     See J. Phys. Chem. A 129, 5373 (2025) for recent functionality
     additions and capabilities.
 
