@@ -24,34 +24,42 @@ export const applications: Application[] = [
   {
     id: 'dftbplus',
     title: 'DFTB+',    
-    description: 'DFTB+ is a fast and versatile quantum mechanical
-    simulation software package',
+    description: 'DFTB+ is a fast and versatile quantum mechanical simulation software package',
     content: `Using DFTB+ you can carry out atomistic quantum
     mechanical simulations that are similar to density functional
     theory but in an approximate way, using the DFTB and xTB families
     of semi-empirical models.  DFTB+ is typically around two orders of
     magnitude faster than DFT, but can perform similar types of
     calculations, which include:
-    - Ground state calculations for solids and molecules, for either
+
+    • Ground state calculations for solids and molecules, for either
       static structures or with molecular dynamics
-    - Open boundary quantum transport of electrons or phonons using
-      non-equilibrium Green\'s functions
-    - Excited state and time-dependent electronic structure
+
+    • Open boundary quantum transport of electrons or phonons using
+      non-equilibrium Green's functions
+
+    • Excited state and time-dependent electronic structure
       calculations with RPA/Casida, Ehrenfest and time-dependent
       perturbation theory      
+    
     See J. Phys. Chem. A 129, 5373 (2025) for recent functionality
     additions and capabilities.
 
-`   Key numerical linear algebra aspects of DFTB+:
-    - Parallel eigenvalue or direct density matrix solvers for ground
+    Key numerical linear algebra aspects of DFTB+:
+
+    • Parallel eigenvalue or direct density matrix solvers for ground
       state calculations (provided by external libraries)
-    - Sparse internal Hamiltonian and single particle density matrix
+
+    • Sparse internal Hamiltonian and single particle density matrix
       storage    
-    - Complex valued linear algebra operations for Green\'s function
+
+    • Complex valued linear algebra operations for Green's function
       methods
-    - Parallel GEMM and matrix inversion operations for real-time
+
+    • Parallel GEMM and matrix inversion operations for real-time
       electronic dynamics
-    - Iterative eigensolvers for excited state calculations
+
+    • Iterative eigensolvers for excited state calculations
 
     You can use DFTB+ either as a standalone application or embed it
     into other academic or commercial simulation packages as a
