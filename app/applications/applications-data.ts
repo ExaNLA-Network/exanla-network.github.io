@@ -4,6 +4,7 @@ export const applicationCategories = {
   MATERIALS_SCIENCE: "Materials Science",
   PHYSICS_SIMULATION: "Physics Simulation",
   HIGH_PERFORMANCE_COMPUTING: "High-Performance Computing",
+  BIOPHYSICS: "Biophysics",
 } as const;
 
 export type ApplicationCategoryValue = typeof applicationCategories[keyof typeof applicationCategories];
@@ -124,5 +125,33 @@ SIESTA includes the TranSIESTA module, which provides the ability to model open-
     website: 'https://www.yambo-code.eu/',
     repository: 'https://github.com/yambo-code/yambo',
     categories: [applicationCategories.MATERIALS_SCIENCE, applicationCategories.PHYSICS_SIMULATION, applicationCategories.HIGH_PERFORMANCE_COMPUTING],
-  }
+  },
+  {
+  id: 'bigdft',
+  title: 'BigDFT',
+  description: 'A wavelet-based DFT code supporting both cubic and linear scaling methods, combining wavelet convolutions with advanced solvers for sparse and dense linear algebra',
+  content: `BigDFT is a pseudopotential electronic structure code based on Daubechies wavelets, offering a flexible, systematically convergent basis set with minimal numerical noise. It supports both standard cubic-scaling DFT and a fully featured linear-scaling mode, enabling large-scale quantum simulations for materials, biological systems, and nanostructures.
+In its linear-scaling mode, BigDFT leverages the sparsity of the underlying wavelet-based representation to directly compute the density matrix using matrix function expansions. This approach enables simulations with thousands of atoms with controlled accuracy and efficiency.
+
+  Key numerical linear algebra aspects:
+  - Dense eigensolvers for traditional cubic-scaling Kohn–Sham calculations
+  - Sparse matrix function evaluations using Chebyshev polynomial expansion (via the CheSS library)
+  - Support for distributed sparse matrix operations and density matrix construction via NTPoly library
+  - Direct computation of the density matrix without diagonalization in linear-scaling mode
+  - Use of localized support functions leading to sparse Hamiltonian and overlap matrices
+  - Scalable parallel algorithms for both dense and sparse regimes
+
+  The Poisson solver in BigDFT is designed to efficiently compute the electrostatic potential on a real space grid representation with flexible boundary conditions (free, periodic, slab, wire). It has been accelerated in different heterogeneous architectures and supports various backends for exascale readiness.
+
+  BigDFT's hybrid capabilities—combining precision, adaptivity, and scalability—make it a versatile platform for modern high-performance and exascale computing environments.`,
+  logo: '/applications/logo/bigdft_logo.png',
+  website: 'https://www.bigdft.org/',
+  repository: 'https://gitlab.com/l_sim/bigdft-suite',
+  categories: [
+    applicationCategories.MATERIALS_SCIENCE,
+    applicationCategories.COMPUTATIONAL_CHEMISTRY,
+    applicationCategories.BIOPHYSICS,
+    applicationCategories.HIGH_PERFORMANCE_COMPUTING,
+  ],
+ }
 ]; 
