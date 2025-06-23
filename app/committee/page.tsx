@@ -325,7 +325,7 @@ const committeeMembers: CommitteeMember[] = [
     name: 'Dr. Raffaele Solcà',
     title: 'Research Software Engineer',
     affiliation: 'ETH Zurich, CSCS, Switzerland',
-    bio: 'Raffaele Solcà obtained a Phd in physics at ETH Zurich in 2016. His interests are in linear algebra, in particular in GPU implementations. He made key contributions to the eigensolvers within the MAGMA library, and currently leads the development of the DLA-Future library.'
+    bio: 'Raffaele Solcà obtained a Phd in physics at ETH Zurich in 2016. His interests are in linear algebra, in particular in GPU implementations. He made key contributions to the eigensolvers within the MAGMA library, and currently leads the development of the DLA-Future library.',
     image: '/committee/avatar/raffaele.solca.jpg',
     categories: [expertiseCategories.NUMERICAL_LINEAR_ALGEBRA, expertiseCategories.HPC, expertiseCategories.SOFTWARE_DEVELOPMENT, expertiseCategories.PARALLEL_PROGRAMMING],
     workingGroups: [WorkingGroups.PERFORMANCE_PARALLELIZATION],
