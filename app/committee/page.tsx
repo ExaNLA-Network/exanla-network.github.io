@@ -202,13 +202,13 @@ const committeeMembers: CommitteeMember[] = [
     workingGroups: [WorkingGroups.APPLICATION_FUNCTIONALITY, WorkingGroups.NLA_INTERFACE],
   },
   {
-    id: 'andras.herten',
+    id: 'andreas.herten',
     name: 'Dr. Andreas Herten',
     title: 'Joint-head of Division Novel System Architecture Design',
     affiliation: 'Jülich Supercomputing Centre, FZJ, Germany',
-    //bio: 'To be updated',
-    //image: '/committee/avatar/andreas.herten.jpg',
-    categories: [expertiseCategories.HPC, expertiseCategories.LOW_LEVEL_OPTIMIZATION, expertiseCategories.PARALLEL_PROGRAMMING, expertiseCategories.AI],
+    bio: 'Andreas researches accelerators in High-Performance Computing in the intersection between users and vendors, optimizing applications for the respective devices - especially GPUs. He is a joint-lead of the Novel System Architecture Division and heads the Accelerating Devices Lab.',
+    image: '/committee/avatar/andreas.herten.jpg',
+    categories: [expertiseCategories.HPC, expertiseCategories.LOW_LEVEL_OPTIMIZATION, expertiseCategories.PARALLEL_PROGRAMMING, expertiseCategories.SOFTWARE_DEVELOPMENT, expertiseCategories.AUTOMATION, expertiseCategories.AI],
     workingGroups: [WorkingGroups.PERFORMANCE_PARALLELIZATION],
   },
   {
