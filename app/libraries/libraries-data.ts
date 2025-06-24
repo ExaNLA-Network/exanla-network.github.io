@@ -122,5 +122,71 @@ export const libraries: Library[] = [
       libraryCategories.GPU_ACCELERATION,
       libraryCategories.DISTRIBUTED_MEMORY
     ],
+  },
+  {
+    id: 'dla-future',
+    name: 'DLA-Future',
+    description: 'A distributed linear algebra library implemented using C++ std::execution. It provides an asynchronous C++ interface, a synchronous C interface, and a synchronous ScaLAPACK-like C interface.',
+    features: [
+      'Dense Symmetric/Hermitian eigenproblems',
+      'Dense Symmetric/Hermitian generalized eigenproblems',
+      'Cholesky factorization and inverse of positive definite matrices',
+      'Highly efficient parallel implementation',
+      'Integration with vendor libraries (MKL, cuBLAS, rocBLAS, etc.)',
+      'Modern C++ design with C++ standard task-based parallelism (std::execution)',
+      'Multi-core systems support',
+      'NVIDIA GPU acceleration support',
+      'AMD GPU acceleration support',
+      'Multi-node and multi-GPU support through MPI',
+      'Real or complex arithmetic, with single or double precision',
+      'Installable with Spack'
+    ],
+    language: 'C++',
+    license: 'BSD-3',
+    website: 'https://github.com/eth-cscs/DLA-Future',
+    repository: 'https://github.com/eth-cscs/DLA-Future',
+    logo: '',
+    categories: [
+      libraryCategories.DENSE_LINEAR_ALGEBRA,
+      libraryCategories.EIGENVALUE_PROBLEMS,
+      libraryCategories.SINGULAR_VALUE_PROBLEMS,
+      libraryCategories.HIGH_PERFORMANCE_COMPUTING,
+      libraryCategories.HERMITIAN_SYMMETRIC,
+      libraryCategories.GPU_ACCELERATION,
+      libraryCategories.DISTRIBUTED_MEMORY
+    ],
+  },
+  {
+    id: 'dla-future-fortran',
+    name: 'DLA-Future-Fortran',
+    description: 'Fortran wrappers for DLA Future.',
+    features: [
+      'Dense Symmetric/Hermitian eigenproblems',
+      'Dense Symmetric/Hermitian generalized eigenproblems',
+      'Cholesky factorization and inverse of positive definite matrices',
+      'Highly efficient parallel implementation',
+      'Integration with vendor libraries (MKL, cuBLAS, rocBLAS, etc.)',
+      'Modern C++ design with C++ standard task-based parallelism (std::execution)',
+      'Multi-core systems support',
+      'NVIDIA GPU acceleration support',
+      'AMD GPU acceleration support',
+      'Multi-node and multi-GPU support through MPI',
+      'Real or complex arithmetic, with single or double precision',
+      'Installable with Spack'
+    ],
+    language: 'Fortran',
+    license: 'BSD-3',
+    website: 'https://eth-cscs.github.io/DLA-Future-Fortran/main',
+    repository: 'https://github.com/eth-cscs/DLA-Future-Fortran',
+    logo: '',
+    categories: [
+      libraryCategories.DENSE_LINEAR_ALGEBRA,
+      libraryCategories.EIGENVALUE_PROBLEMS,
+      libraryCategories.SINGULAR_VALUE_PROBLEMS,
+      libraryCategories.HIGH_PERFORMANCE_COMPUTING,
+      libraryCategories.HERMITIAN_SYMMETRIC,
+      libraryCategories.GPU_ACCELERATION,
+      libraryCategories.DISTRIBUTED_MEMORY
+    ],
   }
 ]; 
