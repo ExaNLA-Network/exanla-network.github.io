@@ -208,7 +208,7 @@ const committeeMembers: CommitteeMember[] = [
     affiliation: 'Jülich Supercomputing Centre, FZJ, Germany',
     //bio: 'To be updated',
     //image: '/committee/avatar/andreas.herten.jpg',
-    categories: [expertiseCategories.HPC, expertiseCategories.LOW_LEVEL_OPTIMIZATION, expertiseCategories.PARALLEL_PROGRAMMING],
+    categories: [expertiseCategories.HPC, expertiseCategories.LOW_LEVEL_OPTIMIZATION, expertiseCategories.PARALLEL_PROGRAMMING, expertiseCategories.AI],
     workingGroups: [WorkingGroups.PERFORMANCE_PARALLELIZATION],
   },
   {
@@ -216,9 +216,9 @@ const committeeMembers: CommitteeMember[] = [
     name: 'Dr. Ben Hourahine',
     title: 'Senior Lecturer',
     affiliation: 'University of Strathclyde, UK',
-    //bio: 'To be updated',
-    //image: '/committee/avatar/ben.hourahine.jpg',
-    categories: [expertiseCategories.SCIENTIFIC_COMPUTING, expertiseCategories.SOFTWARE_DEVELOPMENT, expertiseCategories.PARALLEL_PROGRAMMING],
+    bio: '25+ years of experience in HPC, materials modeling and method development, including founding developer of the DFTB+ project and various computational physics projects including a high-precision semi-analytical electromagnetic solver, Monte Carlo tools for simulating crystal growth and machine learning for semi-empirical electronic structure and scanning electron microscopy.',
+    image: '/committee/avatar/ben.hourahine.jpg',
+    categories: [expertiseCategories.SCIENTIFIC_COMPUTING, expertiseCategories.SOFTWARE_DEVELOPMENT, expertiseCategories.PARALLEL_PROGRAMMING, expertiseCategories.ELECTRONIC_STRUCTURE_THEORY ],
     workingGroups: [WorkingGroups.PERFORMANCE_PARALLELIZATION, WorkingGroups.APPLICATION_FUNCTIONALITY],
   },
   {
