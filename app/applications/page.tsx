@@ -84,6 +84,18 @@ export default function ApplicationsPage() {
                           {paragraph.trim()}
                         </p>
                       ))}
+                      <h3 className="text-lg font-medium text-white mb-2">Key Linear Algebra Components</h3>
+                      <ul className="list-disc list-inside text-gray-200 space-y-1 mb-4">
+                        {application.key_linalg_components.map((component, index) => (
+                          <li key={index}>{component}</li>
+                        ))}
+                      </ul>
+                      
+                      {application.additional_linalg_info && (
+                        <p className="text-gray-200 mb-4">
+                          {application.additional_linalg_info}
+                        </p>
+                      )}                      
                     </div>
                   </div>
                 </div>
