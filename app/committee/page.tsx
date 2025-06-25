@@ -246,7 +246,7 @@ const committeeMembers: CommitteeMember[] = [
     title: 'Group leader of Algorithm, Tools and Methods Lab: Numerical and Statistical Methods',
     affiliation: 'Jülich Supercomputing Centre, FZJ, Germany & Medical Engineering and Technomathematics, University of Applied Sciences Aachen, Germany',
     bio: 'Andreas Kleefeld works on boundary integral equations, non-linear eigenvalue problems, acoustic and electromagnetic scattering problems as well as inverse problems',
-    image: '/committee/avatar/andreas.kleefeld.jpg',
+    image: '/committee/avatar/andreas.kleefeld.png',
     categories: [expertiseCategories.NUMERICAL_LINEAR_ALGEBRA, expertiseCategories.ALGORITHM_DEVELOPMENT, expertiseCategories.APPLIED_MATHEMATICS],
     workingGroups: [WorkingGroups.NLA_INTERFACE],
   },
