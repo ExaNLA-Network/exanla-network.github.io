@@ -153,5 +153,60 @@ In its linear-scaling mode, BigDFT leverages the sparsity of the underlying wave
     applicationCategories.BIOPHYSICS,
     applicationCategories.HIGH_PERFORMANCE_COMPUTING,
   ],
- }
+ },
+  {
+    id: 'cp2k',
+    title: 'CP2K',
+    description: 'CP2K is a quantum chemistry and solid state physics software package that can perform atomistic simulations of solid state, liquid, molecular, periodic, material, crystal, and biological systems.',
+    content: `CP2K provides a general framework for different electronic structure methods (DFT, HF, MP2, RPA, GW, ...) and ab-initio or QM/MM molecular dynamics simulations using the mixed Gaussian/plane waves approaches GPW and GAPW.
+
+    Key numerical linear algebra components:
+
+    - Dense eigenvalue problems for electronic states calculation using ScaLAPACK, DLA-Future or ELPA
+
+    - Cholesky decomposition and inverse of positive definite matrices using ScaLAPACK or DLA-Future
+
+    - Dense matrix matrix multiplication using COSMA library
+
+    - Block sparse matrix matrix multiplication using DBCSR library`,
+
+    logo: '/applications/logo/logo-cp2k.png',
+    website: 'https://www.cp2k.org/',
+    repository: 'https://github.com/cp2k/cp2k/',
+    categories: [
+      applicationCategories.COMPUTATIONAL_CHEMISTRY,
+      applicationCategories.MATERIALS_SCIENCE,
+      applicationCategories.PHYSICS_SIMULATION,
+      applicationCategories.BIOPHYSICS,
+      applicationCategories.HIGH_PERFORMANCE_COMPUTING],
+  },
+  {
+    id: 'sirius',
+    title: 'SIRIUS',
+    description: 'SIRIUS is a domain specific library for electronic structure calculations. It implements pseudopotential plane wave (PP-PW) and full potential linearized augmented plane wave (FP-LAPW) methods.',
+    content: `The following functionalities are currently implemented in SIRIUS:
+
+    - (PP-PW) Norm-conserving, ultrasoft and PAW pseudopotentials, spin-orbit coupling, stress tensor, atomic forces, collinear and non-collinear magnetism
+
+    - (FP-LAPW) APW and LAPW basis sets with arbitrary number of local orbitals, ZORA and IORA approximations for valence states; full relativistic Dirac equation for core states, atomic forces, collinear and non-collinear magnetism
+
+    - Symmetrization of lattice-periodic functions and on-site matrices, generation of irreducible k-meshes
+
+    Key numerical linear algebra components:
+
+    - Distributed dense generalized eigenvalue problems for electronic states calculation using ScaLAPACK, DLA-Future or ELPA
+
+    - Custom optimized implementation for distributed tall and skinny matrix matrix multiplication.
+
+    - Non distributed matrix matrix multiplication and dense generalized eigenvalue problems using vendor BLAS and LAPACK (CPU and/or GPU) or MAGMA.`,
+
+    logo: '/applications/logo/logo-sirius.png',
+    website: 'https://github.com/electronic-structure/SIRIUS',
+    repository: 'https://github.com/electronic-structure/SIRIUS',
+    categories: [
+      applicationCategories.COMPUTATIONAL_CHEMISTRY,
+      applicationCategories.MATERIALS_SCIENCE,
+      applicationCategories.PHYSICS_SIMULATION,
+      applicationCategories.HIGH_PERFORMANCE_COMPUTING],
+  }
 ]; 
