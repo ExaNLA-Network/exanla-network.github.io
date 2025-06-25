@@ -55,6 +55,7 @@ export const applications: Application[] = [
     categories: [applicationCategories.COMPUTATIONAL_CHEMISTRY,
     applicationCategories.MATERIALS_SCIENCE,
     applicationCategories.PHYSICS_SIMULATION,
+    applicationCategories.BIOPHYSICS,
     applicationCategories.HIGH_PERFORMANCE_COMPUTING],
   },
   {
