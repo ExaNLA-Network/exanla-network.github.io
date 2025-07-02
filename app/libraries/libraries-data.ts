@@ -149,7 +149,6 @@ export const libraries: Library[] = [
     categories: [
       libraryCategories.DENSE_LINEAR_ALGEBRA,
       libraryCategories.EIGENVALUE_PROBLEMS,
-      libraryCategories.SINGULAR_VALUE_PROBLEMS,
       libraryCategories.HIGH_PERFORMANCE_COMPUTING,
       libraryCategories.HERMITIAN_SYMMETRIC,
       libraryCategories.GPU_ACCELERATION,
@@ -182,7 +181,6 @@ export const libraries: Library[] = [
     categories: [
       libraryCategories.DENSE_LINEAR_ALGEBRA,
       libraryCategories.EIGENVALUE_PROBLEMS,
-      libraryCategories.SINGULAR_VALUE_PROBLEMS,
       libraryCategories.HIGH_PERFORMANCE_COMPUTING,
       libraryCategories.HERMITIAN_SYMMETRIC,
       libraryCategories.GPU_ACCELERATION,
