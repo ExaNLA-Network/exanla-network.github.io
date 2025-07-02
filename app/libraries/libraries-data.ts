@@ -188,5 +188,33 @@ export const libraries: Library[] = [
       libraryCategories.GPU_ACCELERATION,
       libraryCategories.DISTRIBUTED_MEMORY
     ],
+  },
+  {
+    id: 'cosma',
+    name: 'COSMA',
+    description: 'COSMA is a parallel, high-performance, GPU-accelerated, communication-optimal matrix-matrix multiplication.',
+    features: [
+      'Dense matrix-matrix multiplication',
+      'Communication-optimal implementation',
+      'Highly efficient parallel implementation',
+      'Integration with vendor libraries (MKL, cuBLAS, rocBLAS, etc.)',
+      'Multi-core systems support',
+      'NVIDIA GPU acceleration support',
+      'AMD GPU acceleration support',
+      'Multi-node and multi-GPU support through MPI',
+      'Real or complex arithmetic, with single or double precision',
+      'Installable with Spack'
+    ],
+    language: 'C++',
+    license: 'BSD-3',
+    website: 'https://github.com/eth-cscs/COSMA',
+    repository: 'https://github.com/eth-cscs/COSMA',
+    logo: '/libraries/logo/cosma-logo.svg',
+    categories: [
+      libraryCategories.DENSE_LINEAR_ALGEBRA,
+      libraryCategories.HIGH_PERFORMANCE_COMPUTING,
+      libraryCategories.GPU_ACCELERATION,
+      libraryCategories.DISTRIBUTED_MEMORY
+    ],
   }
-]; 
+];
