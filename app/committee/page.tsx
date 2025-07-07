@@ -167,7 +167,7 @@ const committeeMembers: CommitteeMember[] = [
     title: 'Senior Researcher',
     affiliation: 'CNR, Istituto Nanoscienze, Italy',
     //bio: 'To be updated',
-    //image: '/committee/avatar/andrea.ferretti.jpg',
+    //image: '/committee/avatar/daniele.varsano.png',
     categories: [expertiseCategories.SCIENTIFIC_COMPUTING],
     workingGroups: [WorkingGroups.APPLICATION_FUNCTIONALITY],
   },
