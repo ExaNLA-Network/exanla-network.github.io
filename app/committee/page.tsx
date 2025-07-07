@@ -161,6 +161,16 @@ const committeeMembers: CommitteeMember[] = [
     categories: [expertiseCategories.SCIENTIFIC_COMPUTING],
     workingGroups: [WorkingGroups.APPLICATION_FUNCTIONALITY],
   },
+   {
+    id: 'daniele.varsano',
+    name: 'Dr. Daniele Varsano',
+    title: 'Senior Researcher',
+    affiliation: 'CNR, Istituto Nanoscienze, Italy',
+    //bio: 'To be updated',
+    //image: '/committee/avatar/andrea.ferretti.jpg',
+    categories: [expertiseCategories.SCIENTIFIC_COMPUTING],
+    workingGroups: [WorkingGroups.APPLICATION_FUNCTIONALITY],
+  },
   {
     id: 'takeshi.fukaya',
     name: 'Dr. Takeshi Fukaya',
