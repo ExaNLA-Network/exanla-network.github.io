@@ -84,9 +84,10 @@ export const applications: Application[] = [
 The possibility of treating large systems with first-principles electronic-structure methods, with relatively modest hardware,  has opened up new opportunities in many disciplines. 
 
 SIESTA includes the TranSIESTA module, which provides the ability to model open-boundary systems, such as those related to ballistic electron transport, or to electrochemistry.`,
-    key_linalg_components: ['Generalized eigenvalue solvers for Kohn–Sham equations',
-                            'Scalable parallel solvers and integration with PEXSI for large systems',
-                            'To be Updated..',
+    key_linalg_components: ['Distributed dense generalized eigenvalue solvers for Kohn–Sham equations',
+                            'Leverages ELSI for interfaces to additional solvers',
+                            'Scalable direct computation of the density matrix without diagonalization using PEXSI and NTPoly', 
+                            'Complex valued linear algebra operations for Green\'s function methods',
                             ],
     logo: '/applications/logo/SIESTA-logo-233x125.png',
     website: 'https://siesta-project.org/',
