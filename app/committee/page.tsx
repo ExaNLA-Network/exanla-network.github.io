@@ -166,7 +166,7 @@ const committeeMembers: CommitteeMember[] = [
     name: 'Dr. Daniele Varsano',
     title: 'Senior Researcher',
     affiliation: 'CNR, Istituto Nanoscienze, Italy',
-    //bio: 'Daniele Varsano's research focuses on the development and application of theoretical and computational methods to investigate the electronic and optical properties of materials relevant to optoelectronics, energy conversion and (bio)molecular systems. His work involves developing codes (Yambo code) for implementing new methodologies and optimizing performance in high-performance computing environments.',
+    bio: 'Daniele Varsano is a Senior Researcher at CNR Institute of Nanoscience in Modena (Italy). His research focuses methodological development and applications in electronic and optical properties of materials relevant to optoelectronics, energy conversion and bimolecular systems. He is a among the developers of the Yambo code.',
     image: '/committee/avatar/daniele_varsano.png',
     categories: [expertiseCategories.SCIENTIFIC_COMPUTING],
     workingGroups: [WorkingGroups.APPLICATION_FUNCTIONALITY],
