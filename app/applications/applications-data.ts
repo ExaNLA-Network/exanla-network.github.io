@@ -78,15 +78,16 @@ export const applications: Application[] = [
     {
     id: 'siesta',
     title: 'SIESTA',
-    description: 'A DFT code using localized atomic orbitals and pseudopotentials',
-    content: `SIESTA is both a method and its computer program implementation, to perform efficient electronic structure calculations and ab initio molecular dynamics simulations of molecules and solids. SIESTA's efficiency stems from the use of a basis set of strictly-localized atomic orbitals. A very important feature of the code is that its accuracy and cost can be tuned in a wide range, from quick exploratory calculations to highly accurate simulations matching the quality of other approaches, such as plane-wave methods.
+    description: 'A DFT code using a basis set of localized pseudo-atomic orbitals and pseudopotentials',
+    content: `SIESTA is both a method and its computer program implementation, to perform efficient electronic structure calculations and ab initio molecular dynamics simulations of molecules and solids. SIESTA's efficiency stems from the use of a basis set of strictly-localized pseudo-atomic orbitals. Atomic-like orbitals provide a low-cardinality basis set, when compared to other methods, and the strict localization brings sparsity characteristics that open the door to the use of low-complexity methods, such as the PEXSI solver. A very important feature of the code is that its accuracy and cost can be tuned in a wide range, from quick exploratory calculations to highly accurate simulations matching the quality of other approaches, such as plane-wave methods.
 
-The possibility of treating large systems with some first-principles electronic-structure methods has opened up new opportunities in many disciplines. The SIESTA program is open source and has become quite popular, being increasingly used by researchers in geosciences, biology, and engineering (apart from those in its natural habitat of materials physics and chemistry). Currently there are several thousand users all over the world, and the paper describing the method (J. Phys. Cond. Matt. 14, 2745 (2002)) has received more than 11,000 citations so far.
+The possibility of treating large systems with first-principles electronic-structure methods, with relatively modest hardware,  has opened up new opportunities in many disciplines. 
 
-SIESTA includes the TranSIESTA module, which provides the ability to model open-boundary systems where ballistic electron transport is taking place. Using TranSIESTA one can compute electronic transport properties, such as the zero-bias conductance and the I-V characteristic, of a nanoscale system in contact with two electrodes at different electrochemical potentials.`,
-    key_linalg_components: ['Generalized eigenvalue solvers for Kohn–Sham equations',
-                            'Scalable parallel solvers and integration with PEXSI for large systems',
-                            'To be Updated..',
+SIESTA includes the TranSIESTA module, which provides the ability to model open-boundary systems, such as those related to ballistic electron transport, or to electrochemistry.`,
+    key_linalg_components: ['Distributed dense generalized eigenvalue solvers for Kohn–Sham equations',
+                            'Leverages ELSI for interfaces to additional solvers',
+                            'Scalable direct computation of the density matrix without diagonalization using PEXSI and NTPoly', 
+                            'Complex valued linear algebra operations for Green\'s function methods',
                             ],
     logo: '/applications/logo/SIESTA-logo-233x125.png',
     website: 'https://siesta-project.org/',
