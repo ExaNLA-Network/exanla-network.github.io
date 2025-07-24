@@ -65,6 +65,7 @@ export const surveyData: SurveySection[] = [
             id: 'gen-symmetric-hermitian',
             title: 'Symmetric/Hermitian A, SPD B',
             type: 'section',
+            isSelectable: true,
             children: generalizedSymmetricData[0].questions
           }
         ]
