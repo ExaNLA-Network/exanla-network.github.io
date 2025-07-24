@@ -24,6 +24,7 @@ export default function Navbar() {
     { href: '/libraries', label: 'Libraries' },
     { href: '/applications', label: 'Applications' },
     { href: '/benchmarks', label: 'Benchmarks' },
+    { href: '/survey', label: 'Survey' },
     { href: '/roadmap', label: 'Roadmap' },
     { href: '/news', label: 'News' },
     { href: '/contact', label: 'Contact' },
