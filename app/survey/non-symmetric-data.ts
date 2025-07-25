@@ -37,32 +37,32 @@ export const nonSymmetricData: SurveySection[] = [
               'Don\'t know / Not applicable'
             ]
           },
-          {
-            id: 'non-sym-condition',
-            title: 'Matrix Condition Number',
-            type: 'multiple-choice',
-            content: 'What is the typical condition number of your matrix A?',
-            options: [
-              'Well-conditioned (< 10^3)',
-              'Moderately conditioned (10^3 - 10^6)',
-              'Ill-conditioned (10^6 - 10^9)',
-              'Very ill-conditioned (> 10^9)',
-              'Varies widely / Unknown'
-            ]
-          },
-          {
-            id: 'non-sym-eigenvector-conditioning',
-            title: 'Eigenvector Conditioning',
-            type: 'multiple-choice',
-            content: 'How well-conditioned are the eigenvectors of your matrix?',
-            options: [
-              'Well-conditioned (orthogonal or close to orthogonal)',
-              'Moderately conditioned',
-              'Poorly conditioned (close to defective)',
-              'Highly ill-conditioned or nearly defective',
-              'Unknown / Not applicable'
-            ]
-          },
+          //{
+          //  id: 'non-sym-condition',
+          //  title: 'Matrix Condition Number',
+          //  type: 'multiple-choice',
+          //  content: 'What is the typical condition number of your matrix A?',
+          //  options: [
+          //    'Well-conditioned (< 10^3)',
+          //    'Moderately conditioned (10^3 - 10^6)',
+          //    'Ill-conditioned (10^6 - 10^9)',
+          //    'Very ill-conditioned (> 10^9)',
+          //    'Varies widely / Unknown'
+          //  ]
+          //},
+          //{
+          //  id: 'non-sym-eigenvector-conditioning',
+          //  title: 'Eigenvector Conditioning',
+          //  type: 'multiple-choice',
+          //  content: 'How well-conditioned are the eigenvectors of your matrix?',
+          //  options: [
+          //    'Well-conditioned (orthogonal or close to orthogonal)',
+          //    'Moderately conditioned',
+          //    'Poorly conditioned (close to defective)',
+          //    'Highly ill-conditioned or nearly defective',
+          //    'Unknown / Not applicable'
+          //  ]
+          //},
           {
             id: 'non-sym-eigenvalue-distribution',
             title: 'Spectral Radius and Eigenvalue Distribution',
@@ -76,30 +76,30 @@ export const nonSymmetricData: SurveySection[] = [
               'Unknown / Not applicable'
             ]
           },
-          {
-            id: 'non-sym-defectiveness',
-            title: 'Defectiveness',
-            type: 'multiple-choice',
-            content: 'Does your matrix exhibit defective eigenvalues (non-diagonalizable blocks)?',
-            options: [
-              'No, matrix is diagonalizable',
-              'Occasionally, some eigenvalues are defective',
-              'Frequently, many eigenvalues are defective',
-              'Unknown / Not applicable'
-            ]
-          },
-          {
-            id: 'non-sym-pseudospectra-sensitivity',
-            title: 'Pseudospectra Sensitivity',
-            type: 'multiple-choice',
-            content: 'How sensitive are your matrix eigenvalues to perturbations (pseudospectral behavior)?',
-            options: [
-              'Low sensitivity (stable eigenvalues)',
-              'Moderate sensitivity',
-              'High sensitivity (eigenvalues highly sensitive to small perturbations)',
-              'Unknown / Not applicable'
-            ]
-          }
+          //{
+          //  id: 'non-sym-defectiveness',
+          //  title: 'Defectiveness',
+          //  type: 'multiple-choice',
+          //  content: 'Does your matrix exhibit defective eigenvalues (non-diagonalizable blocks)?',
+          //  options: [
+          //    'No, matrix is diagonalizable',
+          //    'Occasionally, some eigenvalues are defective',
+          //    'Frequently, many eigenvalues are defective',
+          //    'Unknown / Not applicable'
+          //  ]
+          //},
+          //{
+          //  id: 'non-sym-pseudospectra-sensitivity',
+          //  title: 'Pseudospectra Sensitivity',
+          //  type: 'multiple-choice',
+          //  content: 'How sensitive are your matrix eigenvalues to perturbations (pseudospectral behavior)?',
+          //  options: [
+          //    'Low sensitivity (stable eigenvalues)',
+          //    'Moderate sensitivity',
+          //    'High sensitivity (eigenvalues highly sensitive to small perturbations)',
+          //    'Unknown / Not applicable'
+          //  ]
+          //},
         ]
       },
       {
@@ -186,7 +186,7 @@ export const nonSymmetricData: SurveySection[] = [
       },
       {
         id: 'non-sym-nla-libraries',
-        title: 'NLA Library Usage',
+        title: 'Distributed-Memory NLA Library Usage',
         type: 'section',
         children: [
           {
@@ -200,7 +200,6 @@ export const nonSymmetricData: SurveySection[] = [
               'SLEPc – Scalable iterative eigensolvers built on PETSc',
               'Anasazi (Trilinos) – Block Davidson and Krylov methods',
               'ScaLAPACK – Distributed dense eigensolvers',
-              'MAGMA – GPU-accelerated dense linear algebra',
               'SLATE – Successor to ScaLAPACK, CPU/GPU asynchronous support',
               'StarNEig – Scalable Task-based Algorithmic Research for non-Hermitian Eigenvalue Problems',
               'FEAST – rational filter for non-Hermitian eigenvalue problems',
@@ -218,33 +217,65 @@ export const nonSymmetricData: SurveySection[] = [
               'SLEPc',
               'Anasazi',
               'ScaLAPACK',
-              'MAGMA',
               'SLATE',   
               'StarNEig',
               'FEAST',
               'Other (please specify):'
             ]
-          },
+          }                   
+        ]
+      },
+      {
+        id: 'sym-herm-benchmarking',
+        title: 'Benchmarking Requirements',
+        type: 'section',
+        children: [
           {
-            id: 'non-sym-barriers-to-adoption',
-            title: 'If not using libraries of interest, what are the barriers to adoption?',
+            id: 'sym-herm-input-data-type',
+            title: 'Benchmark Input Types',
             type: 'checkbox',
-            content: 'Select all that apply:',
+            content: 'What types of matrix inputs should be used for benchmarking?',
             options: [
-              'Integration effort too high',
-              'Lacks GPU support',
-              'Lacks parallelism or scalability',
-              'Unclear documentation or support',
-              'Incompatible license',
-              'Not performance-portable (heterogeneous systems)',
-              'Missing needed precision (e.g., complex/quad/half)',
-              'Dependency overhead too large',
-              'Stability or convergence issues in practice',
+              'Synthetic / random matrices',
+              'Real matrices from application workloads',
+              'Both synthetic and real data',
+              'Mini-apps or extracted kernels from real applications',
               'Other (please specify):'
             ]
-          }                    
+          },
+          {
+            id: 'sym-herm-data-provision',
+            title: 'Can You Provide Data or Mini-apps?',
+            type: 'checkbox',
+            content: 'Would you be able to share real matrices or mini-apps for benchmarking?',
+            options: [
+              'Yes, both matrices and mini-apps',
+              'Yes, matrices only',
+              'Yes, mini-apps only',
+              'No',
+              'Not sure yet'
+            ]
+          },
+          //{
+          //  id: 'gemm-hardware-interest',
+          //  title: 'Hardware Interest',
+          //  type: 'checkbox',
+          //  content: 'Which hardware platforms are you interested in using? Select all that apply:',
+          //  options: [
+          //    'Integration effort too high',
+          //    'Lacks GPU support',
+          //    'Lacks parallelism or scalability',
+          //    'Unclear documentation or support',
+          //    'Incompatible license',
+          //    'Not performance-portable (heterogeneous systems)',
+          //    'Missing needed precision (e.g., complex/quad/half)',
+          //    'Dependency overhead too large',
+          //    'Stability or convergence issues in practice',
+          //    'Other (please specify):'
+          //  ]
+          //}
         ]
-      }
+      },       
     ]
   }
 ]; 

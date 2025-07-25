@@ -5,43 +5,7 @@ export const qrData: SurveySection[] = [
     id: 'qr-factorization',
     title: 'QR Factorization (A = QR)',
     description: 'Details about QR factorization usage in your applications.',
-    questions: [
-      // Application and Usage
-      {
-        id: 'qr-applications',
-        title: 'Applications',
-        type: 'section',
-        children: [
-          {
-            id: 'qr-primary-use',
-            title: 'Primary Use Case',
-            type: 'checkbox',
-            content: 'What are your main uses for QR factorization? Select all that apply:',
-            options: [
-              'Least squares problems',
-              'Orthogonalization of vectors/matrices',
-              'Rank determination',
-              'SVD computation',
-              'Linear system solving',
-              'Eigenvalue problems',
-              'Other (please specify):'
-            ]
-          },
-          {
-            id: 'qr-pivoting',
-            title: 'Pivoting Requirements',
-            type: 'multiple-choice',
-            content: 'What type of pivoting do you need?',
-            options: [
-              'No pivoting needed',
-              'Column pivoting (QRCP)',
-              'Full pivoting',
-              'Rank-revealing QR',
-              'Varies by application'
-            ]
-          }
-        ]
-      },      
+    questions: [    
       // Matrix Properties
       {
         id: 'qr-matrix-structure',
@@ -64,19 +28,6 @@ export const qrData: SurveySection[] = [
         title: 'Matrix Properties',
         type: 'section',
         children: [
-          {
-            id: 'qr-rank',
-            title: 'Matrix Rank',
-            type: 'multiple-choice',
-            content: 'What is the typical rank property of your matrices?',
-            options: [
-              'Full rank',
-              'Rank deficient (known rank)',
-              'Rank deficient (unknown rank)',
-              'Nearly rank deficient',
-              'Varies by problem'
-            ]
-          },
           {
             id: 'qr-condition',
             title: 'Condition Number',
@@ -185,56 +136,6 @@ export const qrData: SurveySection[] = [
               'Very high accuracy (10^-12)',
               'Machine precision'
             ]
-          },
-          {
-            id: 'qr-least-squares-residual',
-            title: 'Least Squares Residual',
-            type: 'multiple-choice',
-            content: 'For least squares problems, what residual accuracy do you require (||Ax - b||/||b||)?',
-            options: [
-              'Low accuracy (10^-3)',
-              'Medium accuracy (10^-6)',
-              'High accuracy (10^-9)',
-              'Very high accuracy (10^-12)',
-              'Machine precision',
-              'Not applicable'
-            ]
-          }
-        ]
-      },
-      // Library Usage - Standard Dense
-      {
-        id: 'qr-nla-libraries-standard',
-        title: 'Standard Dense Linear Algebra (CPU/GPU/Shared-Memory)',
-        type: 'section',
-        children: [
-          {
-            id: 'qr-nla-group-standard-used',
-            title: 'Currently Used Libraries',
-            type: 'checkbox',
-            content: 'Select all that apply:',
-            options: [
-              'LAPACK (including all variants: Netlib, oneMKL, commercial, open-source, etc.)',
-              'cuSOLVER / cuBLAS (NVIDIA GPU)',
-              'rocSOLVER / rocBLAS (AMD GPU)',
-              'MAGMA (GPU-accelerated LAPACK)',
-              'cuSolverMg',
-              'Other (please specify):'
-            ]
-          },
-          {
-            id: 'qr-nla-group-standard-interested',
-            title: 'Interested in Using',
-            type: 'checkbox',
-            content: 'Which libraries are you interested in using? Select all that apply:',
-            options: [
-              'LAPACK (including all variants: Netlib, oneMKL, commercial, open-source, etc.)',
-              'cuSOLVER / cuBLAS (NVIDIA GPU)',
-              'rocSOLVER / rocBLAS (AMD GPU)',
-              'MAGMA (GPU-accelerated LAPACK)',
-              'cuSolverMg',
-              'Other (please specify):'
-            ]
           }
         ]
       },
@@ -254,7 +155,6 @@ export const qrData: SurveySection[] = [
               'SLATE',
               'ELPA',
               'EigenExa',
-              'DLA-Future',
               'Chameleon',
               'DPLASMA',
               'cuSolverMp',
@@ -271,7 +171,6 @@ export const qrData: SurveySection[] = [
               'SLATE',
               'ELPA',
               'EigenExa',
-              'DLA-Future',
               'Chameleon',
               'DPLASMA',
               'cuSolverMp',
@@ -313,7 +212,58 @@ export const qrData: SurveySection[] = [
             ]
           }
         ]
-      }
+      },
+      {
+        id: 'sym-herm-benchmarking',
+        title: 'Benchmarking Requirements',
+        type: 'section',
+        children: [
+          {
+            id: 'sym-herm-input-data-type',
+            title: 'Benchmark Input Types',
+            type: 'checkbox',
+            content: 'What types of matrix inputs should be used for benchmarking?',
+            options: [
+              'Synthetic / random matrices',
+              'Real matrices from application workloads',
+              'Both synthetic and real data',
+              'Mini-apps or extracted kernels from real applications',
+              'Other (please specify):'
+            ]
+          },
+          {
+            id: 'sym-herm-data-provision',
+            title: 'Can You Provide Data or Mini-apps?',
+            type: 'checkbox',
+            content: 'Would you be able to share real matrices or mini-apps for benchmarking?',
+            options: [
+              'Yes, both matrices and mini-apps',
+              'Yes, matrices only',
+              'Yes, mini-apps only',
+              'No',
+              'Not sure yet'
+            ]
+          },
+          //{
+          //  id: 'gemm-hardware-interest',
+          //  title: 'Hardware Interest',
+          //  type: 'checkbox',
+          //  content: 'Which hardware platforms are you interested in using? Select all that apply:',
+          //  options: [
+          //    'Integration effort too high',
+          //    'Lacks GPU support',
+          //    'Lacks parallelism or scalability',
+          //    'Unclear documentation or support',
+          //    'Incompatible license',
+          //    'Not performance-portable (heterogeneous systems)',
+          //    'Missing needed precision (e.g., complex/quad/half)',
+          //    'Dependency overhead too large',
+          //    'Stability or convergence issues in practice',
+          //    'Other (please specify):'
+          //  ]
+          //}
+        ]
+      },      
     ]
   }
 ]; 

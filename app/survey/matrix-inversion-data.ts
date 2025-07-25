@@ -8,25 +8,7 @@ export const matrixInversionData: SurveySection[] = [
     questions: [
       // Application Context
       {
-        id: 'matrix-inversion-context',
-        title: 'Application Context',
-        type: 'section',
-        children: [
-          {
-            id: 'matrix-inversion-primary-application',
-            title: 'Primary Application Domain',
-            type: 'checkbox',
-            content: 'What are your main applications for matrix inversion? Select all that apply:',
-            options: [
-              'Density Functional Theory (DFT)',
-              'Molecular Dynamics (MD)',
-              'Quantum Many-Body Methods (GW, DMFT)',
-              'Quantum Transport (NEGF)',
-              'Time-Dependent DFT (TDDFT)',
-              'Other (please specify):'
-            ]
-          },
-          {
+
             id: 'matrix-inversion-purpose-usecases',
             title: 'Purpose and Use Cases of Matrix Inversion',
             type: 'checkbox',
@@ -44,8 +26,8 @@ export const matrixInversionData: SurveySection[] = [
               'Effective Hamiltonian construction',
               'Other (please specify):'
             ]
-          }
-        ]
+          
+        
       },
       // Matrix Properties
       {
@@ -100,107 +82,59 @@ export const matrixInversionData: SurveySection[] = [
         ]
       },
       // Inversion Methods
-      {
-        id: 'matrix-inversion-methods',
-        title: 'Inversion Methods',
-        type: 'section',
-        children: [
-          {
-            id: 'matrix-inversion-direct-methods',
-            title: 'Direct Methods',
-            type: 'checkbox',
-            content: 'Which direct matrix inversion methods do you use? Select all that apply:',
-            options: [
-              'LU decomposition (A = LU)',
-              'Cholesky decomposition (A = LLᵀ)',
-              'QR decomposition',
-              'SVD-based methods',
-              'Explicit inverse computation',
-              'Batched/blocked direct methods',
-              'Mixed-precision direct methods',
-              'Other (please specify):'
-            ]
-          },
-          {
-            id: 'matrix-inversion-iterative-methods',
-            title: 'Iterative Methods',
-            type: 'checkbox',
-            content: 'Which iterative matrix inversion methods do you use? Select all that apply:',
-            options: [
-              'Krylov subspace methods (e.g., GMRES, CG, MINRES, BiCGStab)',
-              'Lanczos-based methods',
-              'Chebyshev iteration',
-              'Recursive polynomial expansion',
-              'Density matrix purification (e.g., McWeeny, trace-correcting)',
-              'Dyson equation solvers (iterative Green’s function methods)',
-              'Other (please specify):'
-            ]
-          },
-          {
-            id: 'matrix-inversion-structured-methods',
-            title: 'Structured/Special Matrix Methods',
-            type: 'checkbox',
-            content: 'Which structured or special matrix inversion methods do you use? Select all that apply:',
-            options: [
-              'Low-rank approximation methods',
-              'Block/structured matrix methods',
-              'Schur complement methods',
-              'Sherman-Morrison-Woodbury formula',
-              'Tensor decomposition methods',
-              'Batched/blocked sparse methods',
-              'Other (please specify):'
-            ]
-          },
-          {
-            id: 'matrix-inversion-expansion-methods',
-            title: 'Contour and Polynomial Expansion Methods',
-            type: 'checkbox',
-            content: 'Which contour or polynomial expansion methods do you use? Select all that apply:',
-            options: [
-              'Polynomial expansion methods (e.g., Fermi operator expansion, Chebyshev expansion)',
-              'Contour integration methods (e.g., FEAST, rational filtering)',
-              'Other (please specify):'
-            ]
-          }
-        ]
-      },
-      // Computation Requirements
-      {
-        id: 'matrix-inversion-requirements',
-        title: 'Computation Requirements',
-        type: 'section',
-        children: [
-          {
-            id: 'matrix-inversion-compute-mode',
-            title: 'Computation Mode',
-            type: 'checkbox',
-            content: 'What do you need to compute? Select all that apply:',
-            options: [
-              'Full inverse matrix A⁻¹',
-              'Solution to linear systems (A⁻¹b)',
-              'Selected elements of A⁻¹',
-              'Matrix-vector products with A⁻¹',
-              'Trace of A⁻¹',
-              'Determinant along with inverse',
-              'Other (please specify):'
-            ]
-          },
-          {
-            id: 'matrix-inversion-frequency',
-            title: 'Computation Frequency',
-            type: 'multiple-choice',
-            content: 'How often do you need to compute inversions?',
-            options: [
-              'Once per simulation',
-              'Multiple times with same matrix, different RHS',
-              'Multiple times with different matrices',
-              'Every SCF/optimization step',
-              'Real-time/Dynamic updates',
-              'Varies by application'
-            ]
-          }
-        ]
-      },
+      //{
+      //  id: 'matrix-inversion-methods',
+      //  title: 'Inversion Methods',
+      //  type: 'section',
+      //  children: [
+      //    {
+      //      id: 'matrix-inversion-direct-methods',
+      //      title: 'Direct Methods',
+      //      type: 'checkbox',
+      //      content: 'Which direct matrix inversion methods do you use? Select all that apply:',
+      //      options: [
+      //        'LU decomposition (A = LU)',
+      //        'Cholesky decomposition (A = LLᵀ)',
+      //        'QR decomposition',
+      //        'SVD-based methods',
+      //        'Explicit inverse computation',
+      //        'Batched/blocked direct methods',
+      //        'Mixed-precision direct methods',
+      //        'Other (please specify):'
+      //      ]
+      //    },
+      //    {
+      //      id: 'matrix-inversion-iterative-methods',
+      //      title: 'Iterative Methods',
+      //      type: 'checkbox',
+      //      content: 'Which iterative matrix inversion methods do you use? Select all that apply:',
+      //      options: [
+      //        'Krylov subspace methods (e.g., GMRES, CG, MINRES, BiCGStab)',
+      //        'Lanczos-based methods',
+      //        'Chebyshev iteration',
+      //        'Recursive polynomial expansion',
+      //        'Density matrix purification (e.g., McWeeny, trace-correcting)',
+      //        'Dyson equation solvers (iterative Green’s function methods)',
+      //        'Other (please specify):'
+      //      ]
+      //    },
+      //    {
+      //      id: 'matrix-inversion-structured-methods',
+      //      title: 'Structured/Special Matrix Methods',
+      //      type: 'checkbox',
+      //      content: 'Which structured or special matrix inversion methods do you use? Select all that apply:',
+      //      options: [
+      //        'Low-rank approximation methods',
+      //        'Block/structured matrix methods',
+      //        'Schur complement methods',
+      //        'Sherman-Morrison-Woodbury formula',
+      //        'Tensor decomposition methods',
+      //        'Batched/blocked sparse methods',
+      //        'Other (please specify):'
+      //      ]
+      //    },
+      //  ]
+      //},
       // Accuracy Requirements
       {
         id: 'matrix-inversion-accuracy',
@@ -238,124 +172,171 @@ export const matrixInversionData: SurveySection[] = [
       // Library Usage - Standard Dense
       // Section: Dense Linear Algebra Libraries
       {
-        id: 'matrix-inversion-dense',
-        title: 'Dense Linear Algebra Libraries',
-        type: 'section',
-        children: [
+        "id": "matrix-inversion-dense",
+        "title": "Dense Linear Algebra Libraries",
+        "type": "section",
+        "children": [
           {
-            id: 'dense-libs-used',
-            title: 'Currently Used Libraries',
-            type: 'checkbox',
-            content: 'Which dense linear algebra libraries do you currently use?',
-            options: [
-              'LAPACK / MKL / OpenBLAS',
-              'cuBLAS / cuSOLVER (NVIDIA GPU)',
-              'rocBLAS / rocSOLVER (AMD GPU)',
-              'MAGMA (Hybrid CPU-GPU)',
-              'CUTLASS (NVIDIA CUDA Templates)',
-              'oneAPI MKL (Intel)',
-              'Other (please specify):'
+            "id": "dense-libs-used",
+            "title": "Currently Used Libraries",
+            "type": "checkbox",
+            "content": "Which dense linear algebra libraries do you currently use?",
+            "options": [
+              "ScaLAPACK",
+              "Elemental",
+              "SLATE",
+              "DPLASMA",
+              "cuSolverMp",
+              "Other (please specify):"
             ]
           },
           {
-            id: 'dense-libs-interest',
-            title: 'Interested in Using',
-            type: 'checkbox',
-            content: 'Which dense linear algebra libraries are you interested in exploring?',
-            options: [
-              'LAPACK / MKL / OpenBLAS',
-              'cuBLAS / cuSOLVER (NVIDIA GPU)',
-              'rocBLAS / rocSOLVER (AMD GPU)',
-              'MAGMA (Hybrid CPU-GPU)',
-              'CUTLASS (NVIDIA CUDA Templates)',
-              'oneAPI MKL (Intel)',
-              'Other (please specify):'
+            "id": "dense-libs-interest",
+            "title": "Interested in Using",
+            "type": "checkbox",
+            "content": "Which dense linear algebra libraries are you interested in exploring?",
+            "options": [
+              "ScaLAPACK",
+              "Elemental",
+              "SLATE",
+              "DPLASMA",
+              "cuSolverMp",
+              "Other (please specify):"
             ]
           }
         ]
       },
-
-      // Section: Sparse and Iterative Solver Libraries
       {
-        id: 'matrix-inversion-sparse',
-        title: 'Sparse and Iterative Solver Libraries',
-        type: 'section',
-        children: [
+        "id": "matrix-inversion-sparse",
+        "title": "Sparse or Iterative Solver Libraries",
+        "type": "section",
+        "children": [
           {
-            id: 'sparse-libs-used',
-            title: 'Currently Used Libraries',
-            type: 'checkbox',
-            content: 'Which sparse or iterative solvers are you currently using?',
-            options: [
-              'PETSc',
-              'Trilinos',
-              'MUMPS',
-              'SuperLU / SuperLU_DIST',
-              'PARDISO',
-              'CHOLMOD',
-              'Eigen (sparse backend)',
-              'GPU-accelerated sparse solvers',
-              'Other (please specify):'
+            "id": "sparse-libs-used",
+            "title": "Currently Used Libraries",
+            "type": "checkbox",
+            "content": "Which sparse or iterative solvers are you currently using?",
+            "options": [
+              "PETSc",
+              "Trilinos",
+              "MUMPS",
+              "SuperLU / SuperLU_DIST",
+              "PARDISO",
+              "CHOLMOD",
+              "Eigen (sparse backend)",
+              "AmgX (NVIDIA GPU)",
+              "STRUMPACK",
+              "Other (please specify):"
             ]
           },
           {
-            id: 'sparse-libs-interest',
-            title: 'Interested in Using',
-            type: 'checkbox',
-            content: 'Which sparse or iterative solvers are you interested in?',
-            options: [
-              'PETSc',
-              'Trilinos',
-              'MUMPS',
-              'SuperLU / SuperLU_DIST',
-              'PARDISO',
-              'CHOLMOD',
-              'Eigen (sparse backend)',
-              'GPU-accelerated sparse solvers',
-              'Other (please specify):'
+            "id": "sparse-libs-interest",
+            "title": "Interested in Using",
+            "type": "checkbox",
+            "content": "Which sparse or iterative solvers are you interested in?",
+            "options": [
+              "PETSc",
+              "Trilinos",
+              "MUMPS",
+              "SuperLU / SuperLU_DIST",
+              "PARDISO",
+              "CHOLMOD",
+              "Eigen (sparse backend)",
+              "AmgX (NVIDIA GPU)",
+              "STRUMPACK",
+              "Other (please specify):"
             ]
           }
         ]
       },
-
-      // Section: Specialized and Domain-Specific Libraries
       {
-        id: 'matrix-inversion-specialized',
-        title: 'Specialized and Domain-Specific Libraries',
+        "id": "matrix-inversion-specialized",
+        "title": "Specialized and Domain-Specific Libraries",
+        "type": "section",
+        "children": [
+          {
+            "id": "specialized-libs-used",
+            "title": "Currently Used Libraries",
+            "type": "checkbox",
+            "content": "Which specialized libraries do you currently use for materials or quantum simulations?",
+            "options": [
+              "PEXSI (Selected Inversion for DFT)",
+              "STRUMPACK (Hierarchical Solvers)",
+              "H2Lib / HLIBpro (H-matrix methods)",
+              "H2Opus (GPU-based hierarchical solvers)",
+              "Quantum Chemistry Specific Libraries (e.g., Libint, Libxc)",
+              "Domain-specific GPU libraries (e.g., custom Green’s function solvers)",
+              "Other (please specify):"
+            ]
+          },
+          {
+            "id": "specialized-libs-interest",
+            "title": "Interested in Using",
+            "type": "checkbox",
+            "content": "Which of these specialized libraries are you interested in using?",
+            "options": [
+              "PEXSI (Selected Inversion for DFT)",
+              "STRUMPACK (Hierarchical Solvers)",
+              "H2Lib / HLIBpro (H-matrix methods)",
+              "H2Opus (GPU-based hierarchical solvers)",
+              "Quantum Chemistry Specific Libraries (e.g., Libint, Libxc)",
+              "Domain-specific GPU libraries (e.g., custom Green’s function solvers)",
+              "Other (please specify):"
+            ]
+          }
+        ]
+      },
+      {
+        id: 'sym-herm-benchmarking',
+        title: 'Benchmarking Requirements',
         type: 'section',
         children: [
           {
-            id: 'specialized-libs-used',
-            title: 'Currently Used Libraries',
+            id: 'sym-herm-input-data-type',
+            title: 'Benchmark Input Types',
             type: 'checkbox',
-            content: 'Which specialized libraries do you currently use for materials or quantum simulations?',
+            content: 'What types of matrix inputs should be used for benchmarking?',
             options: [
-              'PEXSI (Selected Inversion for DFT)',
-              'STRUMPACK (Hierarchical Solvers)',
-              'H2Lib / HLIBpro (H-matrix methods)',
-              'FEAST (Contour-based Eigensolver)',
-              'Quantum Chemistry Specific Libraries (e.g., Libint, Libxc)',
+              'Synthetic / random matrices',
+              'Real matrices from application workloads',
+              'Both synthetic and real data',
+              'Mini-apps or extracted kernels from real applications',
               'Other (please specify):'
             ]
           },
           {
-            id: 'specialized-libs-interest',
-            title: 'Interested in Using',
+            id: 'sym-herm-data-provision',
+            title: 'Can You Provide Data or Mini-apps?',
             type: 'checkbox',
-            content: 'Which of these specialized libraries are you interested in using?',
+            content: 'Would you be able to share real matrices or mini-apps for benchmarking?',
             options: [
-              'PEXSI (Selected Inversion for DFT)',
-              'STRUMPACK (Hierarchical Solvers)',
-              'H2Lib / HLIBpro (H-matrix methods)',
-              'FEAST (Contour-based Eigensolver)',
-              'Quantum Chemistry Specific Libraries (e.g., Libint, Libxc)',
-              'Domain-specific GPU libraries (e.g., custom Green’s function solvers)',
-              'Other (please specify):'
+              'Yes, both matrices and mini-apps',
+              'Yes, matrices only',
+              'Yes, mini-apps only',
+              'No',
+              'Not sure yet'
             ]
-          }
+          },
+          //{
+          //  id: 'gemm-hardware-interest',
+          //  title: 'Hardware Interest',
+          //  type: 'checkbox',
+          //  content: 'Which hardware platforms are you interested in using? Select all that apply:',
+          //  options: [
+          //    'Integration effort too high',
+          //    'Lacks GPU support',
+          //    'Lacks parallelism or scalability',
+          //    'Unclear documentation or support',
+          //    'Incompatible license',
+          //    'Not performance-portable (heterogeneous systems)',
+          //    'Missing needed precision (e.g., complex/quad/half)',
+          //    'Dependency overhead too large',
+          //    'Stability or convergence issues in practice',
+          //    'Other (please specify):'
+          //  ]
+          //}
         ]
-      }
-      
+      },
     ]
   }
 ]; 
