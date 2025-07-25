@@ -10,20 +10,26 @@ import { matrixInversionData } from './matrix-inversion-data';
 import { matrixMultiplicationData } from './matrix-multiplication-data';
 import { polynomialFilteringData } from './polynomial-filtering-data';
 import { linearSolversData } from './linear-solvers-data';
-import { benchmarkData } from './benchmark-data';
+//import { benchmarkData } from './benchmark-data';
 
 // Combine all survey data
 export const surveyData: SurveySection[] = [
   ...generalData,
   {
     id: 'nla-operations',
-    title: 'Numerical Linear Algebra Operations',
-    description: 'Details about the NLA operations used in your library. For each operation you select, we will gather information about:\n\n' +
+    title: 'Numerical Linear Algebra Operations and Benchmarks',
+    description: 'Details about the NLA operations used in your library and their benchmarking requirements. For each operation you select, we will gather information about:\n\n' +
                 '• Matrix properties (sizes, types, sparsity patterns)\n' +
                 '• Current library usage and performance requirements\n' +
                 '• Libraries you are interested in using in the future\n' +
-                '• Specific algorithmic needs and constraints\n\n' +
-                'This information helps us understand the computational patterns across different scientific domains and guides our development of optimized NLA libraries and benchmarks. Select only the operations that are relevant to your application.',
+                '• Specific algorithmic needs and constraints\n' +
+                '• Benchmarking requirements and metrics\n\n' +
+                'This information helps us understand the computational patterns across different scientific domains and guides our development of optimized NLA libraries and benchmarks.\n\n' +
+                '⚠️ Selection Guidance\n\n' +
+                'We recommend selecting your top 3 most critical operations for benchmarking:\n' +
+                '• Operations dominating your application performance\n' +
+                '• Key routines you want to optimize\n\n' +
+                'You can select more if essential, but please prioritize your most important operations.',
     questions: [
       {
         id: 'matrix-multiplication',
@@ -102,20 +108,20 @@ export const surveyData: SurveySection[] = [
       }
     ]
   },
-  {
-    id: 'benchmark-section',
-    title: 'Benchmarking Requirements',
-    description: 'This section is directly connected to your selections in the Numerical Linear Algebra (NLA) Operations section above.\n\n' +
-                'For each operation below:\n' +
-                '• You should ONLY select it if you selected the same operation in the NLA section above\n' +
-                '• Selecting it means you want to benchmark this operation using:\n' +
-                '    ◦ The exact numerical properties you specified above\n' +
-                '    ◦ The matrix types and characteristics you described\n' +
-                '    ◦ Both the libraries you currently use AND those you\'re interested in trying\n' +
-                '    ◦ The performance requirements you indicated\n\n' +
-                'The benchmarks will automatically incorporate all the details you provided above, ensuring they match your specific use cases.',
-    questions: benchmarkData[0].questions
-  }
+  //{
+  //  id: 'benchmark-section',
+  //  title: 'Benchmarking Requirements',
+  //  description: 'This section is directly connected to your selections in the Numerical Linear Algebra (NLA) Operations section above.\n\n' +
+  //              'For each operation below:\n' +
+  //              '• You should ONLY select it if you selected the same operation in the NLA section above\n' +
+  //              '• Selecting it means you want to benchmark this operation using:\n' +
+  //              '    ◦ The exact numerical properties you specified above\n' +
+  //              '    ◦ The matrix types and characteristics you described\n' +
+  //              '    ◦ Both the libraries you currently use AND those you\'re interested in trying\n' +
+  //              '    ◦ The performance requirements you indicated\n\n' +
+  //              'The benchmarks will automatically incorporate all the details you provided above, ensuring they match your specific use cases.',
+  //  questions: benchmarkData[0].questions
+  //}
 ];
 
 // Re-export types for convenience

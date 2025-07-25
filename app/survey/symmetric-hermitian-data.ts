@@ -51,31 +51,31 @@ export const symmetricHermitianData: SurveySection[] = [
               'Varies depending on the problem'
             ]
           },
-          {
-            id: 'sym-herm-diagonal-dominance',
-            title: 'Diagonal dominance',
-            type: 'multiple-choice',
-            content: 'What best describes the diagonal dominance?',
-            options: [
-              'Strictly diagonally dominant',
-              'Weakly diagonally dominant',
-              'Not diagonally dominant',
-              'Varies'
-            ]
-          },
-          {
-            id: 'sym-herm-condition',
-            title: 'Condition number',
-            type: 'multiple-choice',
-            content: 'How well-conditioned are your matrices (approximate condition number)?',
-            options: [
-              'Well-conditioned (< 10^3)',
-              'Moderately conditioned (10^3 - 10^6)',
-              'Ill-conditioned (10^6 - 10^9)',
-              'Very ill-conditioned (> 10^9)',
-              'Varies significantly'
-            ]
-          },
+          //{
+          //  id: 'sym-herm-diagonal-dominance',
+          //  title: 'Diagonal dominance',
+          //  type: 'multiple-choice',
+          //  content: 'What best describes the diagonal dominance?',
+          //  options: [
+          //    'Strictly diagonally dominant',
+          //    'Weakly diagonally dominant',
+          //    'Not diagonally dominant',
+          //    'Varies'
+          //  ]
+          //},
+          //{
+          //  id: 'sym-herm-condition',
+          //  title: 'Condition number',
+          //  type: 'multiple-choice',
+          //  content: 'How well-conditioned are your matrices (approximate condition number)?',
+          //  options: [
+          //    'Well-conditioned (< 10^3)',
+          //    'Moderately conditioned (10^3 - 10^6)',
+          //    'Ill-conditioned (10^6 - 10^9)',
+          //    'Very ill-conditioned (> 10^9)',
+          //    'Varies significantly'
+          //  ]
+          //},
           {
             id: 'sym-herm-eigenvalue-distribution',
             title: 'Eigenvalue distribution',
@@ -188,35 +188,35 @@ export const symmetricHermitianData: SurveySection[] = [
       },
       {
         id: 'sym-herm-nla-libraries-hierarchical',
-        title: 'NLA Library Usage',
+        title: 'Distributed-Memory NLA Library Usage',
         type: 'section',
         children: [
-          {
-            id: 'sym-herm-nla-group-standard',
-            title: 'Standard Dense Linear Algebra (CPU/GPU/Shared-Memory)',
-            type: 'checkbox',
-            content: 'Select all that apply:',
-            options: [
-              'LAPACK (including all variants: Netlib, oneMKL, commercial, open-source, etc.)',
-              'MAGMA – GPU-accelerated dense linear algebra',
-              'cuSOLVER / cuBLAS – NVIDIA libraries for GPU-based solvers',
-              'rocSOLVER / rocBLAS – AMD GPU-accelerated dense linear algebra',
-              'Other (please specify):'
-            ]
-          },
+          //{
+          //  id: 'sym-herm-nla-group-standard',
+          //  title: 'Standard Dense Linear Algebra (CPU/GPU/Shared-Memory)',
+          //  type: 'checkbox',
+          //  content: 'Select all that apply:',
+          //  options: [
+          //    'LAPACK (including all variants: Netlib, oneMKL, commercial, open-source, etc.)',
+          //    'MAGMA – GPU-accelerated dense linear algebra',
+          //    'cuSOLVER / cuBLAS – NVIDIA libraries for GPU-based solvers',
+          //    'rocSOLVER / rocBLAS – AMD GPU-accelerated dense linear algebra',
+          //    'Other (please specify):'
+          //  ]
+          //},
           {
             id: 'sym-herm-nla-group-distributed',
             title: 'Distributed-Memory Dense Linear Algebra',
             type: 'checkbox',
             content: 'Select all that apply:',
             options: [
-              'ScaLAPACK – Distributed dense eigenvalue solvers',
-              'ELPA – Highly scalable symmetric eigensolvers',
-              'EigenExa – Optimized for massively parallel architectures',
-              'DLA-Future – Task-based dense eigensolvers for modern architectures',
-              'SLATE – Successor to ScaLAPACK; GPU/CPU support, asynchronous',
-              'Chameleon – Dense linear algebra for distributed/heterogeneous architectures',
-              'DPLASMA – Distributed PLASMA for dense linear algebra',
+              'ScaLAPACK',
+              'ELPA',
+              'EigenExa',
+              'DLA-Future',
+              'SLATE',
+              'Chameleon',
+              'DPLASMA',
               'Other (please specify):'
             ]
           },
@@ -241,7 +241,7 @@ export const symmetricHermitianData: SurveySection[] = [
             type: 'checkbox',
             content: 'Select all that apply:',
             options: [
-              'ELSI – Abstraction layer for eigenvalue solvers (e.g., used by SIESTA, FHI-aims)',
+              'ELSI – Abstraction layer for eigenvalue solvers',
               'Other (please specify):'
             ]
           }
@@ -253,10 +253,6 @@ export const symmetricHermitianData: SurveySection[] = [
         type: 'checkbox',
         content: 'Select all that apply:',
         options: [
-          'LAPACK',
-          'MAGMA',
-          'cuSOLVER/cuBLAS',
-          'rocSOLVER/rocBLAS',
           'ScaLAPACK',
           'ELPA',
           'EigenExa',
@@ -270,28 +266,78 @@ export const symmetricHermitianData: SurveySection[] = [
           'Anasazi',
           'ChASE',
           'FEAST',
-          'ELSI',
           'Other (please specify):'
         ]
       },
       {
-        id: 'sym-herm-barriers-to-adoption',
-        title: 'If not using libraries of interest, what are the barriers to adoption?',
-        type: 'checkbox',
-        content: 'Select all that apply:',
-        options: [
-          'Integration effort too high',
-          'Lacks GPU support',
-          'Lacks parallelism or scalability',
-          'Unclear documentation or support',
-          'Incompatible license',
-          'Not performance-portable (heterogeneous systems)',
-          'Missing needed precision (e.g., complex/quad/half)',
-          'Dependency overhead too large',
-          'Stability or convergence issues in practice',
-          'Other (please specify):'
+        id: 'sym-herm-benchmarking',
+        title: 'Benchmarking Requirements',
+        type: 'section',
+        children: [
+          {
+            id: 'sym-herm-input-data-type',
+            title: 'Benchmark Input Types',
+            type: 'checkbox',
+            content: 'What types of matrix inputs should be used for benchmarking?',
+            options: [
+              'Synthetic / random matrices',
+              'Real matrices from application workloads',
+              'Both synthetic and real data',
+              'Mini-apps or extracted kernels from real applications',
+              'Other (please specify):'
+            ]
+          },
+          {
+            id: 'sym-herm-data-provision',
+            title: 'Can You Provide Data or Mini-apps?',
+            type: 'checkbox',
+            content: 'Would you be able to share real matrices or mini-apps for benchmarking?',
+            options: [
+              'Yes, both matrices and mini-apps',
+              'Yes, matrices only',
+              'Yes, mini-apps only',
+              'No',
+              'Not sure yet'
+            ]
+          },
+          //{
+          //  id: 'gemm-hardware-interest',
+          //  title: 'Hardware Interest',
+          //  type: 'checkbox',
+          //  content: 'Which hardware platforms are you interested in using? Select all that apply:',
+          //  options: [
+          //    'Integration effort too high',
+          //    'Lacks GPU support',
+          //    'Lacks parallelism or scalability',
+          //    'Unclear documentation or support',
+          //    'Incompatible license',
+          //    'Not performance-portable (heterogeneous systems)',
+          //    'Missing needed precision (e.g., complex/quad/half)',
+          //    'Dependency overhead too large',
+          //    'Stability or convergence issues in practice',
+          //    'Other (please specify):'
+          //  ]
+          //}
         ]
-      }
+      },
+      //{
+      //  id: 'sym-herm-barriers-to-adoption',
+      //  title: 'If not using libraries of interest, what are the barriers to adoption?',
+      //  type: 'checkbox',
+      //  content: 'Select all that apply:',
+      //  options: [
+      //    'Integration effort too high',
+      //    'Lacks GPU support',
+      //    'Lacks parallelism or scalability',
+      //    'Unclear documentation or support',
+      //    'Incompatible license',
+      //    'Not performance-portable (heterogeneous systems)',
+      //    'Missing needed precision (e.g., complex/quad/half)',
+      //    'Dependency overhead too large',
+      //    'Stability or convergence issues in practice',
+      //    'Other (please specify):'
+      //  ]
+      //}
     ]
   }
 ]; 

@@ -24,19 +24,19 @@ export const bseData: SurveySection[] = [
         title: 'Matrix Properties',
         type: 'section',
         children: [
-          {
-            id: 'bse-condition',
-            title: 'Condition number',
-            type: 'multiple-choice',
-            content: 'What is the typical condition number of your matrices?',
-            options: [
-              'Well-conditioned (< 10^3)',
-              'Moderately conditioned (10^3 - 10^6)',
-              'Ill-conditioned (10^6 - 10^9)',
-              'Very ill-conditioned (> 10^9)',
-              'Varies significantly'
-            ]
-          },
+          //{
+          //  id: 'bse-condition',
+          //  title: 'Condition number',
+          //  type: 'multiple-choice',
+          //  content: 'What is the typical condition number of your matrices?',
+          //  options: [
+          //    'Well-conditioned (< 10^3)',
+          //    'Moderately conditioned (10^3 - 10^6)',
+          //    'Ill-conditioned (10^6 - 10^9)',
+          //    'Very ill-conditioned (> 10^9)',
+          //    'Varies significantly'
+          //  ]
+          //},
           {
             id: 'bse-eigenvalue-distribution',
             title: 'Eigenvalue distribution',
@@ -149,7 +149,7 @@ export const bseData: SurveySection[] = [
       },
       {
         id: 'bse-nla-library-usage',
-        title: 'NLA Library Usage',
+        title: 'Distributed-Memory NLA Library Usage',
         type: 'section',
         children: [
           {
@@ -162,7 +162,6 @@ export const bseData: SurveySection[] = [
               'PRIMME – High-performance iterative eigensolvers',
               'Anasazi (Trilinos) – Block Davidson and Krylov methods',
               'ScaLAPACK – Distributed dense eigensolvers (geev)',
-              'MAGMA – GPU-accelerated dense linear algebra',
               'SLATE – Successor to ScaLAPACK, CPU/GPU asynchronous support',
               'StarNEig – Scalable Task-based Algorithmic Research for non-Hermitian Eigenvalue Problems',
               'FEAST – rational filter for non-Hermitian eigenvalue problems',
@@ -194,7 +193,6 @@ export const bseData: SurveySection[] = [
           'PRIMME',
           'Anasazi',
           'ScaLAPACK',
-          'MAGMA',
           'SLATE',
           'StarNEig',
           'FEAST',
@@ -206,23 +204,56 @@ export const bseData: SurveySection[] = [
         ]
       },
       {
-        id: 'bse-barriers-to-adoption',
-        title: 'If not using libraries of interest, what are the barriers to adoption?',
-        type: 'checkbox',
-        content: 'Select all that apply:',
-        options: [
-          'Integration effort too high',
-          'Lacks GPU support',
-          'Lacks parallelism or scalability',
-          'Unclear documentation or support',
-          'Incompatible license',
-          'Not performance-portable (heterogeneous systems)',
-          'Missing needed precision (e.g., complex/quad/half)',
-          'Dependency overhead too large',
-          'Stability or convergence issues in practice',
-          'Other (please specify):'
+        id: 'sym-herm-benchmarking',
+        title: 'Benchmarking Requirements',
+        type: 'section',
+        children: [
+          {
+            id: 'sym-herm-input-data-type',
+            title: 'Benchmark Input Types',
+            type: 'checkbox',
+            content: 'What types of matrix inputs should be used for benchmarking?',
+            options: [
+              'Synthetic / random matrices',
+              'Real matrices from application workloads',
+              'Both synthetic and real data',
+              'Mini-apps or extracted kernels from real applications',
+              'Other (please specify):'
+            ]
+          },
+          {
+            id: 'sym-herm-data-provision',
+            title: 'Can You Provide Data or Mini-apps?',
+            type: 'checkbox',
+            content: 'Would you be able to share real matrices or mini-apps for benchmarking?',
+            options: [
+              'Yes, both matrices and mini-apps',
+              'Yes, matrices only',
+              'Yes, mini-apps only',
+              'No',
+              'Not sure yet'
+            ]
+          },
+          //{
+          //  id: 'gemm-hardware-interest',
+          //  title: 'Hardware Interest',
+          //  type: 'checkbox',
+          //  content: 'Which hardware platforms are you interested in using? Select all that apply:',
+          //  options: [
+          //    'Integration effort too high',
+          //    'Lacks GPU support',
+          //    'Lacks parallelism or scalability',
+          //    'Unclear documentation or support',
+          //    'Incompatible license',
+          //    'Not performance-portable (heterogeneous systems)',
+          //    'Missing needed precision (e.g., complex/quad/half)',
+          //    'Dependency overhead too large',
+          //    'Stability or convergence issues in practice',
+          //    'Other (please specify):'
+          //  ]
+          //}
         ]
-      }
+      },      
     ]
   }
 ]; 

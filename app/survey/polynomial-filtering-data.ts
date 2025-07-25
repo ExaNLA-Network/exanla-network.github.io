@@ -28,21 +28,6 @@ export const polynomialFilteringData: SurveySection[] = [
               'Wannier function localization',
               'Other (please specify):'
             ]
-          },
-          {
-            id: 'poly-specific-methods',
-            title: 'Specific Methods',
-            type: 'checkbox',
-            content: 'Which specific methods do you use? Select all that apply:',
-            options: [
-              'Chebyshev Filtered Subspace Iteration (CheFSI)',
-              'Polynomial filtered Lanczos',
-              'McWeeny purification',
-              'Fermi-Dirac expansion',
-              'Real-time propagation',
-              'Rational approximation',
-              'Other (please specify):'
-            ]
           }
         ]
       },
@@ -64,21 +49,6 @@ export const polynomialFilteringData: SurveySection[] = [
               'Density matrix',
               'Green\'s function matrix',
               'Time evolution operator',
-              'Other (please specify):'
-            ]
-          },
-          {
-            id: 'poly-matrix-properties',
-            title: 'Matrix Properties',
-            type: 'checkbox',
-            content: 'What properties do your matrices have? Select all that apply:',
-            options: [
-              'Hermitian/Symmetric',
-              'Sparse',
-              'Block-sparse',
-              'Time-dependent',
-              'Energy/frequency dependent',
-              'Temperature dependent',
               'Other (please specify):'
             ]
           }
@@ -155,44 +125,6 @@ export const polynomialFilteringData: SurveySection[] = [
           }
         ]
       },      
-      // Implementation Details
-      {
-        id: 'poly-implementation',
-        title: 'Implementation Details',
-        type: 'section',
-        children: [
-          {
-            id: 'poly-evaluation-method',
-            title: 'Evaluation Method',
-            type: 'checkbox',
-            content: 'How do you evaluate the polynomial? Select all that apply:',
-            options: [
-              'Matrix-vector products',
-              'Matrix-matrix products',
-              'Sparse matrix operations',
-              'Three-term recurrence',
-              'Recursive polynomial expansion',
-              'Adaptive degree selection',
-              'Other (please specify):'
-            ]
-          },
-          {
-            id: 'poly-optimization',
-            title: 'Optimization Techniques',
-            type: 'checkbox',
-            content: 'Which optimization techniques do you use? Select all that apply:',
-            options: [
-              'Sparsity exploitation',
-              'Matrix-free operations',
-              'Batched operations',
-              'GPU acceleration',
-              'Mixed precision computation',
-              'Distributed computation',
-              'Other (please specify):'
-            ]
-          }
-        ]
-      },
       // Library Usage
       {
         id: 'poly-libraries',
@@ -208,9 +140,6 @@ export const polynomialFilteringData: SurveySection[] = [
               'CheSS (Chebyshev Sparse Solvers)',
               'NTPoly',
               'Custom implementation',
-              'BigDFT polynomial routines',
-              'CP2K polynomial routines',
-              'SIESTA polynomial routines',
               'Other (please specify):'
             ]
           },
@@ -223,14 +152,62 @@ export const polynomialFilteringData: SurveySection[] = [
               'CheSS (Chebyshev Sparse Solvers)',
               'NTPoly',
               'Custom implementation',
-              'BigDFT polynomial routines',
-              'CP2K polynomial routines',
-              'SIESTA polynomial routines',
               'Other (please specify):'
             ]
           }
         ]
-      }
+      },
+      {
+        id: 'sym-herm-benchmarking',
+        title: 'Benchmarking Requirements',
+        type: 'section',
+        children: [
+          {
+            id: 'sym-herm-input-data-type',
+            title: 'Benchmark Input Types',
+            type: 'checkbox',
+            content: 'What types of matrix inputs should be used for benchmarking?',
+            options: [
+              'Synthetic / random matrices',
+              'Real matrices from application workloads',
+              'Both synthetic and real data',
+              'Mini-apps or extracted kernels from real applications',
+              'Other (please specify):'
+            ]
+          },
+          {
+            id: 'sym-herm-data-provision',
+            title: 'Can You Provide Data or Mini-apps?',
+            type: 'checkbox',
+            content: 'Would you be able to share real matrices or mini-apps for benchmarking?',
+            options: [
+              'Yes, both matrices and mini-apps',
+              'Yes, matrices only',
+              'Yes, mini-apps only',
+              'No',
+              'Not sure yet'
+            ]
+          },
+          //{
+          //  id: 'gemm-hardware-interest',
+          //  title: 'Hardware Interest',
+          //  type: 'checkbox',
+          //  content: 'Which hardware platforms are you interested in using? Select all that apply:',
+          //  options: [
+          //    'Integration effort too high',
+          //    'Lacks GPU support',
+          //    'Lacks parallelism or scalability',
+          //    'Unclear documentation or support',
+          //    'Incompatible license',
+          //    'Not performance-portable (heterogeneous systems)',
+          //    'Missing needed precision (e.g., complex/quad/half)',
+          //    'Dependency overhead too large',
+          //    'Stability or convergence issues in practice',
+          //    'Other (please specify):'
+          //  ]
+          //}
+        ]
+      },      
     ]
   }
 ]; 

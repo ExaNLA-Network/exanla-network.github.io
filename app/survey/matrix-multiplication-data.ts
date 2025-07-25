@@ -7,25 +7,25 @@ export const matrixMultiplicationData: SurveySection[] = [
     description: 'Details about matrix-matrix multiplication operations in your applications.',
     questions: [
       // Application Context
-      {
-        id: 'gemm-context',
-        title: 'Primary Use Cases',
-        type: 'checkbox',
-        content: 'What are your main uses for matrix-matrix multiplication? Select all that apply:',
-        options: [
-            'Hamiltonian application to wavefunctions (Hψ)',
-            'Orthonormalization (Gram-Schmidt, Löwdin)',
-            'Wavefunction projection (Ψ†SΨ)',
-            'Subspace projection (V†HV)',
-            'Density matrix construction (CfC†)',
-            'Wavefunction updates/rotations',
-            'Wannier function construction',
-            'Kohn-Sham matrix updates',
-            'Green\'s function calculations',
-            'Tensor contractions in quantum chemistry',
-            'Other (please specify):'
-        ]
-      },
+      //{
+      //  id: 'gemm-context',
+      //  title: 'Primary Use Cases',
+      //  type: 'checkbox',
+      //  content: 'What are your main uses for matrix-matrix multiplication? Select all that apply:',
+      //  options: [
+      //    'Hamiltonian application to wavefunctions (Hψ)',
+      //    'Orthonormalization (Gram-Schmidt, Löwdin)',
+      //    'Wavefunction projection (Ψ†SΨ)',
+      //    'Subspace projection (V†HV)',
+      //    'Density matrix construction (CfC†)',
+      //    'Wavefunction updates/rotations',
+      //    'Wannier function construction',
+      //    'Kohn-Sham matrix updates',
+      //    'Green\'s function calculations',
+      //    'Tensor contractions in quantum chemistry',
+      //    'Other (please specify):'
+      //  ]
+      //},
       // Matrix Properties
       {
         id: 'gemm-properties',
@@ -104,37 +104,37 @@ export const matrixMultiplicationData: SurveySection[] = [
         ]
       },
       // Performance Requirements
-      {
-        id: 'gemm-performance',
-        title: 'Performance Requirements',
-        type: 'section',
-        children: [
-          {
-            id: 'gemm-computation-frequency',
-            title: 'Computation Frequency',
-            type: 'multiple-choice',
-            content: 'How frequently do you perform matrix multiplications?',
-            options: [
-              'Once per simulation step',
-              'Multiple times per SCF iteration',
-              'Thousands of times per simulation',
-              'Real-time/Dynamic updates',
-              'Varies by application'
-            ]
-          },
-          {
-            id: 'gemm-performance-critical',
-            title: 'Performance Criticality',
-            type: 'multiple-choice',
-            content: 'How critical is GEMM performance to your application?',
-            options: [
-              'Dominant performance bottleneck',
-              'Major performance factor',
-              'Moderate impact',
-              'Minor impact',
-              'Not performance critical'
-            ]
-          }//,
+      //{
+      //  id: 'gemm-performance',
+      //  title: 'Performance Requirements',
+      //  type: 'section',
+      //  children: [
+      //  {
+      //    id: 'gemm-computation-frequency',
+      //    title: 'Computation Frequency',
+      //    type: 'multiple-choice',
+      //    content: 'How frequently do you perform matrix multiplications?',
+      //    options: [
+      //      'Once per simulation step',
+      //      'Multiple times per SCF iteration',
+      //      'Thousands of times per simulation',
+      //      'Real-time/Dynamic updates',
+      //      'Varies by application'
+      //    ]
+      //    },
+      //  {
+      //    id: 'gemm-performance-critical',
+      //    title: 'Performance Criticality',
+      //    type: 'multiple-choice',
+      //    content: 'How critical is GEMM performance to your application?',
+      //    options: [
+      //      'Dominant performance bottleneck',
+      //      'Major performance factor',
+      //      'Moderate impact',
+      //      'Minor impact',
+      //      'Not performance critical'
+      //    ]
+      //  }//,
           //{
           //  id: 'gemm-optimization-techniques',
           //  title: 'Optimization Techniques',
@@ -151,41 +151,41 @@ export const matrixMultiplicationData: SurveySection[] = [
           //    'Other (please specify)'
           //  ]
           //}
-        ]
-      },
+      //  ]
+      //},
       // Implementation Details
       {
         id: 'gemm-implementation',
-        title: 'NLA Library Usage',
+        title: 'Distributed-Memory NLA Library Usage',
         type: 'section',
         children: [
-          {
-            id: 'gemm-libraries-shared',
-            title: 'Shared Memory Libraries (CPU/GPU)',
-            type: 'checkbox',
-            content: 'Which shared memory libraries do you use for matrix-matrix multiplication? Select all that apply:',
-            options: [
-              'BLAS (all variants: OpenBLAS, MKL, AOCL, BLIS, ATLAS, Netlib, etc.)',
-              'SuiteSparse',
-              'cuBLAS (NVIDIA GPU)',
-              'cuSPARSE (NVIDIA GPU, sparse)',
-              'rocBLAS (AMD GPU)',
-              'rocSPARSE (AMD GPU, sparse)',
-              'oneMKL (Intel, cross-architecture)',
-              'MAGMA (CPU/GPU hybrid)',
-              'CUTLASS (NVIDIA GPU)',
-              'cuBLASMG (NVIDIA multi-GPUs)',
-              'Eigen',
-              'Tpetra (Trilinos)',
-              'Custom implementation',
-              'Other (please specify):'
-            ]
-          },
+          //{
+          //  id: 'gemm-libraries-shared',
+          //  title: 'Shared Memory Libraries (CPU/GPU)',
+          //  type: 'checkbox',
+          //  content: 'Which shared memory libraries do you use for matrix-matrix multiplication? Select all that apply:',
+          //  options: [
+          //    'BLAS (all variants: OpenBLAS, MKL, AOCL, BLIS, ATLAS, Netlib, etc.)',
+          //    'SuiteSparse',
+          //    'cuBLAS (NVIDIA GPU)',
+          //    'cuSPARSE (NVIDIA GPU, sparse)',
+          //    'rocBLAS (AMD GPU)',
+          //    'rocSPARSE (AMD GPU, sparse)',
+          //    'oneMKL (Intel, cross-architecture)',
+          //    'MAGMA (CPU/GPU hybrid)',
+          //    'CUTLASS (NVIDIA GPU)',
+          //    'cuBLASMG (NVIDIA multi-GPUs)',
+          //    'Eigen',
+          //    'Tpetra (Trilinos)',
+          //    'Custom implementation',
+          //    'Other (please specify):'
+          //  ]
+          //},
           {
             id: 'gemm-libraries-distributed',
-            title: 'Distributed Memory Libraries (CPU/GPU)',
+            title: 'General Distributed Memory Libraries (CPU/GPU)',
             type: 'checkbox',
-            content: 'Which distributed memory libraries do you use for matrix-matrix multiplication? Select all that apply:',
+            content: 'Which general distributed memory libraries do you use for matrix-matrix multiplication? Select all that apply:',
             options: [
               'ScaLAPACK',
               'SLATE',
@@ -222,43 +222,32 @@ export const matrixMultiplicationData: SurveySection[] = [
             type: 'checkbox',
             content: 'Select all that apply:',
             options: [
-                'BLAS',
-                'SuiteSparse',
-                'cuBLAS',
-                'cuSPARSE',
-                'rocBLAS',
-                'rocSPARSE',
-                'oneMKL',
-                'MAGMA',
-                'CUTLASS',
-                'cuBLASMG',
-                'Eigen',
-                'Tpetra (Trilinos)',
-                'ScaLAPACK',
-                'SLATE',
-                'COSMA',
-                'DPLASMA',
-                'Elemental',
-                'ELPA',
-                'cuBLASMp',
-                'PETSc',
-                'DASK',
+              'ScaLAPACK',
+              'SLATE',
+              'COSMA',
+              'DPLASMA',
+              'Elemental',
+              'ELPA',
+              'cuBLASMp (NVIDIA distributed-memory GPUs)',
+              'PETSc',
+              'Tpetra (Trilinos)',
+              'DASK',
               'Other (please specify):'
             ]
           },
-          {
-            id: 'gemm-barriers-to-adoption',
-            title: 'If not using libraries of interest, what are the barriers to adoption?',
-            type: 'checkbox',
-            content: 'Select all that apply:',
-            options: [
-              'Performance',
-              'Portability',
-              'Scalability',
-              'Ease of use',
-              'Other (please specify):'
-            ]
-          }
+          //{
+          //  id: 'gemm-barriers-to-adoption',
+          //  title: 'If not using libraries of interest, what are the barriers to adoption?',
+          //  type: 'checkbox',
+          //  content: 'Select all that apply:',
+          //  options: [
+          //    'Performance',
+          //    'Portability',
+          //    'Scalability',
+          //    'Ease of use',
+          //    'Other (please specify):'
+          //  ]
+          //}
         ]
       },
       // Future Requirements
@@ -283,27 +272,78 @@ export const matrixMultiplicationData: SurveySection[] = [
               'Other (please specify):'
             ]
           },
-          {
-            id: 'gemm-hardware-interest',
-            title: 'Hardware Interest',
-            type: 'checkbox',
-            content: 'Which hardware platforms are you interested in using? Select all that apply:',
-            options: [
-                'Integration effort too high',
-                'Lacks GPU support',
-                'Lacks parallelism or scalability',
-                'Unclear documentation or support',
-                'Incompatible license',
-                'Not performance-portable (heterogeneous systems)',
-                'Missing needed precision (e.g., complex/quad/half)',
-                'Dependency overhead too large',
-                'Stability or convergence issues in practice',
-                'Other (please specify):'
-            ]
-          }
+          //{
+          //  id: 'gemm-hardware-interest',
+          //  title: 'Hardware Interest',
+          //  type: 'checkbox',
+          //  content: 'Which hardware platforms are you interested in using? Select all that apply:',
+          //  options: [
+          //    'Integration effort too high',
+          //    'Lacks GPU support',
+          //    'Lacks parallelism or scalability',
+          //    'Unclear documentation or support',
+          //    'Incompatible license',
+          //    'Not performance-portable (heterogeneous systems)',
+          //    'Missing needed precision (e.g., complex/quad/half)',
+          //    'Dependency overhead too large',
+          //    'Stability or convergence issues in practice',
+          //    'Other (please specify):'
+          //  ]
+          //}
         ]
-      }
-      
+      },
+      //  Benchmarking
+      {
+        id: 'gemm-benchmarking',
+        title: 'Benchmarking Requirements',
+        type: 'section',
+        children: [
+          {
+            id: 'gemm-input-data-type',
+            title: 'Benchmark Input Types',
+            type: 'checkbox',
+            content: 'What types of matrix inputs should be used for benchmarking?',
+            options: [
+              'Synthetic / random matrices',
+              'Real matrices from application workloads',
+              'Both synthetic and real data',
+              'Mini-apps or extracted kernels from real applications',
+              'Other (please specify):'
+            ]
+          },
+          {
+            id: 'gemm-data-provision',
+            title: 'Can You Provide Data or Mini-apps?',
+            type: 'checkbox',
+            content: 'Would you be able to share real matrices or mini-apps for benchmarking?',
+            options: [
+              'Yes, both matrices and mini-apps',
+              'Yes, matrices only',
+              'Yes, mini-apps only',
+              'No',
+              'Not sure yet'
+            ]
+          },
+          //{
+          //  id: 'gemm-hardware-interest',
+          //  title: 'Hardware Interest',
+          //  type: 'checkbox',
+          //  content: 'Which hardware platforms are you interested in using? Select all that apply:',
+          //  options: [
+          //    'Integration effort too high',
+          //    'Lacks GPU support',
+          //    'Lacks parallelism or scalability',
+          //    'Unclear documentation or support',
+          //    'Incompatible license',
+          //    'Not performance-portable (heterogeneous systems)',
+          //    'Missing needed precision (e.g., complex/quad/half)',
+          //    'Dependency overhead too large',
+          //    'Stability or convergence issues in practice',
+          //    'Other (please specify):'
+          //  ]
+          //}
+        ]
+      }      
     ]
   }
 ]; 

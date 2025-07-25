@@ -52,36 +52,163 @@ export const generalizedSymmetricData: SurveySection[] = [
         ]
       },
       {
-        id: 'gen-sym-nla-libraries',
-        title: 'NLA Library Usage',
+        id: 'sym-herm-matrix-properties',
+        title: 'Matrix Properties',
+        type: 'section',
+        children: [
+          //{
+          //  id: 'sym-herm-diagonal-dominance',
+          //  title: 'Diagonal dominance',
+          //  type: 'multiple-choice',
+          //  content: 'What best describes the diagonal dominance?',
+          //  options: [
+          //    'Strictly diagonally dominant',
+          //    'Weakly diagonally dominant',
+          //    'Not diagonally dominant',
+          //    'Varies'
+          //  ]
+          //},
+          //{
+          //  id: 'sym-herm-condition',
+          //  title: 'Condition number',
+          //  type: 'multiple-choice',
+          //  content: 'How well-conditioned are your matrices (approximate condition number)?',
+          //  options: [
+          //    'Well-conditioned (< 10^3)',
+          //    'Moderately conditioned (10^3 - 10^6)',
+          //    'Ill-conditioned (10^6 - 10^9)',
+          //    'Very ill-conditioned (> 10^9)',
+          //    'Varies significantly'
+          //  ]
+          //},
+          {
+            id: 'sym-herm-eigenvalue-distribution',
+            title: 'Eigenvalue distribution',
+            type: 'multiple-choice',
+            content: 'How are your eigenvalues typically distributed?',
+            options: [
+              'Well-separated',
+              'Clustered',
+              'Mix of clustered and separated',
+              'Scattered/unpredictable',
+              'Varies'
+            ]
+          },
+          {
+            id: 'sym-herm-scale-size',
+            title: 'Problem Scale',
+            type: 'multiple-choice',
+            content: 'What are the typical dimensions of your matrices?',
+            options: [
+              'Small (< 1,000)',
+              'Medium (1,000 - 10,000)',
+              'Large (10,000 - 100,000)',
+              'Very Large (100,000 - 1,000,000)',
+              'Extreme (> 1,000,000)'
+            ]
+          }
+        ]
+      },
+      {
+        id: 'sym-herm-computation-requirements',
+        title: 'Computation Requirements',
         type: 'section',
         children: [
           {
-            id: 'gen-sym-nla-standard-dense',
-            title: 'Standard Dense Linear Algebra (CPU/GPU/Shared-Memory)',
-            type: 'checkbox',
-            content: 'Select all that apply:',
+            id: 'sym-herm-eigenvalue-percentage',
+            title: 'Percentage of eigenvalues',
+            type: 'multiple-choice',
+            content: 'What percentage of eigenvalues do you typically compute?',
             options: [
-              'LAPACK (including all variants: Netlib, oneMKL, commercial, open-source, etc.)',
-              'MAGMA – GPU-accelerated dense linear algebra',
-              'cuSOLVER / cuBLAS – NVIDIA libraries for GPU-based solvers',
-              'rocSOLVER / rocBLAS – AMD GPU-accelerated dense linear algebra',
-              'Other (please specify)'
+              'Less than 1%',
+              '1-10%',
+              '10-50%',
+              '50-90%',
+              '90-100%',
+              'All eigenvalues',
+              'Varies'
             ]
           },
+          {
+            id: 'sym-herm-compute-mode',
+            title: 'What to compute',
+            type: 'multiple-choice',
+            content: 'What do you typically need to compute?',
+            options: [
+              'Eigenvalues only',
+              'Eigenvalues and eigenvectors',
+              'Selected eigenvalues and eigenvectors',
+              'Varies'
+            ]
+          },
+          {
+            id: 'sym-herm-eigenvalue-location',
+            title: 'Eigenvalue location',
+            type: 'multiple-choice',
+            content: 'Which eigenvalues are most important to you?',
+            options: [
+              'Smallest eigenvalues',
+              'Largest eigenvalues',
+              'Eigenvalues near a target shif',
+              'Eigenvalues in a specific range',
+              'Interior eigenvalues',
+              'All eigenvalues',
+              'Varies'
+            ]
+          }
+        ]
+      },
+      {
+        id: 'sym-herm-tolerance',
+        title: 'Required tolerance/precision',
+        type: 'section',
+        children: [
+          {
+            id: 'sym-herm-residual-tolerance',
+            title: 'Residual tolerance',
+            type: 'multiple-choice',
+            content: 'What residual tolerance do you require for ||Ax - λx||?',
+            options: [
+              'Low (10^-3)',
+              'Medium (10^-6)',
+              'High (10^-9)',
+              'Very high (10^-12)',
+              'Machine precision'
+            ]
+          },
+          {
+            id: 'sym-herm-orthogonality-tolerance',
+            title: 'Orthogonality tolerance',
+            type: 'multiple-choice',
+            content: 'What orthogonality tolerance do you require for eigenvectors?',
+            options: [
+              'Low (10^-3)',
+              'Medium (10^-6)',
+              'High (10^-9)',
+              'Very high (10^-12)',
+              'Machine precision'
+            ]
+          }
+        ]
+      },      
+      {
+        id: 'gen-sym-nla-libraries',
+        title: 'Distributed-Memory NLA Library Usage',
+        type: 'section',
+        children: [
           {
             id: 'gen-sym-nla-distributed-dense',
             title: 'Distributed-Memory Dense Linear Algebra',
                 type: 'checkbox',
                 content: 'Select all that apply:',
                 options: [
-              'ScaLAPACK – Distributed dense eigenvalue solvers',
-              'ELPA – Highly scalable symmetric eigensolvers',
-              'EigenExa – Optimized for massively parallel architectures',
-              'DLA-Future – Task-based dense eigensolvers for modern architectures',
-              'SLATE – Successor to ScaLAPACK; GPU/CPU support, asynchronous',
-              'Chameleon – Dense linear algebra for distributed/heterogeneous architectures',
-              'DPLASMA – Distributed PLASMA for dense linear algebra',
+              'ScaLAPACK',
+              'ELPA',
+              'EigenExa',
+              'DLA-Future',
+              'SLATE',
+              'Chameleon',
+              'DPLASMA',
               'Other (please specify)'
             ]
           },
@@ -116,10 +243,6 @@ export const generalizedSymmetricData: SurveySection[] = [
             type: 'checkbox',
             content: 'Select all that apply:',
             options: [
-              'LAPACK',
-              'MAGMA',
-              'cuSOLVER/cuBLAS',
-              'rocSOLVER/rocBLAS',
               'ScaLAPACK',
               'ELPA',
               'EigenExa',
@@ -136,27 +259,60 @@ export const generalizedSymmetricData: SurveySection[] = [
               'ELSI',
               'Other (please specify):'
             ]
-          },
+          }         
+        ]
+      },
+      {
+        id: 'sym-herm-benchmarking',
+        title: 'Benchmarking Requirements',
+        type: 'section',
+        children: [
           {
-            id: 'gen-sym-barriers-to-adoption',
-            title: 'If not using libraries of interest, what are the barriers to adoption?',
-                type: 'checkbox',
-                content: 'Select all that apply:',
-                options: [
-              'Integration effort too high',
-              'Lacks GPU support',
-              'Lacks parallelism or scalability',
-              'Unclear documentation or support',
-              'Incompatible license',
-              'Not performance-portable (heterogeneous systems)',
-              'Missing needed precision (e.g., complex/quad/half)',
-              'Dependency overhead too large',
-              'Stability or convergence issues in practice',
+            id: 'sym-herm-input-data-type',
+            title: 'Benchmark Input Types',
+            type: 'checkbox',
+            content: 'What types of matrix inputs should be used for benchmarking?',
+            options: [
+              'Synthetic / random matrices',
+              'Real matrices from application workloads',
+              'Both synthetic and real data',
+              'Mini-apps or extracted kernels from real applications',
               'Other (please specify):'
             ]
-          }          
+          },
+          {
+            id: 'sym-herm-data-provision',
+            title: 'Can You Provide Data or Mini-apps?',
+            type: 'checkbox',
+            content: 'Would you be able to share real matrices or mini-apps for benchmarking?',
+            options: [
+              'Yes, both matrices and mini-apps',
+              'Yes, matrices only',
+              'Yes, mini-apps only',
+              'No',
+              'Not sure yet'
+            ]
+          },
+          //{
+          //  id: 'gemm-hardware-interest',
+          //  title: 'Hardware Interest',
+          //  type: 'checkbox',
+          //  content: 'Which hardware platforms are you interested in using? Select all that apply:',
+          //  options: [
+          //    'Integration effort too high',
+          //    'Lacks GPU support',
+          //    'Lacks parallelism or scalability',
+          //    'Unclear documentation or support',
+          //    'Incompatible license',
+          //    'Not performance-portable (heterogeneous systems)',
+          //    'Missing needed precision (e.g., complex/quad/half)',
+          //    'Dependency overhead too large',
+          //    'Stability or convergence issues in practice',
+          //    'Other (please specify):'
+          //  ]
+          //}
         ]
-      }
+      },      
     ]
   }
 ]; 
