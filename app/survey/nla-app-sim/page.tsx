@@ -419,18 +419,6 @@ export default function NlaAppSimSurveyPage() {
                     <span className="flex items-center">
                       {question.title}
                       {question.required && <span className="text-red-500 ml-1">*</span>}
-                      {isNlaOperation && (
-                        <svg
-                          className={`w-5 h-5 ml-2 transform transition-transform ${
-                            collapsedSections.has(question.id) ? 'rotate-0' : 'rotate-180'
-                          }`}
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                        </svg>
-                      )}
                     </span>
                   </h3>
                   {isSelectedButCollapsed && (
@@ -831,7 +819,7 @@ export default function NlaAppSimSurveyPage() {
         <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-100">
           <div className="text-center mb-12">
             <h1 className="text-4xl font-bold text-gray-900 mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-800">
-              Application/Simulation Library Survey
+              Numerical Linear Algebra Survey in Scientific Applications
             </h1>
             <p className="text-gray-600 max-w-3xl mx-auto text-lg leading-relaxed">
               Help us understand the Numerical Linear Algebra (NLA) operations used in your application/simulation libraries. 
@@ -860,15 +848,26 @@ export default function NlaAppSimSurveyPage() {
                           <div className="bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg p-6 text-gray-700">
                             {section.description.split('\n\n').map((paragraph, idx) => (
                               <div key={idx} className="mb-4 last:mb-0">
-                                {paragraph.split('\n').map((line, lineIdx) => (
-                                  <p key={lineIdx} className={`${
-                                    line.startsWith('•') ? 'ml-4' : ''
-                                  } ${
-                                    line.startsWith('⚠️') ? 'text-orange-600 font-semibold mt-6' : ''
-                                  } mb-1`}>
-                                    {line}
-                                  </p>
-                                ))}
+                                {paragraph.split('\n').map((line, lineIdx) => {
+                                  // Check if this line should be centered and italic
+                                  if (line.startsWith('***') && line.endsWith('***')) {
+                                    const text = line.slice(3, -3); // Remove *** markers
+                                    return (
+                                      <p key={lineIdx} className="text-center italic mb-1">
+                                        {text}
+                                      </p>
+                                    );
+                                  }
+                                  return (
+                                    <p key={lineIdx} className={`${
+                                      line.startsWith('•') ? 'ml-4' : ''
+                                    } ${
+                                      line.startsWith('⚠️') ? 'text-orange-600 font-semibold mt-6' : ''
+                                    } mb-1`}>
+                                      {line}
+                                    </p>
+                                  );
+                                })}
                               </div>
                             ))}
                           </div>
