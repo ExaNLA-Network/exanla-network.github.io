@@ -18,13 +18,13 @@ export const surveyData: SurveySection[] = [
   {
     id: 'nla-operations',
     title: 'Numerical Linear Algebra Operations and Benchmarks',
-    description: 'Details about the NLA operations used in your library and their benchmarking requirements. For each operation you select, we will gather information about:\n\n' +
+    description:'NLA operations used in your library. We will gather information about :\n\n' +
                 '• Matrix properties (sizes, types, sparsity patterns)\n' +
                 '• Current library usage and performance requirements\n' +
                 '• Libraries you are interested in using in the future\n' +
                 '• Specific algorithmic needs and constraints\n' +
                 '• Benchmarking requirements and metrics\n\n' +
-                'This information helps us understand the computational patterns across different scientific domains and guides our development of optimized NLA libraries and benchmarks.\n\n' +
+                '***This information helps us understand the computational patterns across different scientific domains and guides our development of optimized NLA libraries and benchmarks.***\n\n' +
                 '⚠️ Selection Guidance\n\n' +
                 'We recommend selecting your top 3 most critical operations for benchmarking:\n' +
                 '• Operations dominating your application performance\n' +
