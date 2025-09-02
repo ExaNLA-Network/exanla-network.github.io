@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useMemo, useRef } from 'react';
 import { surveyData, SurveyQuestion } from '../index';
+import { supabase } from '@/lib/supabase';
 
 interface FormData {
   [key: string]: string | string[] | boolean;
@@ -20,6 +21,7 @@ export default function NlaAppSimSurveyPage() {
   const [showWarningDialog, setShowWarningDialog] = useState(false);
   const [pendingOperation, setPendingOperation] = useState<{id: string, value: boolean} | null>(null);
   const [activeOperation, setActiveOperation] = useState<string | null>(null);
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
   // Add ref for scrolling
   const operationRefs = useRef<{ [key: string]: HTMLDivElement | null }>({});
@@ -280,14 +282,34 @@ export default function NlaAppSimSurveyPage() {
     e.preventDefault();
     
     const submissionData = {
-      id: `survey_${Date.now()}`,
       timestamp: new Date().toISOString(),
       userAgent: navigator.userAgent,
       responses: formData
     };
 
-    console.log('Survey submission:', submissionData);
-    setSubmitted(true);
+    try {
+      console.log('Submitting data:', submissionData); // Debug log
+      
+      const { error } = await supabase
+        .from('survey_submissions')
+        .insert([{
+          library_name: formData['library-name'] as string,
+          library_version: formData['library-version'] as string,
+          responses: formData,
+          user_agent: navigator.userAgent
+        }]);
+
+      if (error) {
+        console.error('Supabase error:', error);
+        throw new Error(error.message);
+      }
+
+      setSubmitted(true);
+      setSubmitError(null);
+    } catch (error) {
+      console.error('Detailed error submitting survey:', error);
+      setSubmitError(error instanceof Error ? error.message : 'Failed to submit survey. Please try again.');
+    }
   };
 
   const renderQuestion = (question: SurveyQuestion, level: number = 0) => {
@@ -924,7 +946,12 @@ export default function NlaAppSimSurveyPage() {
               </div>
             ))}
 
-            <div className="flex justify-center pt-10">
+            <div className="flex flex-col items-center pt-10">
+              {submitError && (
+                <div className="mb-4 p-4 bg-red-50 border border-red-200 text-red-700 rounded-lg">
+                  {submitError}
+                </div>
+              )}
               <button
                 type="submit"
                 className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-12 py-4 rounded-xl
