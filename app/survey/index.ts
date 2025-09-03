@@ -25,10 +25,11 @@ export const surveyData: SurveySection[] = [
                 '• Specific algorithmic needs and constraints\n' +
                 '• Benchmarking requirements and metrics\n\n' +
                 '***This information helps us understand the computational patterns across different scientific domains and guides our development of optimized NLA libraries and benchmarks.***\n\n' +
+                '⚠️ If your code has multiple distinct use cases with significantly different requirements, we encourage you to submit separate survey responses for each major use case. This helps us better understand the full range of your needs.\n\n' +
                 '⚠️ Selection Guidance\n\n' +
                 'We recommend selecting your top 3 most critical operations for benchmarking:\n' +
                 '• Operations dominating your application performance\n' +
-                '• Key routines you want to optimize\n\n' +
+                '• Operations in your codes you want to optimize\n\n' +
                 'You can select more if essential, but please prioritize your most important operations.',
     questions: [
       {
@@ -50,7 +51,7 @@ export const surveyData: SurveySection[] = [
           },
           {
             id: 'quasi-hermitian-bse',
-            title: 'Quasi-Hermitian (BSE) - Hψ = Eψ, where H = (A -B*; B -A*), A = A†, B = B^T',
+            title: 'Quasi-Hermitian (BSE) - Hψ = Eψ, where H = (A B; -B* -A*), A = A†, B = B^T',
             type: 'section',
             children: bseData[0].questions
           },
@@ -73,6 +74,21 @@ export const surveyData: SurveySection[] = [
             type: 'section',
             isSelectable: true,
             children: generalizedSymmetricData[0].questions
+          },
+          {
+            id: 'gen-other',
+            title: 'Other',
+            type: 'section',
+            isSelectable: true,
+            children: [
+              {
+                id: 'gen-other-specify',
+                title: 'Please specify your generalized eigenvalue problem type',
+                type: 'textarea',
+                content: 'Describe the properties of your matrices A and B',
+                showOnlyWhenParentSelected: true
+              }
+            ]
           }
         ]
       },
@@ -105,6 +121,21 @@ export const surveyData: SurveySection[] = [
         title: 'Linear System Solvers',
         type: 'section',
         children: linearSolversData[0].questions
+      },
+      {
+        id: 'other-nla-operation',
+        title: 'Other NLA Operation',
+        type: 'section',
+        isSelectable: true,
+        children: [
+          {
+            id: 'other-nla-operation-specify',
+            title: 'Please specify your NLA operation',
+            type: 'textarea',
+            content: 'Describe your NLA operation, including:\n• Operation type and mathematical formulation\n• Matrix properties and characteristics\n• Performance requirements\n• Current implementation approach.\n\n This information will help us consider adding dedicated sections for frequently requested operations in future survey updates.',
+            showOnlyWhenParentSelected: true
+          }
+        ]
       }
     ]
   },

@@ -21,9 +21,9 @@ export const symmetricHermitianData: SurveySection[] = [
       },
       {
         id: 'sym-herm-matrix-structure',
-        title: 'Matrix Structure',
+        title: 'Matrix Properties and Structure',
         type: 'checkbox',
-        content: 'What is the structure of your symmetric/Hermitian matrices? Select all that apply:',
+        content: 'What is the structure and properties of your symmetric/Hermitian matrices? Select all that apply:',
         options: [
           'Dense',
           'Sparse',
@@ -31,6 +31,10 @@ export const symmetricHermitianData: SurveySection[] = [
           'Tridiagonal/Banded',
           'Block tridiagonal/Block Diagonal',
           'Toeplitz',
+          'Matrix-free (only matrix-vector products available)',
+          'Matrix-free with preconditioner',
+          'Complex valued',
+          'Real valued',
           'Other (please specify):'
         ]
       },
@@ -39,6 +43,42 @@ export const symmetricHermitianData: SurveySection[] = [
         title: 'Matrix Properties',
         type: 'section',
         children: [
+          {
+            id: 'sym-herm-matrix-distribution',
+            title: 'Matrix Distribution',
+            type: 'checkbox',
+            content: 'How is your matrix distributed across processes/nodes? Select all that apply:',
+            options: [
+              'Block cyclic distribution (e.g., ScaLAPACK style)',
+              'Block row/column distribution',
+              'Custom domain decomposition',
+              'Hierarchical/multilevel distribution',
+              'Graph/hypergraph partitioning',
+              'Replicated on all processes',
+              'Hybrid CPU-GPU distribution',
+              'Dynamic/adaptive distribution',
+              'Other (please specify):'
+            ]
+          },
+          {
+            id: 'sym-herm-matrix-format',
+            title: 'Matrix Storage Format',
+            type: 'checkbox',
+            content: 'What storage formats do you use? Select all that apply:',
+            options: [
+              'Dense (column-major/row-major)',
+              'Compressed Sparse Row (CSR/CRS)',
+              'Compressed Sparse Column (CSC/CCS)',
+              'Block CSR/CSC',
+              'ELLPACK/ELLPACK-R',
+              'Diagonal/Block-diagonal',
+              'Coordinate (COO)',
+              'Hierarchical formats (H-matrices, HSS)',
+              'Custom/application-specific format',
+              'Multiple formats (conversion as needed)',
+              'Other (please specify):'
+            ]
+          },
           {
             id: 'sym-herm-spd',
             title: 'Positive definiteness',
@@ -79,7 +119,7 @@ export const symmetricHermitianData: SurveySection[] = [
           {
             id: 'sym-herm-eigenvalue-distribution',
             title: 'Eigenvalue distribution',
-            type: 'multiple-choice',
+            type: 'checkbox',
             content: 'How are your eigenvalues typically distributed?',
             options: [
               'Well-separated',
@@ -92,7 +132,7 @@ export const symmetricHermitianData: SurveySection[] = [
           {
             id: 'sym-herm-scale-size',
             title: 'Problem Scale',
-            type: 'multiple-choice',
+            type: 'checkbox',
             content: 'What are the typical dimensions of your matrices?',
             options: [
               'Small (< 1,000)',
@@ -144,7 +184,7 @@ export const symmetricHermitianData: SurveySection[] = [
             options: [
               'Smallest eigenvalues',
               'Largest eigenvalues',
-              'Eigenvalues near a target shif',
+              'Eigenvalues near a target shift',
               'Eigenvalues in a specific range',
               'Interior eigenvalues',
               'All eigenvalues',
@@ -182,6 +222,41 @@ export const symmetricHermitianData: SurveySection[] = [
               'High (10^-9)',
               'Very high (10^-12)',
               'Machine precision'
+            ]
+          },
+          {
+            id: 'sym-herm-precision-type',
+            title: 'Working Precision',
+            type: 'checkbox',
+            content: 'What numerical precision do you use or need? Select all that apply:',
+            options: [
+              'Single precision (32-bit)',
+              'Double precision (64-bit)',
+              'Extended/Quad precision (128-bit)',
+              'Mixed precision (e.g., FP32/FP64 combination)',
+              'Low precision (e.g., FP16, BF16)',
+              'Adaptive precision'
+            ]
+          }
+        ]
+      },
+      {
+        id: 'sym-herm-workload',
+        title: 'Workload Characteristics',
+        type: 'section',
+        children: [
+          {
+            id: 'sym-herm-computation-type',
+            title: 'Computation Pattern: capability or capacity',
+            type: 'checkbox',
+            content: 'How do you typically run your eigenvalue computations? Select all that apply:',
+            options: [
+              'Large-scale single problems (e.g., one large matrix at a time, using significant computational resources)',
+              'Many independent smaller problems (e.g., batch processing multiple matrices simultaneously)',
+              'Mix of large and small problems (varying resource requirements)',
+              'Repeated similar-sized problems (e.g., time evolution or parameter sweeps)',
+              'Real-time/interactive requirements (need immediate solutions)',
+              'Asynchronous/background processing (can wait for solutions)'
             ]
           }
         ]
@@ -298,6 +373,18 @@ export const symmetricHermitianData: SurveySection[] = [
               'Yes, mini-apps only',
               'No',
               'Not sure yet'
+            ]
+          },
+          {
+            id: 'sym-herm-scaling-requirements',
+            title: 'Scaling Requirements',
+            type: 'checkbox',
+            content: 'What are your scaling requirements for symmetric/Hermitian eigenvalue problems?',
+            options: [
+              'Strong scaling (fixed total problem size)',
+              'Weak scaling (fixed problem size per process/node)',
+              'Both strong and weak scaling needed',
+              'No specific scaling requirements'
             ]
           },
           //{

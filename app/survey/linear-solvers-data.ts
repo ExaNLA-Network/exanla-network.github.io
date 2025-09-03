@@ -24,7 +24,11 @@ export const linearSolversData: SurveySection[] = [
               'Banded',
               'Block diagonal',
               'Structured (Toeplitz, Hankel, etc.)',
-              'Other (please specify)'
+              'Matrix-free (only matrix-vector products available)',
+              'Matrix-free with preconditioner',
+              'Matrix-free with approximate factorization',
+              'Matrix-free with multilevel structure',
+              'Other (please specify):'
             ]
           },
           {
@@ -39,7 +43,46 @@ export const linearSolversData: SurveySection[] = [
               'Indefinite',
               'Complex-valued',
               'Real-valued',
-              'Other (please specify)'
+              'Other (please specify):'
+            ]
+          },
+          {
+            id: 'matrix-distribution',
+            title: 'Matrix Distribution',
+            type: 'checkbox',
+            content: 'How is your matrix distributed across processes/nodes? Select all that apply:',
+            options: [
+              'Block cyclic distribution (e.g., ScaLAPACK style)',
+              'Block row/column distribution',
+              'Custom domain decomposition',
+              'Hierarchical/multilevel distribution',
+              'Graph/hypergraph partitioning',
+              'Replicated on all processes',
+              'Hybrid CPU-GPU distribution',
+              'Dynamic/adaptive distribution',
+              'Distribution matching preconditioner',
+              'Other (please specify):'
+            ]
+          },
+          {
+            id: 'matrix-format',
+            title: 'Matrix Storage Format',
+            type: 'checkbox',
+            content: 'What storage formats do you use? Select all that apply:',
+            options: [
+              'Dense (column-major/row-major)',
+              'Compressed Sparse Row (CSR/CRS)',
+              'Compressed Sparse Column (CSC/CCS)',
+              'Block CSR/CSC',
+              'ELLPACK/ELLPACK-R',
+              'Diagonal/Block-diagonal',
+              'Coordinate (COO)',
+              'Hierarchical formats (H-matrices, HSS)',
+              'Custom/application-specific format',
+              'Multiple formats (conversion as needed)',
+              'Format optimized for matrix-free operations',
+              'Format optimized for GPU computation',
+              'Other (please specify):'
             ]
           },
           {
@@ -77,6 +120,24 @@ export const linearSolversData: SurveySection[] = [
             ]
           },
           {
+            id: 'solver-precision-type',
+            title: 'Working Precision',
+            type: 'checkbox',
+            content: 'What numerical precision do you use or need for linear solvers? Select all that apply:',
+            options: [
+              'Single precision (32-bit)',
+              'Double precision (64-bit)',
+              'Extended/Quad precision (128-bit)',
+              'Mixed precision (e.g., FP32 solver with FP64 refinement)',
+              'Low precision (e.g., FP16, BF16)',
+              'Adaptive precision (based on matrix condition number)',
+              'Precision matching input matrix type',
+              'Higher precision for ill-conditioned systems',
+              'Mixed precision iterative refinement',
+              'Different precision for solver vs. preconditioner'
+            ]
+          },
+          {
             id: 'solver-scaling',
             title: 'Scaling Requirements',
             type: 'multiple-choice',
@@ -100,7 +161,33 @@ export const linearSolversData: SurveySection[] = [
               'GPU acceleration',
               'Hybrid CPU-GPU',
               'Multi-node scaling',
-              'Other (please specify)'
+              'Other (please specify):'
+            ]
+          }
+        ]
+      },
+      {
+        id: 'solver-workload',
+        title: 'Workload Characteristics',
+        type: 'section',
+        children: [
+          {
+            id: 'solver-computation-type',
+            title: 'Computation Pattern: capability or capacity',
+            type: 'checkbox',
+            content: 'How do you typically solve linear systems? Select all that apply:',
+            options: [
+              'Large-scale single systems (e.g., one large system at a time, using significant computational resources)',
+              'Many independent smaller systems (e.g., batch processing multiple right-hand sides)',
+              'Mix of large and small systems (varying resource requirements)',
+              'Repeated solves with same matrix (e.g., multiple right-hand sides)',
+              'Repeated solves with similar matrices (e.g., during nonlinear iterations)',
+              'Real-time/interactive requirements (need immediate solutions)',
+              'Asynchronous/background processing (can wait for solutions)',
+              'Part of larger computation (e.g., inner solver in optimization)',
+              'Sequence of related systems (e.g., from time-stepping)',
+              'Multiple systems in parallel (e.g., domain decomposition)',
+              'Incremental updates to existing solutions'
             ]
           }
         ]
@@ -120,7 +207,7 @@ export const linearSolversData: SurveySection[] = [
               'ScaLAPACK',
               'SLATE',
               'cuSolverMp',
-              'Other (please specify)'
+              'Other (please specify):'
             ]
           },
           {
@@ -137,18 +224,18 @@ export const linearSolversData: SurveySection[] = [
               'PEXSI',
               'NTPoly',
               'CheSS',
-              'Other (please specify)'
+              'Other (please specify):'
             ]
           },
         ]
       },
       {
-        id: 'sym-herm-benchmarking',
+        id: 'linear-solvers-benchmarking',
         title: 'Benchmarking Requirements',
         type: 'section',
         children: [
           {
-            id: 'sym-herm-input-data-type',
+            id: 'linear-solvers-input-data-type',
             title: 'Benchmark Input Types',
             type: 'checkbox',
             content: 'What types of matrix inputs should be used for benchmarking?',
@@ -161,7 +248,7 @@ export const linearSolversData: SurveySection[] = [
             ]
           },
           {
-            id: 'sym-herm-data-provision',
+            id: 'linear-solvers-data-provision',
             title: 'Can You Provide Data or Mini-apps?',
             type: 'checkbox',
             content: 'Would you be able to share real matrices or mini-apps for benchmarking?',
@@ -171,6 +258,18 @@ export const linearSolversData: SurveySection[] = [
               'Yes, mini-apps only',
               'No',
               'Not sure yet'
+            ]
+          },
+          {
+            id: 'linear-solvers-scaling-requirements',
+            title: 'Scaling Requirements',
+            type: 'checkbox',
+            content: 'What are your scaling requirements for linear system solvers?',
+            options: [
+              'Strong scaling (fixed total problem size)',
+              'Weak scaling (fixed problem size per process/node)',
+              'Both strong and weak scaling needed',
+              'No specific scaling requirements'
             ]
           },
           //{

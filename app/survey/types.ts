@@ -12,6 +12,7 @@ export interface SurveyQuestion {
     groupTitle: string;
     options: string[];
   }[];
+  showOnlyWhenParentSelected?: boolean;
 }
 
 export interface SurveySection {

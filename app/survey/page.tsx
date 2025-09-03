@@ -6,8 +6,8 @@ import Link from 'next/link';
 const AVAILABLE_SURVEYS = [
   {
     id: 'nla-app-sim',
-    title: 'Application/Simulation Library Survey',
-    description: 'Help us understand the Numerical Linear Algebra (NLA) operations used in your application/simulation libraries. This survey will help prepare for benchmarking and identify common NLA patterns across different domains.',
+    title: 'Survey: Numerical Linear Algebra in Scientific Applications',
+    description: 'Help us understand the Numerical Linear Algebra (NLA) operations used in your application/simulation codes. This survey will help prepare for benchmarking and identify common NLA patterns across different domains.',
     path: '/survey/nla-app-sim'
   },
   // More surveys can be added here later

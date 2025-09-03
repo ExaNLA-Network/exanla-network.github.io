@@ -51,6 +51,46 @@ export const matrixMultiplicationData: SurveySection[] = [
             ]
           },
           {
+            id: 'gemm-matrix-distribution',
+            title: 'Matrix Distribution',
+            type: 'checkbox',
+            content: 'How are your matrices distributed across processes/nodes? Select all that apply:',
+            options: [
+              'Block cyclic distribution (e.g., ScaLAPACK style)',
+              'Block row/column distribution',
+              'Custom domain decomposition',
+              'Hierarchical/multilevel distribution',
+              'Communication-avoiding distribution',
+              'Replicated on all processes',
+              'Hybrid CPU-GPU distribution',
+              'Dynamic/adaptive distribution',
+              'Cannon/SUMMA-style distribution',
+              'Other (please specify):'
+            ]
+          },
+          {
+            id: 'gemm-matrix-format',
+            title: 'Matrix Storage Format',
+            type: 'checkbox',
+            content: 'What storage formats do you use? Select all that apply:',
+            options: [
+              'Dense (column-major/row-major)',
+              'Compressed Sparse Row (CSR/CRS)',
+              'Compressed Sparse Column (CSC/CCS)',
+              'Block CSR/CSC',
+              'ELLPACK/ELLPACK-R',
+              'Diagonal/Block-diagonal',
+              'Coordinate (COO)',
+              'Hierarchical formats (H-matrices, HSS)',
+              'Custom/application-specific format',
+              'Multiple formats (conversion as needed)',
+              'Format optimized for batched operations',
+              'Format optimized for GPU computation',
+              'Format optimized for tensor operations',
+              'Other (please specify):'
+            ]
+          },
+          {
             id: 'gemm-operation-types',
             title: 'Which types of matrix multiplications do you perform?',
             type: 'checkbox',
@@ -76,7 +116,7 @@ export const matrixMultiplicationData: SurveySection[] = [
               {
                 id: 'gemm-matrix-size',
                 title: 'Matrix Size Range',
-                type: 'multiple-choice',
+                type: 'checkbox',
                 content: 'What are your typical matrix dimensions?',
                 options: [
                   'Small (< 100)',
@@ -89,7 +129,7 @@ export const matrixMultiplicationData: SurveySection[] = [
               {
                 id: 'gemm-batch-size',
                 title: 'Batch Size',
-                type: 'multiple-choice',
+                type: 'checkbox',
                 content: 'For batched operations, what is your typical batch size?',
                 options: [
                   'Small (< 10)',
@@ -322,6 +362,35 @@ export const matrixMultiplicationData: SurveySection[] = [
               'Yes, mini-apps only',
               'No',
               'Not sure yet'
+            ]
+          },
+          {
+            id: 'gemm-scaling-requirements',
+            title: 'Scaling Requirements',
+            type: 'checkbox',
+            content: 'What are your scaling requirements for matrix multiplication?',
+            options: [
+              'Strong scaling (fixed total problem size)',
+              'Weak scaling (fixed problem size per process/node)',
+              'Both strong and weak scaling needed',
+              'No specific scaling requirements'
+            ]
+          },
+          {
+            id: 'gemm-precision-type',
+            title: 'Working Precision',
+            type: 'checkbox',
+            content: 'What numerical precision do you use or need for matrix multiplication? Select all that apply:',
+            options: [
+              'Single precision (32-bit)',
+              'Double precision (64-bit)',
+              'Extended/Quad precision (128-bit)',
+              'Mixed precision (e.g., FP32 multiplication with FP64 accumulation)',
+              'Low precision (e.g., FP16, BF16)',
+              'Adaptive precision (based on numerical requirements)',
+              'Precision matching input matrix type',
+              'Different precision for computation vs. storage',
+              'Tensor Core compatible precisions'
             ]
           },
           //{
