@@ -3,21 +3,21 @@ import { SurveySection } from './types';
 export const generalData: SurveySection[] = [
   {
     id: 'library-info',
-    title: 'Library Information',
-    description: 'Basic information about your application/simulation library.',
+    title: 'Codes Information',
+    description: 'Basic information about your application/simulation codes.',
     questions: [
       {
         id: 'library-name',
         title: 'Library Name',
         type: 'text',
         required: true,
-        content: 'What is the name of your application/simulation library? (e.g., CP2K, Quantum ESPRESSO, SIESTA, etc.)'
+        content: 'What is the name of your application/simulation codes? (e.g., CP2K, Quantum ESPRESSO, SIESTA, etc.)'
       },
       {
         id: 'library-version',
         title: 'Current Version',
         type: 'text',
-        content: 'What is the current version of your library?'
+        content: 'What is the current version of your codes?'
       },
       {
         id: 'library-domain',
@@ -26,7 +26,7 @@ export const generalData: SurveySection[] = [
         children: [
           {
             id: 'domain-selection',
-            title: 'What is the primary application domain of your library?',
+            title: 'What is the primary application domain of your codes?',
             type: 'multiple-choice',
             required: true,
             content: 'Select the main domain:',
@@ -34,7 +34,7 @@ export const generalData: SurveySection[] = [
               'Materials Science',
               'Fluid Dynamics',
               'Climate/Weather Modeling',
-              'Other'
+              'Other (please specify):'
             ]
           },
           {
@@ -128,24 +128,48 @@ export const generalData: SurveySection[] = [
           },
           {
             id: 'other-domain-functions',
-            title: 'Other',
+            title: 'Other Domain Functions',
             type: 'section',
             children: [
               {
                 id: 'other-functions',
                 title: 'What are the main functionalities of your code?',
-                type: 'textarea',
-                content: 'Please describe the main functionalities of your library:'
+                type: 'text',
+                content: 'Please describe the main functionalities of your code',
               }
             ]
           }
         ]
       },
+      {
+        id: 'use-case-info',
+        title: 'Use Case Information',
+        type: 'section',
+        children: [
+          {
+            id: 'multiple-use-cases',
+            title: 'Does your codes have multiple distinct use cases?',
+            type: 'multiple-choice',
+            content: 'Different use cases might involve different matrix types, operations, or performance requirements.',
+            options: [
+              'No, single primary use case',
+              'Yes, multiple distinct use cases'
+            ]
+          },
+          {
+            id: 'current-use-case',
+            title: 'Which use case are you describing in this submission?',
+            type: 'text',
+            content: 'Please provide a brief name/description for this specific use case (e.g., "Ground state DFT calculations", "Time evolution", "Transport calculations"). This helps us track different submissions from the same codes.',
+            required: true
+          }
+        ]
+      },      
             {
         id: 'library-description',
         title: 'Library Description',
         type: 'textarea',
-        content: 'Please provide a brief description of your library and its main functionality.'
+        content: 'Please provide a brief description of your codes and its main functionality.'
       }
     ]
   }

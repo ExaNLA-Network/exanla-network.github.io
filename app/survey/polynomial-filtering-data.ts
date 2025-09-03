@@ -49,9 +49,53 @@ export const polynomialFilteringData: SurveySection[] = [
               'Density matrix',
               'Green\'s function matrix',
               'Time evolution operator',
+              'Complex valued',
+              'Real valued',
               'Other (please specify):'
             ]
-          }
+          },
+          {
+            id: 'poly-matrix-distribution',
+            title: 'Matrix Distribution',
+            type: 'checkbox',
+            content: 'How is your matrix distributed across processes/nodes? Select all that apply:',
+            options: [
+              'Block cyclic distribution (e.g., ScaLAPACK style)',
+              'Block row/column distribution',
+              'Custom domain decomposition',
+              'Hierarchical/multilevel distribution',
+              'Communication-minimizing distribution',
+              'Replicated on all processes',
+              'Hybrid CPU-GPU distribution',
+              'Dynamic/adaptive distribution',
+              'Distribution optimized for matrix-vector products',
+              'Distribution for polynomial evaluation',
+              'Other (please specify):'
+            ]
+          },
+          {
+            id: 'poly-matrix-format',
+            title: 'Matrix Storage Format',
+            type: 'checkbox',
+            content: 'What storage formats do you use? Select all that apply:',
+            options: [
+              'Dense (column-major/row-major)',
+              'Compressed Sparse Row (CSR/CRS)',
+              'Compressed Sparse Column (CSC/CCS)',
+              'Block CSR/CSC',
+              'ELLPACK/ELLPACK-R',
+              'Diagonal/Block-diagonal',
+              'Coordinate (COO)',
+              'Hierarchical formats (H-matrices, HSS)',
+              'Custom/application-specific format',
+              'Multiple formats (conversion as needed)',
+              'Format optimized for matrix-vector products',
+              'Format optimized for GPU computation',
+              'Format for polynomial evaluation',
+              'Format for Chebyshev/Legendre operations',
+              'Other (please specify):'
+            ]
+          },
         ]
       },      
       // Polynomial Types
@@ -122,9 +166,51 @@ export const polynomialFilteringData: SurveySection[] = [
               'Adaptive criteria',
               'Other (please specify):'
             ]
+          },
+          {
+            id: 'poly-precision-type',
+            title: 'Working Precision',
+            type: 'checkbox',
+            content: 'What numerical precision do you use or need for polynomial filtering? Select all that apply:',
+            options: [
+              'Single precision (32-bit)',
+              'Double precision (64-bit)',
+              'Extended/Quad precision (128-bit)',
+              'Mixed precision (e.g., FP32 for polynomial evaluation, FP64 for coefficients)',
+              'Low precision (e.g., FP16, BF16)',
+              'Adaptive precision (based on polynomial degree)',
+              'Precision matching input matrix type',
+              'Higher precision for coefficient computation',
+              'Mixed precision for matrix-vector products'
+            ]
           }
         ]
       },      
+      {
+        id: 'poly-workload',
+        title: 'Workload Characteristics',
+        type: 'section',
+        children: [
+          {
+            id: 'poly-computation-type',
+            title: 'Computation Pattern: capability or capacity',
+            type: 'checkbox',
+            content: 'How do you typically perform polynomial filtering operations? Select all that apply:',
+            options: [
+              'Large-scale single operations (e.g., one large matrix polynomial at a time)',
+              'Many independent smaller operations (e.g., batch processing multiple polynomials)',
+              'Mix of large and small operations (varying resource requirements)',
+              'Repeated operations with same polynomial (e.g., during time evolution)',
+              'Repeated operations with different polynomials (e.g., polynomial sequence)',
+              'Real-time/interactive requirements (need immediate results)',
+              'Asynchronous/background processing (can wait for results)',
+              'Part of larger computation (e.g., density matrix construction, spectral filtering)',
+              'Adaptive polynomial degree based on convergence',
+              'Multiple polynomials in parallel (e.g., Chebyshev expansion)'
+            ]
+          }
+        ]
+      },
       // Library Usage
       {
         id: 'poly-libraries',
@@ -158,12 +244,12 @@ export const polynomialFilteringData: SurveySection[] = [
         ]
       },
       {
-        id: 'sym-herm-benchmarking',
+        id: 'poly-benchmarking',
         title: 'Benchmarking Requirements',
         type: 'section',
         children: [
           {
-            id: 'sym-herm-input-data-type',
+            id: 'poly-input-data-type',
             title: 'Benchmark Input Types',
             type: 'checkbox',
             content: 'What types of matrix inputs should be used for benchmarking?',
@@ -176,7 +262,7 @@ export const polynomialFilteringData: SurveySection[] = [
             ]
           },
           {
-            id: 'sym-herm-data-provision',
+            id: 'poly-data-provision',
             title: 'Can You Provide Data or Mini-apps?',
             type: 'checkbox',
             content: 'Would you be able to share real matrices or mini-apps for benchmarking?',
@@ -186,6 +272,18 @@ export const polynomialFilteringData: SurveySection[] = [
               'Yes, mini-apps only',
               'No',
               'Not sure yet'
+            ]
+          },
+          {
+            id: 'poly-scaling-requirements',
+            title: 'Scaling Requirements',
+            type: 'checkbox',
+            content: 'What are your scaling requirements for polynomial filtering operations?',
+            options: [
+              'Strong scaling (fixed total problem size)',
+              'Weak scaling (fixed problem size per process/node)',
+              'Both strong and weak scaling needed',
+              'No specific scaling requirements'
             ]
           },
           //{

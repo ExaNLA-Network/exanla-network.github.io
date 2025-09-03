@@ -4,18 +4,20 @@ export const bseData: SurveySection[] = [
   {
     id: 'quasi-hermitian-bse-eigenvalue',
     title: 'Quasi-Hermitian (BSE) Eigenvalue Problems',
-    description: 'Details about quasi-Hermitian eigenvalue problems arising from the Bethe-Salpeter Equation (BSE): Hψ = Eψ, where H = (A -B*; B -A*), with A = A† (Hermitian) and B = B^T (symmetric).',
+    description: 'Details about quasi-Hermitian eigenvalue problems arising from the Bethe-Salpeter Equation (BSE): Hψ = Eψ, where H = (A B; -B* -A*), with A = A† (Hermitian) and B = B^T (symmetric).',
     questions: [
       {
         id: 'bse-matrix-structure',
-        title: 'Matrix Structure',
+        title: 'Matrix Properties and Structure',
         type: 'checkbox',
-        content: 'What is the structure of your BSE matrices? Select all that apply:',
+        content: 'What is the structure and properties of your BSE matrices? Select all that apply:',
         options: [
           'Dense (standard full matrix)',
           'Sparse (from localized basis or truncated interactions)',
           'Block sparse (e.g., from locality in A/B blocks)',
           'Banded (if coupling is short-range only',
+          'Complex valued',
+          'Real valued',
           'Other (please specify):'
         ]
       },
@@ -40,7 +42,7 @@ export const bseData: SurveySection[] = [
           {
             id: 'bse-eigenvalue-distribution',
             title: 'Eigenvalue distribution',
-            type: 'multiple-choice',
+            type: 'checkbox',
             content: 'How are the eigenvalues distributed?',
             options: [
               'Well-separated',
@@ -144,6 +146,41 @@ export const bseData: SurveySection[] = [
               'Very high accuracy (10^-12)',
               'Machine precision'
             ]
+          },
+          {
+            id: 'bse-precision-type',
+            title: 'Working Precision',
+            type: 'checkbox',
+            content: 'What numerical precision do you use or need? Select all that apply:',
+            options: [
+              'Single precision (32-bit)',
+              'Double precision (64-bit)',
+              'Extended/Quad precision (128-bit)',
+              'Mixed precision (e.g., FP32/FP64 combination)',
+              'Low precision (e.g., FP16, BF16)',
+              'Adaptive precision'
+            ]
+          }
+        ]
+      },
+      {
+        id: 'bse-workload',
+        title: 'Workload Characteristics',
+        type: 'section',
+        children: [
+          {
+            id: 'bse-computation-type',
+            title: 'Computation Pattern: capability or capacity',
+            type: 'checkbox',
+            content: 'How do you typically run your BSE eigenvalue computations? Select all that apply:',
+            options: [
+              'Large-scale single problems (e.g., one large BSE matrix at a time, using significant computational resources)',
+              'Many independent smaller problems (e.g., batch processing multiple BSE matrices simultaneously)',
+              'Mix of large and small problems (varying resource requirements)',
+              'Repeated similar-sized problems (e.g., time evolution or parameter sweeps)',
+              'Real-time/interactive requirements (need immediate solutions)',
+              'Asynchronous/background processing (can wait for solutions)'
+            ]
           }
         ]
       },
@@ -204,12 +241,12 @@ export const bseData: SurveySection[] = [
         ]
       },
       {
-        id: 'sym-herm-benchmarking',
+        id: 'bse-benchmarking',
         title: 'Benchmarking Requirements',
         type: 'section',
         children: [
           {
-            id: 'sym-herm-input-data-type',
+            id: 'bse-input-data-type',
             title: 'Benchmark Input Types',
             type: 'checkbox',
             content: 'What types of matrix inputs should be used for benchmarking?',
@@ -222,7 +259,7 @@ export const bseData: SurveySection[] = [
             ]
           },
           {
-            id: 'sym-herm-data-provision',
+            id: 'bse-data-provision',
             title: 'Can You Provide Data or Mini-apps?',
             type: 'checkbox',
             content: 'Would you be able to share real matrices or mini-apps for benchmarking?',
@@ -232,6 +269,18 @@ export const bseData: SurveySection[] = [
               'Yes, mini-apps only',
               'No',
               'Not sure yet'
+            ]
+          },
+          {
+            id: 'bse-scaling-requirements',
+            title: 'Scaling Requirements',
+            type: 'checkbox',
+            content: 'What are your scaling requirements for BSE eigenproblems?',
+            options: [
+              'Strong scaling (fixed total problem size)',
+              'Weak scaling (fixed problem size per process/node)',
+              'Both strong and weak scaling needed',
+              'No specific scaling requirements'
             ]
           },
           //{

@@ -9,9 +9,9 @@ export const qrData: SurveySection[] = [
       // Matrix Properties
       {
         id: 'qr-matrix-structure',
-        title: 'Matrix Structure',
+        title: 'Matrix Properties',
         type: 'checkbox',
-        content: 'What is the structure of your matrices for QR factorization? Select all that apply:',
+        content: 'What is the structure and properties of your matrices for QR factorization? Select all that apply:',
         options: [
           'Dense',
           'Sparse',
@@ -20,7 +20,49 @@ export const qrData: SurveySection[] = [
           'Block diagonal',
           'Toeplitz',
           'Hierarchical / Low-rank',
-          'Other structured (please specify):'
+          'Complex valued',
+          'Real valued',
+          'Other (please specify):'
+        ]
+      },
+      {
+        id: 'qr-matrix-distribution',
+        title: 'Matrix Distribution',
+        type: 'checkbox',
+        content: 'How is your matrix distributed across processes/nodes? Select all that apply:',
+        options: [
+          'Block cyclic distribution (e.g., ScaLAPACK style)',
+          'Block row/column distribution',
+          'Custom domain decomposition',
+          'Hierarchical/multilevel distribution',
+          'Communication-minimizing distribution',
+          'Replicated on all processes',
+          'Hybrid CPU-GPU distribution',
+          'Dynamic/adaptive distribution',
+          'Tall-skinny optimized distribution',
+          'Other (please specify):'
+        ]
+      },
+      {
+        id: 'qr-matrix-format',
+        title: 'Matrix Storage Format',
+        type: 'checkbox',
+        content: 'What storage formats do you use? Select all that apply:',
+        options: [
+          'Dense (column-major/row-major)',
+          'Compressed Sparse Row (CSR/CRS)',
+          'Compressed Sparse Column (CSC/CCS)',
+          'Block CSR/CSC',
+          'ELLPACK/ELLPACK-R',
+          'Diagonal/Block-diagonal',
+          'Coordinate (COO)',
+          'Hierarchical formats (H-matrices, HSS)',
+          'Custom/application-specific format',
+          'Multiple formats (conversion as needed)',
+          'Format optimized for Householder operations',
+          'Format optimized for GPU computation',
+          'Format for tall-skinny matrices',
+          'Other (please specify):'
         ]
       },
       {
@@ -136,6 +178,45 @@ export const qrData: SurveySection[] = [
               'Very high accuracy (10^-12)',
               'Machine precision'
             ]
+          },
+          {
+            id: 'qr-precision-type',
+            title: 'Working Precision',
+            type: 'checkbox',
+            content: 'What numerical precision do you use or need for QR factorization? Select all that apply:',
+            options: [
+              'Single precision (32-bit)',
+              'Double precision (64-bit)',
+              'Extended/Quad precision (128-bit)',
+              'Mixed precision (e.g., FP32 factorization with FP64 refinement)',
+              'Low precision (e.g., FP16, BF16)',
+              'Adaptive precision (based on matrix condition number)',
+              'Precision matching input matrix type',
+              'Different precision for Q and R factors'
+            ]
+          }
+        ]
+      },
+      {
+        id: 'qr-workload',
+        title: 'Workload Characteristics',
+        type: 'section',
+        children: [
+          {
+            id: 'qr-computation-type',
+            title: 'Computation Pattern: capability or capacity',
+            type: 'checkbox',
+            content: 'How do you typically perform QR factorizations? Select all that apply:',
+            options: [
+              'Large-scale single factorizations (e.g., one large matrix at a time, using significant computational resources)',
+              'Many independent smaller factorizations (e.g., batch processing multiple matrices simultaneously)',
+              'Mix of large and small factorizations (varying resource requirements)',
+              'Repeated factorizations of similar matrices (e.g., during iterative methods or optimization)',
+              'Real-time/interactive requirements (need immediate factorization)',
+              'Asynchronous/background processing (can wait for factorization)',
+              'Part of larger computation (e.g., least squares or eigenvalue problems)',
+              'Updating/downdating existing factorizations'
+            ]
           }
         ]
       },
@@ -214,12 +295,12 @@ export const qrData: SurveySection[] = [
         ]
       },
       {
-        id: 'sym-herm-benchmarking',
+        id: 'qr-benchmarking',
         title: 'Benchmarking Requirements',
         type: 'section',
         children: [
           {
-            id: 'sym-herm-input-data-type',
+            id: 'qr-input-data-type',
             title: 'Benchmark Input Types',
             type: 'checkbox',
             content: 'What types of matrix inputs should be used for benchmarking?',
@@ -232,7 +313,7 @@ export const qrData: SurveySection[] = [
             ]
           },
           {
-            id: 'sym-herm-data-provision',
+            id: 'qr-data-provision',
             title: 'Can You Provide Data or Mini-apps?',
             type: 'checkbox',
             content: 'Would you be able to share real matrices or mini-apps for benchmarking?',
@@ -242,6 +323,18 @@ export const qrData: SurveySection[] = [
               'Yes, mini-apps only',
               'No',
               'Not sure yet'
+            ]
+          },
+          {
+            id: 'qr-scaling-requirements',
+            title: 'Scaling Requirements',
+            type: 'checkbox',
+            content: 'What are your scaling requirements for QR factorization?',
+            options: [
+              'Strong scaling (fixed total problem size)',
+              'Weak scaling (fixed problem size per process/node)',
+              'Both strong and weak scaling needed',
+              'No specific scaling requirements'
             ]
           },
           //{

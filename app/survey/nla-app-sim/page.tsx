@@ -152,7 +152,8 @@ export default function NlaAppSimSurveyPage() {
       'qr-factorization',
       'matrix-inversion',
       'polynomial-filtering',
-      'linear-system-solvers'
+      'linear-system-solvers',
+      'other-nla-operation'
     ].includes(questionId);
 
     if (isNlaOperation && typeof value === 'boolean') {
@@ -273,7 +274,8 @@ export default function NlaAppSimSurveyPage() {
       'qr-factorization': 'QR Factorization',
       'matrix-inversion': 'Matrix Inversion',
       'polynomial-filtering': 'Polynomial Filtering',
-      'linear-system-solvers': 'Linear System Solvers'
+      'linear-system-solvers': 'Linear System Solvers',
+      'other-nla-operation': 'Other NLA Operation'
     };
     return operationNames[operationId] || operationId;
   };
@@ -565,6 +567,18 @@ export default function NlaAppSimSurveyPage() {
                     </label>
                   ))}
                 </div>
+                {formData[question.id] === 'Other (please specify):' && (
+                  <div className="mt-2">
+                    <input
+                      type="text"
+                      value={formData[`${question.id}-other`] as string || ''}
+                      onChange={(e) => handleInputChange(`${question.id}-other`, e.target.value)}
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      placeholder="Please specify..."
+                      required
+                    />
+                  </div>
+                )}
               </div>
             )}
 
@@ -670,6 +684,11 @@ export default function NlaAppSimSurveyPage() {
               if (isCollapsed) {
                 return null;
               }
+
+              // Hide child questions that should only show when parent is selected
+              if (child.showOnlyWhenParentSelected && !formData[question.id]) {
+                return null;
+              }
               
               return renderQuestion(child, level + 1);
             })}
@@ -685,9 +704,10 @@ export default function NlaAppSimSurveyPage() {
               
               const libraryDomainSection = surveyData.find(section => section.id === 'library-info');
               const domainQuestion = libraryDomainSection?.questions.find(q => q.id === 'library-domain');
-              const domainSection = domainQuestion?.children?.find(q => 
-                q.id.includes('-functions') && q.title === selectedDomain
-              );
+              // Find the appropriate domain section
+              const domainSection = selectedDomain === 'Other (please specify):' 
+                ? domainQuestion?.children?.find(q => q.id === 'other-domain-functions')
+                : domainQuestion?.children?.find(q => q.title === selectedDomain);
               
               if (domainSection && domainSection.children) {
                 return domainSection.children.map(child => {
@@ -768,6 +788,12 @@ export default function NlaAppSimSurveyPage() {
             <p className="text-gray-600 mb-6">
               Your survey response has been submitted successfully. We appreciate your input for our NLA operations and benchmarking preparation!
             </p>
+            {formData['multiple-use-cases'] === 'Yes, multiple distinct use cases' && 
+              formData['total-use-cases'] !== 'Just this one' && (
+              <p className="text-blue-600 mb-6">
+                You indicated that you have multiple use cases. Please feel free to submit another response for a different use case of your library.
+              </p>
+            )}
             <button
               onClick={() => {
                 setSubmitted(false);
@@ -844,7 +870,7 @@ export default function NlaAppSimSurveyPage() {
               Numerical Linear Algebra Survey in Scientific Applications
             </h1>
             <p className="text-gray-600 max-w-3xl mx-auto text-lg leading-relaxed">
-              Help us understand the Numerical Linear Algebra (NLA) operations used in your application/simulation libraries. 
+              Help us understand the Numerical Linear Algebra (NLA) operations used in your application/simulation codes. 
               This survey will help prepare for benchmarking and identify common NLA patterns across different domains.
             </p>
           </div>

@@ -17,6 +17,8 @@ export const generalizedSymmetricData: SurveySection[] = [
           'A is dense, B is sparse',
           'A is banded, B is banded',
           'A is block-structured, B is block-structured',
+          'Complex valued',
+          'Real valued',
           'Other (please specify):'
         ]
       },
@@ -52,7 +54,7 @@ export const generalizedSymmetricData: SurveySection[] = [
         ]
       },
       {
-        id: 'sym-herm-matrix-properties',
+        id: 'gen-sym-matrix-properties',
         title: 'Matrix Properties',
         type: 'section',
         children: [
@@ -82,7 +84,7 @@ export const generalizedSymmetricData: SurveySection[] = [
           //  ]
           //},
           {
-            id: 'sym-herm-eigenvalue-distribution',
+            id: 'gen-sym-herm-eigenvalue-distribution',
             title: 'Eigenvalue distribution',
             type: 'multiple-choice',
             content: 'How are your eigenvalues typically distributed?',
@@ -95,7 +97,7 @@ export const generalizedSymmetricData: SurveySection[] = [
             ]
           },
           {
-            id: 'sym-herm-scale-size',
+            id: 'gen-sym-herm-scale-size',
             title: 'Problem Scale',
             type: 'multiple-choice',
             content: 'What are the typical dimensions of your matrices?',
@@ -110,12 +112,12 @@ export const generalizedSymmetricData: SurveySection[] = [
         ]
       },
       {
-        id: 'sym-herm-computation-requirements',
+        id: 'gen-sym-herm-computation-requirements',
         title: 'Computation Requirements',
         type: 'section',
         children: [
           {
-            id: 'sym-herm-eigenvalue-percentage',
+            id: 'gen-sym-herm-eigenvalue-percentage',
             title: 'Percentage of eigenvalues',
             type: 'multiple-choice',
             content: 'What percentage of eigenvalues do you typically compute?',
@@ -130,7 +132,7 @@ export const generalizedSymmetricData: SurveySection[] = [
             ]
           },
           {
-            id: 'sym-herm-compute-mode',
+            id: 'gen-sym-herm-compute-mode',
             title: 'What to compute',
             type: 'multiple-choice',
             content: 'What do you typically need to compute?',
@@ -142,7 +144,7 @@ export const generalizedSymmetricData: SurveySection[] = [
             ]
           },
           {
-            id: 'sym-herm-eigenvalue-location',
+            id: 'gen-sym-herm-eigenvalue-location',
             title: 'Eigenvalue location',
             type: 'multiple-choice',
             content: 'Which eigenvalues are most important to you?',
@@ -159,12 +161,12 @@ export const generalizedSymmetricData: SurveySection[] = [
         ]
       },
       {
-        id: 'sym-herm-tolerance',
+        id: 'gen-sym-herm-tolerance',
         title: 'Required tolerance/precision',
         type: 'section',
         children: [
           {
-            id: 'sym-herm-residual-tolerance',
+            id: 'gen-sym-herm-residual-tolerance',
             title: 'Residual tolerance',
             type: 'multiple-choice',
             content: 'What residual tolerance do you require for ||Ax - λx||?',
@@ -177,7 +179,7 @@ export const generalizedSymmetricData: SurveySection[] = [
             ]
           },
           {
-            id: 'sym-herm-orthogonality-tolerance',
+            id: 'gen-sym-herm-orthogonality-tolerance',
             title: 'Orthogonality tolerance',
             type: 'multiple-choice',
             content: 'What orthogonality tolerance do you require for eigenvectors?',
@@ -188,9 +190,44 @@ export const generalizedSymmetricData: SurveySection[] = [
               'Very high (10^-12)',
               'Machine precision'
             ]
+          },
+          {
+            id: 'gen-sym-precision-type',
+            title: 'Working Precision',
+            type: 'checkbox',
+            content: 'What numerical precision do you use or need? Select all that apply:',
+            options: [
+              'Single precision (32-bit)',
+              'Double precision (64-bit)',
+              'Extended/Quad precision (128-bit)',
+              'Mixed precision (e.g., FP32/FP64 combination)',
+              'Low precision (e.g., FP16, BF16)',
+              'Adaptive precision'
+            ]
           }
         ]
       },      
+      {
+        id: 'gen-sym-workload',
+        title: 'Workload Characteristics',
+        type: 'section',
+        children: [
+          {
+            id: 'gen-sym-computation-type',
+            title: 'Computation Pattern: capability or capacity',
+            type: 'checkbox',
+            content: 'How do you typically run your generalized eigenvalue computations? Select all that apply:',
+            options: [
+              'Large-scale single problems (e.g., one large generalized eigenproblem at a time, using significant computational resources)',
+              'Many independent smaller problems (e.g., batch processing multiple generalized eigenproblems simultaneously)',
+              'Mix of large and small problems (varying resource requirements)',
+              'Repeated similar-sized problems (e.g., time evolution or parameter sweeps)',
+              'Real-time/interactive requirements (need immediate solutions)',
+              'Asynchronous/background processing (can wait for solutions)'
+            ]
+          }
+        ]
+      },
       {
         id: 'gen-sym-nla-libraries',
         title: 'Distributed-Memory NLA Library Usage',
@@ -209,7 +246,7 @@ export const generalizedSymmetricData: SurveySection[] = [
               'SLATE',
               'Chameleon',
               'DPLASMA',
-              'Other (please specify)'
+              'Other (please specify):'
             ]
           },
           {
@@ -224,7 +261,7 @@ export const generalizedSymmetricData: SurveySection[] = [
               'Anasazi – Part of Trilinos, supports block Davidson and Krylov methods',
               'ChASE – Chebyshev accelerated subspace iteration',
               'FEAST – Rational filter for non-Hermitian eigenvalue problems',
-              'Other (please specify)'
+              'Other (please specify):'
             ]
           },
           {
@@ -234,7 +271,7 @@ export const generalizedSymmetricData: SurveySection[] = [
                 content: 'Select all that apply:',
                 options: [
               'ELSI – Abstraction layer for eigenvalue solvers (e.g., used by SIESTA, FHI-aims)',
-              'Other (please specify)'
+              'Other (please specify):'
             ]
           },
           {
@@ -263,12 +300,12 @@ export const generalizedSymmetricData: SurveySection[] = [
         ]
       },
       {
-        id: 'sym-herm-benchmarking',
+        id: 'gen-sym-herm-benchmarking',
         title: 'Benchmarking Requirements',
         type: 'section',
         children: [
           {
-            id: 'sym-herm-input-data-type',
+            id: 'gen-sym-herm-input-data-type',
             title: 'Benchmark Input Types',
             type: 'checkbox',
             content: 'What types of matrix inputs should be used for benchmarking?',
@@ -281,7 +318,7 @@ export const generalizedSymmetricData: SurveySection[] = [
             ]
           },
           {
-            id: 'sym-herm-data-provision',
+            id: 'gen-sym-herm-data-provision',
             title: 'Can You Provide Data or Mini-apps?',
             type: 'checkbox',
             content: 'Would you be able to share real matrices or mini-apps for benchmarking?',
@@ -291,6 +328,18 @@ export const generalizedSymmetricData: SurveySection[] = [
               'Yes, mini-apps only',
               'No',
               'Not sure yet'
+            ]
+          },
+          {
+            id: 'gen-sym-scaling-requirements',
+            title: 'Scaling Requirements',
+            type: 'checkbox',
+            content: 'What are your scaling requirements for generalized eigenvalue problems?',
+            options: [
+              'Strong scaling (fixed total problem size)',
+              'Weak scaling (fixed problem size per process/node)',
+              'Both strong and weak scaling needed',
+              'No specific scaling requirements'
             ]
           },
           //{

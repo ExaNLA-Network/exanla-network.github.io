@@ -25,6 +25,63 @@ export const nonSymmetricData: SurveySection[] = [
         type: 'section',
         children: [
           {
+            id: 'non-sym-matrix-structure',
+            title: 'Matrix Structure',
+            type: 'checkbox',
+            content: 'What is the structure of your non-symmetric matrices? Select all that apply:',
+            options: [
+              'Dense',
+              'Sparse',
+              'Block sparse',
+              'Banded',
+              'Block diagonal',
+              'Toeplitz',
+              'Matrix-free (only matrix-vector products available)',
+              'Matrix-free with preconditioner',
+              'Complex valued',
+              'Real valued',
+              'Other (please specify):'
+            ]
+          },
+          {
+            id: 'non-sym-matrix-distribution',
+            title: 'Matrix Distribution',
+            type: 'checkbox',
+            content: 'How is your matrix distributed across processes/nodes? Select all that apply:',
+            options: [
+              'Block cyclic distribution (e.g., ScaLAPACK style)',
+              'Block row/column distribution',
+              'Custom domain decomposition',
+              'Hierarchical/multilevel distribution',
+              'Graph/hypergraph partitioning',
+              'Replicated on all processes',
+              'Hybrid CPU-GPU distribution',
+              'Dynamic/adaptive distribution',
+              'Other (please specify):'
+            ]
+          },
+          {
+            id: 'non-sym-matrix-format',
+            title: 'Matrix Storage Format',
+            type: 'checkbox',
+            content: 'What storage formats do you use? Select all that apply:',
+            options: [
+              'Dense (column-major/row-major)',
+              'Compressed Sparse Row (CSR/CRS)',
+              'Compressed Sparse Column (CSC/CCS)',
+              'Block CSR/CSC',
+              'ELLPACK/ELLPACK-R',
+              'Diagonal/Block-diagonal',
+              'Coordinate (COO)',
+              'Hierarchical formats (H-matrices, HSS)',
+              'Custom/application-specific format',
+              'Multiple formats (conversion as needed)',
+              'Format optimized for matrix-vector products',
+              'Format optimized for GPU computation',
+              'Other (please specify):'
+            ]
+          },
+          {
             id: 'non-sym-normality',
             title: 'Normality',
             type: 'multiple-choice',
@@ -181,6 +238,41 @@ export const nonSymmetricData: SurveySection[] = [
               'Very high accuracy (10^-12)',
               'Machine precision'
             ]
+          },
+          {
+            id: 'non-sym-precision-type',
+            title: 'Working Precision',
+            type: 'checkbox',
+            content: 'What numerical precision do you use or need? Select all that apply:',
+            options: [
+              'Single precision (32-bit)',
+              'Double precision (64-bit)',
+              'Extended/Quad precision (128-bit)',
+              'Mixed precision (e.g., FP32/FP64 combination)',
+              'Low precision (e.g., FP16, BF16)',
+              'Adaptive precision'
+            ]
+          }
+        ]
+      },
+      {
+        id: 'non-sym-workload',
+        title: 'Workload Characteristics',
+        type: 'section',
+        children: [
+          {
+            id: 'non-sym-computation-type',
+            title: 'Computation Pattern: capability or capacity',
+            type: 'checkbox',
+            content: 'How do you typically run your non-symmetric eigenvalue computations? Select all that apply:',
+            options: [
+              'Large-scale single problems (e.g., one large non-symmetric matrix at a time, using significant computational resources)',
+              'Many independent smaller problems (e.g., batch processing multiple matrices simultaneously)',
+              'Mix of large and small problems (varying resource requirements)',
+              'Repeated similar-sized problems (e.g., time evolution or parameter sweeps)',
+              'Real-time/interactive requirements (need immediate solutions)',
+              'Asynchronous/background processing (can wait for solutions)'
+            ]
           }
         ]
       },
@@ -226,12 +318,12 @@ export const nonSymmetricData: SurveySection[] = [
         ]
       },
       {
-        id: 'sym-herm-benchmarking',
+        id: 'non-sym-herm-benchmarking',
         title: 'Benchmarking Requirements',
         type: 'section',
         children: [
           {
-            id: 'sym-herm-input-data-type',
+            id: 'non-sym-input-data-type',
             title: 'Benchmark Input Types',
             type: 'checkbox',
             content: 'What types of matrix inputs should be used for benchmarking?',
@@ -244,7 +336,7 @@ export const nonSymmetricData: SurveySection[] = [
             ]
           },
           {
-            id: 'sym-herm-data-provision',
+            id: 'non-sym-data-provision',
             title: 'Can You Provide Data or Mini-apps?',
             type: 'checkbox',
             content: 'Would you be able to share real matrices or mini-apps for benchmarking?',
@@ -254,6 +346,18 @@ export const nonSymmetricData: SurveySection[] = [
               'Yes, mini-apps only',
               'No',
               'Not sure yet'
+            ]
+          },
+          {
+            id: 'non-sym-scaling-requirements',
+            title: 'Scaling Requirements',
+            type: 'checkbox',
+            content: 'What are your scaling requirements for non-symmetric eigenproblems?',
+            options: [
+              'Strong scaling (fixed total problem size)',
+              'Weak scaling (fixed problem size per process/node)',
+              'Both strong and weak scaling needed',
+              'No specific scaling requirements'
             ]
           },
           //{
