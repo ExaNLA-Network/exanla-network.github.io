@@ -18,18 +18,18 @@ export const surveyData: SurveySection[] = [
   {
     id: 'nla-operations',
     title: 'Numerical Linear Algebra Operations and Benchmarks',
-    description:'NLA operations used in your library. We will gather information about :\n\n' +
+    description:'NLA operations used in your library. Select an operation to reveal detailed questions about:\n\n' +
                 '• Matrix properties (sizes, types, sparsity patterns)\n' +
                 '• Current library usage and performance requirements\n' +
                 '• Libraries you are interested in using in the future\n' +
                 '• Specific algorithmic needs and constraints\n' +
                 '• Benchmarking requirements and metrics\n\n' +
-                '***This information helps us understand the computational patterns across different scientific domains and guides our development of optimized NLA libraries and benchmarks.***\n\n' +
-                '⚠️ If your code has multiple distinct use cases with significantly different requirements, we encourage you to submit separate survey responses for each major use case. This helps us better understand the full range of your needs.\n\n' +
+                '⚠️ When you select an operation, its detailed questions will automatically expand below. You can collapse/expand sections as needed.\n\n' +
                 '⚠️ Selection Guidance\n\n' +
                 'We recommend selecting your top 3 most critical operations for benchmarking:\n' +
                 '• Operations dominating your application performance\n' +
-                '• Operations in your codes you want to optimize\n\n' +
+                '• Operations in your codes you want to optimize\n' +
+                '• If your code has multiple distinct use cases with significantly different requirements, we encourage you to submit separate survey responses for each major use case. \n\n' +
                 'You can select more if essential, but please prioritize your most important operations.',
     questions: [
       {
