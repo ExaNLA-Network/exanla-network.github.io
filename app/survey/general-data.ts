@@ -20,6 +20,34 @@ export const generalData: SurveySection[] = [
         content: 'What is the current version of your codes?'
       },
       {
+        id: 'contact-info',
+        title: 'Contact Information',
+        type: 'section',
+        children: [
+          {
+            id: 'contact-name',
+            title: 'Name',
+            type: 'text',
+            required: true,
+            content: 'Your full name'
+          },
+          {
+            id: 'contact-email', 
+            title: 'Email',
+            type: 'text',
+            required: true,
+            content: 'Your email address'
+          },
+          {
+            id: 'contact-organization',
+            title: 'Organization',
+            type: 'text',
+            required: true,
+            content: 'Your institution or company'
+          }
+        ]
+      },      
+      {
         id: 'library-domain',
         title: 'Application Domain',
         type: 'section',
@@ -151,6 +179,7 @@ export const generalData: SurveySection[] = [
             title: 'Does your codes have multiple distinct use cases?',
             type: 'multiple-choice',
             content: 'Different use cases might involve different matrix types, operations, or performance requirements.',
+            required: true,
             options: [
               'No, single primary use case',
               'Yes, multiple distinct use cases'

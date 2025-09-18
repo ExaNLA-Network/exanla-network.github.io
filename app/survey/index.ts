@@ -24,13 +24,7 @@ export const surveyData: SurveySection[] = [
                 '• Libraries you are interested in using in the future\n' +
                 '• Specific algorithmic needs and constraints\n' +
                 '• Benchmarking requirements and metrics\n\n' +
-                '⚠️ When you select an operation, its detailed questions will automatically expand below. You can collapse/expand sections as needed.\n\n' +
-                '⚠️ Selection Guidance\n\n' +
-                'We recommend selecting your top 3 most critical operations for benchmarking:\n' +
-                '• Operations dominating your application performance\n' +
-                '• Operations in your codes you want to optimize\n' +
-                '• If your code has multiple distinct use cases with significantly different requirements, we encourage you to submit separate survey responses for each major use case. \n\n' +
-                'You can select more if essential, but please prioritize your most important operations.',
+                '⚠️ When you select an operation, its detailed questions will automatically expand below. You can collapse/expand sections as needed.\n\n',
     questions: [
       {
         id: 'matrix-multiplication',
