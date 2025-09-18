@@ -214,17 +214,52 @@ export const nonSymmetricData: SurveySection[] = [
         type: 'section',
         children: [
           {
-            id: 'non-sym-residual-tolerance',
-            title: 'Residual tolerance',
+            id: 'non-sym-residual-type',
+            title: 'Residual tolerance type',
             type: 'multiple-choice',
-            content: 'What residual tolerance do you require for ||Ax - λx||?',
+            content: 'What type of residual tolerance do you use?',
             options: [
-              'Low accuracy (10^-3)',
-              'Medium accuracy (10^-6)',
-              'High accuracy (10^-9)',
-              'Very high accuracy (10^-12)',
-              'Machine precision'
+              'Absolute residual (||Ax - λx||)',
+              'Relative residual (||Ax - λx|| / ||Ax||)',
+              'Both absolute and relative',
+              'Hybrid (combination of absolute and relative)',
+              'Other (please specify):'
             ]
+          },
+          {
+            id: 'non-sym-absolute-residual-tolerance',
+            title: 'Absolute residual tolerance',
+            type: 'multiple-choice',
+            content: 'What absolute residual tolerance do you require for ||Ax - λx||?',
+            options: [
+              'Low (10^-3)',
+              'Medium (10^-6)',
+              'High (10^-9)',
+              'Very high (10^-12)',
+              'Machine precision'
+            ],
+            showOnlyWhenParentSelected: true
+          },
+          {
+            id: 'non-sym-relative-residual-tolerance',
+            title: 'Relative residual tolerance',
+            type: 'multiple-choice',
+            content: 'What relative residual tolerance do you require for ||Ax - λx|| / ||Ax||?',
+            options: [
+              'Low (10^-3)',
+              'Medium (10^-6)',
+              'High (10^-9)',
+              'Very high (10^-12)',
+              'Machine precision'
+            ],
+            showOnlyWhenParentSelected: true
+          },
+          {
+            id: 'non-sym-hybrid-residual-tolerance',
+            title: 'Hybrid residual tolerance',
+            type: 'textarea',
+            content: 'Please describe your hybrid residual tolerance criteria (e.g., "||Ax - λx|| < max(10^-6, 10^-8 * ||Ax||)" or "convergence when either absolute < 10^-9 OR relative < 10^-6")',
+            showOnlyWhenParentSelected: true
           },
           {
             id: 'non-sym-orthogonality-tolerance',

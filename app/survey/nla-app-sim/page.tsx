@@ -686,8 +686,40 @@ export default function NlaAppSimSurveyPage() {
               }
 
               // Hide child questions that should only show when parent is selected
-              if (child.showOnlyWhenParentSelected && !formData[question.id]) {
-                return null;
+              if (child.showOnlyWhenParentSelected) {
+                // Handle residual tolerance questions specifically
+                if (child.id.includes('residual-tolerance') && !child.id.includes('residual-type')) {
+                  // Find the corresponding residual type question
+                  const residualTypeId = child.id.replace('-absolute-residual-tolerance', '-residual-type')
+                                               .replace('-relative-residual-tolerance', '-residual-type')
+                                               .replace('-hybrid-residual-tolerance', '-residual-type');
+                  
+                  const residualType = formData[residualTypeId];
+                  
+                  // Show based on residual type selection
+                  if (child.id.includes('absolute-residual-tolerance')) {
+                    if (residualType !== 'Absolute residual (||Ax - λx||)' && 
+                        residualType !== 'Both absolute and relative' &&
+                        residualType !== 'Hybrid (combination of absolute and relative)') {
+                      return null;
+                    }
+                  } else if (child.id.includes('relative-residual-tolerance')) {
+                    if (residualType !== 'Relative residual (||Ax - λx|| / ||Ax||)' && 
+                        residualType !== 'Both absolute and relative' &&
+                        residualType !== 'Hybrid (combination of absolute and relative)') {
+                      return null;
+                    }
+                  } else if (child.id.includes('hybrid-residual-tolerance')) {
+                    if (residualType !== 'Hybrid (combination of absolute and relative)') {
+                      return null;
+                    }
+                  }
+                } else {
+                  // Fallback for other showOnlyWhenParentSelected questions
+                  if (!formData[question.id]) {
+                    return null;
+                  }
+                }
               }
               
               return renderQuestion(child, level + 1);
@@ -873,6 +905,42 @@ export default function NlaAppSimSurveyPage() {
               Help us understand the Numerical Linear Algebra (NLA) operations used in your application/simulation codes. 
               This survey will help prepare for benchmarking and identify common NLA patterns across different domains.
             </p>
+          </div>
+
+          {/* Prominent Warning Instructions */}
+          <div className="mb-8 bg-gradient-to-r from-amber-50 to-orange-50 border-2 border-amber-200 rounded-xl p-4 shadow-sm">
+            <div className="text-center mb-3">
+              <h2 className="text-lg font-bold text-amber-800 mb-2">
+              ⚠️  IMPORTANT: READ BEFORE STARTING ⚠️ 
+              </h2>
+            </div>
+            <div className="grid md:grid-cols-2 gap-4">
+              <div className="bg-white rounded-lg p-3 border border-amber-200">
+                <h3 className="text-sm font-semibold text-amber-800 mb-2 flex items-center">
+                  📌 SELECT ONLY YOUR TOP 3 MOST CRITICAL OPERATIONS
+                </h3>
+                <ul className="text-xs text-gray-700 space-y-1">
+                  <li>• Focus on operations that dominate your application performance</li>
+                  <li>• Choose operations you want to optimize most</li>
+                  <li>• You can select more, but please prioritize the top 3</li>
+                </ul>
+              </div>
+              <div className="bg-white rounded-lg p-3 border border-amber-200">
+                <h3 className="text-sm font-semibold text-amber-800 mb-2 flex items-center">
+                  📌 MULTIPLE USE CASES? SUBMIT SEPARATELY
+                </h3>
+                <ul className="text-xs text-gray-700 space-y-1">
+                  <li>• If your code has different use cases with NLA operation requirements</li>
+                  <li>• Submit separate survey responses for each major use case</li>
+                  <li>• This helps us create targeted benchmarks for each scenario</li>
+                </ul>
+              </div>
+            </div>
+            <div className="text-center mt-3">
+              <p className="text-xs text-amber-700 font-medium">
+                💡 TIP: You can select more than 3 if essential, but please prioritize your most important operations.
+              </p>
+            </div>
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-10">

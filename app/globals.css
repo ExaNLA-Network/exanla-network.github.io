@@ -90,3 +90,59 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #666;
 }
+
+/* Dark mode scrollbar */
+@media (prefers-color-scheme: dark) {
+  ::-webkit-scrollbar-track {
+    background: #2a2a2a;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #555;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #777;
+  }
+}
+
+/* Form input dark mode styling */
+@media (prefers-color-scheme: dark) {
+  input[type="text"],
+  input[type="email"],
+  textarea,
+  select {
+    background-color: #1a1a1a !important;
+    color: #ffffff !important;
+    border-color: #404040 !important;
+  }
+  
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  textarea:focus,
+  select:focus {
+    background-color: #1a1a1a !important;
+    color: #ffffff !important;
+    border-color: #3b82f6 !important;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1) !important;
+  }
+  
+  input[type="text"]::placeholder,
+  input[type="email"]::placeholder,
+  textarea::placeholder {
+    color: #9ca3af !important;
+  }
+  
+  /* Checkbox and radio button dark mode */
+  input[type="checkbox"],
+  input[type="radio"] {
+    background-color: #1a1a1a !important;
+    border-color: #404040 !important;
+  }
+  
+  input[type="checkbox"]:checked,
+  input[type="radio"]:checked {
+    background-color: #3b82f6 !important;
+    border-color: #3b82f6 !important;
+  }
+}
