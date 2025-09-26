@@ -52,6 +52,26 @@ export function generateSurveyPDF(formData: SurveyFormData, surveyData: SurveySe
     return String(value);
   };
 
+  // Helper function to format values with "other" responses
+  const formatValueWithOther = (questionId: string, value: string | string[] | boolean | undefined): string => {
+    const baseValue = formatValue(value);
+    
+    // Check if there's an "other" response for this question
+    const otherKey = `${questionId}-other`;
+    const otherValue = formData[otherKey];
+    
+    if (otherValue && String(otherValue).trim() !== '') {
+      // If the base value contains "Other (please specify):", replace it with the actual other value
+      if (baseValue.includes('Other (please specify):')) {
+        return baseValue.replace('Other (please specify):', `Other: ${String(otherValue)}`);
+      }
+      // Otherwise, append the other value
+      return `${baseValue}, Other: ${String(otherValue)}`;
+    }
+    
+    return baseValue;
+  };
+
   // Header
   doc.setFontSize(20);
   doc.setFont('helvetica', 'bold');
@@ -185,7 +205,7 @@ export function generateSurveyPDF(formData: SurveyFormData, surveyData: SurveySe
       
       // Answer
       doc.setFont('helvetica', 'bold');
-      yPosition = addText(formatValue(value), margin + indent + 10, yPosition, pageWidth - 2 * margin - indent - 10);
+      yPosition = addText(formatValueWithOther(question.id, value), margin + indent + 10, yPosition, pageWidth - 2 * margin - indent - 10);
       yPosition += 3;
 
       // Children questions
@@ -223,7 +243,7 @@ export function generateSurveyPDF(formData: SurveyFormData, surveyData: SurveySe
     
     // Answer (show "Not specified" if no response)
     doc.setFont('helvetica', 'bold');
-    yPosition = addText(formatValue(value), margin + indent + 10, yPosition, pageWidth - 2 * margin - indent - 10);
+    yPosition = addText(formatValueWithOther(question.id, value), margin + indent + 10, yPosition, pageWidth - 2 * margin - indent - 10);
     yPosition += 3;
 
     // Children questions - Show ALL children for selected operations
