@@ -117,13 +117,29 @@ export const matrixMultiplicationData: SurveySection[] = [
                 id: 'gemm-matrix-size',
                 title: 'Matrix Size Range',
                 type: 'checkbox',
-                content: 'What are your typical matrix dimensions?',
+                content: 'What are your typical maximum matrix dimensions? (Please consider the largest dimension across m, n, k in C = A×B where A is m×k and B is k×n)',
                 options: [
                   'Small (< 100)',
                   'Medium (100 - 1,000)',
                   'Large (1,000 - 10,000)',
                   'Very Large (10,000 - 100,000)',
                   'Extreme (> 100,000)'
+                ]
+              },
+              {
+                id: 'gemm-matrix-shape',
+                title: 'Typical Matrix Shapes',
+                type: 'checkbox',
+                content: 'What are the typical shapes of your matrices in multiplication operations? Select all that apply:',
+                options: [
+                  'Square matrices (m ≈ n ≈ k)',
+                  'Tall-skinny matrices (m >> k, n small)',
+                  'Wide-short matrices (m small, n >> k)',
+                  'Block-outer product (k small, m and n large)',
+                  'Block-inner product (m and n small, k large)',
+                  'General rectangular (no dominant pattern)',
+                  'Varies significantly by operation',
+                  'Other (please specify):'
                 ]
               },
               {
