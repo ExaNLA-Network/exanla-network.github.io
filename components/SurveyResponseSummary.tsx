@@ -43,6 +43,26 @@ export default function SurveyResponseSummary({
     return String(value);
   };
 
+  // Helper function to format values with "other" responses
+  const formatValueWithOther = (questionId: string, value: string | string[] | boolean | undefined): string => {
+    const baseValue = formatValue(value);
+    
+    // Check if there's an "other" response for this question
+    const otherKey = `${questionId}-other`;
+    const otherValue = formData[otherKey];
+    
+    if (otherValue && String(otherValue).trim() !== '') {
+      // If the base value contains "Other (please specify):", replace it with the actual other value
+      if (baseValue.includes('Other (please specify):')) {
+        return baseValue.replace('Other (please specify):', `Other: ${String(otherValue)}`);
+      }
+      // Otherwise, append the other value
+      return `${baseValue}, Other: ${String(otherValue)}`;
+    }
+    
+    return baseValue;
+  };
+
   const getSelectedOperations = () => {
     const operationNames: { [key: string]: string } = {
       'matrix-multiplication': 'Matrix-Matrix Multiplication (GEMM)',
@@ -108,7 +128,7 @@ export default function SurveyResponseSummary({
             {question.title}:
           </span>
           <span className="text-sm text-gray-600 text-right">
-            {formatValue(value)}
+            {formatValueWithOther(question.id, value)}
           </span>
         </div>
         {question.children && question.children.length > 0 && (
@@ -140,7 +160,7 @@ export default function SurveyResponseSummary({
               ? 'text-gray-400 italic' 
               : 'text-gray-600'
           }`}>
-            {formatValue(value)}
+            {formatValueWithOther(question.id, value)}
           </span>
         </div>
         {question.children && question.children.length > 0 && (
