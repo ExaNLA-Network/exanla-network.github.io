@@ -146,3 +146,50 @@ body {
     border-color: #3b82f6 !important;
   }
 }
+
+/* Print styles for survey response summary */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  .print-break {
+    page-break-before: always;
+  }
+  
+  .print-avoid-break {
+    page-break-inside: avoid;
+  }
+  
+  body {
+    font-size: 12px;
+    line-height: 1.4;
+  }
+  
+  .survey-summary {
+    color: #000 !important;
+    background: #fff !important;
+  }
+  
+  .survey-summary h1,
+  .survey-summary h2,
+  .survey-summary h3 {
+    color: #000 !important;
+  }
+  
+  .survey-summary .bg-blue-50,
+  .survey-summary .bg-green-50,
+  .survey-summary .bg-gray-50 {
+    background: #f8f9fa !important;
+    border: 1px solid #dee2e6 !important;
+  }
+  
+  .survey-summary button {
+    display: none !important;
+  }
+  
+  .survey-summary .shadow-lg,
+  .survey-summary .shadow-xl {
+    box-shadow: none !important;
+  }
+}

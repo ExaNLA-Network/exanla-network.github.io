@@ -3,6 +3,8 @@
 import { useState, useEffect, useMemo, useRef } from 'react';
 import { surveyData, SurveyQuestion } from '../index';
 import { supabase } from '@/lib/supabase';
+import SurveyResponseSummary from '@/components/SurveyResponseSummary';
+import { generateSurveyPDF } from '@/lib/pdfGenerator';
 
 interface FormData {
   [key: string]: string | string[] | boolean;
@@ -806,38 +808,35 @@ export default function NlaAppSimSurveyPage() {
     );
   };
 
+  const handleDownloadPDF = () => {
+    try {
+      generateSurveyPDF(formData, surveyData);
+    } catch (error) {
+      console.error('Error generating PDF:', error);
+      alert('Error generating PDF. Please try again.');
+    }
+  };
+
+
+  const handlePrint = () => {
+    window.print();
+  };
+
+  const handleSubmitAnother = () => {
+    setSubmitted(false);
+    setFormData({});
+    setCompletedSections(new Set());
+    setCollapsedSections(new Set(surveyData.map(section => section.id)));
+  };
+
   if (submitted) {
     return (
-      <div className="min-h-screen bg-gray-50 py-12">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white rounded-lg shadow-lg p-8 text-center">
-            <div className="text-green-600 mb-4">
-              <svg className="w-16 h-16 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-              </svg>
-            </div>
-            <h1 className="text-2xl font-bold text-gray-900 mb-4">Thank You!</h1>
-            <p className="text-gray-600 mb-6">
-              Your survey response has been submitted successfully. We appreciate your input for our NLA operations and benchmarking preparation!
-            </p>
-            {formData['multiple-use-cases'] === 'Yes, multiple distinct use cases' && 
-              formData['total-use-cases'] !== 'Just this one' && (
-              <p className="text-blue-600 mb-6">
-                You indicated that you have multiple use cases. Please feel free to submit another response for a different use case of your library.
-              </p>
-            )}
-            <button
-              onClick={() => {
-                setSubmitted(false);
-                setFormData({});
-              }}
-              className="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition-colors"
-            >
-              Submit Another Response
-            </button>
-          </div>
-        </div>
-      </div>
+      <SurveyResponseSummary
+        formData={formData}
+        onDownloadPDF={handleDownloadPDF}
+        onPrint={handlePrint}
+        onSubmitAnother={handleSubmitAnother}
+      />
     );
   }
 
