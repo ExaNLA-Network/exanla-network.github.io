@@ -169,6 +169,13 @@ export default function SurveyListingPage() {
                 >
                   Analytics & Data Upload
                 </button>
+                
+                <Link 
+                  href="/survey/results"
+                  className="block w-full bg-green-600 text-white text-center py-3 px-4 rounded-lg hover:bg-green-700 transition-colors font-medium"
+                >
+                  Survey Results
+                </Link>
               </div>
             </div>
           ))}

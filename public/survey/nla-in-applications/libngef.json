@@ -1,0 +1,121 @@
+{
+  "contact-name": "Alessandro Pecchia",
+  "library-name": "libNEGF",
+  "contact-email": "alessandro.pecchia@cnr.it",
+  "dense-libs-used": [
+    "ScaLAPACK",
+    "Other (please specify):"
+  ],
+  "gemm-batch-size": [
+    "Not applicable"
+  ],
+  "library-version": "1.3",
+  "current-use-case": "Transport calculations in nanostructures",
+  "domain-selection": "Materials Science",
+  "gemm-matrix-size": [
+    "Medium (100 - 1,000)",
+    "Large (1,000 - 10,000)"
+  ],
+  "matrix-inversion": true,
+  "sparse-libs-used": [
+    "SuperLU / SuperLU_DIST"
+  ],
+  "gemm-matrix-shape": [
+    "Square matrices (m ≈ n ≈ k)"
+  ],
+  "gemm-matrix-format": [
+    "Dense (column-major/row-major)"
+  ],
+  "multiple-use-cases": "Yes, multiple distinct use cases",
+  "dense-libs-interest": [
+    "cuSolverMp"
+  ],
+  "gemm-data-provision": [
+    "Yes, both matrices and mini-apps"
+  ],
+  "gemm-precision-type": [
+    "Single precision (32-bit)",
+    "Double precision (64-bit)",
+    "Mixed precision (e.g., FP32 multiplication with FP64 accumulation)",
+    "Tensor Core compatible precisions"
+  ],
+  "library-description": "libNEGF is a general-purpose library to perform quantum transport calculations. It is agnostic of the underlying Hamiltonian formulation, provided it is a local basis representation (FD, FEM, LCAO, etc.). In recent years there was a big development of the code thanks to the Energy-Oriented Center of Excellence, involving a tight collaboration with JSC. Currently the codes relays on block-dense linear algebra also ported to GPUs. There is an activity to further improve scalability by distributing the spatial domain by  Nested-Dissection or similar approaches. Mixed-precision and compression by low-rank approximations are also under scrutiny. ",
+  "materials-functions": [
+    "Quantum transport"
+  ],
+  "other-nla-operation": false,
+  "contact-organization": "Consiglio Nazionale delle Ricerche",
+  "gemm-future-features": [
+    "Better mixed precision support",
+    "More flexible memory layouts"
+  ],
+  "gemm-input-data-type": [
+    "Real matrices from application workloads"
+  ],
+  "gemm-operation-types": [
+    "Full GEMM (αAB + βC)",
+    "Triple product (ABC)",
+    "Mixed precision operations"
+  ],
+  "dense-libs-used-other": "cuSolver",
+  "gemm-matrix-structure": [
+    "Dense matrices",
+    "Distributed matrices",
+    "Block-structured matrices"
+  ],
+  "linear-system-solvers": true,
+  "matrix-inversion-size": "Medium (1,000 - 10,000)",
+  "matrix-multiplication": true,
+  "specialized-libs-used": [
+    "Domain-specific GPU libraries (e.g., custom Green’s function solvers)"
+  ],
+  "matrix-inversion-format": [
+    "Dense (column-major/row-major)"
+  ],
+  "gemm-matrix-distribution": [
+    "Custom domain decomposition"
+  ],
+  "gemm-scaling-requirements": [
+    "Strong scaling (fixed total problem size)",
+    "Weak scaling (fixed problem size per process/node)"
+  ],
+  "matrix-inversion-residual": "Medium accuracy (10^-6)",
+  "gemm-libraries-distributed": [
+    "Custom distributed implementation"
+  ],
+  "matrix-inversion-structure": [
+    "Dense",
+    "Low-rank updates (A + UCVᵀ)"
+  ],
+  "gemm-special-implementations": [
+    "Algorithm-specific implementations (e.g., Strassen, communication-avoiding algorithms)"
+  ],
+  "matrix-inversion-distribution": [
+    "Distribution optimized for selected inversion"
+  ],
+  "matrix-inversion-linear-system": "Medium accuracy (10^-6)",
+  "matrix-inversion-data-provision": [
+    "Yes, both matrices and mini-apps"
+  ],
+  "matrix-inversion-precision-type": [
+    "Double precision (64-bit)",
+    "Mixed precision (e.g., FP32 inversion with FP64 refinement)"
+  ],
+  "matrix-inversion-input-data-type": [
+    "Real matrices from application workloads"
+  ],
+  "matrix-inversion-computation-type": [
+    "Many independent smaller inversions (e.g., batch processing multiple matrices simultaneously)",
+    "Part of larger computation (e.g., Green's function calculation, preconditioner construction)"
+  ],
+  "matrix-inversion-purpose-usecases": [
+    "Green's function calculation (ωI-H-Σ(ω))⁻¹"
+  ],
+  "matrix-inversion-scaling-requirements": [
+    "Strong scaling (fixed total problem size)",
+    "Weak scaling (fixed problem size per process/node)"
+  ],
+  "matrix-inversion-properties-mathematical": [
+    "Complex valued"
+  ]
+}

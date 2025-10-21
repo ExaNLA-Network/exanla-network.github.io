@@ -1,0 +1,144 @@
+{
+  "contact-name": "Phil Hasnip",
+  "library-name": "CASTEP",
+  "contact-email": "phil.hasnip@york.ac.uk",
+  "gemm-batch-size": [
+    "Small (< 10)"
+  ],
+  "library-version": "25.1.2",
+  "current-use-case": "Ground state DFT",
+  "domain-selection": "Materials Science",
+  "gemm-matrix-size": [
+    "Extreme (> 100,000)",
+    "Very Large (10,000 - 100,000)"
+  ],
+  "matrix-inversion": false,
+  "gemm-matrix-shape": [
+    "Square matrices (m ≈ n ≈ k)",
+    "Tall-skinny matrices (m >> k, n small)"
+  ],
+  "gemm-matrix-format": [
+    "Dense (column-major/row-major)",
+    "Diagonal/Block-diagonal"
+  ],
+  "multiple-use-cases": "Yes, multiple distinct use cases",
+  "gemm-data-provision": [
+    "Yes, both matrices and mini-apps"
+  ],
+  "gemm-precision-type": [
+    "Mixed precision (e.g., FP32 multiplication with FP64 accumulation)",
+    "Double precision (64-bit)"
+  ],
+  "library-description": "Density functional theory for materials modelling, using the plane-wave pseudopotential method. Can use ultrasoft pseudopotentials (Vanderbilt scheme) or norm-conserving.",
+  "materials-functions": [
+    "Ground state DFT",
+    "Time-dependent DFT",
+    "Crystal structure prediction",
+    "Molecular dynamics",
+    "Excited-state dynamics",
+    "Phase transitions",
+    "Defect calculations",
+    "Surface science",
+    "Other"
+  ],
+  "other-nla-operation": true,
+  "standard-eigenvalue": true,
+  "symmetric-hermitian": true,
+  "contact-organization": "University of York",
+  "gemm-future-features": [
+    "Other (please specify):"
+  ],
+  "gemm-input-data-type": [
+    "Both synthetic and real data",
+    "Mini-apps or extracted kernels from real applications"
+  ],
+  "gemm-operation-types": [
+    "Standard multiplication (AB)",
+    "Scaled multiplication (αAB)",
+    "Accumulation (AB + C)",
+    "Full GEMM (αAB + βC)",
+    "Transpose multiplication (AᵀB, ABᵀ)",
+    "Triple product (ABC)",
+    "Hermitian multiplication (A†B, AB†)"
+  ],
+  "gemm-matrix-structure": [
+    "Dense matrices",
+    "Tall-and-skinny matrices",
+    "Triangular matrices",
+    "Banded matrices",
+    "Distributed matrices",
+    "Mixed real/complex"
+  ],
+  "matrix-multiplication": true,
+  "gen-sym-precision-type": [
+    "Double precision (64-bit)"
+  ],
+  "generalized-eigenvalue": true,
+  "gen-sym-herm-scale-size": "Medium (1,000 - 10,000)",
+  "gen-symmetric-hermitian": true,
+  "materials-other-specify": "Vibrational spectra (IR, Raman, INS), NMR spectra, Core-loss and low-loss EELS, optical properties",
+  "gemm-matrix-distribution": [
+    "Block row/column distribution",
+    "Communication-avoiding distribution",
+    "Replicated on all processes",
+    "Hybrid CPU-GPU distribution",
+    "Hierarchical/multilevel distribution",
+    "Custom domain decomposition"
+  ],
+  "gen-sym-computation-type": [
+    "Large-scale single problems (e.g., one large generalized eigenproblem at a time, using significant computational resources)",
+    "Mix of large and small problems (varying resource requirements)",
+    "Repeated similar-sized problems (e.g., time evolution or parameter sweeps)",
+    "Many independent smaller problems (e.g., batch processing multiple generalized eigenproblems simultaneously)"
+  ],
+  "gen-sym-matrix-structure": [
+    "A is dense, B is sparse",
+    "Complex valued",
+    "Real valued",
+    "A is dense, B is dense"
+  ],
+  "gen-sym-reduction-method": "Cholesky factorization of B (B = LLᵗ or B = L*L)",
+  "gen-sym-reduction-needed": "Yes, sometimes (depends on solver or problem)",
+  "gemm-interested-libraries": [
+    "ELPA",
+    "PETSc"
+  ],
+  "gen-sym-herm-compute-mode": "Varies",
+  "sym-herm-matrix-structure": [
+    "Dense",
+    "Matrix-free (only matrix-vector products available)",
+    "Matrix-free with preconditioner",
+    "Complex valued",
+    "Real valued"
+  ],
+  "sym-herm-physical-problem": [
+    "Kohn–Sham equations (standard DFT)"
+  ],
+  "gemm-future-features-other": "Row/column distributions rather than block-cyclic ; when block-cyclic, proper optimisations for block-size 1",
+  "gen-sym-herm-residual-type": "Both absolute and relative",
+  "gen-sym-herm-data-provision": [
+    "Yes, both matrices and mini-apps"
+  ],
+  "other-nla-operation-specify": "3D, 2D and 1D FFT",
+  "cholesky-matrix-format-other": "The update vectors, where matrix is constructed from low-rank updates",
+  "gen-sym-herm-input-data-type": [
+    "Both synthetic and real data",
+    "Mini-apps or extracted kernels from real applications"
+  ],
+  "gen-sym-interested-libraries": [
+    "ScaLAPACK",
+    "ELPA",
+    "FEAST"
+  ],
+  "gen-sym-scaling-requirements": [
+    "Both strong and weak scaling needed"
+  ],
+  "gen-sym-herm-eigenvalue-location": "Smallest eigenvalues",
+  "cholesky-sparsity-structure-other": "Two main classes, one dense, the other low-rank plus diagonal",
+  "cholesky-matrix-distribution-other": "For \"block row/column\" block size is usually 1 for load-balancing elsewhere",
+  "gen-sym-herm-eigenvalue-percentage": "1-10%",
+  "gen-sym-herm-eigenvalue-distribution": "Varies",
+  "gen-sym-herm-orthogonality-tolerance": "Very high (10^-12)",
+  "gen-sym-herm-absolute-residual-tolerance": "High (10^-9)",
+  "gen-sym-herm-relative-residual-tolerance": "High (10^-9)"
+}

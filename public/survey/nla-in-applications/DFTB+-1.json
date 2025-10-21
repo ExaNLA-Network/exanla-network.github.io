@@ -1,0 +1,140 @@
+{
+  "contact-name": "Ben Hourahine",
+  "library-name": "DFTB+",
+  "sym-herm-spd": "Usually positive definite",
+  "contact-email": "benjamin.hourahine@strath.ac.uk",
+  "library-version": "24.1",
+  "current-use-case": "Ground state calculation code path",
+  "domain-selection": "Materials Science",
+  "multiple-use-cases": "Yes, multiple distinct use cases",
+  "library-description": "Electronic structure for non- and self-consistent models that are derived from DFT, but tabulated (with the addition of long-rage electrostatics if self-consistent). The ground state calculations, for reasonably large systems, spending ~90 of time in solving the generalised eigen-problem and another 10% in forming the density matrix via dsyrk / zherk operations. Or using some specialised solvers, directly from the starting matrices to the density matrix. The conventional solver route uses dense matrices, currently with BLACS decomposition, the direct solvers are either BLACS or a mixture of sparse formats (a form of CSR and also code specific). We may need to solve either real of complex cases and either a single set of eigen problems, or a coupled set over an index (spin and/or k-points). Note for the eigen-solution, we have not tested our Required tolerance/precision recently (possibly use of weaker tolerance for that stage of the calculation could be made, but we seem to need double precision for the self-consistency mixing of past solutions).",
+  "materials-functions": [
+    "Ground state DFT",
+    "Time-dependent DFT",
+    "Molecular dynamics",
+    "Quantum transport",
+    "Excited-state dynamics",
+    "Surface science",
+    "Defect calculations",
+    "Other"
+  ],
+  "other-nla-operation": true,
+  "standard-eigenvalue": false,
+  "sym-herm-scale-size": [
+    "Small (< 1,000)",
+    "Medium (1,000 - 10,000)",
+    "Large (10,000 - 100,000)",
+    "Very Large (100,000 - 1,000,000)"
+  ],
+  "symmetric-hermitian": true,
+  "contact-organization": "The University of Strathclyde",
+  "gen-sym-nla-highlevel": [
+    "ELSI – Abstraction layer for eigenvalue solvers (e.g., used by SIESTA, FHI-aims)"
+  ],
+  "sym-herm-compute-mode": "Eigenvalues and eigenvectors",
+  "domain-selection-other": "Materials science, but also quantum chemistry, condensed matter",
+  "gen-sym-precision-type": [
+    "Double precision (64-bit)"
+  ],
+  "generalized-eigenvalue": true,
+  "sym-herm-matrix-format": [
+    "Dense (column-major/row-major)"
+  ],
+  "sym-herm-residual-type": "Absolute residual (||Ax - λx||)",
+  "gen-sym-herm-scale-size": "Large (10,000 - 100,000)",
+  "gen-symmetric-hermitian": true,
+  "materials-other-specify": "Semi-empirical (density-functional based tight binding) but close to DFT with some differences (smaller basis, trivial equation set-up time). Note this code is more heavily used for quantum chemistry than materials science, but also has condensed matter and engineering applications.",
+  "sym-herm-data-provision": [
+    "Yes, both matrices and mini-apps"
+  ],
+  "sym-herm-precision-type": [
+    "Double precision (64-bit)"
+  ],
+  "gen-sym-computation-type": [
+    "Repeated similar-sized problems (e.g., time evolution or parameter sweeps)",
+    "Large-scale single problems (e.g., one large generalized eigenproblem at a time, using significant computational resources)"
+  ],
+  "gen-sym-matrix-structure": [
+    "A is dense, B is dense",
+    "A is sparse, B is sparse",
+    "Complex valued",
+    "Real valued",
+    "Other (please specify):"
+  ],
+  "gen-sym-reduction-method": "Cholesky factorization of B (B = LLᵗ or B = L*L)",
+  "gen-sym-reduction-needed": "Yes, always",
+  "sym-herm-input-data-type": [
+    "Real matrices from application workloads"
+  ],
+  "gen-sym-herm-compute-mode": "Eigenvalues and eigenvectors",
+  "sym-herm-computation-type": [
+    "Large-scale single problems (e.g., one large matrix at a time, using significant computational resources)",
+    "Repeated similar-sized problems (e.g., time evolution or parameter sweeps)"
+  ],
+  "sym-herm-matrix-structure": [
+    "Dense",
+    "Complex valued",
+    "Real valued"
+  ],
+  "sym-herm-physical-problem": [
+    "Tight-binding models"
+  ],
+  "gen-sym-herm-residual-type": "Absolute residual (||Ax - λx||)",
+  "gen-sym-herm-data-provision": [
+    "Yes, both matrices and mini-apps"
+  ],
+  "other-nla-operation-specify": "Rank k-update (xSYRK / xHERK). Could use GEMM, but this is slightly faster and lower memory.",
+  "gen-sym-herm-input-data-type": [
+    "Real matrices from application workloads",
+    "Mini-apps or extracted kernels from real applications"
+  ],
+  "gen-sym-interested-libraries": [
+    "EigenExa",
+    "ChASE",
+    "FEAST",
+    "SLATE"
+  ],
+  "gen-sym-scaling-requirements": [
+    "Weak scaling (fixed problem size per process/node)",
+    "Both strong and weak scaling needed"
+  ],
+  "sym-herm-eigenvalue-location": "All eigenvalues",
+  "sym-herm-matrix-distribution": [
+    "Block cyclic distribution (e.g., ScaLAPACK style)"
+  ],
+  "sym-herm-nla-group-highlevel": [
+    "ELSI – Abstraction layer for eigenvalue solvers"
+  ],
+  "gen-sym-nla-distributed-dense": [
+    "ScaLAPACK",
+    "ELPA"
+  ],
+  "sym-herm-interested-libraries": [
+    "EigenExa",
+    "ChASE",
+    "FEAST",
+    "SLATE"
+  ],
+  "sym-herm-scaling-requirements": [
+    "Weak scaling (fixed problem size per process/node)",
+    "Both strong and weak scaling needed"
+  ],
+  "gen-sym-matrix-structure-other": "Internal storage in sparse format, then conversion for interfacing with solver(s)",
+  "sym-herm-eigenvalue-percentage": "All eigenvalues",
+  "sym-herm-nla-group-distributed": [
+    "ScaLAPACK",
+    "ELPA",
+    "Other (please specify):"
+  ],
+  "gen-sym-herm-eigenvalue-location": "All eigenvalues",
+  "sym-herm-eigenvalue-distribution": [
+    "Mix of clustered and separated"
+  ],
+  "sym-herm-orthogonality-tolerance": "High (10^-9)",
+  "gen-sym-herm-eigenvalue-percentage": "All eigenvalues",
+  "gen-sym-herm-eigenvalue-distribution": "Mix of clustered and separated",
+  "gen-sym-herm-orthogonality-tolerance": "High (10^-9)",
+  "sym-herm-absolute-residual-tolerance": "High (10^-9)",
+  "sym-herm-nla-group-distributed-other": "ELSI project solvers",
+  "gen-sym-herm-absolute-residual-tolerance": "High (10^-9)"
+}

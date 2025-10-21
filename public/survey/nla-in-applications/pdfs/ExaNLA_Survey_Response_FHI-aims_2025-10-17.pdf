@@ -1,0 +1,2344 @@
+%PDF-1.3
+%ºß¬à
+3 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 4 0 R
+>>
+endobj
+4 0 obj
+<<
+/Length 4270
+>>
+stream
+0.5670000000000001 w
+0 G
+BT
+/F2 20 Tf
+23. TL
+0 g
+138.4399999999999693 785.1970866141732586 Td
+(ExaNLA Survey Response Report) Tj
+ET
+BT
+/F1 12 Tf
+13.7999999999999989 TL
+0 g
+185.9799999999999613 742.6774015748030706 Td
+(Generated on: 10/17/2025 at 12:48:23 PM) Tj
+ET
+BT
+/F2 14 Tf
+16.0999999999999979 TL
+0 g
+56.6929133858267775 685.9844881889763428 Td
+(Submission Details) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+56.6929133858267775 657.6380314960629221 Td
+(Library Name: FHI-aims) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+56.6929133858267775 647.7167716535432191 Td
+(Version: 250822) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+56.6929133858267775 637.7955118110235162 Td
+(Contact Name: Volker Blum) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+56.6929133858267775 627.8742519685039269 Td
+(Email: volker.blum@duke.edu) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+56.6929133858267775 617.952992125984224 Td
+(Organization: Duke University) Tj
+ET
+BT
+/F2 14 Tf
+16.0999999999999979 TL
+0 g
+56.6929133858267775 579.6852755905511003 Td
+(Selected NLA Operations) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+85.0393700787401627 551.3388188976377933 Td
+(1. Quasi-Hermitian \(BSE\) Eigenvalue Problems) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+85.0393700787401627 541.4175590551180903 Td
+(2. Symmetric/Hermitian Eigenvalue Problems) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+85.0393700787401627 531.4962992125983874 Td
+(3. Matrix-Matrix Multiplication \(GEMM\)) Tj
+ET
+BT
+/F2 12 Tf
+13.7999999999999989 TL
+0 g
+56.6929133858267775 493.2285826771653205 Td
+(1. Codes Information) Tj
+ET
+BT
+/F3 10 Tf
+11.5 TL
+0 g
+56.6929133858267775 470.5514173228345953 Td
+(Basic information about your application/simulation codes.) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+56.6929133858267775 446.4569291338582389 Td
+(Library Name:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+85.0393700787401627 436.5356692913385359 Td
+(FHI-aims) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+56.6929133858267775 418.1104724409448181 Td
+(Current Version:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+85.0393700787401627 408.1892125984251152 Td
+(250822) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+56.6929133858267775 389.7640157480314542 Td
+(Contact Information:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+85.0393700787401627 379.8427559055117513 Td
+(Not specified) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+85.0393700787401627 361.4175590551180335 Td
+(Name:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 351.4962992125983874 Td
+(Volker Blum) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+85.0393700787401627 333.0711023622046696 Td
+(Email:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 323.1498425196849666 Td
+(volker.blum@duke.edu) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+85.0393700787401627 304.7246456692912489 Td
+(Organization:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 294.8033858267715459 Td
+(Duke University) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+56.6929133858267775 276.3781889763778281 Td
+(Application Domain:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+85.0393700787401627 266.4569291338582389 Td
+(Not specified) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+85.0393700787401627 248.0317322834645211 Td
+(What is the primary application domain of your codes?:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 238.1104724409448181 Td
+(Materials Science) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+85.0393700787401627 219.6852755905511003 Td
+(Materials Science:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 209.7640157480313974 Td
+(Not specified) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 191.3388188976376796 Td
+(What are the main functionalities of your code?:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+141.7322834645669332 181.4175590551179766 Td
+(Ground state DFT, Time-dependent DFT, Many-body perturbation theory \(GW, BSE\),) Tj
+T* (Molecular dynamics, Quantum transport, Excited-state dynamics, Crystal structure) Tj
+T* (prediction, Defect calculations, Surface science) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 143.1498425196849666 Td
+(If you selected "Other", please specify::) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+141.7322834645669332 133.2285826771652637 Td
+(Not specified) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+85.0393700787401627 114.8033858267715459 Td
+(Climate/Weather Modeling:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 104.882125984251843 Td
+(Not specified) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0 g
+213.6799999999999784 28.3464566929134207 Td
+(Page 1 of 7 - ExaNLA Survey Response Report) Tj
+ET
+endstream
+endobj
+5 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 6 0 R
+>>
+endobj
+6 0 obj
+<<
+/Length 5313
+>>
+stream
+0.5670000000000001 w
+0 G
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 785.1970866141732586 Td
+(What are the main functionalities of your code?:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+141.7322834645669332 775.2758267716535556 Td
+(Not specified) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 756.8506299212598378 Td
+(If you selected "Other", please specify::) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+141.7322834645669332 746.9293700787401349 Td
+(Not specified) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+85.0393700787401627 728.5041732283464171 Td
+(Fluid Dynamics:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 718.5829133858267141 Td
+(Not specified) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 700.15771653543311 Td
+(What are the main functionalities of your code?:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+141.7322834645669332 690.2364566929134071 Td
+(Not specified) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 671.8112598425196893 Td
+(If you selected "Other", please specify::) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+141.7322834645669332 661.8899999999999864 Td
+(Not specified) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+85.0393700787401627 643.4648031496062686 Td
+(Other Domain Functions:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 633.5435433070865656 Td
+(Not specified) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 615.1183464566928478 Td
+(What are the main functionalities of your code?:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+141.7322834645669332 605.1970866141732586 Td
+(Not specified) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+56.6929133858267775 586.7718897637794271 Td
+(Use Case Information:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+85.0393700787401627 576.8506299212597241 Td
+(Not specified) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+85.0393700787401627 558.42543307086612 Td
+(Does your codes have multiple distinct use cases?:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 548.5041732283464171 Td
+(Yes, multiple distinct use cases) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+85.0393700787401627 530.0789763779526993 Td
+(Which use case are you describing in this submission?:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 520.1577165354329964 Td
+(Groubd stte DFT) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+56.6929133858267775 501.7325196850393354 Td
+(Library Description:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+85.0393700787401627 491.8112598425196325 Td
+(General purpose code for simulations in materials science and chemistry. ) Tj
+ET
+BT
+/F2 12 Tf
+13.7999999999999989 TL
+0 g
+56.6929133858267775 445.0396062992125508 Td
+(2. Matrix-Matrix Multiplication \(GEMM\)) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+56.6929133858267775 422.3624409448818255 Td
+(Matrix-Matrix Multiplication \(GEMM\):) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+85.0393700787401627 412.4411811023621226 Td
+(Yes) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+85.0393700787401627 394.0159842519684616 Td
+(Matrix Properties:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 384.0947244094487587 Td
+(Not specified) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 365.6695275590550409 Td
+(Matrix Structure:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+141.7322834645669332 355.7482677165353948 Td
+(Dense matrices, Distributed matrices) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 337.323070866141677 Td
+(Matrix Distribution:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+141.7322834645669332 327.4018110236220309 Td
+(Block cyclic distribution \(e.g., ScaLAPACK style\)) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 308.9766141732283131 Td
+(Matrix Storage Format:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+141.7322834645669332 299.0553543307086102 Td
+(Dense \(column-major/row-major\), Compressed Sparse Row \(CSR/CRS\),) Tj
+T* (Compressed Sparse Column \(CSC/CCS\), Multiple formats \(conversion as needed\)) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 270.7088976377951894 Td
+(Which types of matrix multiplications do you perform?:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+141.7322834645669332 260.7876377952754865 Td
+( S t a n d a r d   m u l t i p l i c a t i o n   \( A B \) ,   T r a n s p o s e   m u l t i p l i c a t i o n   \( A@ B ,   A B@ \) ,   H e r m i t i a n) Tj
+T* (multiplication \(A†B, AB†\)) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 232.4411811023621794 Td
+(Typical Dimensions:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+141.7322834645669332 222.5199212598424765 Td
+(Not specified) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+141.7322834645669332 204.0947244094487587 Td
+(Matrix Size Range:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+170.0787401574803255 194.1734645669290558 Td
+(Medium \(100 - 1,000\), Large \(1,000 - 10,000\), Very Large \(10,000 - 100,000\),) Tj
+T* (Extreme \(> 100,000\)) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+141.7322834645669332 165.827007874015635 Td
+(Typical Matrix Shapes:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+170.0787401574803255 155.9057480314959321 Td
+( S q u a r e   m a t r i c e s   \( m  "H   n  "H   k \)) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+141.7322834645669332 137.480551181102328 Td
+(Batch Size:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+170.0787401574803255 127.559291338582625 Td
+(Not specified) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+85.0393700787401627 109.1340944881889072 Td
+(Distributed-Memory NLA Library Usage:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 99.2128346456692043 Td
+(Not specified) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0 g
+213.6799999999999784 28.3464566929134207 Td
+(Page 2 of 7 - ExaNLA Survey Response Report) Tj
+ET
+endstream
+endobj
+7 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 8 0 R
+>>
+endobj
+8 0 obj
+<<
+/Length 5251
+>>
+stream
+0.5670000000000001 w
+0 G
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 785.1970866141732586 Td
+(General Distributed Memory Libraries \(CPU/GPU\):) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+141.7322834645669332 775.2758267716535556 Td
+(ScaLAPACK, ELPA, COSMA) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 756.8506299212598378 Td
+(Special/Advanced Implementations:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+141.7322834645669332 746.9293700787401349 Td
+(Not specified) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 728.5041732283464171 Td
+(Are there any NLA libraries you are interested in using \(but have not yet adopted\)?:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+141.7322834645669332 718.5829133858267141 Td
+(cuBLASMp \(NVIDIA distributed-memory GPUs\)) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+85.0393700787401627 700.15771653543311 Td
+(Future Requirements:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 690.2364566929134071 Td
+(Not specified) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 671.8112598425196893 Td
+(Desired Features:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+141.7322834645669332 661.8899999999999864 Td
+(Improved sparse-dense multiplication, Hardware-specific optimizations, Other:) Tj
+T* (simply, efficiency of all steps.) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+85.0393700787401627 633.5435433070865656 Td
+(Benchmarking Requirements:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 623.6222834645668627 Td
+(Not specified) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 605.1970866141732586 Td
+(Benchmark Input Types:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+141.7322834645669332 595.2758267716535556 Td
+(Real matrices from application workloads) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 576.8506299212597241 Td
+(Can You Provide Data or Mini-apps?:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+141.7322834645669332 566.9293700787401349 Td
+(Yes, matrices only) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 548.5041732283464171 Td
+(Scaling Requirements:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+141.7322834645669332 538.5829133858267141 Td
+(Strong scaling \(fixed total problem size\), Both strong and weak scaling needed) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 520.1577165354329964 Td
+(Working Precision:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+141.7322834645669332 510.2364566929133503 Td
+(Double precision \(64-bit\)) Tj
+ET
+BT
+/F2 12 Tf
+13.7999999999999989 TL
+0 g
+56.6929133858267775 463.4648031496062686 Td
+( 3 .   S t a n d a r d   E i g e n v a l u e   P r o b l e m s   \( A x   =  » x \)) Tj
+ET
+BT
+/F2 11 Tf
+12.6499999999999986 TL
+0 g
+85.0393700787401627 440.7876377952755433 Td
+(Symmetric/Hermitian) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+85.0393700787401627 423.7797637795275136 Td
+(Primary Use Cases:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 413.8585039370078107 Td
+(Kohn–Sham equations \(standard DFT\), GW quasiparticle calculations, Bethe–Salpeter) Tj
+T* (equation \(Tamm-Dancoff approximation\)) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+85.0393700787401627 385.5120472440944468 Td
+(Matrix Properties and Structure:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 375.5907874015747439 Td
+(Dense) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+85.0393700787401627 357.1655905511810261 Td
+(Matrix Properties:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 347.24433070866138 Td
+(Not specified) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 328.8191338582676053 Td
+(Matrix Distribution:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+141.7322834645669332 318.8978740157480161 Td
+(Block cyclic distribution \(e.g., ScaLAPACK style\), Custom domain decomposition) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 300.4726771653542983 Td
+(Matrix Storage Format:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+141.7322834645669332 290.5514173228345953 Td
+(Dense \(column-major/row-major\), Compressed Sparse Row \(CSR/CRS\),) Tj
+T* (Compressed Sparse Column \(CSC/CCS\)) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 262.2049606299211746 Td
+(Positive definiteness:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+141.7322834645669332 252.2837007874014716 Td
+(Varies depending on the problem) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 233.8585039370077538 Td
+(Eigenvalue distribution:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+141.7322834645669332 223.9372440944881646 Td
+(Varies) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 205.5120472440944468 Td
+(Problem Scale:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+141.7322834645669332 195.5907874015747439 Td
+(Medium \(1,000 - 10,000\), Large \(10,000 - 100,000\), Very Large \(100,000 - 1,000,000\),) Tj
+T* (Extreme \(> 1,000,000\), Small \(< 1,000\)) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+85.0393700787401627 167.2443307086613231 Td
+(Computation Requirements:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 157.3230708661416202 Td
+(Not specified) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 138.8978740157479024 Td
+(Percentage of eigenvalues:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+141.7322834645669332 128.9766141732283131 Td
+(Varies) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 110.5514173228345953 Td
+(What to compute:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+141.7322834645669332 100.6301574803148924 Td
+(Varies) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0 g
+213.6799999999999784 28.3464566929134207 Td
+(Page 3 of 7 - ExaNLA Survey Response Report) Tj
+ET
+endstream
+endobj
+9 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 10 0 R
+>>
+endobj
+10 0 obj
+<<
+/Length 5386
+>>
+stream
+0.5670000000000001 w
+0 G
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 785.1970866141732586 Td
+(Eigenvalue location:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+141.7322834645669332 775.2758267716535556 Td
+(Varies) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+85.0393700787401627 756.8506299212598378 Td
+(Required tolerance/precision:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 746.9293700787401349 Td
+(Not specified) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 728.5041732283464171 Td
+(Residual tolerance type:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+141.7322834645669332 718.5829133858267141 Td
+( A b s o l u t e   r e s i d u a l   \( | | A x   -  » x | | \)) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 700.15771653543311 Td
+(Absolute residual tolerance:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+141.7322834645669332 690.2364566929134071 Td
+(Machine precision) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 671.8112598425196893 Td
+(Relative residual tolerance:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+141.7322834645669332 661.8899999999999864 Td
+(Not specified) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 643.4648031496062686 Td
+(Hybrid residual tolerance:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+141.7322834645669332 633.5435433070865656 Td
+(Not specified) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 615.1183464566928478 Td
+(Orthogonality tolerance:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+141.7322834645669332 605.1970866141732586 Td
+(Machine precision) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 586.7718897637794271 Td
+(Working Precision:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+141.7322834645669332 576.8506299212597241 Td
+(Double precision \(64-bit\)) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+85.0393700787401627 558.42543307086612 Td
+(Workload Characteristics:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 548.5041732283464171 Td
+(Not specified) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 530.0789763779526993 Td
+(Computation Pattern: capability or capacity:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+141.7322834645669332 520.1577165354329964 Td
+(Large-scale single problems \(e.g., one large matrix at a time, using significant) Tj
+T* (computational resources\), Repeated similar-sized problems \(e.g., time evolution or) Tj
+T* (parameter sweeps\)) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+85.0393700787401627 481.8899999999999295 Td
+(Distributed-Memory NLA Library Usage:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 471.9687401574802834 Td
+(Not specified) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 453.5435433070865656 Td
+(Distributed-Memory Dense Linear Algebra:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+141.7322834645669332 443.6222834645668627 Td
+(ScaLAPACK, ELPA) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 425.1970866141731449 Td
+(Iterative Eigensolvers:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+141.7322834645669332 415.2758267716534988 Td
+(Not specified) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 396.850629921259781 Td
+(High-Level & Interface Libraries:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+141.7322834645669332 386.929370078740078 Td
+(ELSI – Abstraction layer for eigenvalue solvers) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+85.0393700787401627 368.5041732283464171 Td
+(Are there any NLA libraries you are interested in using \(but have not yet adopted\)?:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 358.5829133858267141 Td
+(SLEPc, PRIMME, ChASE) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+85.0393700787401627 340.1577165354329964 Td
+(Benchmarking Requirements:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 330.2364566929132934 Td
+(Not specified) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 311.8112598425195756 Td
+(Benchmark Input Types:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+141.7322834645669332 301.8899999999999864 Td
+(Real matrices from application workloads) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 283.4648031496062686 Td
+(Can You Provide Data or Mini-apps?:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+141.7322834645669332 273.5435433070865656 Td
+(Yes, matrices only) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 255.1183464566928478 Td
+(Scaling Requirements:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+141.7322834645669332 245.1970866141731449 Td
+(Strong scaling \(fixed total problem size\)) Tj
+ET
+BT
+/F2 11 Tf
+12.6499999999999986 TL
+0 g
+85.0393700787401627 212.5986614173227736 Td
+( Q u a s i - H e r m i t i a n   \( B S E \)   -   HÈ   =   EÈ ,   w h e r e   H   =   \( A   B ;   - B *   - A * \) ,   A   =   A † ,   B   =   B ^ T) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+85.0393700787401627 195.5907874015747439 Td
+(Matrix Properties and Structure:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 185.6695275590550409 Td
+(Dense \(standard full matrix\)) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+85.0393700787401627 167.2443307086613231 Td
+(Matrix Properties:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 157.3230708661416202 Td
+(Not specified) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 138.8978740157479024 Td
+(Eigenvalue distribution:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+141.7322834645669332 128.9766141732283131 Td
+(Varies) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 110.5514173228345953 Td
+(Matrix scale/size:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+141.7322834645669332 100.6301574803148924 Td
+(Large \(10,000 - 100,000\)) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0 g
+213.6799999999999784 28.3464566929134207 Td
+(Page 4 of 7 - ExaNLA Survey Response Report) Tj
+ET
+endstream
+endobj
+11 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 12 0 R
+>>
+endobj
+12 0 obj
+<<
+/Length 5299
+>>
+stream
+0.5670000000000001 w
+0 G
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+85.0393700787401627 785.1970866141732586 Td
+(Computation Requirements:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 775.2758267716535556 Td
+(Not specified) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 756.8506299212598378 Td
+(Percentage of eigenvalues:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+141.7322834645669332 746.9293700787401349 Td
+(Varies) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 728.5041732283464171 Td
+(What to compute:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+141.7322834645669332 718.5829133858267141 Td
+(Varies) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 700.15771653543311 Td
+(Eigenvalue location:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+141.7322834645669332 690.2364566929134071 Td
+(Varies) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+85.0393700787401627 671.8112598425196893 Td
+(Required tolerance/precision:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 661.8899999999999864 Td
+(Not specified) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 643.4648031496062686 Td
+(Residual tolerance type:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+141.7322834645669332 633.5435433070865656 Td
+( A b s o l u t e   r e s i d u a l   \( | | A x   -  » x | | \)) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 615.1183464566928478 Td
+(Absolute residual tolerance:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+141.7322834645669332 605.1970866141732586 Td
+(Machine precision) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 586.7718897637794271 Td
+(Relative residual tolerance:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+141.7322834645669332 576.8506299212597241 Td
+(Not specified) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 558.42543307086612 Td
+(Hybrid residual tolerance:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+141.7322834645669332 548.5041732283464171 Td
+(Not specified) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 530.0789763779526993 Td
+(Orthogonality tolerance:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+141.7322834645669332 520.1577165354329964 Td
+(Machine precision) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 501.7325196850393354 Td
+(Working Precision:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+141.7322834645669332 491.8112598425196325 Td
+(Double precision \(64-bit\)) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+85.0393700787401627 473.3860629921259147 Td
+(Workload Characteristics:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 463.4648031496062686 Td
+(Not specified) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 445.0396062992125508 Td
+(Computation Pattern: capability or capacity:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+141.7322834645669332 435.1183464566928478 Td
+(Large-scale single problems \(e.g., one large BSE matrix at a time, using significant) Tj
+T* (computational resources\)) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+85.0393700787401627 406.7718897637794839 Td
+(Distributed-Memory NLA Library Usage:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 396.850629921259781 Td
+(Not specified) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 378.4254330708660632 Td
+(General Non-Hermitian Eigensolvers:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+141.7322834645669332 368.5041732283464171 Td
+() Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 350.0789763779526993 Td
+(Solvers Targeting Full BSE Problems:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+141.7322834645669332 340.1577165354329964 Td
+(BSEPACK – Dedicated solver library for full BSE eigenproblems, ChASE –) Tj
+T* (Chebyshev Accelerated Subspace Eigensolver, extended to BSE with custmoized) Tj
+T* (filters and rayleigh-ritz) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+85.0393700787401627 301.8899999999999864 Td
+(Are there any NLA libraries you are interested in using \(but have not yet adopted\)?:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 291.9687401574802834 Td
+(ChASE) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+85.0393700787401627 273.5435433070865656 Td
+(Benchmarking Requirements:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 263.6222834645668627 Td
+(Not specified) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 245.1970866141731449 Td
+(Benchmark Input Types:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+141.7322834645669332 235.2758267716534419 Td
+(Real matrices from application workloads) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 216.8506299212597241 Td
+(Can You Provide Data or Mini-apps?:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+141.7322834645669332 206.9293700787401349 Td
+(Yes, matrices only) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 188.5041732283464171 Td
+(Scaling Requirements:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+141.7322834645669332 178.5829133858267141 Td
+(Strong scaling \(fixed total problem size\)) Tj
+ET
+BT
+/F2 12 Tf
+13.7999999999999989 TL
+0 g
+56.6929133858267775 145.9844881889763428 Td
+( 4 .   G e n e r a l i z e d   E i g e n v a l u e   P r o b l e m s   \( A x   =  » B x \)) Tj
+ET
+BT
+/F2 11 Tf
+12.6499999999999986 TL
+0 g
+85.0393700787401627 123.3073228346455608 Td
+(Symmetric/Hermitian A, SPD B) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+85.0393700787401627 106.2994488188975311 Td
+(Matrix Structure:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 96.3781889763778281 Td
+(A is dense, B is dense, A is banded, B is banded, Complex valued, Real valued) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0 g
+213.6799999999999784 28.3464566929134207 Td
+(Page 5 of 7 - ExaNLA Survey Response Report) Tj
+ET
+endstream
+endobj
+13 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 14 0 R
+>>
+endobj
+14 0 obj
+<<
+/Length 5379
+>>
+stream
+0.5670000000000001 w
+0 G
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+85.0393700787401627 785.1970866141732586 Td
+(Reduction to Standard Eigenproblem \(using B\):) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 775.2758267716535556 Td
+(Not specified) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 756.8506299212598378 Td
+(Reduction to Standard Eigenproblem:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+141.7322834645669332 746.9293700787401349 Td
+(Yes, always) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 728.5041732283464171 Td
+(Reduction Method:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+141.7322834645669332 718.5829133858267141 Td
+( C h o l e s k y   f a c t o r i z a t i o n   o f   B   \( B   =   L LW   o r   B   =   L * L \)) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+85.0393700787401627 700.15771653543311 Td
+(Matrix Properties:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 690.2364566929134071 Td
+(Not specified) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 671.8112598425196893 Td
+(Eigenvalue distribution:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+141.7322834645669332 661.8899999999999864 Td
+(Varies) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 643.4648031496062686 Td
+(Problem Scale:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+141.7322834645669332 633.5435433070865656 Td
+(Large \(10,000 - 100,000\)) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+85.0393700787401627 615.1183464566928478 Td
+(Computation Requirements:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 605.1970866141732586 Td
+(Not specified) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 586.7718897637794271 Td
+(Percentage of eigenvalues:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+141.7322834645669332 576.8506299212597241 Td
+(Varies) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 558.42543307086612 Td
+(What to compute:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+141.7322834645669332 548.5041732283464171 Td
+(Varies) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 530.0789763779526993 Td
+(Eigenvalue location:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+141.7322834645669332 520.1577165354329964 Td
+(Varies) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+85.0393700787401627 501.7325196850393354 Td
+(Required tolerance/precision:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 491.8112598425196325 Td
+(Not specified) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 473.3860629921259147 Td
+(Residual tolerance type:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+141.7322834645669332 463.4648031496062686 Td
+( A b s o l u t e   r e s i d u a l   \( | | A x   -  » x | | \)) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 445.0396062992125508 Td
+(Absolute residual tolerance:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+141.7322834645669332 435.1183464566928478 Td
+(Machine precision) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 416.69314960629913 Td
+(Relative residual tolerance:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+141.7322834645669332 406.7718897637794839 Td
+(Not specified) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 388.3466929133857661 Td
+(Hybrid residual tolerance:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+141.7322834645669332 378.4254330708660632 Td
+(Not specified) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 360.0002362204724022 Td
+(Orthogonality tolerance:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+141.7322834645669332 350.0789763779526993 Td
+(Machine precision) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 331.6537795275589815 Td
+(Working Precision:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+141.7322834645669332 321.7325196850392786 Td
+(Double precision \(64-bit\)) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+85.0393700787401627 303.3073228346455608 Td
+(Workload Characteristics:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 293.3860629921258578 Td
+(Not specified) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 274.9608661417322537 Td
+(Computation Pattern: capability or capacity:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+141.7322834645669332 265.0396062992125508 Td
+(Large-scale single problems \(e.g., one large generalized eigenproblem at a time,) Tj
+T* (using significant computational resources\), Repeated similar-sized problems \(e.g.,) Tj
+T* (time evolution or parameter sweeps\)) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+85.0393700787401627 226.7718897637794271 Td
+(Distributed-Memory NLA Library Usage:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 216.8506299212597241 Td
+(Not specified) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 198.4254330708660063 Td
+(Distributed-Memory Dense Linear Algebra:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+141.7322834645669332 188.5041732283464171 Td
+(ELPA, ScaLAPACK) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 170.0789763779526993 Td
+(Iterative Eigensolvers:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+141.7322834645669332 160.1577165354329964 Td
+(Not specified) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 141.7325196850392786 Td
+(High-Level & Interface Libraries:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+141.7322834645669332 131.8112598425195756 Td
+(ELSI – Abstraction layer for eigenvalue solvers \(e.g., used by SIESTA, FHI-aims\)) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 113.3860629921258578 Td
+(Are there any NLA libraries you are interested in using \(but have not yet adopted\)?:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+141.7322834645669332 103.4648031496061549 Td
+(ChASE, DLA-Future) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0 g
+213.6799999999999784 28.3464566929134207 Td
+(Page 6 of 7 - ExaNLA Survey Response Report) Tj
+ET
+endstream
+endobj
+15 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 16 0 R
+>>
+endobj
+16 0 obj
+<<
+/Length 1005
+>>
+stream
+0.5670000000000001 w
+0 G
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+85.0393700787401627 785.1970866141732586 Td
+(Benchmarking Requirements:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 775.2758267716535556 Td
+(Not specified) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 756.8506299212598378 Td
+(Benchmark Input Types:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+141.7322834645669332 746.9293700787401349 Td
+(Real matrices from application workloads) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 728.5041732283464171 Td
+(Can You Provide Data or Mini-apps?:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+141.7322834645669332 718.5829133858267141 Td
+(Yes, matrices only) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 700.15771653543311 Td
+(Scaling Requirements:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+141.7322834645669332 690.2364566929134071 Td
+(Strong scaling \(fixed total problem size\)) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0 g
+213.6799999999999784 28.3464566929134207 Td
+(Page 7 of 7 - ExaNLA Survey Response Report) Tj
+ET
+endstream
+endobj
+1 0 obj
+<</Type /Pages
+/Kids [3 0 R 5 0 R 7 0 R 9 0 R 11 0 R 13 0 R 15 0 R ]
+/Count 7
+>>
+endobj
+17 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+18 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica-Bold
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+19 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica-Oblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+20 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica-BoldOblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+21 0 obj
+<<
+/Type /Font
+/BaseFont /Courier
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+22 0 obj
+<<
+/Type /Font
+/BaseFont /Courier-Bold
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+23 0 obj
+<<
+/Type /Font
+/BaseFont /Courier-Oblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+24 0 obj
+<<
+/Type /Font
+/BaseFont /Courier-BoldOblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+25 0 obj
+<<
+/Type /Font
+/BaseFont /Times-Roman
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+26 0 obj
+<<
+/Type /Font
+/BaseFont /Times-Bold
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+27 0 obj
+<<
+/Type /Font
+/BaseFont /Times-Italic
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+28 0 obj
+<<
+/Type /Font
+/BaseFont /Times-BoldItalic
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+29 0 obj
+<<
+/Type /Font
+/BaseFont /ZapfDingbats
+/Subtype /Type1
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+30 0 obj
+<<
+/Type /Font
+/BaseFont /Symbol
+/Subtype /Type1
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+2 0 obj
+<<
+/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]
+/Font <<
+/F1 17 0 R
+/F2 18 0 R
+/F3 19 0 R
+/F4 20 0 R
+/F5 21 0 R
+/F6 22 0 R
+/F7 23 0 R
+/F8 24 0 R
+/F9 25 0 R
+/F10 26 0 R
+/F11 27 0 R
+/F12 28 0 R
+/F13 29 0 R
+/F14 30 0 R
+>>
+/XObject <<
+>>
+>>
+endobj
+31 0 obj
+<<
+/Producer (jsPDF 3.0.3)
+/CreationDate (D:20251017124823+02'00')
+>>
+endobj
+32 0 obj
+<<
+/Type /Catalog
+/Pages 1 0 R
+/OpenAction [3 0 R /FitH null]
+/PageLayout /OneColumn
+>>
+endobj
+xref
+0 33
+0000000000 65535 f 
+0000033252 00000 n 
+0000035113 00000 n 
+0000000015 00000 n 
+0000000152 00000 n 
+0000004474 00000 n 
+0000004611 00000 n 
+0000009976 00000 n 
+0000010113 00000 n 
+0000015416 00000 n 
+0000015554 00000 n 
+0000020993 00000 n 
+0000021132 00000 n 
+0000026484 00000 n 
+0000026623 00000 n 
+0000032055 00000 n 
+0000032194 00000 n 
+0000033348 00000 n 
+0000033474 00000 n 
+0000033605 00000 n 
+0000033739 00000 n 
+0000033877 00000 n 
+0000034001 00000 n 
+0000034130 00000 n 
+0000034262 00000 n 
+0000034398 00000 n 
+0000034526 00000 n 
+0000034653 00000 n 
+0000034782 00000 n 
+0000034915 00000 n 
+0000035017 00000 n 
+0000035366 00000 n 
+0000035452 00000 n 
+trailer
+<<
+/Size 33
+/Root 32 0 R
+/Info 31 0 R
+/ID [ <A469A5D91EAAF33E29344C0257BEED2D> <A469A5D91EAAF33E29344C0257BEED2D> ]
+>>
+startxref
+35556
+%%EOF

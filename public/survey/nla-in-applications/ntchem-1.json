@@ -1,0 +1,152 @@
+{
+  "poly-degree": "High degree (50-200)",
+  "contact-name": "William Dawson",
+  "library-name": "NTChem",
+  "contact-email": "william.dawson@riken.jp",
+  "library-version": "",
+  "other-functions": "Ab Initio Simulations",
+  "poly-basis-type": [
+    "Chebyshev polynomials",
+    "McWeeny polynomials",
+    "Fermi polynomial approximations",
+    "Newton polynomials"
+  ],
+  "current-use-case": "Ground state DFT calculations",
+  "domain-selection": "Other (please specify):",
+  "gemm-matrix-size": [
+    "Very Large (10,000 - 100,000)",
+    "Large (1,000 - 10,000)"
+  ],
+  "poly-matrix-type": [
+    "Hamiltonian matrix",
+    "Overlap matrix",
+    "Fock matrix",
+    "Density matrix",
+    "Complex valued",
+    "Real valued"
+  ],
+  "poly-primary-use": [
+    "Density matrix approximation without diagonalization",
+    "Fermi operator expansion (FOE)",
+    "Matrix sign function"
+  ],
+  "gemm-matrix-shape": [
+    "Square matrices (m ≈ n ≈ k)"
+  ],
+  "gemm-matrix-format": [
+    "Block CSR/CSC",
+    "Dense (column-major/row-major)"
+  ],
+  "multiple-use-cases": "Yes, multiple distinct use cases",
+  "poly-matrix-format": [
+    "Block CSR/CSC"
+  ],
+  "gemm-data-provision": [
+    "Yes, both matrices and mini-apps"
+  ],
+  "gemm-precision-type": [
+    "Adaptive precision (based on numerical requirements)",
+    "Double precision (64-bit)",
+    "Mixed precision (e.g., FP32 multiplication with FP64 accumulation)"
+  ],
+  "poly-data-provision": [
+    "Yes, matrices only"
+  ],
+  "poly-precision-type": [
+    "Double precision (64-bit)",
+    "Mixed precision (e.g., FP32 for polynomial evaluation, FP64 for coefficients)"
+  ],
+  "standard-eigenvalue": false,
+  "contact-organization": "RIKEN R-CCS",
+  "gemm-future-features": [
+    "Better mixed precision support",
+    "Hardware-specific optimizations"
+  ],
+  "gemm-input-data-type": [
+    "Both synthetic and real data"
+  ],
+  "gemm-operation-types": [
+    "Standard multiplication (AB)",
+    "Scaled multiplication (αAB)",
+    "Accumulation (AB + C)",
+    "Transpose multiplication (AᵀB, ABᵀ)",
+    "Full GEMM (αAB + βC)",
+    "Hermitian multiplication (A†B, AB†)"
+  ],
+  "poly-input-data-type": [
+    "Real matrices from application workloads"
+  ],
+  "polynomial-filtering": true,
+  "gemm-matrix-structure": [
+    "Dense matrices",
+    "Sparse matrices"
+  ],
+  "matrix-multiplication": true,
+  "poly-computation-type": [
+    "Large-scale single operations (e.g., one large matrix polynomial at a time)"
+  ],
+  "domain-selection-other": "Chemistry",
+  "gen-sym-precision-type": [
+    "Double precision (64-bit)"
+  ],
+  "generalized-eigenvalue": true,
+  "poly-libraries-current": [
+    "NTPoly"
+  ],
+  "gen-sym-herm-scale-size": "Large (10,000 - 100,000)",
+  "gen-symmetric-hermitian": true,
+  "gemm-matrix-distribution": [
+    "Communication-avoiding distribution"
+  ],
+  "gen-sym-computation-type": [
+    "Large-scale single problems (e.g., one large generalized eigenproblem at a time, using significant computational resources)"
+  ],
+  "gen-sym-matrix-structure": [
+    "A is dense, B is dense",
+    "A is sparse, B is sparse"
+  ],
+  "gen-sym-reduction-method": "Approximate inverse of B (e.g., polynomial or iterative approximation)",
+  "gen-sym-reduction-needed": "Yes, always",
+  "poly-matrix-distribution": [
+    "Communication-minimizing distribution"
+  ],
+  "gemm-scaling-requirements": [
+    "Both strong and weak scaling needed"
+  ],
+  "gen-sym-herm-compute-mode": "Varies",
+  "poly-convergence-criteria": [
+    "Energy convergence",
+    "Density matrix idempotency",
+    "Residual norm"
+  ],
+  "poly-scaling-requirements": [
+    "Both strong and weak scaling needed"
+  ],
+  "gemm-libraries-distributed": [
+    "Custom distributed implementation"
+  ],
+  "poly-accuracy-requirements": "Varies by application",
+  "gen-sym-herm-data-provision": [
+    "Yes, matrices only"
+  ],
+  "gemm-special-implementations": [
+    "Algorithm-specific implementations (e.g., Strassen, communication-avoiding algorithms)"
+  ],
+  "gen-sym-herm-input-data-type": [
+    "Real matrices from application workloads"
+  ],
+  "gen-sym-interested-libraries": [
+    "ELPA",
+    "ChASE",
+    "ELSI"
+  ],
+  "gen-sym-scaling-requirements": [
+    "Both strong and weak scaling needed"
+  ],
+  "gen-sym-nla-distributed-dense": [
+    "EigenExa"
+  ],
+  "gen-sym-herm-eigenvalue-location": "Eigenvalues in a specific range",
+  "gen-sym-herm-eigenvalue-percentage": "10-50%",
+  "gen-sym-herm-eigenvalue-distribution": "Mix of clustered and separated"
+}

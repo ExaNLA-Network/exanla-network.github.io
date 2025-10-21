@@ -1,0 +1,13 @@
+{
+  "contact-name": "Paolo Bientinesi",
+  "library-name": "LAPACK",
+  "contact-email": "pauldj@cs.umu.se",
+  "library-version": "-",
+  "current-use-case": "Genome-Wide Association Studies (GWAS), Chemometrics",
+  "domain-selection": "Other (please specify):",
+  "multiple-use-cases": "Yes, multiple distinct use cases",
+  "other-nla-operation": true,
+  "contact-organization": "Umeå University",
+  "domain-selection-other": "Statistics",
+  "other-nla-operation-specify": "Least Squares, Generalized Least Squares"
+}

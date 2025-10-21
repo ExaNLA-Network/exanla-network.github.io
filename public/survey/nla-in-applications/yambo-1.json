@@ -1,0 +1,107 @@
+{
+  "matrix-size": "Medium (1,000 - 10,000)",
+  "contact-name": "Andrea Ferretti, Daniele Varsano",
+  "library-name": "Yambo",
+  "contact-email": "andrea.ferretti@nano.cnr.it, daniele.varsano@nano.cnr.it",
+  "matrix-format": [
+    "Dense (column-major/row-major)"
+  ],
+  "solver-scaling": "Not critical",
+  "gemm-batch-size": [
+    "Not applicable"
+  ],
+  "library-version": "yambo 5.3.x, 5.4",
+  "solver-accuracy": "Medium (10⁻⁶)",
+  "solver-parallel": [
+    "Shared memory (OpenMP)",
+    "Distributed memory (MPI)",
+    "GPU acceleration",
+    "Multi-node scaling"
+  ],
+  "current-use-case": "GW simulation",
+  "domain-selection": "Materials Science",
+  "gemm-matrix-size": [
+    "Large (1,000 - 10,000)"
+  ],
+  "matrix-structure": [
+    "Dense"
+  ],
+  "gemm-matrix-shape": [
+    "Block-inner product (m and n small, k large)",
+    "General rectangular (no dominant pattern)"
+  ],
+  "matrix-properties": [
+    "Non-symmetric/Non-Hermitian",
+    "Symmetric/Hermitian",
+    "Complex-valued"
+  ],
+  "gemm-matrix-format": [
+    "Dense (column-major/row-major)"
+  ],
+  "multiple-use-cases": "Yes, multiple distinct use cases",
+  "gemm-data-provision": [
+    "Yes, both matrices and mini-apps"
+  ],
+  "gemm-precision-type": [
+    "Single precision (32-bit)",
+    "Double precision (64-bit)",
+    "Mixed precision (e.g., FP32 multiplication with FP64 accumulation)",
+    "Low precision (e.g., FP16, BF16)",
+    "Tensor Core compatible precisions"
+  ],
+  "library-description": "YAMBO is an open-source code released within the GPL licence implementing first-principles methods based on Green’s function theory to describe excited-state properties of realistic materials.These methods include the GW approximation, the Bethe-Salpeter equation (BSE), electron-phonon interaction and non-equilibrium Green’s function theory (NEGF).\nYAMBO relies on previously computed ground-state properties and for this reason it is interfaced with other density functional theory (DFT) codes.",
+  "materials-functions": [
+    "Many-body perturbation theory (GW, BSE)"
+  ],
+  "matrix-distribution": [
+    "Block cyclic distribution (e.g., ScaLAPACK style)"
+  ],
+  "contact-organization": "CNR Istituto Nanoscienze, IT",
+  "gemm-future-features": [
+    "Better mixed precision support",
+    "Auto-tuning capabilities",
+    "Hardware-specific optimizations"
+  ],
+  "gemm-input-data-type": [
+    "Synthetic / random matrices",
+    "Both synthetic and real data"
+  ],
+  "gemm-operation-types": [
+    "Hermitian multiplication (A†B, AB†)",
+    "Standard multiplication (AB)"
+  ],
+  "gemm-matrix-structure": [
+    "Dense matrices",
+    "Tall-and-skinny matrices"
+  ],
+  "linear-system-solvers": true,
+  "matrix-multiplication": true,
+  "solver-precision-type": [
+    "Single precision (32-bit)",
+    "Double precision (64-bit)"
+  ],
+  "dense-solver-libraries": [
+    "ScaLAPACK",
+    "cuSolverMp"
+  ],
+  "solver-computation-type": [
+    "Large-scale single systems (e.g., one large system at a time, using significant computational resources)"
+  ],
+  "gemm-matrix-distribution": [
+    "Block row/column distribution"
+  ],
+  "gemm-scaling-requirements": [
+    "Strong scaling (fixed total problem size)"
+  ],
+  "linear-solvers-data-provision": [
+    "Yes, both matrices and mini-apps"
+  ],
+  "linear-solvers-input-data-type": [
+    "Synthetic / random matrices",
+    "Real matrices from application workloads",
+    "Both synthetic and real data"
+  ],
+  "linear-solvers-scaling-requirements": [
+    "Strong scaling (fixed total problem size)"
+  ]
+}
