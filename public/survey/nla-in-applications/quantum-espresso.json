@@ -1,0 +1,223 @@
+{
+  "contact-name": "Pietro Delugas",
+  "library-name": "Quantum ESPRESSO",
+  "qr-condition": "Varies significantly",
+  "contact-email": "pdelugas@sissa.it",
+  "qr-q-handling": "Explicit Q matrix",
+  "qr-scale-size": "Medium (1,000 - 10,000)",
+  "gemm-batch-size": [
+    "Small (< 10)",
+    "Medium (10 - 100)"
+  ],
+  "library-version": "7.5 ",
+  "qr-aspect-ratio": "Varies by application",
+  "qr-compute-mode": [
+    "QR with column pivoting",
+    "Q factor only"
+  ],
+  "current-use-case": "Ground state DFT calculations",
+  "domain-selection": "Materials Science",
+  "gemm-matrix-size": [
+    "Large (1,000 - 10,000)"
+  ],
+  "qr-factorization": true,
+  "qr-matrix-format": [
+    "Dense (column-major/row-major)"
+  ],
+  "qr-orthogonality": "High accuracy (10^-9)",
+  "gemm-matrix-shape": [
+    "Square matrices (m ≈ n ≈ k)",
+    "Tall-skinny matrices (m >> k, n small)"
+  ],
+  "qr-data-provision": [
+    "Yes, both matrices and mini-apps"
+  ],
+  "qr-precision-type": [
+    "Double precision (64-bit)"
+  ],
+  "gemm-matrix-format": [
+    "Dense (column-major/row-major)"
+  ],
+  "multiple-use-cases": "No, single primary use case",
+  "qr-input-data-type": [
+    "Mini-apps or extracted kernels from real applications"
+  ],
+  "gemm-data-provision": [
+    "Yes, mini-apps only",
+    "Yes, both matrices and mini-apps"
+  ],
+  "gemm-precision-type": [
+    "Double precision (64-bit)"
+  ],
+  "library-description": "Basic DFT code with ground state calculations, static perturbations (e.g. phonons, static dielectric constants), excitation spectra with TDDFT (e.g. Optical Spectra, EELS spectra, Magnons) ",
+  "materials-functions": [
+    "Ground state DFT",
+    "Time-dependent DFT",
+    "Molecular dynamics",
+    "Defect calculations",
+    "Surface science"
+  ],
+  "qr-computation-type": [
+    "Large-scale single factorizations (e.g., one large matrix at a time, using significant computational resources)"
+  ],
+  "qr-matrix-structure": [
+    "Dense",
+    "Complex valued"
+  ],
+  "cholesky-matrix-size": "Medium (1,000 – 10,000)",
+  "contact-organization": "SISSA",
+  "gemm-future-features": [
+    "Auto-tuning capabilities",
+    "Hardware-specific optimizations",
+    "Better mixed precision support",
+    "More flexible memory layouts",
+    "More efficient batched operations"
+  ],
+  "gemm-input-data-type": [
+    "Mini-apps or extracted kernels from real applications"
+  ],
+  "gemm-operation-types": [
+    "Full GEMM (αAB + βC)",
+    "Transpose multiplication (AᵀB, ABᵀ)",
+    "Hermitian multiplication (A†B, AB†)",
+    "Standard multiplication (AB)"
+  ],
+  "gemm-matrix-structure": [
+    "Dense matrices"
+  ],
+  "gen-sym-nla-iterative": [
+    "Other (please specify):"
+  ],
+  "linear-system-solvers": false,
+  "matrix-multiplication": true,
+  "cholesky-factorization": true,
+  "cholesky-matrix-format": [
+    "Dense (column-major/row-major)"
+  ],
+  "gen-sym-precision-type": [
+    "Double precision (64-bit)"
+  ],
+  "generalized-eigenvalue": true,
+  "qr-matrix-distribution": [
+    "Block cyclic distribution (e.g., ScaLAPACK style)"
+  ],
+  "cholesky-data-provision": [
+    "Yes, both matrices and mini-apps"
+  ],
+  "cholesky-precision-type": [
+    "Double precision (64-bit)"
+  ],
+  "gen-sym-herm-scale-size": "Medium (1,000 - 10,000)",
+  "gen-symmetric-hermitian": true,
+  "qr-scaling-requirements": [
+    "Both strong and weak scaling needed"
+  ],
+  "cholesky-input-data-type": [
+    "Mini-apps or extracted kernels from real applications"
+  ],
+  "gemm-matrix-distribution": [
+    "Block cyclic distribution (e.g., ScaLAPACK style)",
+    "Block row/column distribution"
+  ],
+  "gen-sym-computation-type": [
+    "Large-scale single problems (e.g., one large generalized eigenproblem at a time, using significant computational resources)",
+    "Many independent smaller problems (e.g., batch processing multiple generalized eigenproblems simultaneously)"
+  ],
+  "gen-sym-matrix-structure": [
+    "A is dense, B is dense",
+    "Complex valued",
+    "Real valued"
+  ],
+  "gen-sym-reduction-method": "Cholesky factorization of B (B = LLᵗ or B = L*L)",
+  "gen-sym-reduction-needed": "Yes, sometimes (depends on solver or problem)",
+  "cholesky-computation-type": [
+    "Large-scale single factorizations (e.g., one large matrix at a time, using significant computational resources)"
+  ],
+  "cholesky-condition-number": "Varies widely / Not known",
+  "gemm-interested-libraries": [
+    "SLATE"
+  ],
+  "gemm-scaling-requirements": [
+    "Both strong and weak scaling needed"
+  ],
+  "gen-sym-herm-compute-mode": "Eigenvalues and eigenvectors",
+  "qr-factorization-accuracy": "High accuracy (10^-9)",
+  "gemm-libraries-distributed": [
+    "ScaLAPACK",
+    "ELPA"
+  ],
+  "gen-sym-herm-residual-type": "Absolute residual (||Ax - λx||)",
+  "cholesky-diagonal-dominance": "Not diagonally dominant",
+  "cholesky-sparsity-structure": "Dense",
+  "gen-sym-herm-data-provision": [
+    "Yes, mini-apps only"
+  ],
+  "gen-sym-nla-iterative-other": "KS solvers within Quantum ESPRESSO distribution ",
+  "cholesky-matrix-distribution": [
+    "Block row/column distribution",
+    "Block cyclic distribution (e.g., ScaLAPACK style)"
+  ],
+  "gemm-special-implementations": [
+    "Other (please specify):"
+  ],
+  "gen-sym-herm-input-data-type": [
+    "Real matrices from application workloads",
+    "Mini-apps or extracted kernels from real applications"
+  ],
+  "gen-sym-interested-libraries": [
+    "ChASE",
+    "SLATE",
+    "DLA-Future"
+  ],
+  "gen-sym-scaling-requirements": [
+    "Both strong and weak scaling needed"
+  ],
+  "cholesky-scaling-requirements": [
+    "Both strong and weak scaling needed"
+  ],
+  "gen-sym-nla-distributed-dense": [
+    "ScaLAPACK",
+    "ELPA",
+    "DLA-Future"
+  ],
+  "qr-nla-group-distributed-used": [
+    "ScaLAPACK",
+    "ELPA"
+  ],
+  "qr-nla-group-specialized-used": [
+    "Other (please specify):"
+  ],
+  "cholesky-factorization-tolerance": "Very high accuracy (10^-12)",
+  "gen-sym-herm-eigenvalue-location": "Smallest eigenvalues",
+  "gemm-special-implementations-other": "none at the moment ",
+  "gen-sym-herm-eigenvalue-percentage": "50-90%",
+  "cholesky-nla-group-distributed-used": [
+    "ScaLAPACK",
+    "Other (please specify):",
+    "ELPA"
+  ],
+  "cholesky-nla-group-specialized-used": [
+    "Other (please specify):"
+  ],
+  "qr-nla-group-distributed-interested": [
+    "SLATE",
+    "DPLASMA"
+  ],
+  "qr-nla-group-specialized-interested": [
+    "Other (please specify):"
+  ],
+  "qr-nla-group-specialized-used-other": "none at the moment",
+  "gen-sym-herm-eigenvalue-distribution": "Mix of clustered and separated",
+  "gen-sym-herm-orthogonality-tolerance": "High (10^-9)",
+  "gen-sym-herm-absolute-residual-tolerance": "Very high (10^-12)",
+  "cholesky-nla-group-distributed-interested": [
+    "DLA-Future"
+  ],
+  "cholesky-nla-group-distributed-used-other": "Internal routines of Quantum ESPRESSO in LAXlib",
+  "cholesky-nla-group-specialized-interested": [
+    "Other (please specify):"
+  ],
+  "cholesky-nla-group-specialized-used-other": "no specialized libraries",
+  "qr-nla-group-specialized-interested-other": "none at the moment",
+  "cholesky-nla-group-specialized-interested-other": "no interest at the moment"
+}

@@ -1,0 +1,60 @@
+{
+  "contact-name": "Ben Hourahine",
+  "library-name": "Principle modes",
+  "contact-email": "benjamin.hourahine@strath.ac.uk",
+  "library-version": "No released version",
+  "other-functions": "Frequency domain calculation of electromagnetic modes. These can then be used to evaluate various properties (absorption, scattering, q-factors non-linear effects, ...).",
+  "current-use-case": "Ben Hourahine",
+  "domain-selection": "Other (please specify):",
+  "gemm-matrix-size": [
+    "Very Large (10,000 - 100,000)"
+  ],
+  "gemm-matrix-shape": [
+    "Tall-skinny matrices (m >> k, n small)"
+  ],
+  "gemm-matrix-format": [
+    "Dense (column-major/row-major)"
+  ],
+  "multiple-use-cases": "No, single primary use case",
+  "gemm-data-provision": [
+    "Not sure yet"
+  ],
+  "gemm-precision-type": [
+    "Double precision (64-bit)"
+  ],
+  "library-description": "Solves the electromagnetic modes of nanostructures in the frequency domain. Mathematical operation is equivalent to a least squares solution, A X = B, with a very poor condition number for A. But this approach uses the nature of the differential equations and their boundary conditions to write well conditioned equations on the interface between two sub-spaces of the system (and then evaluates principal angles and principal modes).",
+  "materials-functions": [],
+  "other-nla-operation": true,
+  "contact-organization": "The University of Strathclyde",
+  "gemm-future-features": [
+    "Auto-tuning capabilities",
+    "Other (please specify):"
+  ],
+  "gemm-input-data-type": [
+    "Real matrices from application workloads",
+    "Mini-apps or extracted kernels from real applications"
+  ],
+  "gemm-operation-types": [
+    "Hermitian multiplication (A†B, AB†)"
+  ],
+  "gemm-matrix-structure": [
+    "Dense matrices",
+    "Tall-and-skinny matrices",
+    "Other (please specify):"
+  ],
+  "matrix-multiplication": true,
+  "domain-selection-other": "Macroscopic Maxwell equations sover, using a semi-analytical method on the boundary of systems and expanding the field in a basis of multipoles. https://doi.org/10.1364/OE.19.021432",
+  "materials-other-specify": "",
+  "gemm-matrix-distribution": [
+    "Block cyclic distribution (e.g., ScaLAPACK style)"
+  ],
+  "gemm-scaling-requirements": [
+    "Weak scaling (fixed problem size per process/node)"
+  ],
+  "gemm-future-features-other": "Hybrid CPU-GPU",
+  "gemm-libraries-distributed": [
+    "ScaLAPACK"
+  ],
+  "gemm-matrix-structure-other": "Multiple indepdendent calculations at different frequencies, but if phase coherence is required there is an inter-frequency set of SVD problems.",
+  "other-nla-operation-specify": "Singular value decomposition, mostly for tall skinny matrices (>10K, ~1K) shape for a single particle. Multiparticle probably can be solved more efficiently, but naive solutions multiply these numbers by particle count."
+}

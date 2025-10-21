@@ -1,0 +1,180 @@
+{
+  "sym-herm-spd": "Usually positive definite",
+  "gemm-batch-size": [
+    "Medium (10 - 100)",
+    "Large (100 - 1,000)"
+  ],
+  "gemm-matrix-size": [
+    "Small (< 100)",
+    "Medium (100 - 1,000)",
+    "Large (1,000 - 10,000)",
+    "Extreme (> 100,000)",
+    "Very Large (10,000 - 100,000)"
+  ],
+  "gemm-matrix-shape": [
+    "Tall-skinny matrices (m >> k, n small)",
+    "Wide-short matrices (m small, n >> k)",
+    "Square matrices (m ≈ n ≈ k)"
+  ],
+  "gemm-matrix-format": [
+    "Dense (column-major/row-major)"
+  ],
+  "gemm-data-provision": [
+    "Not sure yet"
+  ],
+  "gemm-precision-type": [
+    "Double precision (64-bit)",
+    "Mixed precision (e.g., FP32 multiplication with FP64 accumulation)"
+  ],
+  "standard-eigenvalue": true,
+  "sym-herm-scale-size": [
+    "Medium (1,000 - 10,000)",
+    "Large (10,000 - 100,000)",
+    "Very Large (100,000 - 1,000,000)",
+    "Extreme (> 1,000,000)"
+  ],
+  "symmetric-hermitian": true,
+  "gemm-future-features": [
+    "Better mixed precision support",
+    "More flexible memory layouts",
+    "More efficient batched operations",
+    "Hardware-specific optimizations"
+  ],
+  "gemm-input-data-type": [
+    "Both synthetic and real data",
+    "Real matrices from application workloads",
+    "Synthetic / random matrices"
+  ],
+  "gemm-operation-types": [
+    "Standard multiplication (AB)",
+    "Accumulation (AB + C)",
+    "Transpose multiplication (AᵀB, ABᵀ)"
+  ],
+  "gemm-matrix-structure": [
+    "Dense matrices",
+    "Tall-and-skinny matrices",
+    "Distributed matrices"
+  ],
+  "matrix-multiplication": true,
+  "sym-herm-compute-mode": "Eigenvalues and eigenvectors",
+  "generalized-eigenvalue": true,
+  "sym-herm-matrix-format": [
+    "Dense (column-major/row-major)"
+  ],
+  "sym-herm-residual-type": "Other (please specify):",
+  "gen-sym-herm-scale-size": "Large (10,000 - 100,000)",
+  "gen-symmetric-hermitian": true,
+  "sym-herm-data-provision": [
+    "Not sure yet"
+  ],
+  "sym-herm-precision-type": [
+    "Double precision (64-bit)",
+    "Mixed precision (e.g., FP32/FP64 combination)",
+    "Extended/Quad precision (128-bit)"
+  ],
+  "gemm-matrix-distribution": [
+    "Block cyclic distribution (e.g., ScaLAPACK style)",
+    "Other (please specify):"
+  ],
+  "gen-sym-computation-type": [
+    "Large-scale single problems (e.g., one large generalized eigenproblem at a time, using significant computational resources)",
+    "Many independent smaller problems (e.g., batch processing multiple generalized eigenproblems simultaneously)",
+    "Mix of large and small problems (varying resource requirements)",
+    "Repeated similar-sized problems (e.g., time evolution or parameter sweeps)"
+  ],
+  "gen-sym-matrix-structure": [
+    "A is dense, B is dense",
+    "Real valued",
+    "Complex valued"
+  ],
+  "gen-sym-reduction-method": "Other direct factorizations",
+  "gen-sym-reduction-needed": "Yes, always",
+  "sym-herm-input-data-type": [
+    "Synthetic / random matrices",
+    "Real matrices from application workloads",
+    "Both synthetic and real data"
+  ],
+  "gemm-interested-libraries": [
+    "SLATE",
+    "cuBLASMp (NVIDIA distributed-memory GPUs)"
+  ],
+  "gemm-scaling-requirements": [
+    "Strong scaling (fixed total problem size)"
+  ],
+  "gen-sym-herm-compute-mode": "Eigenvalues and eigenvectors",
+  "sym-herm-computation-type": [
+    "Large-scale single problems (e.g., one large matrix at a time, using significant computational resources)",
+    "Many independent smaller problems (e.g., batch processing multiple matrices simultaneously)",
+    "Mix of large and small problems (varying resource requirements)",
+    "Repeated similar-sized problems (e.g., time evolution or parameter sweeps)"
+  ],
+  "sym-herm-matrix-structure": [
+    "Dense"
+  ],
+  "sym-herm-physical-problem": [
+    "Tight-binding models",
+    "Kohn–Sham equations (standard DFT)"
+  ],
+  "gemm-libraries-distributed": [
+    "ScaLAPACK"
+  ],
+  "gen-sym-herm-data-provision": [
+    "Not sure yet"
+  ],
+  "gemm-special-implementations": [
+    "Mixed-precision implementations (e.g., using FP16/FP32/FP64 in the same operation)"
+  ],
+  "gen-sym-herm-input-data-type": [
+    "Synthetic / random matrices",
+    "Real matrices from application workloads",
+    "Both synthetic and real data"
+  ],
+  "gen-sym-interested-libraries": [
+    "ELPA",
+    "DLA-Future",
+    "SLATE",
+    "ChASE",
+    "FEAST",
+    "ELSI"
+  ],
+  "gen-sym-scaling-requirements": [
+    "Strong scaling (fixed total problem size)"
+  ],
+  "sym-herm-eigenvalue-location": "All eigenvalues",
+  "sym-herm-matrix-distribution": [
+    "Block cyclic distribution (e.g., ScaLAPACK style)",
+    "Other (please specify):"
+  ],
+  "sym-herm-residual-type-other": "Convergence of diagonal in the QR iteration, approximated Newton method for solving the secular equation of Cuppen's D&C, Ogita-Aishima's iterative refinement.",
+  "gen-sym-nla-distributed-dense": [
+    "ScaLAPACK",
+    "EigenExa"
+  ],
+  "sym-herm-interested-libraries": [
+    "SLATE",
+    "ChASE",
+    "DLA-Future",
+    "ELPA"
+  ],
+  "sym-herm-scaling-requirements": [
+    "Strong scaling (fixed total problem size)"
+  ],
+  "gemm-matrix-distribution-other": "cyclic-cyclic, tree-based",
+  "sym-herm-eigenvalue-percentage": "All eigenvalues",
+  "sym-herm-nla-group-distributed": [
+    "ScaLAPACK",
+    "EigenExa"
+  ],
+  "gen-sym-herm-eigenvalue-location": "All eigenvalues",
+  "sym-herm-eigenvalue-distribution": [
+    "Well-separated",
+    "Clustered",
+    "Mix of clustered and separated",
+    "Scattered/unpredictable",
+    "Varies"
+  ],
+  "sym-herm-orthogonality-tolerance": "Machine precision",
+  "gen-sym-herm-eigenvalue-percentage": "All eigenvalues",
+  "sym-herm-matrix-distribution-other": "cyclic-cyclic, tree-based",
+  "gen-sym-herm-eigenvalue-distribution": "Mix of clustered and separated"
+}

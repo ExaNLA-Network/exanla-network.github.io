@@ -1,0 +1,161 @@
+{
+  "contact-name": "Nick Papior",
+  "library-name": "SIESTA",
+  "contact-email": "nicpa@dtu.dk",
+  "dense-libs-used": [
+    "ScaLAPACK"
+  ],
+  "library-version": "5.4.1",
+  "current-use-case": "Transport calculations",
+  "domain-selection": "Materials Science",
+  "gemm-matrix-size": [
+    "Large (1,000 - 10,000)"
+  ],
+  "matrix-inversion": true,
+  "sparse-libs-used": [
+    "MUMPS",
+    "Other (please specify):"
+  ],
+  "gemm-matrix-shape": [
+    "Square matrices (m ≈ n ≈ k)",
+    "Tall-skinny matrices (m >> k, n small)",
+    "Wide-short matrices (m small, n >> k)",
+    "Block-inner product (m and n small, k large)",
+    "General rectangular (no dominant pattern)"
+  ],
+  "gemm-matrix-format": [
+    "Dense (column-major/row-major)",
+    "Compressed Sparse Row (CSR/CRS)",
+    "Compressed Sparse Column (CSC/CCS)"
+  ],
+  "multiple-use-cases": "Yes, multiple distinct use cases",
+  "dense-libs-interest": [
+    "Elemental",
+    "ScaLAPACK",
+    "cuSolverMp",
+    "DPLASMA"
+  ],
+  "gemm-data-provision": [
+    "Yes, matrices only"
+  ],
+  "gemm-precision-type": [
+    "Double precision (64-bit)",
+    "Mixed precision (e.g., FP32 multiplication with FP64 accumulation)"
+  ],
+  "library-description": "The TranSiesta part of the code handles lots of inversions of matrices that are big. It can do so using various methods. PEXSI, MUMPS which are both \"selective\" inversions that allows only some elements to be calculated. There is also a library for doing block-tri-diagonal matrix inversions where one can reduce the numeric complexity by doing lots of small(er)-matrix inversions and matrix multiplications. With this one can calculate transmission functions and orbital-currents etc.",
+  "materials-functions": [
+    "Ground state DFT",
+    "Quantum transport",
+    "Defect calculations",
+    "Surface science",
+    "Other"
+  ],
+  "contact-organization": "Technical University of Denmark",
+  "gemm-future-features": [
+    "Better mixed precision support",
+    "More flexible memory layouts"
+  ],
+  "gemm-input-data-type": [
+    "Synthetic / random matrices",
+    "Both synthetic and real data",
+    "Real matrices from application workloads"
+  ],
+  "gemm-operation-types": [
+    "Accumulation (AB + C)",
+    "Standard multiplication (AB)",
+    "Transpose multiplication (AᵀB, ABᵀ)",
+    "Hermitian multiplication (A†B, AB†)",
+    "Triple product (ABC)",
+    "Scaled multiplication (αAB)",
+    "Full GEMM (αAB + βC)"
+  ],
+  "sparse-libs-interest": [
+    "MUMPS",
+    "SuperLU / SuperLU_DIST"
+  ],
+  "gemm-matrix-structure": [
+    "Dense matrices",
+    "Sparse matrices",
+    "Block-structured matrices",
+    "Tall-and-skinny matrices",
+    "Distributed matrices"
+  ],
+  "matrix-inversion-size": "Large (10,000 - 100,000)",
+  "matrix-multiplication": true,
+  "specialized-libs-used": [
+    "PEXSI (Selected Inversion for DFT)",
+    "Quantum Chemistry Specific Libraries (e.g., Libint, Libxc)"
+  ],
+  "sparse-libs-used-other": "PEXSI",
+  "materials-other-specify": "Electrochemistry",
+  "matrix-inversion-format": [
+    "Dense (column-major/row-major)",
+    "Compressed Sparse Row (CSR/CRS)",
+    "Compressed Sparse Column (CSC/CCS)"
+  ],
+  "gemm-matrix-distribution": [
+    "Block cyclic distribution (e.g., ScaLAPACK style)",
+    "Block row/column distribution",
+    "Replicated on all processes"
+  ],
+  "gemm-interested-libraries": [
+    "SLATE",
+    "DASK",
+    "DPLASMA"
+  ],
+  "gemm-scaling-requirements": [
+    "Both strong and weak scaling needed"
+  ],
+  "specialized-libs-interest": [
+    "PEXSI (Selected Inversion for DFT)",
+    "STRUMPACK (Hierarchical Solvers)"
+  ],
+  "gemm-libraries-distributed": [
+    "ScaLAPACK",
+    "ELPA"
+  ],
+  "matrix-inversion-structure": [
+    "Sparse",
+    "Dense"
+  ],
+  "gemm-special-implementations": [
+    "Other (please specify):"
+  ],
+  "matrix-inversion-distribution": [
+    "Block cyclic distribution (e.g., ScaLAPACK style)",
+    "Replicated on all processes"
+  ],
+  "matrix-inversion-linear-system": "High accuracy (10^-9)",
+  "matrix-inversion-data-provision": [
+    "Yes, matrices only"
+  ],
+  "matrix-inversion-precision-type": [
+    "Double precision (64-bit)"
+  ],
+  "matrix-inversion-input-data-type": [
+    "Synthetic / random matrices",
+    "Real matrices from application workloads",
+    "Both synthetic and real data"
+  ],
+  "matrix-inversion-computation-type": [
+    "Large-scale single inversions (e.g., one large matrix at a time, using significant computational resources)",
+    "Many independent smaller inversions (e.g., batch processing multiple matrices simultaneously)",
+    "Part of larger computation (e.g., Green's function calculation, preconditioner construction)",
+    "Incremental updates to existing inverses (e.g., Sherman-Morrison updates)"
+  ],
+  "matrix-inversion-purpose-usecases": [
+    "Solving linear systems (Ax = b)",
+    "Green's function calculation (ωI-H-Σ(ω))⁻¹",
+    "Basis transformation/orthogonalization (e.g., Löwdin, S⁻¹/²)"
+  ],
+  "gemm-special-implementations-other": "none",
+  "matrix-inversion-scaling-requirements": [
+    "Both strong and weak scaling needed"
+  ],
+  "matrix-inversion-properties-mathematical": [
+    "Hermitian/Symmetric",
+    "Positive definite",
+    "Singular/Nearly singular",
+    "Complex valued"
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "contact-name": "Ben Hourahine",
+  "library-name": "DFTB+",
+  "sym-herm-spd": "Usually positive definite",
+  "contact-email": "benjamin.hourahine@strath.ac.uk",
+  "library-version": "24.1",
+  "other-functions": "Ground state DFT, Time-dependent DFT(B), Molecular dynamics, Quantum transport, Excited-state dynamics, Surface science, Defect calculations, Other",
+  "current-use-case": "Excited state calculations",
+  "domain-selection": "Other (please specify):",
+  "multiple-use-cases": "Yes, multiple distinct use cases",
+  "library-description": "Electronic structure for non- and self-consistent models that are derived from DFT, but tabulated (with the addition of long-rage electrostatics if self-consistent). Excited state requires the ground state solution first at each geometry (see relevant survey entry), but the time dominate step on this code path is the excited solution stage. At the moment we have two different sub-code paths within the excited state path, the pARPACK route will probably eventually fully replace the other code path (the second is required for hybrid density-functionals as the matrices are non-symmetric in that case). I will therefore describe the ARPACK route.",
+  "standard-eigenvalue": true,
+  "sym-herm-scale-size": [
+    "Large (10,000 - 100,000)",
+    "Very Large (100,000 - 1,000,000)"
+  ],
+  "symmetric-hermitian": true,
+  "contact-organization": "The University of Strathclyde",
+  "sym-herm-compute-mode": "Eigenvalues and eigenvectors",
+  "domain-selection-other": "Mostly quantum chemistry for this code path",
+  "sym-herm-residual-type": "Both absolute and relative",
+  "sym-herm-precision-type": [
+    "Double precision (64-bit)"
+  ],
+  "sym-herm-input-data-type": [
+    "Other (please specify):"
+  ],
+  "sym-herm-computation-type": [
+    "Large-scale single problems (e.g., one large matrix at a time, using significant computational resources)"
+  ],
+  "sym-herm-matrix-structure": [
+    "Matrix-free (only matrix-vector products available)"
+  ],
+  "sym-herm-physical-problem": [
+    "Other (please specify):"
+  ],
+  "sym-herm-eigenvalue-location": "Smallest eigenvalues",
+  "sym-herm-matrix-distribution": [
+    "Other (please specify):"
+  ],
+  "sym-herm-nla-group-highlevel": [
+    "Other (please specify):"
+  ],
+  "sym-herm-nla-group-iterative": [
+    "ARPACK – Shift-invert methods for symmetric eigenproblems"
+  ],
+  "sym-herm-scaling-requirements": [
+    "Both strong and weak scaling needed"
+  ],
+  "sym-herm-eigenvalue-percentage": "Less than 1%",
+  "sym-herm-input-data-type-other": "Probably best to generate these from the main application code efficiently on the fly (as matrix action on vector is performed so nothing stored).",
+  "sym-herm-physical-problem-other": "Casida (also known as Random Phase Approximation) equations from tight-binding models.",
+  "sym-herm-eigenvalue-distribution": [
+    "Scattered/unpredictable"
+  ],
+  "sym-herm-orthogonality-tolerance": "High (10^-9)",
+  "sym-herm-matrix-distribution-other": "Matrix-vector, so not distributed, but the data to generate the action is replicated.",
+  "sym-herm-nla-group-highlevel-other": "Have tried ELSI-rci, but not currently using this.",
+  "sym-herm-absolute-residual-tolerance": "High (10^-9)",
+  "sym-herm-relative-residual-tolerance": "High (10^-9)"
+}

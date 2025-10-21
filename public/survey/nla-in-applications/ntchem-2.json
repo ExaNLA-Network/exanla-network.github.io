@@ -1,0 +1,49 @@
+{
+  "contact-name": "William Dawson",
+  "library-name": "NTChem",
+  "contact-email": "william.dawson@riken.jp",
+  "other-functions": "Ab Initio Calculations",
+  "current-use-case": "RI-MP2",
+  "domain-selection": "Other (please specify):",
+  "gemm-matrix-size": [
+    "Very Large (10,000 - 100,000)"
+  ],
+  "gemm-matrix-shape": [
+    "General rectangular (no dominant pattern)"
+  ],
+  "gemm-matrix-format": [
+    "Dense (column-major/row-major)"
+  ],
+  "multiple-use-cases": "Yes, multiple distinct use cases",
+  "gemm-data-provision": [
+    "Not sure yet"
+  ],
+  "gemm-precision-type": [
+    "Single precision (32-bit)",
+    "Double precision (64-bit)"
+  ],
+  "contact-organization": "RIKEN R-CCS",
+  "gemm-input-data-type": [
+    "Synthetic / random matrices"
+  ],
+  "gemm-operation-types": [
+    "Standard multiplication (AB)",
+    "Scaled multiplication (αAB)",
+    "Transpose multiplication (AᵀB, ABᵀ)"
+  ],
+  "gemm-matrix-structure": [
+    "Dense matrices"
+  ],
+  "matrix-multiplication": true,
+  "domain-selection-other": "Chemistry",
+  "gemm-matrix-distribution": [
+    "Block row/column distribution"
+  ],
+  "gemm-scaling-requirements": [
+    "Both strong and weak scaling needed"
+  ],
+  "gemm-special-implementations": [
+    "Tensor contraction engines",
+    "Mixed-precision implementations (e.g., using FP16/FP32/FP64 in the same operation)"
+  ]
+}

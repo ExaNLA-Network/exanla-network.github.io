@@ -1,0 +1,177 @@
+{
+  "contact-name": "Piotr",
+  "library-name": "PLASMA",
+  "sym-herm-spd": "Varies depending on the problem",
+  "contact-email": "luszczek@icl.utk.edu",
+  "gemm-batch-size": [
+    "Not applicable"
+  ],
+  "library-version": "25.5.27",
+  "other-functions": "Linear systems, least squares, eigenvalue pairs and singular triplets",
+  "current-use-case": "linear system solve",
+  "domain-selection": "Other (please specify):",
+  "gemm-matrix-size": [
+    "Very Large (10,000 - 100,000)"
+  ],
+  "qr-factorization": false,
+  "gemm-matrix-shape": [
+    "Square matrices (m ≈ n ≈ k)",
+    "Tall-skinny matrices (m >> k, n small)",
+    "Wide-short matrices (m small, n >> k)",
+    "Block-outer product (k small, m and n large)",
+    "Block-inner product (m and n small, k large)",
+    "General rectangular (no dominant pattern)",
+    "Varies significantly by operation"
+  ],
+  "gemm-matrix-format": [
+    "Dense (column-major/row-major)",
+    "Multiple formats (conversion as needed)",
+    "Other (please specify):"
+  ],
+  "multiple-use-cases": "Yes, multiple distinct use cases",
+  "gemm-data-provision": [
+    "Yes, both matrices and mini-apps"
+  ],
+  "gemm-precision-type": [
+    "Single precision (32-bit)",
+    "Double precision (64-bit)",
+    "Mixed precision (e.g., FP32 multiplication with FP64 accumulation)"
+  ],
+  "library-description": "The PLASMA library solves linear systems, least squares problems, and also computes either eigenvalue pairs or singular triplets. The majority of BLAS functionality is also provided.",
+  "standard-eigenvalue": true,
+  "sym-herm-scale-size": [
+    "Very Large (100,000 - 1,000,000)"
+  ],
+  "symmetric-hermitian": true,
+  "cholesky-matrix-size": "Very large (100,000 – 1,000,000)",
+  "contact-organization": "MIT Lincoln Lab",
+  "gemm-future-features": [
+    "Better mixed precision support",
+    "Auto-tuning capabilities"
+  ],
+  "gemm-input-data-type": [
+    "Synthetic / random matrices"
+  ],
+  "gemm-operation-types": [
+    "Standard multiplication (AB)",
+    "Scaled multiplication (αAB)",
+    "Accumulation (AB + C)",
+    "Full GEMM (αAB + βC)",
+    "Transpose multiplication (AᵀB, ABᵀ)",
+    "Hermitian multiplication (A†B, AB†)"
+  ],
+  "gemm-matrix-structure": [
+    "Dense matrices",
+    "Banded matrices",
+    "Triangular matrices",
+    "Tall-and-skinny matrices"
+  ],
+  "matrix-multiplication": true,
+  "sym-herm-compute-mode": "Varies",
+  "cholesky-factorization": true,
+  "cholesky-matrix-format": [
+    "Dense (column-major/row-major)",
+    "Other (please specify):"
+  ],
+  "domain-selection-other": "Numerical Linear Algebra",
+  "gen-sym-precision-type": [
+    "Single precision (32-bit)",
+    "Double precision (64-bit)"
+  ],
+  "generalized-eigenvalue": true,
+  "sym-herm-matrix-format": [
+    "Dense (column-major/row-major)",
+    "Other (please specify):"
+  ],
+  "sym-herm-residual-type": "Absolute residual (||Ax - λx||)",
+  "cholesky-data-provision": [
+    "Yes, both matrices and mini-apps"
+  ],
+  "cholesky-precision-type": [
+    "Double precision (64-bit)",
+    "Single precision (32-bit)"
+  ],
+  "gen-sym-herm-scale-size": "Very Large (100,000 - 1,000,000)",
+  "gen-symmetric-hermitian": true,
+  "sym-herm-data-provision": [
+    "Yes, both matrices and mini-apps"
+  ],
+  "sym-herm-precision-type": [
+    "Single precision (32-bit)",
+    "Double precision (64-bit)"
+  ],
+  "cholesky-input-data-type": [
+    "Synthetic / random matrices"
+  ],
+  "gemm-matrix-format-other": "tile block",
+  "gen-sym-computation-type": [
+    "Asynchronous/background processing (can wait for solutions)"
+  ],
+  "gen-sym-matrix-structure": [
+    "A is dense, B is dense"
+  ],
+  "gen-sym-reduction-method": "Cholesky factorization of B (B = LLᵗ or B = L*L)",
+  "gen-sym-reduction-needed": "Yes, always",
+  "sym-herm-input-data-type": [
+    "Synthetic / random matrices"
+  ],
+  "cholesky-computation-type": [
+    "Large-scale single factorizations (e.g., one large matrix at a time, using significant computational resources)"
+  ],
+  "cholesky-condition-number": "Varies widely / Not known",
+  "gemm-scaling-requirements": [
+    "Both strong and weak scaling needed"
+  ],
+  "gen-sym-herm-compute-mode": "Varies",
+  "sym-herm-computation-type": [
+    "Large-scale single problems (e.g., one large matrix at a time, using significant computational resources)"
+  ],
+  "sym-herm-matrix-structure": [
+    "Dense"
+  ],
+  "sym-herm-physical-problem": [
+    "Kohn–Sham equations (standard DFT)",
+    "GW quasiparticle calculations",
+    "Bethe–Salpeter equation (Tamm-Dancoff approximation)",
+    "Tight-binding models"
+  ],
+  "gemm-libraries-distributed": [
+    "Custom distributed implementation"
+  ],
+  "gen-sym-herm-residual-type": "Absolute residual (||Ax - λx||)",
+  "cholesky-diagonal-dominance": "Strictly diagonally dominant",
+  "cholesky-sparsity-structure": "Dense",
+  "gen-sym-herm-data-provision": [
+    "Yes, both matrices and mini-apps"
+  ],
+  "cholesky-matrix-format-other": "tile block",
+  "gemm-special-implementations": [
+    "Fused operations (e.g., GEMM + bias, GEMM + activation, or custom fused kernels)"
+  ],
+  "gen-sym-herm-input-data-type": [
+    "Synthetic / random matrices"
+  ],
+  "gen-sym-scaling-requirements": [
+    "Both strong and weak scaling needed"
+  ],
+  "sym-herm-eigenvalue-location": "Varies",
+  "sym-herm-matrix-format-other": "tile block",
+  "cholesky-scaling-requirements": [
+    "Both strong and weak scaling needed"
+  ],
+  "sym-herm-scaling-requirements": [
+    "Both strong and weak scaling needed"
+  ],
+  "sym-herm-eigenvalue-percentage": "Varies",
+  "cholesky-factorization-tolerance": "Machine precision",
+  "gen-sym-herm-eigenvalue-location": "Varies",
+  "sym-herm-eigenvalue-distribution": [
+    "Varies"
+  ],
+  "sym-herm-orthogonality-tolerance": "Machine precision",
+  "gen-sym-herm-eigenvalue-percentage": "Varies",
+  "gen-sym-herm-eigenvalue-distribution": "Varies",
+  "gen-sym-herm-orthogonality-tolerance": "Machine precision",
+  "sym-herm-absolute-residual-tolerance": "Machine precision",
+  "gen-sym-herm-absolute-residual-tolerance": "Machine precision"
+}

@@ -1,0 +1,297 @@
+{
+  "gen-other": false,
+  "contact-name": "Thomas Kühne",
+  "library-name": "CP2K",
+  "sym-herm-spd": "Always positive definite",
+  "contact-email": "t.kuehne@hzdr.de",
+  "dense-libs-used": [
+    "ScaLAPACK",
+    "cuSolverMp"
+  ],
+  "library-version": "v2025.2",
+  "current-use-case": "Ab-initio Molecular dynamics",
+  "domain-selection": "Materials Science",
+  "gemm-matrix-size": [
+    "Small (< 100)",
+    "Medium (100 - 1,000)",
+    "Large (1,000 - 10,000)",
+    "Very Large (10,000 - 100,000)",
+    "Extreme (> 100,000)"
+  ],
+  "matrix-inversion": true,
+  "gemm-matrix-format": [
+    "Dense (column-major/row-major)",
+    "Compressed Sparse Row (CSR/CRS)",
+    "Block CSR/CSC"
+  ],
+  "multiple-use-cases": "Yes, multiple distinct use cases",
+  "dense-libs-interest": [
+    "ScaLAPACK",
+    "cuSolverMp"
+  ],
+  "gemm-data-provision": [
+    "Yes, matrices only"
+  ],
+  "gemm-precision-type": [
+    "Mixed precision (e.g., FP32 multiplication with FP64 accumulation)",
+    "Double precision (64-bit)"
+  ],
+  "materials-functions": [
+    "Ground state DFT",
+    "Time-dependent DFT",
+    "Many-body perturbation theory (GW, BSE)",
+    "Molecular dynamics",
+    "Quantum transport",
+    "Surface science",
+    "Defect calculations",
+    "Phase transitions",
+    "Excited-state dynamics"
+  ],
+  "standard-eigenvalue": true,
+  "sym-herm-scale-size": [
+    "Small (< 1,000)",
+    "Medium (1,000 - 10,000)",
+    "Large (10,000 - 100,000)"
+  ],
+  "symmetric-hermitian": true,
+  "cholesky-matrix-size": "Medium (1,000 – 10,000)",
+  "contact-organization": "Helmholtz-Zentrum Dresden-Rossendorf",
+  "gemm-future-features": [
+    "Improved sparse-dense multiplication",
+    "Better tensor contraction support",
+    "Auto-tuning capabilities",
+    "Hardware-specific optimizations"
+  ],
+  "gemm-input-data-type": [
+    "Real matrices from application workloads",
+    "Both synthetic and real data"
+  ],
+  "gemm-operation-types": [
+    "Standard multiplication (AB)",
+    "Transpose multiplication (AᵀB, ABᵀ)",
+    "Full GEMM (αAB + βC)"
+  ],
+  "gemm-matrix-structure": [
+    "Dense matrices",
+    "Sparse matrices",
+    "Tall-and-skinny matrices",
+    "Distributed matrices",
+    "Small batched matrices"
+  ],
+  "matrix-inversion-size": "Large (10,000 - 100,000)",
+  "matrix-multiplication": true,
+  "specialized-libs-used": [
+    "PEXSI (Selected Inversion for DFT)"
+  ],
+  "sym-herm-compute-mode": "Eigenvalues and eigenvectors",
+  "cholesky-factorization": true,
+  "cholesky-matrix-format": [
+    "Dense (column-major/row-major)",
+    "Compressed Sparse Row (CSR/CRS)",
+    "Block CSR/CSC"
+  ],
+  "gen-sym-precision-type": [
+    "Double precision (64-bit)",
+    "Mixed precision (e.g., FP32/FP64 combination)"
+  ],
+  "generalized-eigenvalue": true,
+  "sym-herm-matrix-format": [
+    "Dense (column-major/row-major)",
+    "Compressed Sparse Row (CSR/CRS)"
+  ],
+  "cholesky-data-provision": [
+    "Yes, matrices only"
+  ],
+  "cholesky-precision-type": [
+    "Double precision (64-bit)",
+    "Mixed precision (e.g., FP32 factorization with FP64 refinement)"
+  ],
+  "gen-sym-herm-scale-size": "Medium (1,000 - 10,000)",
+  "gen-symmetric-hermitian": true,
+  "matrix-inversion-format": [
+    "Dense (column-major/row-major)",
+    "Compressed Sparse Row (CSR/CRS)",
+    "Block CSR/CSC"
+  ],
+  "sym-herm-data-provision": [
+    "Yes, matrices only"
+  ],
+  "sym-herm-precision-type": [
+    "Double precision (64-bit)",
+    "Mixed precision (e.g., FP32/FP64 combination)"
+  ],
+  "cholesky-input-data-type": [
+    "Real matrices from application workloads"
+  ],
+  "gemm-matrix-distribution": [
+    "Block cyclic distribution (e.g., ScaLAPACK style)",
+    "Hybrid CPU-GPU distribution",
+    "Cannon/SUMMA-style distribution"
+  ],
+  "gen-sym-computation-type": [
+    "Large-scale single problems (e.g., one large generalized eigenproblem at a time, using significant computational resources)",
+    "Many independent smaller problems (e.g., batch processing multiple generalized eigenproblems simultaneously)",
+    "Mix of large and small problems (varying resource requirements)",
+    "Repeated similar-sized problems (e.g., time evolution or parameter sweeps)"
+  ],
+  "gen-sym-reduction-method": "Approximate inverse of B (e.g., polynomial or iterative approximation)",
+  "gen-sym-reduction-needed": "No, solver works directly with generalized form (e.g., contour integration, FEAST, iterative solvers)",
+  "sym-herm-input-data-type": [
+    "Real matrices from application workloads"
+  ],
+  "cholesky-computation-type": [
+    "Large-scale single factorizations (e.g., one large matrix at a time, using significant computational resources)",
+    "Many independent smaller factorizations (e.g., batch processing multiple matrices simultaneously)",
+    "Mix of large and small factorizations (varying resource requirements)",
+    "Repeated factorizations of similar matrices (e.g., during iterative refinement or optimization)"
+  ],
+  "cholesky-condition-number": "Well-conditioned (< 10^3)",
+  "gemm-interested-libraries": [
+    "COSMA",
+    "ScaLAPACK",
+    "ELPA",
+    "cuBLASMp (NVIDIA distributed-memory GPUs)",
+    "Other (please specify):"
+  ],
+  "gemm-scaling-requirements": [
+    "Both strong and weak scaling needed"
+  ],
+  "gen-sym-herm-compute-mode": "Eigenvalues and eigenvectors",
+  "matrix-inversion-residual": "Low accuracy (10^-3)",
+  "specialized-libs-interest": [
+    "H2Lib / HLIBpro (H-matrix methods)"
+  ],
+  "sym-herm-computation-type": [
+    "Large-scale single problems (e.g., one large matrix at a time, using significant computational resources)",
+    "Many independent smaller problems (e.g., batch processing multiple matrices simultaneously)",
+    "Mix of large and small problems (varying resource requirements)",
+    "Repeated similar-sized problems (e.g., time evolution or parameter sweeps)"
+  ],
+  "sym-herm-matrix-structure": [
+    "Dense",
+    "Sparse",
+    "Block Sparse",
+    "Block tridiagonal/Block Diagonal"
+  ],
+  "sym-herm-physical-problem": [
+    "Kohn–Sham equations (standard DFT)",
+    "GW quasiparticle calculations",
+    "Bethe–Salpeter equation (Tamm-Dancoff approximation)",
+    "Tight-binding models"
+  ],
+  "gemm-libraries-distributed": [
+    "ScaLAPACK",
+    "COSMA",
+    "ELPA",
+    "cuBLASMp (NVIDIA distributed-memory GPUs)",
+    "Other (please specify):"
+  ],
+  "matrix-inversion-structure": [
+    "Sparse",
+    "Block sparse",
+    "Dense"
+  ],
+  "cholesky-diagonal-dominance": "Not sure",
+  "cholesky-sparsity-structure": "Sparse",
+  "gen-sym-herm-data-provision": [
+    "Yes, matrices only"
+  ],
+  "sym-herm-residual-tolerance": "Medium (10^-6)",
+  "cholesky-matrix-distribution": [
+    "Block cyclic distribution (e.g., ScaLAPACK style)"
+  ],
+  "gemm-special-implementations": [
+    "Block-sparse or block-structured multiplication",
+    "Algorithm-specific implementations (e.g., Strassen, communication-avoiding algorithms)"
+  ],
+  "gen-sym-herm-input-data-type": [
+    "Real matrices from application workloads"
+  ],
+  "gen-sym-interested-libraries": [
+    "ScaLAPACK",
+    "ChASE",
+    "ELPA",
+    "DLA-Future"
+  ],
+  "gen-sym-scaling-requirements": [
+    "Strong scaling (fixed total problem size)",
+    "Weak scaling (fixed problem size per process/node)",
+    "Both strong and weak scaling needed"
+  ],
+  "sym-herm-eigenvalue-location": "Eigenvalues near a target shift",
+  "sym-herm-matrix-distribution": [
+    "Block cyclic distribution (e.g., ScaLAPACK style)",
+    "Hybrid CPU-GPU distribution"
+  ],
+  "cholesky-scaling-requirements": [
+    "Weak scaling (fixed problem size per process/node)",
+    "Strong scaling (fixed total problem size)",
+    "Both strong and weak scaling needed"
+  ],
+  "gen-sym-nla-distributed-dense": [
+    "ScaLAPACK",
+    "ELPA",
+    "DLA-Future"
+  ],
+  "matrix-inversion-distribution": [
+    "Block cyclic distribution (e.g., ScaLAPACK style)",
+    "Block row/column distribution"
+  ],
+  "sym-herm-interested-libraries": [
+    "ScaLAPACK",
+    "ELPA",
+    "ChASE",
+    "DLA-Future"
+  ],
+  "sym-herm-scaling-requirements": [
+    "Both strong and weak scaling needed"
+  ],
+  "matrix-inversion-linear-system": "Low accuracy (10^-3)",
+  "sym-herm-eigenvalue-percentage": "90-100%",
+  "sym-herm-nla-group-distributed": [
+    "ScaLAPACK",
+    "ELPA",
+    "DLA-Future"
+  ],
+  "gemm-interested-libraries-other": "DLA-Future",
+  "gen-sym-herm-residual-tolerance": "Medium (10^-6)",
+  "matrix-inversion-data-provision": [
+    "Yes, matrices only"
+  ],
+  "matrix-inversion-precision-type": [
+    "Mixed precision (e.g., FP32 inversion with FP64 refinement)",
+    "Double precision (64-bit)",
+    "Low precision (e.g., FP16, BF16)",
+    "Single precision (32-bit)"
+  ],
+  "cholesky-factorization-tolerance": "Medium accuracy (10^-6)",
+  "gemm-libraries-distributed-other": "DLA-Future",
+  "matrix-inversion-input-data-type": [
+    "Real matrices from application workloads"
+  ],
+  "sym-herm-orthogonality-tolerance": "Low (10^-3)",
+  "matrix-inversion-computation-type": [
+    "Large-scale single inversions (e.g., one large matrix at a time, using significant computational resources)",
+    "Repeated inversions of similar matrices (e.g., during time evolution or parameter sweeps)"
+  ],
+  "matrix-inversion-purpose-usecases": [
+    "Solving linear systems (Ax = b)",
+    "Shift-and-invert operations ((H-σI)⁻¹)",
+    "Basis transformation/orthogonalization (e.g., Löwdin, S⁻¹/²)",
+    "Preconditioner construction (M⁻¹≈A⁻¹)",
+    "Density matrix construction/purification",
+    "Kohn-Sham equation solving"
+  ],
+  "gen-sym-herm-eigenvalue-percentage": "90-100%",
+  "cholesky-nla-group-distributed-used": [
+    "ScaLAPACK",
+    "cuSoverMp",
+    "DLA-Future",
+    "ELPA"
+  ],
+  "gen-sym-herm-orthogonality-tolerance": "Low (10^-3)",
+  "matrix-inversion-properties-mathematical": [
+    "Positive definite",
+    "Hermitian/Symmetric"
+  ]
+}

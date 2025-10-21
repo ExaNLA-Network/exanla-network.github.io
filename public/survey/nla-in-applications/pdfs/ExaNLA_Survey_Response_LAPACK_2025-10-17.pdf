@@ -1,0 +1,707 @@
+%PDF-1.3
+%ºß¬à
+3 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 4 0 R
+>>
+endobj
+4 0 obj
+<<
+/Length 3998
+>>
+stream
+0.5670000000000001 w
+0 G
+BT
+/F2 20 Tf
+23. TL
+0 g
+138.4399999999999693 785.1970866141732586 Td
+(ExaNLA Survey Response Report) Tj
+ET
+BT
+/F1 12 Tf
+13.7999999999999989 TL
+0 g
+185.9799999999999613 742.6774015748030706 Td
+(Generated on: 10/17/2025 at 12:48:48 PM) Tj
+ET
+BT
+/F2 14 Tf
+16.0999999999999979 TL
+0 g
+56.6929133858267775 685.9844881889763428 Td
+(Submission Details) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+56.6929133858267775 657.6380314960629221 Td
+(Library Name: LAPACK) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+56.6929133858267775 647.7167716535432191 Td
+(Version: -) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+56.6929133858267775 637.7955118110235162 Td
+(Contact Name: Paolo Bientinesi) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+56.6929133858267775 627.8742519685039269 Td
+(Email: pauldj@cs.umu.se) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+56.6929133858267775 617.952992125984224 Td
+(Organization: Umeå University) Tj
+ET
+BT
+/F2 14 Tf
+16.0999999999999979 TL
+0 g
+56.6929133858267775 579.6852755905511003 Td
+(Selected NLA Operations) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+85.0393700787401627 551.3388188976377933 Td
+(1. Other NLA Operation) Tj
+ET
+BT
+/F2 12 Tf
+13.7999999999999989 TL
+0 g
+56.6929133858267775 513.0711023622046696 Td
+(1. Codes Information) Tj
+ET
+BT
+/F3 10 Tf
+11.5 TL
+0 g
+56.6929133858267775 490.3939370078739444 Td
+(Basic information about your application/simulation codes.) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+56.6929133858267775 466.2994488188975879 Td
+(Library Name:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+85.0393700787401627 456.378188976377885 Td
+(LAPACK) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+56.6929133858267775 437.952992125984224 Td
+(Current Version:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+85.0393700787401627 428.0317322834645211 Td
+(-) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+56.6929133858267775 409.6065354330708033 Td
+(Contact Information:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+85.0393700787401627 399.6852755905511003 Td
+(Not specified) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+85.0393700787401627 381.2600787401574394 Td
+(Name:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 371.3388188976377364 Td
+(Paolo Bientinesi) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+85.0393700787401627 352.9136220472440186 Td
+(Email:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 342.9923622047243725 Td
+(pauldj@cs.umu.se) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+85.0393700787401627 324.5671653543306547 Td
+(Organization:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 314.6459055118109518 Td
+(Umeå University) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+56.6929133858267775 296.220708661417234 Td
+(Application Domain:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+85.0393700787401627 286.2994488188975311 Td
+(Not specified) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+85.0393700787401627 267.8742519685038133 Td
+(What is the primary application domain of your codes?:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 257.952992125984224 Td
+(Other: Statistics) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+85.0393700787401627 239.5277952755905062 Td
+(Materials Science:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 229.6065354330708033 Td
+(Not specified) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 211.1813385826770855 Td
+(What are the main functionalities of your code?:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+141.7322834645669332 201.2600787401573825 Td
+(Not specified) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 182.8348818897636647 Td
+(If you selected "Other", please specify::) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+141.7322834645669332 172.9136220472439618 Td
+(Not specified) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+85.0393700787401627 154.4884251968503577 Td
+(Climate/Weather Modeling:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 144.5671653543306547 Td
+(Not specified) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 126.1419685039369369 Td
+(What are the main functionalities of your code?:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+141.7322834645669332 116.220708661417234 Td
+(Not specified) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0 g
+213.6799999999999784 28.3464566929134207 Td
+(Page 1 of 2 - ExaNLA Survey Response Report) Tj
+ET
+endstream
+endobj
+5 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 6 0 R
+>>
+endobj
+6 0 obj
+<<
+/Length 2802
+>>
+stream
+0.5670000000000001 w
+0 G
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 785.1970866141732586 Td
+(If you selected "Other", please specify::) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+141.7322834645669332 775.2758267716535556 Td
+(Not specified) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+85.0393700787401627 756.8506299212598378 Td
+(Fluid Dynamics:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 746.9293700787401349 Td
+(Not specified) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 728.5041732283464171 Td
+(What are the main functionalities of your code?:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+141.7322834645669332 718.5829133858267141 Td
+(Not specified) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 700.15771653543311 Td
+(If you selected "Other", please specify::) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+141.7322834645669332 690.2364566929134071 Td
+(Not specified) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+85.0393700787401627 671.8112598425196893 Td
+(Other Domain Functions:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 661.8899999999999864 Td
+(Not specified) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 643.4648031496062686 Td
+(What are the main functionalities of your code?:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+141.7322834645669332 633.5435433070865656 Td
+(Not specified) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+56.6929133858267775 615.1183464566928478 Td
+(Use Case Information:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+85.0393700787401627 605.1970866141732586 Td
+(Not specified) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+85.0393700787401627 586.7718897637794271 Td
+(Does your codes have multiple distinct use cases?:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 576.8506299212597241 Td
+(Yes, multiple distinct use cases) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+85.0393700787401627 558.42543307086612 Td
+(Which use case are you describing in this submission?:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 548.5041732283464171 Td
+(Genome-Wide Association Studies \(GWAS\), Chemometrics) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+56.6929133858267775 530.0789763779526993 Td
+(Library Description:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+85.0393700787401627 520.1577165354329964 Td
+(Not specified) Tj
+ET
+BT
+/F2 12 Tf
+13.7999999999999989 TL
+0 g
+56.6929133858267775 473.3860629921259147 Td
+(2. Other NLA Operation) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+56.6929133858267775 450.7088976377952463 Td
+(Other NLA Operation:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+85.0393700787401627 440.7876377952755433 Td
+(Yes) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0 g
+85.0393700787401627 422.3624409448818255 Td
+(Please specify your NLA operation:) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0 g
+113.3858267716535551 412.4411811023621226 Td
+(Least Squares, Generalized Least Squares) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0 g
+213.6799999999999784 28.3464566929134207 Td
+(Page 2 of 2 - ExaNLA Survey Response Report) Tj
+ET
+endstream
+endobj
+1 0 obj
+<</Type /Pages
+/Kids [3 0 R 5 0 R ]
+/Count 2
+>>
+endobj
+7 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+8 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica-Bold
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+9 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica-Oblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+10 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica-BoldOblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+11 0 obj
+<<
+/Type /Font
+/BaseFont /Courier
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+12 0 obj
+<<
+/Type /Font
+/BaseFont /Courier-Bold
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+13 0 obj
+<<
+/Type /Font
+/BaseFont /Courier-Oblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+14 0 obj
+<<
+/Type /Font
+/BaseFont /Courier-BoldOblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+15 0 obj
+<<
+/Type /Font
+/BaseFont /Times-Roman
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+16 0 obj
+<<
+/Type /Font
+/BaseFont /Times-Bold
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+17 0 obj
+<<
+/Type /Font
+/BaseFont /Times-Italic
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+18 0 obj
+<<
+/Type /Font
+/BaseFont /Times-BoldItalic
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+19 0 obj
+<<
+/Type /Font
+/BaseFont /ZapfDingbats
+/Subtype /Type1
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+20 0 obj
+<<
+/Type /Font
+/BaseFont /Symbol
+/Subtype /Type1
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+2 0 obj
+<<
+/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]
+/Font <<
+/F1 7 0 R
+/F2 8 0 R
+/F3 9 0 R
+/F4 10 0 R
+/F5 11 0 R
+/F6 12 0 R
+/F7 13 0 R
+/F8 14 0 R
+/F9 15 0 R
+/F10 16 0 R
+/F11 17 0 R
+/F12 18 0 R
+/F13 19 0 R
+/F14 20 0 R
+>>
+/XObject <<
+>>
+>>
+endobj
+21 0 obj
+<<
+/Producer (jsPDF 3.0.3)
+/CreationDate (D:20251017124848+02'00')
+>>
+endobj
+22 0 obj
+<<
+/Type /Catalog
+/Pages 1 0 R
+/OpenAction [3 0 R /FitH null]
+/PageLayout /OneColumn
+>>
+endobj
+xref
+0 23
+0000000000 65535 f 
+0000007193 00000 n 
+0000009018 00000 n 
+0000000015 00000 n 
+0000000152 00000 n 
+0000004202 00000 n 
+0000004339 00000 n 
+0000007256 00000 n 
+0000007381 00000 n 
+0000007511 00000 n 
+0000007644 00000 n 
+0000007782 00000 n 
+0000007906 00000 n 
+0000008035 00000 n 
+0000008167 00000 n 
+0000008303 00000 n 
+0000008431 00000 n 
+0000008558 00000 n 
+0000008687 00000 n 
+0000008820 00000 n 
+0000008922 00000 n 
+0000009268 00000 n 
+0000009354 00000 n 
+trailer
+<<
+/Size 23
+/Root 22 0 R
+/Info 21 0 R
+/ID [ <3E59C88DAB32EF9FAE975A555D85DD61> <3E59C88DAB32EF9FAE975A555D85DD61> ]
+>>
+startxref
+9458
+%%EOF

@@ -1,0 +1,110 @@
+{
+  "contact-name": "Alberto Garcia",
+  "library-name": "SIESTA",
+  "contact-email": "albertog@icmab.es",
+  "library-version": "5.4.1",
+  "current-use-case": "Ground state DFT calculations",
+  "domain-selection": "Materials Science",
+  "multiple-use-cases": "Yes, multiple distinct use cases",
+  "library-description": "SIESTA is a DFT code using pseudopotentials and a basis set of strictly localized pseudo-atomic orbitals. It also has a sub-system that uses Non-Equilibrium Green's Functions to deal with systems under bias (e.g. for electron transport and electrochemistry)",
+  "materials-functions": [
+    "Ground state DFT",
+    "Time-dependent DFT",
+    "Molecular dynamics",
+    "Quantum transport",
+    "Crystal structure prediction",
+    "Phase transitions",
+    "Defect calculations",
+    "Surface science"
+  ],
+  "cholesky-matrix-size": "Large (10,000 – 100,000)",
+  "contact-organization": "ICMAB-CSIC",
+  "gen-sym-nla-highlevel": [
+    "ELSI – Abstraction layer for eigenvalue solvers (e.g., used by SIESTA, FHI-aims)"
+  ],
+  "cholesky-factorization": true,
+  "cholesky-matrix-format": [
+    "Dense (column-major/row-major)"
+  ],
+  "gen-sym-precision-type": [
+    "Single precision (32-bit)",
+    "Double precision (64-bit)"
+  ],
+  "generalized-eigenvalue": true,
+  "cholesky-data-provision": [
+    "Yes, both matrices and mini-apps"
+  ],
+  "cholesky-precision-type": [
+    "Double precision (64-bit)"
+  ],
+  "gen-sym-herm-scale-size": "Large (10,000 - 100,000)",
+  "gen-symmetric-hermitian": true,
+  "materials-other-specify": "Electrochemistry",
+  "cholesky-input-data-type": [
+    "Real matrices from application workloads",
+    "Mini-apps or extracted kernels from real applications"
+  ],
+  "gen-sym-computation-type": [
+    "Large-scale single problems (e.g., one large generalized eigenproblem at a time, using significant computational resources)",
+    "Many independent smaller problems (e.g., batch processing multiple generalized eigenproblems simultaneously)",
+    "Repeated similar-sized problems (e.g., time evolution or parameter sweeps)"
+  ],
+  "gen-sym-matrix-structure": [
+    "A is dense, B is dense",
+    "A is sparse, B is sparse"
+  ],
+  "gen-sym-reduction-method": "Cholesky factorization of B (B = LLᵗ or B = L*L)",
+  "gen-sym-reduction-needed": "Yes, always",
+  "cholesky-computation-type": [
+    "Large-scale single factorizations (e.g., one large matrix at a time, using significant computational resources)",
+    "Many independent smaller factorizations (e.g., batch processing multiple matrices simultaneously)",
+    "Repeated factorizations of similar matrices (e.g., during iterative refinement or optimization)",
+    "Part of larger computation (e.g., reduction of generalized eigenproblems)"
+  ],
+  "cholesky-condition-number": "Moderately conditioned (10^3 – 10^6)",
+  "gen-sym-herm-compute-mode": "Eigenvalues and eigenvectors",
+  "gen-sym-herm-residual-type": "Other (please specify):",
+  "cholesky-diagonal-dominance": "Weakly diagonally dominant",
+  "cholesky-sparsity-structure": "Dense",
+  "gen-sym-herm-data-provision": [
+    "Yes, both matrices and mini-apps"
+  ],
+  "cholesky-matrix-distribution": [
+    "Block cyclic distribution (e.g., ScaLAPACK style)"
+  ],
+  "gen-sym-herm-input-data-type": [
+    "Real matrices from application workloads",
+    "Mini-apps or extracted kernels from real applications"
+  ],
+  "gen-sym-interested-libraries": [
+    "DLA-Future",
+    "ChASE",
+    "EigenExa",
+    "SLATE"
+  ],
+  "gen-sym-scaling-requirements": [
+    "Both strong and weak scaling needed"
+  ],
+  "cholesky-scaling-requirements": [
+    "Both strong and weak scaling needed"
+  ],
+  "gen-sym-nla-distributed-dense": [
+    "ScaLAPACK",
+    "ELPA"
+  ],
+  "cholesky-factorization-tolerance": "Very high accuracy (10^-12)",
+  "gen-sym-herm-eigenvalue-location": "Smallest eigenvalues",
+  "gen-sym-herm-residual-type-other": "I am not sure. This is handled by external libraries",
+  "gen-sym-herm-eigenvalue-percentage": "10-50%",
+  "cholesky-nla-group-distributed-used": [
+    "ScaLAPACK",
+    "ELPA"
+  ],
+  "gen-sym-herm-eigenvalue-distribution": "Mix of clustered and separated",
+  "gen-sym-herm-orthogonality-tolerance": "Very high (10^-12)",
+  "cholesky-nla-group-distributed-interested": [
+    "SLATE",
+    "EigenExa",
+    "DLA-Future"
+  ]
+}
