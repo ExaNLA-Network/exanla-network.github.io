@@ -138,7 +138,8 @@ export default function SurveyResultsPage() {
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">🔬 Domain Diversity</h3>
                   <p className="text-gray-700 text-sm mb-3">
                     Applications span across <strong>{Object.keys(analytics.domainDistribution).length} research domains</strong>, 
-                    demonstrating the universal importance of NLA operations.
+                    demonstrating the universal importance of NLA operations. This includes traditional scientific computing domains 
+                    as well as emerging areas like <strong>Statistics</strong> (Genome-Wide Association Studies, Chemometrics).
                   </p>
                   <div className="flex flex-wrap gap-2">
                     {Object.entries(analytics.domainDistribution)
@@ -334,6 +335,37 @@ export default function SurveyResultsPage() {
                   </a>
                 ));
               })()}
+            </div>
+            
+            {/* Other NLA Operations */}
+            <div className="mt-8 p-6 bg-gradient-to-r from-amber-50 to-orange-50 border border-amber-200 rounded-lg">
+              <div className="flex items-start">
+                <div className="flex-shrink-0">
+                  <svg className="w-6 h-6 text-amber-500 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <div className="ml-4">
+                  <h3 className="text-lg font-semibold text-amber-900 mb-2">Other NLA Operations Proposed</h3>
+                  <p className="text-amber-800 text-sm mb-3">
+                    The survey also identified additional NLA operations that are important but not yet covered in our current analysis. 
+                    These operations represent emerging needs and specialized applications that warrant further investigation.
+                  </p>
+                  <div className="bg-white rounded-lg p-4 border border-amber-200">
+                    <h4 className="font-semibold text-amber-900 mb-2">Identified Operations:</h4>
+                    <ul className="text-sm text-amber-800 space-y-1">
+                      <li>• <strong>Least Squares</strong> - Used in Statistics (Genome-Wide Association Studies, Chemometrics)</li>
+                      <li>• <strong>Generalized Least Squares</strong> - Applied in statistical modeling and data analysis</li>
+                    </ul>
+                    <div className="mt-3 p-3 bg-amber-100 rounded border border-amber-300">
+                      <p className="text-xs text-amber-800">
+                        <strong>Next Steps:</strong> These operations suggest the need for a follow-up survey focusing on statistical computing 
+                        and specialized NLA operations to better understand requirements in emerging domains.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -978,7 +1010,7 @@ export default function SurveyResultsPage() {
                     <div className="font-medium text-gray-900">LAPACK (13 mentions)</div>
                     <div className="text-sm text-gray-600">
                       <span className="text-green-600">Used by:</span> CP2K, Quantum ESPRESSO, SIESTA, libNEGF<br/>
-                      <span className="text-blue-600">Interested by:</span> CASTEP, DFTB+, FHI-aims, Yambo, unknown<br/>
+                      <span className="text-blue-600">Interest by:</span> CASTEP, DFTB+, FHI-aims, Yambo, unknown<br/>
                       <span className="text-gray-500">Mentioned by:</span> LAPACK, Principle modes
                     </div>
                   </div>
@@ -986,7 +1018,7 @@ export default function SurveyResultsPage() {
                     <div className="font-medium text-gray-900">ScaLAPACK (12 mentions)</div>
                     <div className="text-sm text-gray-600">
                       <span className="text-green-600">Used by:</span> CP2K, Quantum ESPRESSO, SIESTA, libNEGF<br/>
-                      <span className="text-blue-600">Interested by:</span> CASTEP, DFTB+, FHI-aims, Yambo, unknown<br/>
+                      <span className="text-blue-600">Interest by:</span> CASTEP, DFTB+, FHI-aims, Yambo, unknown<br/>
                       <span className="text-gray-500">Mentioned by:</span> Principle modes
                     </div>
                   </div>
@@ -994,14 +1026,14 @@ export default function SurveyResultsPage() {
                     <div className="font-medium text-gray-900">ELPA (11 mentions)</div>
                     <div className="text-sm text-gray-600">
                       <span className="text-green-600">Used by:</span> CP2K, Quantum ESPRESSO, SIESTA<br/>
-                      <span className="text-blue-600">Interested by:</span> CASTEP, DFTB+, FHI-aims, NTChem, Yambo, unknown<br/>
+                      <span className="text-blue-600">Interest by:</span> CASTEP, DFTB+, FHI-aims, NTChem, Yambo, unknown<br/>
                       <span className="text-gray-500">Mentioned by:</span> SIESTA
                     </div>
                   </div>
                   <div className="border-l-4 border-blue-200 pl-3">
                     <div className="font-medium text-gray-900">ChASE (8 mentions)</div>
                     <div className="text-sm text-gray-600">
-                      <span className="text-blue-600">Interested by:</span> CP2K, DFTB+, FHI-aims, NTChem, Quantum ESPRESSO, SIESTA, Yambo, unknown
+                      <span className="text-blue-600">Interest by:</span> CP2K, DFTB+, FHI-aims, NTChem, Quantum ESPRESSO, SIESTA, Yambo, unknown
                     </div>
                   </div>
                 </div>
@@ -1018,7 +1050,7 @@ export default function SurveyResultsPage() {
                     <div className="font-medium text-gray-900">cuSolver (6 mentions)</div>
                     <div className="text-sm text-gray-600">
                       <span className="text-green-600">Used by:</span> CP2K, libNEGF<br/>
-                      <span className="text-blue-600">Interested by:</span> CP2K, SIESTA, libNEGF<br/>
+                      <span className="text-blue-600">Interest by:</span> CP2K, SIESTA, libNEGF<br/>
                       <span className="text-gray-500">Mentioned by:</span> Yambo
                     </div>
                   </div>
@@ -1026,20 +1058,20 @@ export default function SurveyResultsPage() {
                     <div className="font-medium text-gray-900">cuSolverMp (5 mentions)</div>
                     <div className="text-sm text-gray-600">
                       <span className="text-green-600">Used by:</span> CP2K<br/>
-                      <span className="text-blue-600">Interested by:</span> CP2K, SIESTA, libNEGF<br/>
+                      <span className="text-blue-600">Interest by:</span> CP2K, SIESTA, libNEGF<br/>
                       <span className="text-gray-500">Mentioned by:</span> Yambo
                     </div>
                   </div>
                   <div className="border-l-4 border-green-200 pl-3">
                     <div className="font-medium text-gray-900">cuBLASMp (3 mentions)</div>
                     <div className="text-sm text-gray-600">
-                      <span className="text-blue-600">Interested by:</span> CP2K, FHI-aims, unknown
+                      <span className="text-blue-600">Interest by:</span> CP2K, FHI-aims, unknown
                     </div>
                   </div>
                   <div className="border-l-4 border-green-200 pl-3">
                     <div className="font-medium text-gray-900">cuBLAS (3 mentions)</div>
                     <div className="text-sm text-gray-600">
-                      <span className="text-blue-600">Interested by:</span> CP2K, FHI-aims, unknown
+                      <span className="text-blue-600">Interest by:</span> CP2K, FHI-aims, unknown
                     </div>
                   </div>
                 </div>
@@ -1056,25 +1088,25 @@ export default function SurveyResultsPage() {
                     <div className="font-medium text-gray-900">DLA-Future (6 mentions)</div>
                     <div className="text-sm text-gray-600">
                       <span className="text-green-600">Used by:</span> CP2K<br/>
-                      <span className="text-blue-600">Interested by:</span> CP2K, FHI-aims, Quantum ESPRESSO, SIESTA, unknown
+                      <span className="text-blue-600">Interest by:</span> CP2K, FHI-aims, Quantum ESPRESSO, SIESTA, unknown
                     </div>
                   </div>
                   <div className="border-l-4 border-orange-200 pl-3">
                     <div className="font-medium text-gray-900">SLATE (4 mentions)</div>
                     <div className="text-sm text-gray-600">
-                      <span className="text-blue-600">Interested by:</span> DFTB+, Quantum ESPRESSO, SIESTA, unknown
+                      <span className="text-blue-600">Interest by:</span> DFTB+, Quantum ESPRESSO, SIESTA, unknown
                     </div>
                   </div>
                   <div className="border-l-4 border-orange-200 pl-3">
                     <div className="font-medium text-gray-900">DPLASMA (2 mentions)</div>
                     <div className="text-sm text-gray-600">
-                      <span className="text-blue-600">Interested by:</span> Quantum ESPRESSO, SIESTA
+                      <span className="text-blue-600">Interest by:</span> Quantum ESPRESSO, SIESTA
                     </div>
                   </div>
                   <div className="border-l-4 border-orange-200 pl-3">
                     <div className="font-medium text-gray-900">PLASMA (3 mentions)</div>
                     <div className="text-sm text-gray-600">
-                      <span className="text-blue-600">Interested by:</span> Quantum ESPRESSO, SIESTA<br/>
+                      <span className="text-blue-600">Interest by:</span> Quantum ESPRESSO, SIESTA<br/>
                       <span className="text-gray-500">Mentioned by:</span> PLASMA
                     </div>
                   </div>
@@ -1092,28 +1124,28 @@ export default function SurveyResultsPage() {
                     <div className="font-medium text-gray-900">PEXSI (3 mentions)</div>
                     <div className="text-sm text-gray-600">
                       <span className="text-green-600">Used by:</span> CP2K, SIESTA<br/>
-                      <span className="text-blue-600">Interested by:</span> SIESTA
+                      <span className="text-blue-600">Interest by:</span> SIESTA
                     </div>
                   </div>
                   <div className="border-l-4 border-purple-200 pl-3">
                     <div className="font-medium text-gray-900">ELSI (5 mentions)</div>
                     <div className="text-sm text-gray-600">
                       <span className="text-green-600">Used by:</span> DFTB+, FHI-aims, SIESTA<br/>
-                      <span className="text-blue-600">Interested by:</span> NTChem, unknown
+                      <span className="text-blue-600">Interest by:</span> NTChem, unknown
                     </div>
                   </div>
                   <div className="border-l-4 border-purple-200 pl-3">
                     <div className="font-medium text-gray-900">SuperLU / SuperLU_DIST (2 each)</div>
                     <div className="text-sm text-gray-600">
                       <span className="text-green-600">Used by:</span> libNEGF<br/>
-                      <span className="text-blue-600">Interested by:</span> SIESTA
+                      <span className="text-blue-600">Interest by:</span> SIESTA
                     </div>
                   </div>
                   <div className="border-l-4 border-purple-200 pl-3">
                     <div className="font-medium text-gray-900">MUMPS (2 mentions)</div>
                     <div className="text-sm text-gray-600">
                       <span className="text-green-600">Used by:</span> SIESTA<br/>
-                      <span className="text-blue-600">Interested by:</span> SIESTA
+                      <span className="text-blue-600">Interest by:</span> SIESTA
                     </div>
                   </div>
                 </div>
@@ -1129,21 +1161,21 @@ export default function SurveyResultsPage() {
                   <div className="border-l-4 border-teal-200 pl-3">
                     <div className="font-medium text-gray-900">SLEPc (2 mentions)</div>
                     <div className="text-sm text-gray-600">
-                      <span className="text-blue-600">Interested by:</span> FHI-aims<br/>
+                      <span className="text-blue-600">Interest by:</span> FHI-aims<br/>
                       <span className="text-gray-500">Mentioned by:</span> Yambo
                     </div>
                   </div>
                   <div className="border-l-4 border-teal-200 pl-3">
                     <div className="font-medium text-gray-900">PETSc (2 mentions)</div>
                     <div className="text-sm text-gray-600">
-                      <span className="text-blue-600">Interested by:</span> CASTEP<br/>
+                      <span className="text-blue-600">Interest by:</span> CASTEP<br/>
                       <span className="text-gray-500">Mentioned by:</span> Yambo
                     </div>
                   </div>
                   <div className="border-l-4 border-teal-200 pl-3">
                     <div className="font-medium text-gray-900">BLAS (4 mentions)</div>
                     <div className="text-sm text-gray-600">
-                      <span className="text-blue-600">Interested by:</span> CP2K, FHI-aims, unknown<br/>
+                      <span className="text-blue-600">Interest by:</span> CP2K, FHI-aims, unknown<br/>
                       <span className="text-gray-500">Mentioned by:</span> PLASMA
                     </div>
                   </div>
