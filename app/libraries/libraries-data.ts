@@ -240,6 +240,9 @@ export const libraries: Library[] = [
       libraryCategories.QUASI_HERMITIAN_SYMMETRIC,
       libraryCategories.GPU_ACCELERATION,
       libraryCategories.DISTRIBUTED_MEMORY
+    ],
+  },      
+  {
     id: 'ntpoly',
     name: 'NTPoly',
     description: 'NTPoly is a massively parallel library for computing the functions of sparse, symmetric matrices based on polynomial expansions.',
