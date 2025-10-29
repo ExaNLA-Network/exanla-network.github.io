@@ -214,5 +214,32 @@ export const libraries: Library[] = [
       libraryCategories.GPU_ACCELERATION,
       libraryCategories.DISTRIBUTED_MEMORY
     ],
+  },
+  {
+    id: 'elpa',
+    name: 'ELPA',
+    description: 'Highly efficient and highly scalable direct eigensolvers for symmetric (hermitian) matrices.',
+    features: [
+      'Dense Hermitian standard and generalized eigenproblems',
+      'Dense quasi-Hermitian eigenproblems (skew-symmetric and related Bethe–Salpeter)',
+      '1- and 2-stage direct eigensolver algorithms. 2-stage solver is especially efficient when only a part of the eigenspectrum is needed',
+      'Distributed dense matrix-matrix multiplication',
+      'Support for NVIDIA, AMD, and Intel GPUs',
+      'Demonstrated pre-exascale runs: full eigenspectrum of 3,200,000*3,200,000 real double matrix on LUMI',
+    ],
+    language: 'Fortran',
+    license: 'LGPL-3',
+    website: 'https://elpa.mpcdf.mpg.de/',
+    repository: 'https://gitlab.mpcdf.mpg.de/elpa/elpa',
+    logo: '/libraries/logo/elpa-logo.png',
+    categories: [
+      libraryCategories.DENSE_LINEAR_ALGEBRA,
+      libraryCategories.EIGENVALUE_PROBLEMS,
+      libraryCategories.HIGH_PERFORMANCE_COMPUTING,
+      libraryCategories.HERMITIAN_SYMMETRIC,
+      libraryCategories.QUASI_HERMITIAN_SYMMETRIC,
+      libraryCategories.GPU_ACCELERATION,
+      libraryCategories.DISTRIBUTED_MEMORY
+    ],
   }
 ];
