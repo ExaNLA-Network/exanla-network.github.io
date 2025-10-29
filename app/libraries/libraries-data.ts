@@ -240,6 +240,29 @@ export const libraries: Library[] = [
       libraryCategories.QUASI_HERMITIAN_SYMMETRIC,
       libraryCategories.GPU_ACCELERATION,
       libraryCategories.DISTRIBUTED_MEMORY
+    id: 'ntpoly',
+    name: 'NTPoly',
+    description: 'NTPoly is a massively parallel library for computing the functions of sparse, symmetric matrices based on polynomial expansions.',
+    features: [
+      'Sparse matrix-matrix multiplication',
+      'Highly efficient parallel implementation',
+      'Multi-core systems support',
+      'Real or complex arithmetic',
+      'General polynomials (standard, chebyshev, hermite)',
+      'Transcendental functions (trigonometric, exponential, logarithm)',
+      'Matrix roots and inverses',
+      'Density matrix purification, sign function, polar decomposition',
+    ],
+    language: 'Fortran, C++, Python',
+    license: 'MIT',
+    website: 'https://william-dawson.github.io/NTPoly/',
+    repository: 'https://github.com/william-dawson/NTPoly',
+    logo: '/libraries/logo/ntpoly-logo.png',
+    categories: [
+      libraryCategories.HIGH_PERFORMANCE_COMPUTING,
+      libraryCategories.DISTRIBUTED_MEMORY,
+      libraryCategories.SPARSE_LINEAR_ALGEBRA,
+      libraryCategories.HERMITIAN_SYMMETRIC
     ],
   }
 ];
