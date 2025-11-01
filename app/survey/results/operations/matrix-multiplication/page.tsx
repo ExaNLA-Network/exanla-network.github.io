@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { formatApplicationName } from '@/lib/surveyAnalytics';
 
 interface MatrixMultResponse {
   application: string;
@@ -106,11 +107,11 @@ export default function MatrixMultiplicationPage() {
     try {
       setLoading(true);
       const surveyFiles = [
-        'CASTEP.json', 'cp2k.json', 'DFTB+-1.json', 'DFTB+-2.json', 
+        'CASTEP.json', 'cp2k.json', 'cp2k-2.json', 'cp2k-3.json', 'DFTB+-1.json', 'DFTB+-2.json', 
         'FHI-AIMS.json', 'Ginkgo.json', 'LAPACK.json', 'libngef.json',
         'ntchem-1.json', 'ntchem-2.json', 'PLASMA.json', 'principleModes.json', 
-        'quantum-espresso.json', 'siesta-1.json', 'siesta-2.json', 'unknown.json', 
-        'yambo-1.json', 'yambo-2.json'
+        'quantum-espresso.json', 'siesta-1.json', 'siesta-2.json', 'sirirus.json', 
+        'unknown.json', 'turboRVB-1.json', 'yambo-1.json', 'yambo-2.json'
       ];
 
       const loadedResponses: MatrixMultResponse[] = [];
@@ -122,7 +123,9 @@ export default function MatrixMultiplicationPage() {
             const data = await response.json();
             // Only include if matrix-multiplication is true
             if (data['matrix-multiplication'] === true) {
-              const applicationName = data['library-name'] || 'undefined';
+              const libraryName = data['library-name'] || 'undefined';
+              const useCase = data['current-use-case'];
+              const applicationName = formatApplicationName(libraryName, useCase);
               
               loadedResponses.push({
                 application: applicationName,

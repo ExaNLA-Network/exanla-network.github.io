@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { formatApplicationName } from '@/lib/surveyAnalytics';
 
 interface GEVResponse {
   application: string;
@@ -22,11 +23,11 @@ export default function GEVAnalysisPage() {
     try {
       setLoading(true);
       const surveyFiles = [
-        'CASTEP.json', 'cp2k.json', 'DFTB+-1.json', 'DFTB+-2.json', 
+        'CASTEP.json', 'cp2k.json', 'cp2k-2.json', 'cp2k-3.json', 'DFTB+-1.json', 'DFTB+-2.json', 
         'FHI-AIMS.json', 'Ginkgo.json', 'LAPACK.json', 'libngef.json',
         'ntchem-1.json', 'ntchem-2.json', 'PLASMA.json', 'principleModes.json', 
-        'quantum-espresso.json', 'siesta-1.json', 'siesta-2.json', 'unknown.json', 
-        'yambo-1.json', 'yambo-2.json'
+        'quantum-espresso.json', 'siesta-1.json', 'siesta-2.json', 'sirirus.json', 
+        'unknown.json', 'turboRVB-1.json', 'yambo-1.json', 'yambo-2.json'
       ];
 
       const loadedResponses: GEVResponse[] = [];
@@ -38,8 +39,12 @@ export default function GEVAnalysisPage() {
             const data = await response.json();
             // Only include responses that use GEV
             if (data['generalized-eigenvalue'] === true || data['gen-symmetric-hermitian'] === true) {
+              const libraryName = data['library-name'] || 'undefined';
+              const useCase = data['current-use-case'];
+              const applicationName = formatApplicationName(libraryName, useCase);
+              
               loadedResponses.push({
-                application: data['library-name'] || 'undefined',
+                application: applicationName,
                 responses: data
               });
             }

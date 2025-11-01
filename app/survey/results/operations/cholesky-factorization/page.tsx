@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { formatApplicationName } from '@/lib/surveyAnalytics';
 
 interface CholeskyResponse {
   application: string;
@@ -125,8 +126,8 @@ export default function CholeskyFactorizationPage() {
     try {
       setLoading(true);
       const surveyFiles = [
-        'cp2k.json', 'ntchem-1.json', 'ntchem-2.json', 'PLASMA.json', 
-        'quantum-espresso.json', 'siesta-1.json'
+        'cp2k.json', 'cp2k-2.json', 'cp2k-3.json', 'ntchem-1.json', 'ntchem-2.json', 
+        'PLASMA.json', 'quantum-espresso.json', 'siesta-1.json'
       ];
 
       const loadedResponses: CholeskyResponse[] = [];
@@ -138,49 +139,13 @@ export default function CholeskyFactorizationPage() {
             const data = await response.json();
             // Only include if cholesky-factorization is true
             if (data['cholesky-factorization'] === true) {
-              // Extract use case from current-use-case field
-              const useCase = data['current-use-case'] || 'General';
-              
-              // Create specific use case identifiers based on the actual use case
-              let useCaseShort = 'General';
-              if (useCase.toLowerCase().includes('ground state')) {
-                useCaseShort = 'Ground States';
-              } else if (useCase.toLowerCase().includes('excited state')) {
-                useCaseShort = 'Excited States';
-              } else if (useCase.toLowerCase().includes('transport')) {
-                useCaseShort = 'Transport';
-              } else if (useCase.toLowerCase().includes('bse')) {
-                useCaseShort = 'BSE';
-              } else if (useCase.toLowerCase().includes('gw')) {
-                useCaseShort = 'GW';
-              } else {
-                // Fallback to generic abbreviation
-                useCaseShort = useCase
-                  .replace(/calculations?/gi, 'calc')
-                  .replace(/simulation/gi, 'sim')
-                  .replace(/ground state/gi, 'Ground States')
-                  .replace(/excited state/gi, 'Excited States')
-                  .replace(/transport/gi, 'Transport')
-                  .replace(/BSE solver/gi, 'BSE')
-                  .replace(/GW simulation/gi, 'GW')
-                  .substring(0, 20);
-              }
-              
-              const applicationName = data['library-name'] || 'undefined';
-              
-              // Only DFTB+ gets use case suffixes in the display name (following the pattern)
-              let displayName = applicationName;
-              if (applicationName === 'DFTB+') {
-                if (useCaseShort === 'Ground States') {
-                  displayName = 'DFTB+ (TB)';
-                } else if (useCaseShort === 'Excited States') {
-                  displayName = 'DFTB+ (Casida)';
-                }
-              }
+              const libraryName = data['library-name'] || 'undefined';
+              const useCase = data['current-use-case'];
+              const displayName = formatApplicationName(libraryName, useCase);
               
               loadedResponses.push({
                 application: displayName,
-                useCase: useCaseShort,
+                useCase: useCase || 'General',
                 displayName: displayName,
                 responses: data
               });

@@ -1,0 +1,96 @@
+{
+  "contact-name": "Anton Kozhevnikov",
+  "library-name": "SIRIUS electronic structure library",
+  "contact-email": "antonk@cscs.ch",
+  "library-version": "7.9.0",
+  "current-use-case": "Ground state DFT calculation with pseudopotential plane-wave and full-potential LAPW methods.",
+  "domain-selection": "Materials Science",
+  "gemm-matrix-size": [
+    "Very Large (10,000 - 100,000)",
+    "Large (1,000 - 10,000)"
+  ],
+  "gemm-matrix-shape": [
+    "Square matrices (m ≈ n ≈ k)",
+    "Block-inner product (m and n small, k large)"
+  ],
+  "gemm-matrix-format": [
+    "Dense (column-major/row-major)"
+  ],
+  "multiple-use-cases": "Yes, multiple distinct use cases",
+  "gemm-data-provision": [
+    "No"
+  ],
+  "gemm-precision-type": [
+    "Double precision (64-bit)",
+    "Mixed precision (e.g., FP32 multiplication with FP64 accumulation)"
+  ],
+  "library-description": "SIRIUS is a domain specific library for electronic structure calculations. It implements pseudopotential plane wave (PP-PW) and full potential linearized augmented plane wave (FP-LAPW) methods and is designed for GPU acceleration of popular community codes such as Exciting, Elk and Quantum ESPRESSO. SIRIUS is written in C++17 with MPI, OpenMP and CUDA/ROCm programming models. SIRIUS is organised as a collection of classes that abstract away the different building blocks of DFT self-consistency cycle.",
+  "materials-functions": [
+    "Ground state DFT"
+  ],
+  "standard-eigenvalue": false,
+  "contact-organization": "CSCS",
+  "gemm-future-features": [
+    "Better mixed precision support"
+  ],
+  "gemm-input-data-type": [
+    "Synthetic / random matrices"
+  ],
+  "gemm-operation-types": [
+    "Accumulation (AB + C)",
+    "Hermitian multiplication (A†B, AB†)",
+    "Full GEMM (αAB + βC)",
+    "Scaled multiplication (αAB)",
+    "Standard multiplication (AB)",
+    "Transpose multiplication (AᵀB, ABᵀ)"
+  ],
+  "gemm-matrix-structure": [
+    "Dense matrices",
+    "Tall-and-skinny matrices"
+  ],
+  "matrix-multiplication": true,
+  "gen-sym-precision-type": [
+    "Double precision (64-bit)",
+    "Mixed precision (e.g., FP32/FP64 combination)"
+  ],
+  "generalized-eigenvalue": true,
+  "gen-sym-herm-scale-size": "Large (10,000 - 100,000)",
+  "gen-symmetric-hermitian": true,
+  "gemm-matrix-distribution": [
+    "Block row/column distribution",
+    "Communication-avoiding distribution"
+  ],
+  "gen-sym-computation-type": [
+    "Large-scale single problems (e.g., one large generalized eigenproblem at a time, using significant computational resources)"
+  ],
+  "gen-sym-matrix-structure": [
+    "A is dense, B is dense",
+    "Complex valued",
+    "Real valued"
+  ],
+  "gen-sym-reduction-needed": "No, solver works directly with generalized form (e.g., contour integration, FEAST, iterative solvers)",
+  "gemm-scaling-requirements": [
+    "Both strong and weak scaling needed"
+  ],
+  "gen-sym-herm-compute-mode": "Selected eigenvalues and eigenvectors",
+  "gen-sym-herm-residual-type": "Absolute residual (||Ax - λx||)",
+  "gen-sym-herm-data-provision": [
+    "No"
+  ],
+  "gen-sym-herm-input-data-type": [
+    "Synthetic / random matrices"
+  ],
+  "gen-sym-scaling-requirements": [
+    "Both strong and weak scaling needed"
+  ],
+  "gen-sym-nla-distributed-dense": [
+    "ScaLAPACK",
+    "DLA-Future",
+    "ELPA"
+  ],
+  "gen-sym-herm-eigenvalue-location": "Smallest eigenvalues",
+  "gen-sym-herm-eigenvalue-percentage": "10-50%",
+  "gen-sym-herm-eigenvalue-distribution": "Mix of clustered and separated",
+  "gen-sym-herm-orthogonality-tolerance": "Very high (10^-12)",
+  "gen-sym-herm-absolute-residual-tolerance": "Very high (10^-12)"
+}
