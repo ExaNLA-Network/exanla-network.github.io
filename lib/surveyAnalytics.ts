@@ -462,3 +462,85 @@ export function formatLibraryName(library: string): string {
   
   return libraryNames[library] || library;
 }
+
+/**
+ * Generate a display name for an application that includes use case when needed
+ * to distinguish multiple submissions for the same library
+ */
+export function formatApplicationName(libraryName: string, useCase?: string): string {
+  if (!useCase) {
+    return libraryName;
+  }
+
+  const useCaseLower = useCase.toLowerCase();
+
+  // Handle DFTB+ (already established pattern)
+  if (libraryName === 'DFTB+') {
+    if (useCaseLower.includes('ground state')) {
+      return 'DFTB+ (TB)';
+    } else if (useCaseLower.includes('excited state') || useCaseLower.includes('casida')) {
+      return 'DFTB+ (Casida)';
+    }
+  }
+
+  // Handle CP2K - create short use case identifiers
+  if (libraryName === 'CP2K') {
+    if (useCaseLower.includes('molecular dynamics') || useCaseLower.includes('aimd')) {
+      return 'CP2K (AIMD)';
+    } else if (useCaseLower.includes('ground state')) {
+      return 'CP2K (Ground State DFT)';
+    } else if (useCaseLower.includes('ri-drpa') || useCaseLower.includes('drpa')) {
+      return 'CP2K (RI-dRPA)';
+    } else if (useCaseLower.includes('dft')) {
+      return 'CP2K (DFT)';
+    }
+  }
+
+  // Handle SIESTA
+  if (libraryName === 'SIESTA') {
+    if (useCaseLower.includes('ground state')) {
+      return 'SIESTA (Ground State)';
+    } else if (useCaseLower.includes('transport') || useCaseLower.includes('negf')) {
+      return 'SIESTA (Transport)';
+    } else if (useCaseLower.includes('gw')) {
+      return 'SIESTA (GW)';
+    }
+  }
+
+  // Handle Yambo
+  if (libraryName === 'Yambo' || libraryName === 'yambo') {
+    if (useCaseLower.includes('ground state') || useCaseLower.includes('dft')) {
+      return 'Yambo (DFT)';
+    } else if (useCaseLower.includes('gw') || useCaseLower.includes('quasiparticle')) {
+      return 'Yambo (GW)';
+    } else if (useCaseLower.includes('bse') || useCaseLower.includes('excited')) {
+      return 'Yambo (BSE)';
+    }
+  }
+
+  // Handle TurboRVB
+  if (libraryName === 'TurboRVB') {
+    if (useCaseLower.includes('wave function') || useCaseLower.includes('optimization')) {
+      return 'TurboRVB (Wave Function)';
+    }
+  }
+
+  // Handle SIRIUS
+  if (libraryName === 'SIRIUS electronic structure library' || libraryName === 'SIRIUS') {
+    if (useCaseLower.includes('dft')) {
+      return 'SIRIUS (DFT)';
+    }
+  }
+
+  // Generic fallback: create short use case suffix
+  const shortUseCase = useCase
+    .replace(/calculations?/gi, 'calc')
+    .replace(/simulation/gi, 'sim')
+    .replace(/ground state/gi, 'GS')
+    .replace(/excited state/gi, 'ES')
+    .replace(/transport/gi, 'Trans')
+    .replace(/molecular dynamics/gi, 'MD')
+    .substring(0, 30);
+
+  return `${libraryName} (${shortUseCase})`;
+}

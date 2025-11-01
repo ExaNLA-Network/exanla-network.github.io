@@ -1,0 +1,65 @@
+{
+  "contact-name": "Frederick Stein",
+  "library-name": "CP2K",
+  "contact-email": "f.stein@hzdr.de",
+  "gemm-batch-size": [
+    "Medium (10 - 100)"
+  ],
+  "library-version": "development version",
+  "current-use-case": "RI-dRPA gradient calculations",
+  "domain-selection": "Materials Science",
+  "gemm-matrix-size": [
+    "Medium (100 - 1,000)",
+    "Very Large (10,000 - 100,000)"
+  ],
+  "gemm-matrix-shape": [
+    "Tall-skinny matrices (m >> k, n small)",
+    "Square matrices (m ≈ n ≈ k)"
+  ],
+  "gemm-matrix-format": [
+    "Dense (column-major/row-major)",
+    "Multiple formats (conversion as needed)"
+  ],
+  "multiple-use-cases": "Yes, multiple distinct use cases",
+  "gemm-data-provision": [
+    "No"
+  ],
+  "gemm-precision-type": [
+    "Double precision (64-bit)"
+  ],
+  "library-description": "CP2K is a highly-parallelized quantum chemistry package written in Fortran 2008, C and C++, MPI and OpenMP targeting CPU, NVIDIA and AMD GPUs. This submission is about analytical gradient calculations within the Resolution-of-the-Identity approximation of the direct Random Phase approximation (RI-dRPA).",
+  "materials-functions": [
+    "Ground state DFT",
+    "Time-dependent DFT",
+    "Many-body perturbation theory (GW, BSE)",
+    "Molecular dynamics",
+    "Crystal structure prediction",
+    "Excited-state dynamics"
+  ],
+  "contact-organization": "Helmholtzzentrum Dresden-Rossendorf e.V.",
+  "gemm-input-data-type": [
+    "Synthetic / random matrices"
+  ],
+  "gemm-operation-types": [
+    "Full GEMM (αAB + βC)",
+    "Accumulation (AB + C)",
+    "Scaled multiplication (αAB)",
+    "Standard multiplication (AB)",
+    "Batched multiplications"
+  ],
+  "gemm-matrix-structure": [
+    "Dense matrices"
+  ],
+  "matrix-multiplication": true,
+  "gemm-matrix-distribution": [
+    "Block cyclic distribution (e.g., ScaLAPACK style)",
+    "Block row/column distribution"
+  ],
+  "gemm-scaling-requirements": [
+    "Both strong and weak scaling needed"
+  ],
+  "gemm-libraries-distributed": [
+    "ScaLAPACK",
+    "COSMA"
+  ]
+}

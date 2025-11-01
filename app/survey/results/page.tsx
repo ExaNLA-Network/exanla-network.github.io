@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { SurveyResponse, SurveyAnalytics, analyzeSurveyData } from '@/lib/surveyAnalytics';
+import { SurveyResponse, SurveyAnalytics, analyzeSurveyData, formatApplicationName } from '@/lib/surveyAnalytics';
 
 export default function SurveyResultsPage() {
   const [responses, setResponses] = useState<SurveyResponse[]>([]);
@@ -17,10 +17,11 @@ export default function SurveyResultsPage() {
     try {
       setLoading(true);
       const surveyFiles = [
-        'CASTEP.json', 'cp2k.json', 'DFTB+-1.json', 'DFTB+-2.json', 
+        'CASTEP.json', 'cp2k.json', 'cp2k-2.json', 'cp2k-3.json', 'DFTB+-1.json', 'DFTB+-2.json', 
         'FHI-AIMS.json', 'Ginkgo.json', 'LAPACK.json', 'libngef.json',
         'PLASMA.json', 'principleModes.json', 'quantum-espresso.json',
-        'siesta-1.json', 'siesta-2.json', 'unknown.json', 'yambo-1.json', 'yambo-2.json',
+        'siesta-1.json', 'siesta-2.json', 'sirirus.json', 'unknown.json', 
+        'turboRVB-1.json', 'yambo-1.json', 'yambo-2.json',
         'ntchem-1.json', 'ntchem-2.json'
       ];
 
@@ -202,7 +203,7 @@ export default function SurveyResultsPage() {
                     name: 'Matrix Multiplication',
                     description: 'General matrix-matrix multiplication (GEMM) operations',
                     usageCount: analytics.operationPopularity['matrix-multiplication'] || 0,
-                    applications: responses.filter(r => r['matrix-multiplication'] === true).map(r => r['library-name'] || 'undefined'),
+                    applications: responses.filter(r => r['matrix-multiplication'] === true).map(r => formatApplicationName(r['library-name'] || 'undefined', r['current-use-case'])),
                     color: 'blue',
                     icon: '×'
                   },
@@ -211,7 +212,7 @@ export default function SurveyResultsPage() {
                     name: 'Standard Symmetric/Hermitian Eigenvalue Problems',
                     description: 'Standard eigenvalue problems (Ax = λx) with symmetric/Hermitian matrices',
                     usageCount: analytics.operationPopularity['symmetric-hermitian'] || 0,
-                    applications: responses.filter(r => r['symmetric-hermitian'] === true).map(r => r['library-name'] || 'undefined'),
+                    applications: responses.filter(r => r['symmetric-hermitian'] === true).map(r => formatApplicationName(r['library-name'] || 'undefined', r['current-use-case'])),
                     color: 'green',
                     icon: 'λ'
                   },
@@ -220,7 +221,7 @@ export default function SurveyResultsPage() {
                     name: 'Quasi-Hermitian (BSE) Eigenvalue Problems',
                     description: 'Quasi-Hermitian eigenvalue problems from Bethe-Salpeter Equation (Hψ = Eψ)',
                     usageCount: analytics.operationPopularity['quasi-hermitian-bse'] || 0,
-                    applications: responses.filter(r => r['quasi-hermitian-bse'] === true).map(r => r['library-name'] || 'undefined'),
+                    applications: responses.filter(r => r['quasi-hermitian-bse'] === true).map(r => formatApplicationName(r['library-name'] || 'undefined', r['current-use-case'])),
                     color: 'orange',
                     icon: 'ψ'
                   },
@@ -229,7 +230,7 @@ export default function SurveyResultsPage() {
                     name: 'Cholesky Factorization',
                     description: 'Cholesky factorization of overlap matrix B for generalized eigenproblems',
                     usageCount: analytics.operationPopularity['cholesky-factorization'] || 0,
-                    applications: responses.filter(r => r['cholesky-factorization'] === true).map(r => r['library-name'] || 'undefined'),
+                    applications: responses.filter(r => r['cholesky-factorization'] === true).map(r => formatApplicationName(r['library-name'] || 'undefined', r['current-use-case'])),
                     color: 'red',
                     icon: 'L'
                   },
@@ -238,7 +239,7 @@ export default function SurveyResultsPage() {
                     name: 'Matrix Inversion',
                     description: 'Matrix inversion operations (A⁻¹) including direct and implicit methods',
                     usageCount: analytics.operationPopularity['matrix-inversion'] || 0,
-                    applications: responses.filter(r => r['matrix-inversion'] === true).map(r => r['library-name'] || 'undefined'),
+                    applications: responses.filter(r => r['matrix-inversion'] === true).map(r => formatApplicationName(r['library-name'] || 'undefined', r['current-use-case'])),
                     color: 'yellow',
                     icon: 'A⁻¹'
                   },
@@ -247,7 +248,7 @@ export default function SurveyResultsPage() {
                     name: 'QR Factorization',
                     description: 'QR factorization operations (A = QR) for least squares and orthogonalization',
                     usageCount: analytics.operationPopularity['qr-factorization'] || 0,
-                    applications: responses.filter(r => r['qr-factorization'] === true).map(r => r['library-name'] || 'undefined'),
+                    applications: responses.filter(r => r['qr-factorization'] === true).map(r => formatApplicationName(r['library-name'] || 'undefined', r['current-use-case'])),
                     color: 'teal',
                     icon: 'QR'
                   },
@@ -256,7 +257,7 @@ export default function SurveyResultsPage() {
                     name: 'Linear System Solvers',
                     description: 'Linear system solvers for Ax = b problems including direct and iterative methods',
                     usageCount: analytics.operationPopularity['linear-system-solvers'] || 0,
-                    applications: responses.filter(r => r['linear-system-solvers'] === true).map(r => r['library-name'] || 'undefined'),
+                    applications: responses.filter(r => r['linear-system-solvers'] === true).map(r => formatApplicationName(r['library-name'] || 'undefined', r['current-use-case'])),
                     color: 'indigo',
                     icon: 'Ax=b'
                   },
@@ -265,7 +266,7 @@ export default function SurveyResultsPage() {
                     name: 'Generalized Eigenvalue Problems',
                     description: 'Generalized eigenvalue problems (Ax = λBx)',
                     usageCount: responses.filter(r => r['generalized-eigenvalue'] === true || r['gen-symmetric-hermitian'] === true).length,
-                    applications: responses.filter(r => r['generalized-eigenvalue'] === true || r['gen-symmetric-hermitian'] === true).map(r => r['library-name'] || 'undefined'),
+                    applications: responses.filter(r => r['generalized-eigenvalue'] === true || r['gen-symmetric-hermitian'] === true).map(r => formatApplicationName(r['library-name'] || 'undefined', r['current-use-case'])),
                     color: 'purple',
                     icon: 'λB'
                   },
@@ -274,7 +275,7 @@ export default function SurveyResultsPage() {
                     name: 'Polynomial Filtering and Matrix Functions',
                     description: 'Polynomial filtering and matrix function evaluations p(A)',
                     usageCount: analytics.operationPopularity['polynomial-filtering'] || 0,
-                    applications: responses.filter(r => r['polynomial-filtering'] === true).map(r => r['library-name'] || 'undefined'),
+                    applications: responses.filter(r => r['polynomial-filtering'] === true).map(r => formatApplicationName(r['library-name'] || 'undefined', r['current-use-case'])),
                     color: 'pink',
                     icon: 'p(A)'
                   },
@@ -283,7 +284,7 @@ export default function SurveyResultsPage() {
                     name: 'Non-Symmetric Eigenvalue Problems',
                     description: 'Non-symmetric/non-Hermitian eigenvalue problems (Ax = λx)',
                     usageCount: analytics.operationPopularity['non-symmetric-eigenvalue'] || 0,
-                    applications: responses.filter(r => r['non-symmetric-eigenvalue'] === true).map(r => r['library-name'] || 'undefined'),
+                    applications: responses.filter(r => r['non-symmetric-eigenvalue'] === true).map(r => formatApplicationName(r['library-name'] || 'undefined', r['current-use-case'])),
                     color: 'gray',
                     icon: 'λ'
                   }
@@ -448,7 +449,7 @@ export default function SurveyResultsPage() {
                 <div className="text-sm text-green-800 space-y-3">
                   <div className="bg-green-100 rounded-lg p-3">
                     <div className="font-semibold text-green-900 mb-1">📊 Scale & Impact</div>
-                    <div>{analytics.operationPopularity['symmetric-hermitian'] || 0} applications • Primarily DFT codes (CASTEP, DFTB+, FHI-AIMS, Yambo)</div>
+                    <div>{analytics.operationPopularity['symmetric-hermitian'] || 0} applications • Primarily DFT codes (CASTEP, CP2K, DFTB+, FHI-AIMS, SIRIUS, TurboRVB, Yambo)</div>
                   </div>
                   
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
@@ -993,7 +994,7 @@ export default function SurveyResultsPage() {
               </div>
               <div className="ml-4">
                 <h2 className="text-2xl font-bold text-gray-900">NLA Libraries Ecosystem</h2>
-                <p className="text-purple-600 font-medium">Comprehensive library usage across 14 applications (used, interested, or mentioned)</p>
+                <p className="text-purple-600 font-medium">Comprehensive library usage across {analytics.totalResponses} applications (used, interested, or mentioned)</p>
               </div>
             </div>
           </div>
@@ -1015,9 +1016,9 @@ export default function SurveyResultsPage() {
                     </div>
                   </div>
                   <div className="border-l-4 border-blue-200 pl-3">
-                    <div className="font-medium text-gray-900">ScaLAPACK (12 mentions)</div>
+                    <div className="font-medium text-gray-900">ScaLAPACK (15+ mentions)</div>
                     <div className="text-sm text-gray-600">
-                      <span className="text-green-600">Used by:</span> CP2K, Quantum ESPRESSO, SIESTA, libNEGF<br/>
+                      <span className="text-green-600">Used by:</span> CP2K, Quantum ESPRESSO, SIESTA, libNEGF, TurboRVB<br/>
                       <span className="text-blue-600">Interest by:</span> CASTEP, DFTB+, FHI-aims, Yambo, unknown<br/>
                       <span className="text-gray-500">Mentioned by:</span> Principle modes
                     </div>
@@ -1055,16 +1056,17 @@ export default function SurveyResultsPage() {
                     </div>
                   </div>
                   <div className="border-l-4 border-green-200 pl-3">
-                    <div className="font-medium text-gray-900">cuSolverMp (5 mentions)</div>
+                    <div className="font-medium text-gray-900">cuSolverMp (7+ mentions)</div>
                     <div className="text-sm text-gray-600">
-                      <span className="text-green-600">Used by:</span> CP2K<br/>
+                      <span className="text-green-600">Used by:</span> CP2K, TurboRVB<br/>
                       <span className="text-blue-600">Interest by:</span> CP2K, SIESTA, libNEGF<br/>
                       <span className="text-gray-500">Mentioned by:</span> Yambo
                     </div>
                   </div>
                   <div className="border-l-4 border-green-200 pl-3">
-                    <div className="font-medium text-gray-900">cuBLASMp (3 mentions)</div>
+                    <div className="font-medium text-gray-900">cuBLASMp (4+ mentions)</div>
                     <div className="text-sm text-gray-600">
+                      <span className="text-green-600">Used by:</span> TurboRVB<br/>
                       <span className="text-blue-600">Interest by:</span> CP2K, FHI-aims, unknown
                     </div>
                   </div>
@@ -1089,6 +1091,13 @@ export default function SurveyResultsPage() {
                     <div className="text-sm text-gray-600">
                       <span className="text-green-600">Used by:</span> CP2K<br/>
                       <span className="text-blue-600">Interest by:</span> CP2K, FHI-aims, Quantum ESPRESSO, SIESTA, unknown
+                    </div>
+                  </div>
+                  <div className="border-l-4 border-orange-200 pl-3">
+                    <div className="font-medium text-gray-900">COSMA (3+ mentions)</div>
+                    <div className="text-sm text-gray-600">
+                      <span className="text-green-600">Used by:</span> CP2K<br/>
+                      <span className="text-blue-600">Interest by:</span> CP2K, others
                     </div>
                   </div>
                   <div className="border-l-4 border-orange-200 pl-3">
@@ -1226,7 +1235,7 @@ export default function SurveyResultsPage() {
                 </div>
                 <div className="ml-3">
                   <p className="text-sm text-purple-800">
-                    <strong>Comprehensive library ecosystem insights:</strong> This analysis covers all 14 survey applications and reveals 35+ unique NLA libraries. 
+                    <strong>Comprehensive library ecosystem insights:</strong> This analysis covers all {analytics.totalResponses} survey applications and reveals 35+ unique NLA libraries. 
                     <span className="text-green-600">Green</span> indicates current usage, <span className="text-blue-600">blue</span> shows future interest, and <span className="text-gray-500">gray</span> indicates general mentions.
                     Key findings: LAPACK and ScaLAPACK dominate usage, strong interest in GPU acceleration (cuSolver, cuSolverMp), growing adoption of modern distributed libraries (ELPA, SLATE), and specialized libraries for quantum chemistry (Libint, Libxc) and polynomial filtering (NTPoly).
                   </p>

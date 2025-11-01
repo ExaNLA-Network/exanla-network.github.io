@@ -26,10 +26,12 @@ export default function DetailedInsightsPage() {
     try {
       setLoading(true);
       const surveyFiles = [
-        'CASTEP.json', 'cp2k.json', 'DFTB+-1.json', 'DFTB+-2.json', 
+        'CASTEP.json', 'cp2k.json', 'cp2k-2.json', 'cp2k-3.json', 'DFTB+-1.json', 'DFTB+-2.json', 
         'FHI-AIMS.json', 'Ginkgo.json', 'LAPACK.json', 'libngef.json',
         'PLASMA.json', 'principleModes.json', 'quantum-espresso.json',
-        'siesta-1.json', 'siesta-2.json', 'unknown.json', 'yambo-1.json', 'yambo-2.json'
+        'siesta-1.json', 'siesta-2.json', 'sirirus.json', 'unknown.json', 
+        'turboRVB-1.json', 'yambo-1.json', 'yambo-2.json',
+        'ntchem-1.json', 'ntchem-2.json'
       ];
 
       const loadedResponses: SurveyResponse[] = [];

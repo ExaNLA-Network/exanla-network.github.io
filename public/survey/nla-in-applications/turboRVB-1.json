@@ -1,0 +1,266 @@
+{
+  "matrix-size": "Large (10,000 - 100,000)",
+  "contact-name": "Michele Casula",
+  "library-name": "TurboRVB",
+  "sym-herm-spd": "Always positive definite",
+  "contact-email": "michele.casula@gmail.com",
+  "matrix-format": [
+    "Dense (column-major/row-major)"
+  ],
+  "solver-scaling": "Quadratic O(N²)",
+  "dense-libs-used": [
+    "ScaLAPACK"
+  ],
+  "gemm-batch-size": [
+    "Medium (10 - 100)"
+  ],
+  "library-version": "developer version from here: https://github.com/sissaschool/turborvb",
+  "solver-accuracy": "Medium (10⁻⁶)",
+  "solver-parallel": [
+    "Distributed memory (MPI)",
+    "GPU acceleration",
+    "Hybrid CPU-GPU",
+    "Shared memory (OpenMP)"
+  ],
+  "current-use-case": "wave function optimization",
+  "domain-selection": "Materials Science",
+  "gemm-matrix-size": [
+    "Large (1,000 - 10,000)",
+    "Very Large (10,000 - 100,000)"
+  ],
+  "matrix-inversion": true,
+  "matrix-structure": [
+    "Dense",
+    "Block sparse",
+    "Other (please specify):"
+  ],
+  "sparse-libs-used": [
+    "Other (please specify):"
+  ],
+  "gemm-matrix-shape": [
+    "Square matrices (m ≈ n ≈ k)"
+  ],
+  "matrix-properties": [
+    "Symmetric/Hermitian",
+    "Positive definite",
+    "Complex-valued"
+  ],
+  "gemm-matrix-format": [
+    "Dense (column-major/row-major)"
+  ],
+  "multiple-use-cases": "No, single primary use case",
+  "dense-libs-interest": [
+    "Other (please specify):",
+    "cuSolverMp"
+  ],
+  "gemm-data-provision": [
+    "Yes, both matrices and mini-apps"
+  ],
+  "gemm-precision-type": [
+    "Double precision (64-bit)"
+  ],
+  "library-description": "TurboRVB computes the ground state properties of a quantum system by looking for the best approximated many-body wave function, as close as possible to the unknown ground state wave function of the many-body Hamiltonian. This is achieved in two main schemes: the optimization of a parametrized wave function (based on the variational principle) and the projection of the initial trial wave function (through a stochastic evolution of walkers which is weighted according to their local energies).",
+  "materials-functions": [
+    "Molecular dynamics",
+    "Phase transitions",
+    "Defect calculations",
+    "Surface science",
+    "Other"
+  ],
+  "matrix-distribution": [
+    "Block row/column distribution"
+  ],
+  "standard-eigenvalue": false,
+  "sym-herm-scale-size": [
+    "Large (10,000 - 100,000)",
+    "Medium (1,000 - 10,000)"
+  ],
+  "symmetric-hermitian": true,
+  "contact-organization": "CNRS and Sorbonne University, France",
+  "gemm-future-features": [
+    "Better mixed precision support",
+    "Hardware-specific optimizations"
+  ],
+  "gemm-input-data-type": [
+    "Both synthetic and real data",
+    "Mini-apps or extracted kernels from real applications"
+  ],
+  "gemm-operation-types": [
+    "Hermitian multiplication (A†B, AB†)",
+    "Full GEMM (αAB + βC)",
+    "Transpose multiplication (AᵀB, ABᵀ)"
+  ],
+  "sparse-libs-interest": [
+    "Other (please specify):"
+  ],
+  "gemm-matrix-structure": [
+    "Mixed real/complex",
+    "Sparse matrices",
+    "Dense matrices"
+  ],
+  "linear-system-solvers": true,
+  "matrix-inversion-size": "Medium (1,000 - 10,000)",
+  "matrix-multiplication": true,
+  "solver-precision-type": [
+    "Double precision (64-bit)"
+  ],
+  "specialized-libs-used": [
+    "Other (please specify):"
+  ],
+  "sym-herm-compute-mode": "Eigenvalues and eigenvectors",
+  "dense-solver-libraries": [
+    "ScaLAPACK",
+    "cuSolverMp"
+  ],
+  "generalized-eigenvalue": false,
+  "matrix-structure-other": "the sparsity depends on the basis set used, something to be checked. In general dense.",
+  "sparse-libs-used-other": "None of the above",
+  "sym-herm-matrix-format": [
+    "Dense (column-major/row-major)"
+  ],
+  "sym-herm-residual-type": "Relative residual (||Ax - λx|| / ||Ax||)",
+  "gen-symmetric-hermitian": true,
+  "materials-other-specify": "ground state properties beyond DFT (based many-body wave functions and their projections)",
+  "matrix-inversion-format": [
+    "Dense (column-major/row-major)"
+  ],
+  "solver-computation-type": [
+    "Repeated solves with similar matrices (e.g., during nonlinear iterations)",
+    "Sequence of related systems (e.g., from time-stepping)"
+  ],
+  "sparse-solver-libraries": [
+    "Other (please specify):"
+  ],
+  "sym-herm-data-provision": [
+    "Yes, both matrices and mini-apps"
+  ],
+  "sym-herm-precision-type": [
+    "Double precision (64-bit)"
+  ],
+  "gemm-matrix-distribution": [
+    "Block row/column distribution",
+    "Replicated on all processes",
+    "Hybrid CPU-GPU distribution"
+  ],
+  "sym-herm-input-data-type": [
+    "Both synthetic and real data",
+    "Mini-apps or extracted kernels from real applications"
+  ],
+  "dense-libs-interest-other": "I would like to know their features. No clear idea now. Portability to GPU must be improved",
+  "gemm-interested-libraries": [
+    "Other (please specify):"
+  ],
+  "gemm-scaling-requirements": [
+    "Strong scaling (fixed total problem size)"
+  ],
+  "matrix-inversion-residual": "High accuracy (10^-9)",
+  "specialized-libs-interest": [
+    "Other (please specify):"
+  ],
+  "sym-herm-computation-type": [
+    "Repeated similar-sized problems (e.g., time evolution or parameter sweeps)"
+  ],
+  "sym-herm-matrix-structure": [
+    "Complex valued",
+    "Dense",
+    "Block Sparse",
+    "Other (please specify):"
+  ],
+  "sym-herm-physical-problem": [
+    "Other (please specify):"
+  ],
+  "gemm-libraries-distributed": [
+    "ScaLAPACK",
+    "cuBLASMp (NVIDIA distributed-memory GPUs)",
+    "Custom distributed implementation"
+  ],
+  "matrix-inversion-structure": [
+    "Dense",
+    "Low-rank updates (A + UCVᵀ)",
+    "Block sparse",
+    "Other (please specify):"
+  ],
+  "sparse-libs-interest-other": "I would like to know their features. No clear idea now.",
+  "specialized-libs-used-other": "We use pfapack for Pfaffian wave function calculations",
+  "gemm-special-implementations": [
+    "Other (please specify):"
+  ],
+  "sym-herm-eigenvalue-location": "Eigenvalues in a specific range",
+  "sym-herm-matrix-distribution": [
+    "Hybrid CPU-GPU distribution",
+    "Replicated on all processes",
+    "Block row/column distribution"
+  ],
+  "sym-herm-nla-group-highlevel": [
+    "Other (please specify):"
+  ],
+  "sym-herm-nla-group-iterative": [
+    "Other (please specify):"
+  ],
+  "linear-solvers-data-provision": [
+    "Yes, both matrices and mini-apps"
+  ],
+  "matrix-inversion-distribution": [
+    "Block row/column distribution",
+    "Distribution for Sherman-Morrison updates",
+    "Hybrid CPU-GPU distribution"
+  ],
+  "sparse-solver-libraries-other": "None of the above",
+  "sym-herm-interested-libraries": [
+    "Other (please specify):"
+  ],
+  "sym-herm-scaling-requirements": [
+    "Strong scaling (fixed total problem size)"
+  ],
+  "linear-solvers-input-data-type": [
+    "Both synthetic and real data"
+  ],
+  "matrix-inversion-linear-system": "Medium accuracy (10^-6)",
+  "sym-herm-eigenvalue-percentage": "Less than 1%",
+  "sym-herm-nla-group-distributed": [
+    "ScaLAPACK"
+  ],
+  "gemm-interested-libraries-other": "I would like to know the features and the performances...",
+  "matrix-inversion-data-provision": [
+    "Yes, both matrices and mini-apps"
+  ],
+  "matrix-inversion-precision-type": [
+    "Double precision (64-bit)"
+  ],
+  "specialized-libs-interest-other": "I would like to know their features. No clear idea now.",
+  "sym-herm-matrix-structure-other": "the sparsity depends on the basis set used, something to be checked. In general dense.",
+  "sym-herm-physical-problem-other": "wave function optimization through SR minimization algorithm (see slides)",
+  "matrix-inversion-input-data-type": [
+    "Both synthetic and real data"
+  ],
+  "matrix-inversion-structure-other": "the sparsity depends on the problem",
+  "sym-herm-eigenvalue-distribution": [
+    "Varies",
+    "Mix of clustered and separated"
+  ],
+  "sym-herm-orthogonality-tolerance": "Low (10^-3)",
+  "matrix-inversion-computation-type": [
+    "Repeated inversions of similar matrices (e.g., during time evolution or parameter sweeps)"
+  ],
+  "matrix-inversion-purpose-usecases": [
+    "Other (please specify):"
+  ],
+  "gemm-special-implementations-other": "conjugate gradient distributed implementation, customized, to solve the linear problem with positive definite kernel",
+  "sym-herm-nla-group-highlevel-other": "GPU interface",
+  "sym-herm-nla-group-iterative-other": "custom conjugate gradient",
+  "linear-solvers-scaling-requirements": [
+    "Strong scaling (fixed total problem size)"
+  ],
+  "sym-herm-interested-libraries-other": "I would like to know the features and the performances...",
+  "sym-herm-relative-residual-tolerance": "High (10^-9)",
+  "matrix-inversion-scaling-requirements": [
+    "Both strong and weak scaling needed"
+  ],
+  "matrix-inversion-purpose-usecases-other": "wave function update after a single particle move (Sherman-Morrison)",
+  "matrix-inversion-properties-mathematical": [
+    "Complex valued",
+    "Singular/Nearly singular",
+    "Other (please specify):"
+  ],
+  "matrix-inversion-properties-mathematical-other": "It can be nearly singular, otherwise indefinite"
+}

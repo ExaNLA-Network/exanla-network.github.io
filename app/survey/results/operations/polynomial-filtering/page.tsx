@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { formatApplicationName } from '@/lib/surveyAnalytics';
 
 interface PolyFilterResponse {
   application: string;
@@ -137,7 +138,9 @@ export default function PolynomialFilteringPage() {
             const data = await response.json();
             // Only include if polynomial-filtering is true
             if (data['polynomial-filtering'] === true) {
-              const applicationName = data['library-name'] || 'undefined';
+              const libraryName = data['library-name'] || 'undefined';
+              const useCase = data['current-use-case'];
+              const applicationName = formatApplicationName(libraryName, useCase);
               
               loadedResponses.push({
                 application: applicationName,
