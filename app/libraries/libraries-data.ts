@@ -51,8 +51,8 @@ export const libraries: Library[] = [
     website: 'https://icl.utk.edu/slate/',
     repository: 'https://github.com/icl-utk-edu/slate',
     logo: '/libraries/logo/slate-logo.png',
-    categories: [libraryCategories.DENSE_LINEAR_ALGEBRA, 
-                 libraryCategories.EIGENVALUE_PROBLEMS, 
+    categories: [libraryCategories.DENSE_LINEAR_ALGEBRA,
+                 libraryCategories.EIGENVALUE_PROBLEMS,
                  libraryCategories.HIGH_PERFORMANCE_COMPUTING,
                  libraryCategories.HERMITIAN_SYMMETRIC,
                  libraryCategories.QUASI_HERMITIAN_SYMMETRIC,
@@ -241,7 +241,7 @@ export const libraries: Library[] = [
       libraryCategories.GPU_ACCELERATION,
       libraryCategories.DISTRIBUTED_MEMORY
     ],
-  },      
+  },
   {
     id: 'ntpoly',
     name: 'NTPoly',
@@ -266,6 +266,34 @@ export const libraries: Library[] = [
       libraryCategories.DISTRIBUTED_MEMORY,
       libraryCategories.SPARSE_LINEAR_ALGEBRA,
       libraryCategories.HERMITIAN_SYMMETRIC
+    ],
+  },
+  {
+    id: 'chameleon',
+    name: 'Chameleon',
+    description: 'Dense linear algebra subroutines for heterogeneous and distributed architectures',
+    features: [
+      'Dense matrix mutiplication (GEMM, SYMM, TRMM)',
+      'Dense matrix factorization and linear system solve (GETR, POTR, GEQR, GELQ, GELS)',
+      'Integration with vendor libraries (Blis/Flame, OpenBLAS, MKL, cuBLAS, rocBLAS, etc.)',
+      'Multi-core systems support',
+      'NVIDIA GPU acceleration support',
+      'AMD GPU acceleration support',
+      'Multi-node and multi-GPU support through MPI',
+      'Real or complex arithmetic, with single or double precision',
+      'Installable with CMake, GNU Guix, Homebrew, Spack'
+    ],
+    language: 'C',
+    license: 'CeCILL-C',
+    website: 'https://solverstack.gitlabpages.inria.fr/chameleon/',
+    repository: 'https://gitlab.inria.fr/solverstack/chameleon',
+    logo: '/libraries/logo/chameleon-logo.png',
+    categories: [
+      libraryCategories.DENSE_LINEAR_ALGEBRA,
+      libraryCategories.HIGH_PERFORMANCE_COMPUTING,
+      libraryCategories.GPU_ACCELERATION,
+      libraryCategories.DISTRIBUTED_MEMORY,
+      libraryCategories.HERMITIAN_SYMMETRIC,
     ],
   }
 ];
