@@ -301,6 +301,16 @@ const committeeMembers: CommitteeMember[] = [
     workingGroups: [WorkingGroups.APPLICATION_FUNCTIONALITY],
   },
   {
+    id: 'peter.karpov',
+    name: 'Dr. Peter Karpov',
+    title: 'HPC Application Expert',
+    affiliation: 'Max-Planck Computing and Data Facility (MPCDF), Germany',
+    bio: 'Peter Karpov is a computational scientist and developer of ELPA library',
+    image: '/committee/avatar/peter.karpov.jpg',
+    categories: [expertiseCategories.NUMERICAL_LINEAR_ALGEBRA, expertiseCategories.HPC, expertiseCategories.ALGORITHM_DEVELOPMENT, expertiseCategories.SOFTWARE_DEVELOPMENT, expertiseCategories.PARALLEL_PROGRAMMING, expertiseCategories.SCIENTIFIC_COMPUTING],
+    workingGroups: [WorkingGroups.APPLICATION_FUNCTIONALITY],
+  },
+  {
     id: 'stepan.nassyr',
     name: 'Dr. Stepan Nassyr',
     title: 'Researcher',
