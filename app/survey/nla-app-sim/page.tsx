@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useMemo, useRef } from 'react';
 import { surveyData, SurveyQuestion } from '../index';
-import { supabase } from '@/lib/supabase';
+import { submitSurveyToGoogleSheets } from '@/lib/submitSurvey';
 import SurveyResponseSummary from '@/components/SurveyResponseSummary';
 import { generateSurveyPDF } from '@/lib/pdfGenerator';
 
@@ -284,34 +284,21 @@ export default function NlaAppSimSurveyPage() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
-    const submissionData = {
-      timestamp: new Date().toISOString(),
-      userAgent: navigator.userAgent,
-      responses: formData
+
+    const surveyPayload = {
+      library_name: formData['library-name'] as string,
+      library_version: formData['library-version'] as string,
+      responses: formData,
+      user_agent: navigator.userAgent,
     };
 
     try {
-      console.log('Submitting data:', submissionData); // Debug log
-      
-      const { error } = await supabase
-        .from('survey_submissions')
-        .insert([{
-          library_name: formData['library-name'] as string,
-          library_version: formData['library-version'] as string,
-          responses: formData,
-          user_agent: navigator.userAgent
-        }]);
-
-      if (error) {
-        console.error('Supabase error:', error);
-        throw new Error(error.message);
-      }
+      await submitSurveyToGoogleSheets(surveyPayload);
 
       setSubmitted(true);
       setSubmitError(null);
     } catch (error) {
-      console.error('Detailed error submitting survey:', error);
+      console.error('Failed to submit survey data:', error);
       setSubmitError(error instanceof Error ? error.message : 'Failed to submit survey. Please try again.');
     }
   };

@@ -30,10 +30,10 @@ jobs:
       - name: Install dependencies
         run: npm ci
       
+      # Survey submissions POST to Google Apps Script (NEXT_PUBLIC_GOOGLE_SCRIPT_URL)
       - name: Build
         env:
-          NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
-          NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY }}
+          NEXT_PUBLIC_GOOGLE_SCRIPT_URL: ${{ secrets.NEXT_PUBLIC_GOOGLE_SCRIPT_URL }}
         run: npm run build
       
       - name: Setup Pages
