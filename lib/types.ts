@@ -8,12 +8,8 @@ export interface SurveyResponses {
 }
 
 export interface SurveySubmission {
-  id: string;
-  created_at?: string;
-  library_name?: string;
-  library_version?: string;
+  library_name: string;
+  library_version: string;
   responses: SurveyResponses;
-  user_agent?: string;
+  user_agent: string;
 }
-
-export type { Database } from './database.types.ts'
