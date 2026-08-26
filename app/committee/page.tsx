@@ -222,6 +222,16 @@ const committeeMembers: CommitteeMember[] = [
     workingGroups: [WorkingGroups.PERFORMANCE_PARALLELIZATION],
   },
   {
+    id: 'carolin.penke',
+    name: 'Dr. Carolin Penke',
+    title: 'Researcher',
+    affiliation: 'Jülich Supercomputing Centre, FZJ, Germany',
+    bio: 'Carolin Penke is a mathematician and high-performance computing researcher whose work spans numerical linear algebra, scientific computing, and artificial intelligence. She is interested in structured eigenvalue problems and algorithm development to make the training of deep neural networks more efficient on novel hardware.',
+    image: '/committee/avatar/carolin.penke.jpg',
+    categories: [expertiseCategories.NUMERICAL_LINEAR_ALGEBRA, expertiseCategories.HPC, expertiseCategories.PARALLEL_PROGRAMMING, expertiseCategories.AI],
+    workingGroups: [WorkingGroups.PERFORMANCE_PARALLELIZATION],
+  },
+  {
     id: 'ben.hourahine',
     name: 'Dr. Ben Hourahine',
     title: 'Senior Lecturer',
